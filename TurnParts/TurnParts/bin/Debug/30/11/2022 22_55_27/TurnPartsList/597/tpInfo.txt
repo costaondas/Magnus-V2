@@ -1,0 +1,11 @@
+CN:597
+Name:Bullseye
+P/N:N/A
+QTD:73
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Sem Controle
+Estoque Inicial:83
+Data NPI:

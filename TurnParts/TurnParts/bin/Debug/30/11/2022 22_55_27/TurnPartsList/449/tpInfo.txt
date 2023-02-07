@@ -1,0 +1,11 @@
+CN:449
+Name:TP_EXTENSOR_ IO_44P
+P/N:NPINBX0002VU00
+QTD:6633
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

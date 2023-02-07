@@ -1,0 +1,14 @@
+CN:737
+Name:TP_Adapater 19.5V/65W - DPN: T3JDJ
+P/N:NPIUPK10001F74L
+QTD:53
+EstoqueM:0
+Descrição:REALOCADO 13 FONTES DA SOUTH PEAK PARA A MLK, ZERADO O ESTOQUE DA SOUTH PEAK, AJUSTADO 01/10/2022
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:79
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

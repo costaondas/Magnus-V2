@@ -1,0 +1,14 @@
+CN:4PCBCM;T23
+Name:Fixture
+P/N:ESD1206
+QTD:1
+EstoqueM:0
+Descrição:OBE / SEM ESD
+SKUs:
+Modelo:CAMILIA FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:CAMILIA FX
+picture:CAMILIA FX
+validacao:

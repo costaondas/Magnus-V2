@@ -1,0 +1,11 @@
+CN:220
+Name:SIF LCD
+P/N:NPIAC600025G1L
+QTD:9
+EstoqueM:10
+Descrição:L29
+SKUs:
+Modelo:SIF
+Status:Crítico
+Estoque Inicial:21
+Data NPI:

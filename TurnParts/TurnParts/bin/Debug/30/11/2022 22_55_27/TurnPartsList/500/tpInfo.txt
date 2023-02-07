@@ -1,0 +1,11 @@
+CN:500
+Name:TP_CABO_EDP
+P/N:MRODC02003V400
+QTD:749
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:100E
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

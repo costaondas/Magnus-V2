@@ -1,0 +1,14 @@
+CN:786
+Name:TP_Cabo Flat (FFC) 14P x 0.3 - MB/Audio
+P/N:NBX0002W100
+QTD:336
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:341
+Data NPI:
+grupo:
+picture:
+validacao:

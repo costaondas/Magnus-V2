@@ -1,0 +1,11 @@
+CN:464
+Name:TP_HDD
+P/N:NPIDD10000WWNL
+QTD:123
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

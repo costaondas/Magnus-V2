@@ -1,0 +1,14 @@
+CN:428
+Name:TP_GPT54_TECLADO
+P/N:NPIPK132H81A28
+QTD:43
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:220
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:38,05

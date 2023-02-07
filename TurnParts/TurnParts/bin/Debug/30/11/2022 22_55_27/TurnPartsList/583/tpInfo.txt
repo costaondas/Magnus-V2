@@ -1,0 +1,13 @@
+CN:583
+Name:TECLADO
+P/N:NPIPK1334G1C29
+QTD:28
+EstoqueM:33
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Crítico
+Estoque Inicial:57
+Data NPI:18/03/2022 00
+valorUnitario:131,00
+alerta:3

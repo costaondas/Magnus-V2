@@ -1,0 +1,11 @@
+CN:547
+Name:TP_ROSE_WLAN
+P/N:MROIP00706
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

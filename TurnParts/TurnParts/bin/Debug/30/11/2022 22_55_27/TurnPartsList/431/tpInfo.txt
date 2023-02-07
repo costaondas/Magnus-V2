@@ -1,0 +1,14 @@
+CN:431
+Name:TP_GPT54_FINGERPRINT
+P/N:NPIPK09000NI40
+QTD:481
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:148
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-20,22

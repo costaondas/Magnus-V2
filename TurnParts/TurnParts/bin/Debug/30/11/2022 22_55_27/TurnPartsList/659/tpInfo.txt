@@ -1,0 +1,15 @@
+CN:659
+Name:TP_CABO TYPE-C
+P/N:NPI60603000Y
+QTD:53
+EstoqueM:0
+Descrição:TP_CABO TYPE-C
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:56
+Data NPI:07/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:11166,67
+ForcastUsed:0

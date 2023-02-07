@@ -1,0 +1,14 @@
+CN:755
+Name:TP_PLACA ADAPTADORA IO BOARD                      
+P/N:NPIU72A0ZR31333
+QTD:341
+EstoqueM:171
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:341
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:611
+Name:D9 TYPE C (AZUL)
+P/N:
+QTD:1
+EstoqueM:50
+Descrição:KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

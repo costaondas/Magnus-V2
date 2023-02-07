@@ -1,0 +1,11 @@
+CN:208
+Name:COMBO
+P/N:
+QTD:10
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

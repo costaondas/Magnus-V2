@@ -1,0 +1,17 @@
+CN:891
+Name:TP_TECLADO M20NXR-UBSN1
+P/N:NPIUPK133MF1D44
+QTD:116
+EstoqueM:67
+Descrição:KB SG-A5 LTN BRA 3MF M20NXR-UBSN1 A31~
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:133
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:7
+location2:B
+location3:BURITI

@@ -1,0 +1,14 @@
+CN:849
+Name:SIM CARD DELL PN: 6XD8M
+P/N:NPIU6XD8M
+QTD:60
+EstoqueM:30
+Descrição:SIM CARD DELL PN: 6XD8M
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:60
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

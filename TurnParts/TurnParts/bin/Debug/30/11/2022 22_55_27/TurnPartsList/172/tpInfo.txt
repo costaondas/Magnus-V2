@@ -1,0 +1,11 @@
+CN:172
+Name:TP_COSUS_CABO BACKLIGHT 90CM
+P/N:MRO4641-05NH000
+QTD:271
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:398
+Name:PASADENA_CABO _TP
+P/N:MRODEFC0839050
+QTD:219
+EstoqueM:134
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Alerta
+Estoque Inicial:
+Data NPI:

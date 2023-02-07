@@ -1,0 +1,11 @@
+CN:158
+Name:SOUTHPEAK 13 TP_SP13_CABO_BATERIA
+P/N:MRO4500M8070021
+QTD:248
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:243
+Name:SIF USB R7 
+P/N:NPI435PE531L01
+QTD:32
+EstoqueM:80
+Descrição:GDL56 LS-K66EP, UTILIZADO NO R7ͶͶSE TIVER IC FUNCIONA NA LA3
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:144
+Data NPI:

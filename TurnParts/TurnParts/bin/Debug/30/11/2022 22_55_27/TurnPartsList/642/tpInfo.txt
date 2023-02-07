@@ -1,0 +1,16 @@
+CN:642
+Name:AEGIS TP_WEBCAM CABLE
+P/N:NPI3500FX080001
+QTD:128
+EstoqueM:90
+Descrição:CABO DA CÂMERA
+SKUs:
+Modelo:AEGIS
+Status:Alerta
+Estoque Inicial:180
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:797,62
+ItensINLine:10
+ForcastUsed:0

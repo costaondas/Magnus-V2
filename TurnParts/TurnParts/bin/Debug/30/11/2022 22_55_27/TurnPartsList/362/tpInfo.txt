@@ -1,0 +1,11 @@
+CN:362
+Name:CIRCUITO IMPRESSO SIMPLES FACE FLEXIVEL
+P/N:MRONBX0002RF00
+QTD:4
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

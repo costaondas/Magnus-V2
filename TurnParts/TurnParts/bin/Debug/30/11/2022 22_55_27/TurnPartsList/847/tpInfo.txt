@@ -1,0 +1,14 @@
+CN:847
+Name:TECLADO M20ISU-BS
+P/N:NPIU4900M70707J
+QTD:37
+EstoqueM:19
+Descrição:TECLADO M20ISU-BS
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:37
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

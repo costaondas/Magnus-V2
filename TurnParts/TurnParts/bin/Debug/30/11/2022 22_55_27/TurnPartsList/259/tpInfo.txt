@@ -1,0 +1,11 @@
+CN:259
+Name:SIF ADAPTER 240W
+P/N:NPIPK10001H91L
+QTD:14
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:40
+Data NPI:

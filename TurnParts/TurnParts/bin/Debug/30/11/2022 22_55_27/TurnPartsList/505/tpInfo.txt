@@ -1,0 +1,11 @@
+CN:505
+Name:TP_THERMAL_BRACKET
+P/N:MROAT37Y0060P0
+QTD:38
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

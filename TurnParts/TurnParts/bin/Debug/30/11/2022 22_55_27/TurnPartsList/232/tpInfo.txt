@@ -1,0 +1,11 @@
+CN:232
+Name:SIF extensor pwr
+P/N:NPIDA30001JR10
+QTD:83
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:220
+Data NPI:

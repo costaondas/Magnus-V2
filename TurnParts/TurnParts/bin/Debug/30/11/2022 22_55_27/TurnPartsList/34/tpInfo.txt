@@ -1,0 +1,11 @@
+CN:34
+Name:MOCKINGBIRD CABO TOUCH
+P/N:MRO4500KA060001
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

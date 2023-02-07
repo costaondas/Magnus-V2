@@ -1,0 +1,14 @@
+CN:792
+Name:TP_Teclado - DPN: CW3R5
+P/N:PK1330S1B00
+QTD:21
+EstoqueM:0
+Descrição:CW3R5
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:47
+Data NPI:
+grupo:
+picture:
+validacao:

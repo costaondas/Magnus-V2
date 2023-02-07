@@ -1,0 +1,14 @@
+CN:452
+Name:TP_CABO LVDS
+P/N:NPIDC02003X500
+QTD:4836
+EstoqueM:2486
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location2:D
+location:1
+location3:BURITI

@@ -1,0 +1,11 @@
+CN:219
+Name:SIF LCD
+P/N:NPIAC60001Y49L
+QTD:20
+EstoqueM:30
+Descrição:I5, CML, LA2, R5, R7
+SKUs:
+Modelo:SIF
+Status:Crítico
+Estoque Inicial:108
+Data NPI:

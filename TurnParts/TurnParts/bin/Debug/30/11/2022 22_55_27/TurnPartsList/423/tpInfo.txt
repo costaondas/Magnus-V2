@@ -1,0 +1,14 @@
+CN:423
+Name:TP_GPT54_SSD 256GB
+P/N:NPIDD900018K30
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:98
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:68,71

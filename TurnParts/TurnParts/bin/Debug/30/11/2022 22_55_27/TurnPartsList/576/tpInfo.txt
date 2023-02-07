@@ -1,0 +1,14 @@
+CN:576
+Name:CABO TYPE C PARA USB
+P/N:
+QTD:46
+EstoqueM:0
+Descrição:APENAS KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:46
+Data NPI:
+grupo:
+picture:
+validacao:

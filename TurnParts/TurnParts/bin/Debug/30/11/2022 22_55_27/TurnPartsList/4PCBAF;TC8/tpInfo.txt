@@ -1,0 +1,14 @@
+CN:4PCBAF;TC8
+Name:Fixture
+P/N:ESD0399
+QTD:1
+EstoqueM:0
+Descrição:OPERANTE
+SKUs:
+Modelo:SLEEPY FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SLEEPY FX
+picture:SLEEPY FX
+validacao:

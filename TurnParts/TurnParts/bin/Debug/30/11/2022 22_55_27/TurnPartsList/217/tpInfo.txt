@@ -1,0 +1,11 @@
+CN:217
+Name:SIF LVDS
+P/N:NPIDC02C00VY00
+QTD:59
+EstoqueM:200
+Descrição:L29
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:309
+Data NPI:

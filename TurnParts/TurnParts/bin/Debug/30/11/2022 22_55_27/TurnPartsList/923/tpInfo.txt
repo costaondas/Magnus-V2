@@ -1,0 +1,14 @@
+CN:923
+Name:Extrator de borracha
+P/N:
+QTD:50
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:50
+Data NPI:06/10/2022 00:00:00
+grupo:
+picture:
+validacao:

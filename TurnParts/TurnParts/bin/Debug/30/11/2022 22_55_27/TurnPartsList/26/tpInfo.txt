@@ -1,0 +1,11 @@
+CN:26
+Name:MOCKINGBIRD CABO HD
+P/N:MRO4500FV080021
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

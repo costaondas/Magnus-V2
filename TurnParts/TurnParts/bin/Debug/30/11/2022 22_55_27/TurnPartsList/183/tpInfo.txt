@@ -1,0 +1,11 @@
+CN:183
+Name:TP_COSUS_HDD
+P/N:MRO1911-02FL0DE
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:451
+Name:TP_CAMERA
+P/N:NPIPK40001RO1L
+QTD:119
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location:1
+location2:E
+location3:BURITI

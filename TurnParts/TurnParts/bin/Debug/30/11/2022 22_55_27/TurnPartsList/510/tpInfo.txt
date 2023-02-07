@@ -1,0 +1,11 @@
+CN:510
+Name:TP_TECLADO
+P/N:MROPK1337Y2A20
+QTD:30
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

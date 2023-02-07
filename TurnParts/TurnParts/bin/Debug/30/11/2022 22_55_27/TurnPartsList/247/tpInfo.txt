@@ -1,0 +1,11 @@
+CN:247
+Name:SIF USB I5, CML
+P/N:NPI435P9D31L02
+QTD:52
+EstoqueM:50
+Descrição:GDL55 LS-K663P, UTILIZADO NO I5, CML
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:452
+Data NPI:

@@ -1,0 +1,11 @@
+CN:706
+Name:TP_SSD 256GB
+P/N:NPIUDD90001532 
+QTD:0
+EstoqueM:40
+Descrição:SP14 NOVA
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Zerado
+Estoque Inicial:94
+Data NPI:23/06/2022

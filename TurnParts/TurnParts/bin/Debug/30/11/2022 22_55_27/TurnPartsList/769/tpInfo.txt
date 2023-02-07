@@ -1,0 +1,14 @@
+CN:769
+Name:TP_Fonte Alimentação 19V/65W - DPN: T3JDJ
+P/N:PK10001F74L
+QTD:36
+EstoqueM:0
+Descrição:T3JDJ
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:36
+Data NPI:
+grupo:
+picture:
+validacao:

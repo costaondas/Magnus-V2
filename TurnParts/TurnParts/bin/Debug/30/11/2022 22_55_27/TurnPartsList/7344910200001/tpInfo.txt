@@ -1,0 +1,14 @@
+CN:7344910200001
+Name:FH5AT LA-K093P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:FH5AT LA-K093P
+SKUs:
+Modelo:CAMELIA MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

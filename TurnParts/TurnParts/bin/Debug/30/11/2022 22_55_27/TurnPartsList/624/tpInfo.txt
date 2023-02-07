@@ -1,0 +1,11 @@
+CN:624
+Name:TYPE-C TO DISPLAYPORT 
+P/N:
+QTD:127
+EstoqueM:0
+Descrição: 
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

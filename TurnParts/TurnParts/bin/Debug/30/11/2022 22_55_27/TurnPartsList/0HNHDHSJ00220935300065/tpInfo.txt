@@ -1,0 +1,14 @@
+CN:0HNHDHSJ00220935300065
+Name:LA-L581P
+P/N:0HNHDHSJ00220935300062
+QTD:0
+EstoqueM:0
+Descrição:LA-L581P
+SKUs:
+Modelo:MONTREUX PN LISO
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

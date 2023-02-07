@@ -1,0 +1,11 @@
+CN:358
+Name:MICROVENTILADOR AREA 90 CM2
+P/N:MRODC28000QDF0
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:600
+Name:Colossus
+P/N:N/A
+QTD:8
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:13
+Data NPI:

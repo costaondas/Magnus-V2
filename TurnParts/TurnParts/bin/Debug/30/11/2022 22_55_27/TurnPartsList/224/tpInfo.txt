@@ -1,0 +1,11 @@
+CN:224
+Name:SIF touch pad
+P/N:NPIPK09000RN1L
+QTD:46
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:38
+Data NPI:

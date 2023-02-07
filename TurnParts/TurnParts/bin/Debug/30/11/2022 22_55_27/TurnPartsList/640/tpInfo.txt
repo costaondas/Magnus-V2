@@ -1,0 +1,11 @@
+CN:640
+Name:FIXTURE DA CAMELLIA
+P/N:N/S
+QTD:14
+EstoqueM:0
+Descrição:FIXTURE DA CAMELLIA
+SKUs:
+Modelo:CAMELLIA
+Status:Sem Controle
+Estoque Inicial:21
+Data NPI:

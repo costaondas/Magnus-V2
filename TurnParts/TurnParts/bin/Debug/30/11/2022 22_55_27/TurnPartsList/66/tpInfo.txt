@@ -1,0 +1,11 @@
+CN:66
+Name:SOUTH PEAK 14 FAN
+P/N:MROAT30K002ZCL
+QTD:0
+EstoqueM:80
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

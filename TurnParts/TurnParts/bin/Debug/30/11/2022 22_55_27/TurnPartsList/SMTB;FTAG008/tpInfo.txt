@@ -1,0 +1,14 @@
+CN:SMTB;FTAG008
+Name:Fixture
+P/N:ESD2183
+QTD:1
+EstoqueM:0
+Descrição:RETRABALHADO
+SKUs:
+Modelo:AEGES FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:AEGES FX
+picture:AEGES FX
+validacao:

@@ -1,0 +1,11 @@
+CN:523
+Name:TP_SLEEPY_CABO HDD
+P/N:MRONBX0002JQ00
+QTD:18
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

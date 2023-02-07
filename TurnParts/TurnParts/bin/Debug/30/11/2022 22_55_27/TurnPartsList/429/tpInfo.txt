@@ -1,0 +1,14 @@
+CN:429
+Name:TP_GPT54_TOUCH PAD
+P/N:NPIPK09000LQ30
+QTD:12
+EstoqueM:10
+Descrição:VERIFICAR ALTERNATE
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:220
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:32,38

@@ -1,0 +1,11 @@
+CN:80
+Name:MONTREUX THERMAL_FAN
+P/N:MROAT30S002ZSL
+QTD:24
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

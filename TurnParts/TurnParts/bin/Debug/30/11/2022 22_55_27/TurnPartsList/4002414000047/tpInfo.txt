@@ -1,0 +1,14 @@
+CN:4002414000047
+Name:
+P/N:BR085GJGCMM0013V0039A00
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 13 MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

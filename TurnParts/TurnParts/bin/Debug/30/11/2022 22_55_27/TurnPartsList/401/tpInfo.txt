@@ -1,0 +1,11 @@
+CN:401
+Name:PASADENA_PAINEL_MB
+P/N:MRO31ZAKMB00T0
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

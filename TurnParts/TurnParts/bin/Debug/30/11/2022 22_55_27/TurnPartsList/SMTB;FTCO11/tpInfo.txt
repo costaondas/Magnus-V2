@@ -1,0 +1,14 @@
+CN:SMTB;FTCO11
+Name:Fixture
+P/N:ESD0550
+QTD:1
+EstoqueM:0
+Descrição:OPERANTE
+SKUs:
+Modelo:COLOSSUS FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:COLOSSUS FX
+picture:COLOSSUS FX
+validacao:

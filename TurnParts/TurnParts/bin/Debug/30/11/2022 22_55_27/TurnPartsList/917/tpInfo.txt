@@ -1,0 +1,14 @@
+CN:917
+Name:Caneta azul
+P/N:
+QTD:25
+EstoqueM:25
+Descrição:
+SKUs:
+Modelo:Escritório
+Status:Crítico
+Estoque Inicial:25
+Data NPI:30/09/2022 00:00:00
+grupo:
+picture:
+validacao:

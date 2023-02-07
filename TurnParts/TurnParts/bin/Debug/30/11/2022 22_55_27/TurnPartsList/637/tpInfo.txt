@@ -1,0 +1,11 @@
+CN:637
+Name:16 PINOS CABO FLAT
+P/N:N/S
+QTD:1400
+EstoqueM:0
+Descrição:16 PINOS CABO FLAT
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

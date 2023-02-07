@@ -1,0 +1,11 @@
+CN:69
+Name:SOUTH PEAK 14 ADAPTADOR
+P/N:MROPK10001F82L
+QTD:0
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

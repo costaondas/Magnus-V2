@@ -1,0 +1,14 @@
+CN:CN08KXGHCMC002180028X01
+Name:HDL5D LA-L945P
+P/N:7305511800012
+QTD:0
+EstoqueM:0
+Descrição:HDL5D LA-L945P
+SKUs:
+Modelo:WARLOCK MLK MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:28/07/2022 00:00:00
+grupo:GOLDENS
+picture:
+validacao:

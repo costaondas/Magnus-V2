@@ -1,0 +1,11 @@
+CN:102
+Name:MONTREUX CONECTOR_CIRCUITO IMPRESSO
+P/N:MRO43407D31L01
+QTD:40
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

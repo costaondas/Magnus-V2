@@ -1,0 +1,14 @@
+CN:775
+Name:TP_Placa sensor de apontamento touch - DPN:T98N2
+P/N:PK09000R31L
+QTD:244
+EstoqueM:0
+Descrição:T98N2
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:65
+Data NPI:
+grupo:
+picture:
+validacao:

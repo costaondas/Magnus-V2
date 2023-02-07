@@ -1,0 +1,14 @@
+CN:804
+Name:TP _LAN/B_LSL655                                  
+P/N:NPIU455PGB31L51
+QTD:58
+EstoqueM:0
+Descrição:TP _LAN/B_LSL655                                  
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:70
+Data NPI:
+grupo:
+picture:
+validacao:

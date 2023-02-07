@@ -1,0 +1,14 @@
+CN:PKWLNE31VFLJPJ
+Name:FPI50 LA-H329P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:FPI50 LA-H329P 
+SKUs:
+Modelo:MALDIVES MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

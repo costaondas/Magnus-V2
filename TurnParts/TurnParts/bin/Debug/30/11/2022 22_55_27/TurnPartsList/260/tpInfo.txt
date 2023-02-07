@@ -1,0 +1,11 @@
+CN:260
+Name:SIF fun board
+P/N:NPI435PCN31L02
+QTD:40
+EstoqueM:20
+Descrição:PARA REVISAO
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:28
+Data NPI:

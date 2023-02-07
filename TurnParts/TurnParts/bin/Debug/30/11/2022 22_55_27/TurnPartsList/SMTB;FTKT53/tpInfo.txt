@@ -1,0 +1,14 @@
+CN:SMTB;FTKT53
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:07/10/2022 00:00:00
+grupo:KYOTO FX
+picture:KYOTO FX
+validacao:

@@ -1,0 +1,11 @@
+CN:472
+Name:CYBORG N15G EDP CABLE(TOUCH) ICT (LVDS)
+P/N:NPI4500ND020001
+QTD:35
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:500
+Data NPI:

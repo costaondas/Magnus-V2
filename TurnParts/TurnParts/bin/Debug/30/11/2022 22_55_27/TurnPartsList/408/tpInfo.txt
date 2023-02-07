@@ -1,0 +1,11 @@
+CN:408
+Name:SSD 128GB
+P/N:NPI9946M       
+QTD:377
+EstoqueM:100
+Descrição:M4P2200753ͶͶSALDO DE ENTRADA 425 UNI
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:180
+Data NPI:

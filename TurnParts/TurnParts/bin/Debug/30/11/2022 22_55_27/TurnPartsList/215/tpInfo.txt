@@ -1,0 +1,11 @@
+CN:215
+Name:SIF Camera
+P/N:NPIPK40001R01L
+QTD:35
+EstoqueM:10
+Descrição:L30
+SKUs:
+Modelo:SIF
+Status:Moderado
+Estoque Inicial:18
+Data NPI:

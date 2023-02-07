@@ -1,0 +1,14 @@
+CN:SMTB;FTWK48
+Name:Fixture
+P/N:ESD0477
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK FX
+picture:WARLOCK FX
+validacao:

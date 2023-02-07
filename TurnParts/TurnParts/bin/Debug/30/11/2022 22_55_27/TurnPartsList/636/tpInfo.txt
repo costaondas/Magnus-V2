@@ -1,0 +1,11 @@
+CN:636
+Name:24 PINOS CABO FLAT
+P/N:N/S
+QTD:4245
+EstoqueM:0
+Descrição:24 PINOS CABO FLAT
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

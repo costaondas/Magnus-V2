@@ -1,0 +1,11 @@
+CN:193
+Name:Flat 4p 0.5mm
+P/N:
+QTD:75
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:4PCBCM;T04
+Name:Fixture
+P/N:ESD1968
+QTD:1
+EstoqueM:0
+Descrição:SEM ETIQUETA
+SKUs:
+Modelo:CAMILIA FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:CAMILIA FX
+picture:CAMILIA FX
+validacao:

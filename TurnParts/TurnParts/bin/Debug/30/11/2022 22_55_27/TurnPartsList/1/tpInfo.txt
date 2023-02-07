@@ -1,0 +1,11 @@
+CN:1
+Name:CABO_BATERIA
+P/N:MRODC02002YH00
+QTD:1107
+EstoqueM:500
+Descrição:<out1higͶͶ><out2loͶͶ><out3higͶͶ><out1higͶͶ><out2higͶͶ><out3loͶͶ>
+SKUs:
+Modelo:BULLSEYE
+Status:Moderado
+Estoque Inicial:
+Data NPI:

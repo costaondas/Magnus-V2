@@ -1,0 +1,11 @@
+CN:556
+Name:PEN DRIVE 3.0 32GB
+P/N:NPIN000082
+QTD:252
+EstoqueM:100
+Descrição:UTILIZADO SLEEPY IL, STONIC, ROSE, PASADENA, 100E, KIOTO&TROY
+SKUs:
+Modelo:UNIVERSAL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

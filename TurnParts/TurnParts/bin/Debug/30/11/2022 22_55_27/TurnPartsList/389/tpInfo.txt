@@ -1,0 +1,11 @@
+CN:389
+Name:PASADENA_TOUCH_PAD
+P/N:MROADLB461D008
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Zerado
+Estoque Inicial:
+Data NPI:

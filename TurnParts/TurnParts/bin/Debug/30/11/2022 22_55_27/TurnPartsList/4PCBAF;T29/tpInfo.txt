@@ -1,0 +1,14 @@
+CN:4PCBAF;T29
+Name:Fixture
+P/N:ESD0815
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MALDIVES FX
+picture:MALDIVES FX
+validacao:

@@ -1,0 +1,11 @@
+CN:71
+Name:SOUTH PEAK 14 CONECTOR_CIRCUITO IMPRESSO
+P/N:MRO43407D31L01
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

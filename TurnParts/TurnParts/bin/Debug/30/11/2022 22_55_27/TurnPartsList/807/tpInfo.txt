@@ -1,0 +1,14 @@
+CN:807
+Name:TP_IO BOARD_ LSL657                               
+P/N:NPIU455PGA31L02
+QTD:36
+EstoqueM:0
+Descrição:TP_IO BOARD_ LSL657                               
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:54
+Data NPI:
+grupo:
+picture:
+validacao:

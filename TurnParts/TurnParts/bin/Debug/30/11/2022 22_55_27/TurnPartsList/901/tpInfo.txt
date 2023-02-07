@@ -1,0 +1,14 @@
+CN:901
+Name:ADAPTADOR PS2 PARA USB
+P/N:
+QTD:25
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:25
+Data NPI:26/09/2022 00:00:00
+grupo:
+picture:
+validacao:

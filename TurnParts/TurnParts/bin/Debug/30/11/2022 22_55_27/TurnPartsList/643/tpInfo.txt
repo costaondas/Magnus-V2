@@ -1,0 +1,15 @@
+CN:643
+Name:AEGIS TP_TOUCH_CABLE
+P/N:NPI3500FX0K0001
+QTD:299
+EstoqueM:215
+Descrição:CABO TOUCH
+SKUs:
+Modelo:AEGIS
+Status:Alerta
+Estoque Inicial:430
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:257,69
+ForcastUsed:0

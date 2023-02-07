@@ -1,0 +1,11 @@
+CN:206
+Name:COLOSSUS_FFC SD CARD
+P/N:MRON006691
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Zerado
+Estoque Inicial:
+Data NPI:

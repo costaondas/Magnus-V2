@@ -1,0 +1,11 @@
+CN:360
+Name:FLAT CABLE
+P/N:MRONBX0002OR00
+QTD:39
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

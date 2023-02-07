@@ -1,0 +1,11 @@
+CN:203
+Name:UNIVERSAL_HDD
+P/N:MROIP00968
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

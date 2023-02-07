@@ -1,0 +1,14 @@
+CN:718
+Name:TP_Cabo LVDS MB-LCD-EMZA-SEN/B - DPN: 9Y1XX
+P/N:NPIUDC02C00VF00
+QTD:3802
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:4187
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

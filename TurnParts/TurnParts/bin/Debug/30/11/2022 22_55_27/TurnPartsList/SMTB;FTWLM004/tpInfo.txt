@@ -1,0 +1,14 @@
+CN:SMTB;FTWLM004
+Name:Fixture
+P/N:ESD1486
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK MLK FX
+picture:WARLOCK MLK FX
+validacao:

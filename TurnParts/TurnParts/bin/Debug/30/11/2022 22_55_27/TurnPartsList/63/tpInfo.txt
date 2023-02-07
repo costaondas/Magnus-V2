@@ -1,0 +1,11 @@
+CN:63
+Name:SOUTH PEAK 14 WLAN 
+P/N:MROPK32000F70L
+QTD:0
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

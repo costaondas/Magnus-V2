@@ -1,0 +1,17 @@
+CN:882
+Name:TP_SDD_256GB
+P/N:NPIUDD900013U2L
+QTD:716
+EstoqueM:415
+Descrição:SSD_M 256G N3SP4 KBG40ZNS256G A31 !
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:829
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:6
+location2:C
+location3:BURITI

@@ -1,0 +1,11 @@
+CN:501
+Name:TP_ANTENA
+P/N:MRODC33002K400
+QTD:29
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

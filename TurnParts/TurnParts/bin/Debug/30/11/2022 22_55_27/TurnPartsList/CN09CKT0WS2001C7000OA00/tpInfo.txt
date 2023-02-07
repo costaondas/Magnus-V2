@@ -1,0 +1,14 @@
+CN:CN09CKT0WS2001C7000OA00
+Name:D12 ADL 6L HF
+P/N:CN09CKT0WS2001C7000NA00
+QTD:0
+EstoqueM:0
+Descrição:D12 ADL 6L HF
+SKUs:
+Modelo:KYOTOTROY PN
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

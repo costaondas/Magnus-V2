@@ -1,0 +1,11 @@
+CN:265
+Name:SIF extensor io
+P/N:NPINBX0002TI00
+QTD:0
+EstoqueM:100
+Descrição:SIF AMD R5, R7
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:211
+Data NPI:

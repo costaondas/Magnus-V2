@@ -1,0 +1,11 @@
+CN:35
+Name:MOCKINGBIRD CABO USB
+P/N:MRO4500KA080001
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

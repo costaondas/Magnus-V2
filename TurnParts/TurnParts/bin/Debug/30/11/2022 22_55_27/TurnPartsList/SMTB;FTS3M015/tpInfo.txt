@@ -1,0 +1,14 @@
+CN:SMTB;FTS3M015
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:TAMPA RETRABALHADA
+SKUs:
+Modelo:SOUTH PEAK 13 MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SOUTH PEAK 13 MLK FX
+picture:SOUTH PEAK 13 MLK FX
+validacao:

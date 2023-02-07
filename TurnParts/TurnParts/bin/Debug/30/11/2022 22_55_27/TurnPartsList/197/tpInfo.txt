@@ -1,0 +1,11 @@
+CN:197
+Name:HUB USB 3.0
+P/N:
+QTD:20
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

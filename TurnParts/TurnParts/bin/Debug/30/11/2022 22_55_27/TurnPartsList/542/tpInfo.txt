@@ -1,0 +1,11 @@
+CN:542
+Name:TP_ROSE_CABO LVDS
+P/N:MROIP00701
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

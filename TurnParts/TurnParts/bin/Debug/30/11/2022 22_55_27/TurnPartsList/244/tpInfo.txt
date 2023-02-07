@@ -1,0 +1,11 @@
+CN:244
+Name:SIF LAN 5N52P LA2
+P/N:NPI435P9C31L01
+QTD:0
+EstoqueM:50
+Descrição:5N52P, UTILIZADO NO LA2.
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:10
+Data NPI:

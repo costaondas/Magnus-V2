@@ -1,0 +1,14 @@
+CN:SMTB;FTSP308
+Name:Fixture
+P/N:ESD0269
+QTD:1
+EstoqueM:0
+Descrição:DESAPARECIDO
+SKUs:
+Modelo:SOUTH PEAK 13 FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SOUTH PEAK 13 FX
+picture:SOUTH PEAK 13 FX
+validacao:

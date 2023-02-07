@@ -1,0 +1,11 @@
+CN:228
+Name:SIF teclado
+P/N:NPIPK132RI1B01
+QTD:3
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:44
+Data NPI:

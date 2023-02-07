@@ -1,0 +1,14 @@
+CN:NIDGOLDEN2
+Name:
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

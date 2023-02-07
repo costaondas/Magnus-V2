@@ -1,0 +1,14 @@
+CN:857
+Name:CAMERA
+P/N:NPIU6XX8D$AB
+QTD:14
+EstoqueM:19
+Descrição:CAMERA
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Crítico
+Estoque Inicial:37
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

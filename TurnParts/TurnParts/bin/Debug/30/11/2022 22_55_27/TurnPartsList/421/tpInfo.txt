@@ -1,0 +1,14 @@
+CN:421
+Name:TP_GPT54_DDR4-2666MHZ
+P/N:NPIPK054009F10
+QTD:93
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:147
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:124,7

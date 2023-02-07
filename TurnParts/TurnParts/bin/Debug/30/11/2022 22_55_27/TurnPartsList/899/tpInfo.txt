@@ -1,0 +1,14 @@
+CN:899
+Name:Cooler 12V
+P/N:
+QTD:4
+EstoqueM:20
+Descrição:Utilizado nos heat sinks dos fixtures
+SKUs:
+Modelo:Automação
+Status:Extremamente crítico
+Estoque Inicial:40
+Data NPI:
+grupo:
+picture:
+validacao:

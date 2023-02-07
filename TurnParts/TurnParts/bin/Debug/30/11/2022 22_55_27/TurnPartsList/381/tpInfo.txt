@@ -1,0 +1,11 @@
+CN:381
+Name:TT_CABO_TP
+P/N:MROIP01230
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:725
+Name:TP_Cabo Flat (FFC) 20P x 0.3 - Touch Pad/MB - DPN:87V5K
+P/N:NPIUNBX0002R200
+QTD:2335
+EstoqueM:1435
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:2870
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

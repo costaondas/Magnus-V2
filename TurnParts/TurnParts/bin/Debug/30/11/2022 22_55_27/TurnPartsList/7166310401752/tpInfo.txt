@@ -1,0 +1,14 @@
+CN:7166310401752
+Name:GDF40 LA-K491P
+P/N:CN014P1WCMK0017N166EA00
+QTD:0
+EstoqueM:0
+Descrição:GDF40 LA-K491P
+SKUs:
+Modelo:SOUTH PEAK 14 MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

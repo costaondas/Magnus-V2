@@ -1,0 +1,14 @@
+CN:801
+Name:TP_PARAFUSO                                       
+P/N:NPIUMA0000069G0
+QTD:44
+EstoqueM:0
+Descrição:TP_PARAFUSO                                       
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:44
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:562
+Name:ADAPTADOR USB_RJ45
+P/N:NPITP00358
+QTD:59
+EstoqueM:0
+Descrição:APENAS KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:65
+Data NPI:
+grupo:
+picture:
+validacao:

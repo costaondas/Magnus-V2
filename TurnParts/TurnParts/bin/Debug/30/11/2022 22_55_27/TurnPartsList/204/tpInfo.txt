@@ -1,0 +1,11 @@
+CN:204
+Name:UNIVERSAL_WLAN_1
+P/N:PK32000GD20
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

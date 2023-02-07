@@ -1,0 +1,14 @@
+CN:783
+Name:TP_Antena 3IW 350-24009 - DPN: JPXV7
+P/N:DC33002LO2L
+QTD:50
+EstoqueM:0
+Descrição:JPXV7
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:50
+Data NPI:
+grupo:
+picture:
+validacao:

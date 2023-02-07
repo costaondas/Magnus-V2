@@ -1,0 +1,17 @@
+CN:867
+Name:TP_PAINEL_LCD
+P/N:NPIUAC600024O5L
+QTD:101
+EstoqueM:0
+Descrição:LCD_LED_M NV156FHM-N4U FHD AG R6FD8 A31!
+SKUs:
+Modelo:WARLOCK MLK
+Status:Sem Controle
+Estoque Inicial:143
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:6
+location2:J
+location3:BURITI

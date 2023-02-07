@@ -1,0 +1,14 @@
+CN:595
+Name:FIXTURE_KYOTO_TROY
+P/N:NPITP00426
+QTD:21
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:29
+Data NPI:26/03/2022 00
+grupo:
+picture:
+validacao:

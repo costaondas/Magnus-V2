@@ -1,0 +1,11 @@
+CN:465
+Name:TP_BULLSEYE_SSD 128GB
+P/N:NPIDD900013W2L
+QTD:158
+EstoqueM:270
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

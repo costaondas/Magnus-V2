@@ -1,0 +1,13 @@
+CN:586
+Name:AUTOFALANTE_ESQUERDO
+P/N:NPIPK230012400
+QTD:174
+EstoqueM:95
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:21
+Data NPI:18/03/2022 00
+valorUnitario:13,23
+alerta:3

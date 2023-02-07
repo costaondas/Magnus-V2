@@ -1,0 +1,14 @@
+CN:865
+Name:CABO EXTENSOR 6 PINS 0.5 MM
+P/N:MROIP00225
+QTD:902
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Alerta
+Estoque Inicial:1000
+Data NPI:11/08/2022 00:00:00
+grupo:
+picture:
+validacao:

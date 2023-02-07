@@ -1,0 +1,14 @@
+CN:843
+Name: WLAN M2/AX2211
+P/N:NPIU05403244001
+QTD:48
+EstoqueM:34
+Descrição:WLAN M2/AX2211
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:68
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

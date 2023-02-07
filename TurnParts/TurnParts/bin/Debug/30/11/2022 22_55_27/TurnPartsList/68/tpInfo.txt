@@ -1,0 +1,11 @@
+CN:68
+Name:SOUTH PEAK 14 SSD 128GB
+P/N:MRODD900013T2L
+QTD:0
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

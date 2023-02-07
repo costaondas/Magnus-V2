@@ -1,0 +1,12 @@
+CN:60
+Name:SOUTH PEAK 14 FINGER PRINT
+P/N:MROPK09000RC0L
+QTD:1
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+alerta:3

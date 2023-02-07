@@ -1,0 +1,14 @@
+CN:815
+Name:TP_TOUCH PAD SYNAPTICS                            
+P/N:NPIUPK09000SA1L
+QTD:57
+EstoqueM:0
+Descrição:TP_TOUCH PAD SYNAPTICS                            
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:57
+Data NPI:
+grupo:
+picture:
+validacao:

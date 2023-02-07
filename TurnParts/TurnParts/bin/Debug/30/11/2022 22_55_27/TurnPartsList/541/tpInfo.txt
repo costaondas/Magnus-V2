@@ -1,0 +1,11 @@
+CN:541
+Name:TP_ROSE_CAMERA
+P/N:MROIP00700
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

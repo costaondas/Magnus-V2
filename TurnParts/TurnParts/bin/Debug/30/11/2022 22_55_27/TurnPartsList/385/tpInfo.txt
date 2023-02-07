@@ -1,0 +1,11 @@
+CN:385
+Name:PASADENA_CAMERA
+P/N:MROAI046210024
+QTD:30
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

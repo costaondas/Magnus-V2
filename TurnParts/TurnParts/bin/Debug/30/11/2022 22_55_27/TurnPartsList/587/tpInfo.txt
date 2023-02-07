@@ -1,0 +1,13 @@
+CN:587
+Name:AUTOFALANTE_DIREITO
+P/N:NPIPK230012500
+QTD:178
+EstoqueM:95
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:21
+Data NPI:18/03/2022 00
+valorUnitario:13,49
+alerta:3

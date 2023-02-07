@@ -1,0 +1,11 @@
+CN:239
+Name:Thermal 1ZCL
+P/N:NPIAT36M001ZCL
+QTD:0
+EstoqueM:8
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:72
+Data NPI:

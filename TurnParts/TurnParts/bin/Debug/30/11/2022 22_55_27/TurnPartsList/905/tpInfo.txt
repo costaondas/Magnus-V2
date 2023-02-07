@@ -1,0 +1,15 @@
+CN:905
+Name:Chave Gangorra
+P/N:
+QTD:186
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Trivial
+Estoque Inicial:185
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:
+CycleLife:NaN

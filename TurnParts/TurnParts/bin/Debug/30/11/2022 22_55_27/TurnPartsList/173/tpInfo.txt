@@ -1,0 +1,11 @@
+CN:173
+Name:TP_COSUS_CABO DMIC 10PIN
+P/N:MRO4641-05NK000
+QTD:49
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

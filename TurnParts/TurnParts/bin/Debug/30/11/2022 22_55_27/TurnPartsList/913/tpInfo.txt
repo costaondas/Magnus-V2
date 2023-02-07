@@ -1,0 +1,18 @@
+CN:913
+Name:IPTV
+P/N:
+QTD:17
+EstoqueM:6
+Descrição:
+SKUs:
+Modelo:AEGIS
+Status:Moderado
+Estoque Inicial:20
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:11166,67
+ForcastUsed:0

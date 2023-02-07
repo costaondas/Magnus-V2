@@ -1,0 +1,11 @@
+CN:608
+Name:SIF AMD
+P/N:N/A
+QTD:11
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:16
+Data NPI:

@@ -1,0 +1,14 @@
+CN:SMTB;FTWLM038
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:07/10/2022 00:00:00
+grupo:WARLOCK MLK FX
+picture:WARLOCK MLK FX
+validacao:

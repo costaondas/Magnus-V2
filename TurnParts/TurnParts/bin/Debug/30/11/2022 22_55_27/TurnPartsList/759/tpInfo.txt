@@ -1,0 +1,14 @@
+CN:759
+Name:TP_PLACA ADAPTADORA SMART CARD                    
+P/N:NPIUDC04000RV00
+QTD:174
+EstoqueM:87
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:174
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:818
+Name:TECLADO LARANJA
+P/N:NPIUPK133LP2B44
+QTD:17
+EstoqueM:0
+Descrição:TP_TECLADO_DLM18                                  
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:25
+Data NPI:
+grupo:
+picture:
+validacao:

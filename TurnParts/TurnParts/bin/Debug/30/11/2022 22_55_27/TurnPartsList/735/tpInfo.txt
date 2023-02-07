@@ -1,0 +1,14 @@
+CN:735
+Name:TP_Antena RFID F-0W-FH-6124-001-00 - DPN: 9005G
+P/N:NPIUDC33002GY0L
+QTD:143
+EstoqueM:0
+Descrição:SÓ OBE
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:187
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

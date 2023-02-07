@@ -1,0 +1,11 @@
+CN:392
+Name:PASADENA_ADAPTER
+P/N:MROAG20022B236
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Zerado
+Estoque Inicial:
+Data NPI:

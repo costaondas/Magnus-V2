@@ -1,0 +1,11 @@
+CN:169
+Name:TP_COSUS_ALTOFALANTE
+P/N:MRO04A4-03MR0DE
+QTD:85
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

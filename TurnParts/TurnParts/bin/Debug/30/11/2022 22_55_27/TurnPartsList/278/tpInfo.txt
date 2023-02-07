@@ -1,0 +1,11 @@
+CN:278
+Name:SIF Memoria
+P/N:NPIPK054009C1L
+QTD:7
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:240
+Data NPI:

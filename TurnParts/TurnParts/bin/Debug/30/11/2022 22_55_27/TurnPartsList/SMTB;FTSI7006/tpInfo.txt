@@ -1,0 +1,14 @@
+CN:SMTB;FTSI7006
+Name:Fixture
+P/N:ESD0596
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF I7 FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF I7 FX
+picture:SIF I7 FX
+validacao:

@@ -1,0 +1,11 @@
+CN:111
+Name:SELEK FAN CPU
+P/N:MRO023100G90004
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SELEK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

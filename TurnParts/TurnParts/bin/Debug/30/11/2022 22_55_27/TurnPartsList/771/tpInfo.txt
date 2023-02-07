@@ -1,0 +1,14 @@
+CN:771
+Name:TP_Painel LCD - DPN: 9PN3R
+P/N:AC60001N65L
+QTD:6
+EstoqueM:0
+Descrição:9PN3R
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:45
+Data NPI:
+grupo:
+picture:
+validacao:

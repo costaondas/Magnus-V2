@@ -1,0 +1,11 @@
+CN:402
+Name:TP_CABO_BATERIA                                 
+P/N:NPI4500MY010021
+QTD:993
+EstoqueM:200
+Descrição:M4P2200753 ͶͶSALDO DE ENTRADA 336 UNI.
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:500
+Data NPI:

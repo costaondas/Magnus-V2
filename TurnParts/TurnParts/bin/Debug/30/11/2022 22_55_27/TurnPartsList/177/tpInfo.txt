@@ -1,0 +1,11 @@
+CN:177
+Name:TP_COSUS_FLAT 6PIN
+P/N:MRO1412-04SR0DE
+QTD:6
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

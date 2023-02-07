@@ -1,0 +1,14 @@
+CN:788
+Name:TP_Cabo conexão Bateria
+P/N:DC02003YR00
+QTD:531
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:552
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:192
+Name:Flat 26p 0.5mm
+P/N:
+QTD:893
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Alerta
+Estoque Inicial:
+Data NPI:

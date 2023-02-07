@@ -1,0 +1,11 @@
+CN:202
+Name:CABO EXTENSOR_REDE
+P/N:X000000000001
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

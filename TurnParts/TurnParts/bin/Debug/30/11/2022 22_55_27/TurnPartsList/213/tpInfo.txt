@@ -1,0 +1,11 @@
+CN:213
+Name:SIF Camera
+P/N:NPIPK40001JN0L
+QTD:101
+EstoqueM:50
+Descrição:I5, CML, LA2, R5, R7
+SKUs:
+Modelo:SIF
+Status:Moderado
+Estoque Inicial:198
+Data NPI:

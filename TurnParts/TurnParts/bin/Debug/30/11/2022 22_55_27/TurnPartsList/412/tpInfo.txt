@@ -1,0 +1,11 @@
+CN:412
+Name:FONTE 65W AC
+P/N:NPIW1N63       
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:60
+Data NPI:

@@ -1,0 +1,15 @@
+CN:657
+Name:TP_CABO_AUDIO_4PINOS
+P/N:NPI606040003
+QTD:97
+EstoqueM:0
+Descrição:TP_CABO_AUDIO_4PINOS
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:98
+Data NPI:07/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:∞
+ForcastUsed:0

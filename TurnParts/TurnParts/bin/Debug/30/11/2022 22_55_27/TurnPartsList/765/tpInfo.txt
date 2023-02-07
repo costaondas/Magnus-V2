@@ -1,0 +1,14 @@
+CN:765
+Name:TP_SUPORTE SIM CARD - DPN: C2M1W                  
+P/N:NPIUFA30K000S00
+QTD:100
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:100
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

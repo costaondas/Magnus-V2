@@ -1,0 +1,11 @@
+CN:72
+Name:SOUTH PEAK 14 PLACA ADAPTACAO_TYPE C
+P/N:MRO43404U31L01
+QTD:0
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

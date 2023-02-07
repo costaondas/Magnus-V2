@@ -1,0 +1,11 @@
+CN:471
+Name:LCD TOUCH (N)
+P/N:NPIM5DY2
+QTD:21
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:38
+Data NPI:

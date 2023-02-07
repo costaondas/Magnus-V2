@@ -1,0 +1,11 @@
+CN:520
+Name:TP_SLEEPY_DC_JACK
+P/N:MRODC301015B00
+QTD:77
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

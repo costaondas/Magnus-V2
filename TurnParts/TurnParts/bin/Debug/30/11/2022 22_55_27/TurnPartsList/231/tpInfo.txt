@@ -1,0 +1,11 @@
+CN:231
+Name:Placa Power SIF
+P/N:NPI435P9B31L51
+QTD:0
+EstoqueM:100
+Descrição:Utilizados nos modelos I5, CML, LA2, R5, R7.
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:239
+Data NPI:

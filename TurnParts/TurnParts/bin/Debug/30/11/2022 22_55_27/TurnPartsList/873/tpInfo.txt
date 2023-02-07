@@ -1,0 +1,17 @@
+CN:873
+Name:TP_TOUCH_PAD_SB479B
+P/N:NPIUPK09000V84L
+QTD:152
+EstoqueM:99
+Descrição:TOUCH PAD ELAN SB479B-21H4 V03 A31 ~
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:197
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:7
+location2:F
+location3:BURITI

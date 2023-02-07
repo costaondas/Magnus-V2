@@ -1,0 +1,11 @@
+CN:113
+Name:SELEK FINGER PRINT
+P/N:MRO05425099M027
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SELEK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

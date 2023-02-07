@@ -1,0 +1,14 @@
+CN:457
+Name:TP_SPEAKER
+P/N:NPIPK230014800
+QTD:506
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location3:BURITI
+location:3
+location2:D

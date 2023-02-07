@@ -1,0 +1,14 @@
+CN:822
+Name:TP_THERMAL_FAN_80W                                
+P/N:NPIUAT3LQ002ZVL
+QTD:299
+EstoqueM:0
+Descrição:TP_THERMAL_FAN_80W                                
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:200
+Data NPI:
+grupo:
+picture:
+validacao:

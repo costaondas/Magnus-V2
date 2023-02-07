@@ -1,0 +1,14 @@
+CN:6028185303576
+Name:FDI55 LA-J081P
+P/N:CN0790WTCMC000C608AAA00
+QTD:0
+EstoqueM:0
+Descrição:FDI55 LA-J081P
+SKUs:
+Modelo:BULLSEYE MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

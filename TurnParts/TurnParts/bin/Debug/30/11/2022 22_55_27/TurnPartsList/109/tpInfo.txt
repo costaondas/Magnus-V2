@@ -1,0 +1,11 @@
+CN:109
+Name:SELEK IO BOARD
+P/N:MRO4550K7020002
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SELEK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

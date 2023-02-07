@@ -1,0 +1,11 @@
+CN:15
+Name:BULLSEYE FINGER PRINT
+P/N:MROPK09000NSFL
+QTD:366
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

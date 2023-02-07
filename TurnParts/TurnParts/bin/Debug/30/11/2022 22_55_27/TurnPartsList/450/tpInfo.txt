@@ -1,0 +1,14 @@
+CN:450
+Name:TP_LCD_PAINEL
+P/N:NPIAC600011TNL
+QTD:186
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location2:J
+location:9
+location3:BURITI

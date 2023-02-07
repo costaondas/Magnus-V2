@@ -1,0 +1,14 @@
+CN:714
+Name:TP_BATERIA 3.18AH - DPN: Y86WG
+P/N:NPIUGC02003421L
+QTD:22
+EstoqueM:51
+Descrição:SOUTH PEAK 14 MLK
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Extremamente crítico
+Estoque Inicial:102
+Data NPI:21/06/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,15 @@
+CN:919
+Name:TECLADO PS2
+P/N:
+QTD:8
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:55
+Data NPI:03/10/2022 00:00:00
+grupo:
+picture:
+validacao:
+CycleLife:

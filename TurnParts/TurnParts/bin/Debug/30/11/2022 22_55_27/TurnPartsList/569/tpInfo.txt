@@ -1,0 +1,11 @@
+CN:569
+Name:EXTENSOR_KB 28PIN*1.0*280mm
+P/N:NPITP00476
+QTD:1015
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:1500
+Data NPI:

@@ -1,0 +1,14 @@
+CN:4PCBAAF;TA2
+Name:Fixture
+P/N:ESD1283
+QTD:1
+EstoqueM:0
+Descrição:DESMONTADO-03/09/22ͶͶSAIDA
+SKUs:
+Modelo:STONIC FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:STONIC FX
+picture:STONIC FX
+validacao:

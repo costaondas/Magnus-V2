@@ -1,0 +1,14 @@
+CN:906
+Name:Borne P2 para Fan
+P/N:
+QTD:181
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Alerta
+Estoque Inicial:185
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:

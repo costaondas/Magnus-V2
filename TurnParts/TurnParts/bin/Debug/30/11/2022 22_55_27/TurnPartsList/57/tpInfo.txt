@@ -1,0 +1,11 @@
+CN:57
+Name:SOUTH PEAK 14 USH/B
+P/N:MRO435P7Z31L01
+QTD:186
+EstoqueM:150
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Alerta
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,15 @@
+CN:656
+Name:GS_AEGIS_SB_SD
+P/N:NPI3550FX030001
+QTD:55
+EstoqueM:33
+Descrição:PERIFERICA SD CARD
+SKUs:
+Modelo:AEGIS
+Status:Alerta
+Estoque Inicial:66
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:3045,46
+ForcastUsed:0

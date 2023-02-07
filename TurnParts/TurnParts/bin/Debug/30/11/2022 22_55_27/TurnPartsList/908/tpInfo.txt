@@ -1,0 +1,14 @@
+CN:908
+Name:Botoeira s/ retenção
+P/N:
+QTD:51
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Alerta
+Estoque Inicial:52
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:

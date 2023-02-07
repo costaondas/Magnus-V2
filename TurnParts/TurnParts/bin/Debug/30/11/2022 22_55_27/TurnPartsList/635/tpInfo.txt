@@ -1,0 +1,12 @@
+CN:635
+Name:6 PINOS /1.0 MM PASSO.
+P/N:
+QTD:6079
+EstoqueM:0
+Descrição:6 PINOS /1.0 MM PASSO.
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:6090
+Data NPI:
+CycleLife:NaN

@@ -1,0 +1,15 @@
+CN:912
+Name:CABO TYPE C - TYPE C
+P/N:
+QTD:34
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Alerta
+Estoque Inicial:34
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:
+CycleLife:NaN

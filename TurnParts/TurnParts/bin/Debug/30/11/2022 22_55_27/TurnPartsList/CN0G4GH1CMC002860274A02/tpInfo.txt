@@ -1,0 +1,14 @@
+CN:CN0G4GH1CMC002860274A02
+Name:GDI4A LA-K032P
+P/N:7449131200628
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:12/09/2020 00:00:00
+grupo:GOLDENS
+picture:
+validacao:

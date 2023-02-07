@@ -1,0 +1,11 @@
+CN:621
+Name:UNIVERSAL ADAPTER UBS 3.0 TYPE-C
+P/N:
+QTD:87
+EstoqueM:0
+Descrição:UNIVERSAL ADAPTER UBS 3.0 TYPE-C
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

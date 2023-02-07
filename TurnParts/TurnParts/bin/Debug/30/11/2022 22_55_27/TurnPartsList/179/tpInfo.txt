@@ -1,0 +1,11 @@
+CN:179
+Name:TP_COSUS_CABO LVDS
+P/N:MRO4641-05NL000
+QTD:283
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

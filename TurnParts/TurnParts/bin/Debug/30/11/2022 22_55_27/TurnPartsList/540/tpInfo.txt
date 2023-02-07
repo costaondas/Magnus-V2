@@ -1,0 +1,11 @@
+CN:540
+Name:TP_ROSE_LCD
+P/N:MROIP00699
+QTD:17
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

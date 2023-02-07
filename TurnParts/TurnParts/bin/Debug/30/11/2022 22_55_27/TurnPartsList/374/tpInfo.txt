@@ -1,0 +1,11 @@
+CN:374
+Name:TP_STONIC_I/O BOARD
+P/N:MRO72A0UGBO005
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

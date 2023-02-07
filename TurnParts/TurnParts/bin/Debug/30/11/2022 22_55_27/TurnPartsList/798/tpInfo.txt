@@ -1,0 +1,14 @@
+CN:798
+Name:TP_Bateria 3.18AH - DPN: Y86WG
+P/N:GC02003421L
+QTD:52
+EstoqueM:0
+Descrição:Y86WG
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:52
+Data NPI:
+grupo:
+picture:
+validacao:

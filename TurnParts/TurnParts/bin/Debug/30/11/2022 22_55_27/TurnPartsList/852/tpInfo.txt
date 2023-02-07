@@ -1,0 +1,14 @@
+CN:852
+Name:SPEAKER
+P/N:NPIU023400P9001
+QTD:27
+EstoqueM:24
+Descrição:SPEAKER_FG_208 2W4OHM
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:47
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

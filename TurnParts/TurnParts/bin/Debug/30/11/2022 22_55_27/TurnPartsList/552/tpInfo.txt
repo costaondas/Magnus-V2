@@ -1,0 +1,11 @@
+CN:552
+Name:Super Cola
+P/N:
+QTD:29
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:None
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

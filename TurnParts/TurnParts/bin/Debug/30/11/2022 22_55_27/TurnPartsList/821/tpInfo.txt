@@ -1,0 +1,14 @@
+CN:821
+Name:TP_DC_JACK                                        
+P/N:NPIUDC301017900
+QTD:81
+EstoqueM:0
+Descrição:TP_DC_JACK                                        
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:81
+Data NPI:
+grupo:
+picture:
+validacao:

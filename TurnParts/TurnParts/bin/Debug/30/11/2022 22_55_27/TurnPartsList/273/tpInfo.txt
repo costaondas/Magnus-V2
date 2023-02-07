@@ -1,0 +1,11 @@
+CN:273
+Name:SIF parafuso
+P/N:MA0000069G0
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:240
+Data NPI:

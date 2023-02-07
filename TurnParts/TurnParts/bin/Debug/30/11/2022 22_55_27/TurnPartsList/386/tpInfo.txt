@@ -1,0 +1,11 @@
+CN:386
+Name:PASADENA_MICROFONE
+P/N:MRODN133063001
+QTD:25
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

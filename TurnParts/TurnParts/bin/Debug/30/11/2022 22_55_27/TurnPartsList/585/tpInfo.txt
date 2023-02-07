@@ -1,0 +1,13 @@
+CN:585
+Name:MEMÓRIA 4GB
+P/N:NPIPK054009C60
+QTD:203
+EstoqueM:235
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Crítico
+Estoque Inicial:290
+Data NPI:18/03/2022 00
+valorUnitario:126,17
+alerta:10

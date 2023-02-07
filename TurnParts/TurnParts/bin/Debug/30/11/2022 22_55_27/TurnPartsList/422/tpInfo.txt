@@ -1,0 +1,14 @@
+CN:422
+Name:TP_GPT54_LCD 15.6 HD
+P/N:NPIAC60001RKG0
+QTD:44
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:42
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-3367

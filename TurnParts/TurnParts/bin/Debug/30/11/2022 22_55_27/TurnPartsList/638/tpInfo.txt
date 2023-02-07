@@ -1,0 +1,11 @@
+CN:638
+Name:6 PINOS INVERTIDO CABO FLAT
+P/N:N/S
+QTD:173
+EstoqueM:0
+Descrição:6 PINOS INVERTIDO CABO FLAT
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

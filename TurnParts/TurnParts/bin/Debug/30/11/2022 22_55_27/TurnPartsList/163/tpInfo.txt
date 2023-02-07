@@ -1,0 +1,11 @@
+CN:163
+Name:TP_COSUS_PLACA ADAPTADORA 30 PIN
+P/N:MRO4641-05NP000
+QTD:507
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

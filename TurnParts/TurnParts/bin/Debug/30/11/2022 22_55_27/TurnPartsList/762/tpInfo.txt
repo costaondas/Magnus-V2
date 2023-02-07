@@ -1,0 +1,14 @@
+CN:762
+Name:TP_PLACA SENSOR DE APONTAMENTO TOUCH - DPN:T98N2  
+P/N:NPIUPK09000R31L
+QTD:276
+EstoqueM:138
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:276
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

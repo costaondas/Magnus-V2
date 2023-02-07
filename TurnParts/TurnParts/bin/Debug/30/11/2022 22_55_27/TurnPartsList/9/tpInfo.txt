@@ -1,0 +1,11 @@
+CN:9
+Name:camera
+P/N:MROPK40001JC0L
+QTD:780
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Trivial
+Estoque Inicial:
+Data NPI:

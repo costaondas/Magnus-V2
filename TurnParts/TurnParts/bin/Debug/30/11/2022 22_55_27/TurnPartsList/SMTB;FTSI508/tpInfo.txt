@@ -1,0 +1,14 @@
+CN:SMTB;FTSI508
+Name:Fixture
+P/N:ESD0564
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF i5 FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF i5 FX
+picture:SIF i5 FX
+validacao:

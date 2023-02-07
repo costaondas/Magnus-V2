@@ -1,0 +1,14 @@
+CN:4002488600840
+Name:NB8609_PCB_MB_V4
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:NB8609_PCB_MB_V4
+SKUs:
+Modelo:ROSE MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

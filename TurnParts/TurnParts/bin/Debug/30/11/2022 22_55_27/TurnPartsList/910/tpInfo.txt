@@ -1,0 +1,14 @@
+CN:910
+Name:Flat keyboard (Cinza) BTU
+P/N:
+QTD:17
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Crítico
+Estoque Inicial:13
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:

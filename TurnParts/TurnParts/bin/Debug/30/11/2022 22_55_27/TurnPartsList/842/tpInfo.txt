@@ -1,0 +1,14 @@
+CN:842
+Name:SDD_256G DELL PN: 8C3CP
+P/N:NPIU8C3CP
+QTD:46
+EstoqueM:37
+Descrição:DELL PN: 8C3CP
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:74
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

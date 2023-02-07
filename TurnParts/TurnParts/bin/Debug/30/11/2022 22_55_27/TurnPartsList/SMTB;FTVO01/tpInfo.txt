@@ -1,0 +1,14 @@
+CN:SMTB;FTVO01
+Name:Fixture
+P/N:NT
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:LENOVO FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:LENOVO FX
+picture:LENOVO FX
+validacao:

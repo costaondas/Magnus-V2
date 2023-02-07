@@ -1,0 +1,15 @@
+CN:448
+Name:TP_IO BOARD 44PIN
+P/N:NPI455PCS31L01
+QTD:1214
+EstoqueM:655
+Descrição:IO BOARD 44PIN
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+alerta:5
+location3:BURITI
+location2:C
+location:1

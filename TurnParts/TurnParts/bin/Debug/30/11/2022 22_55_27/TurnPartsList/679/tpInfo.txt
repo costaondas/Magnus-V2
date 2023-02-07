@@ -1,0 +1,14 @@
+CN:679
+Name:FERRAMENTA MEC SKT M38090-001
+P/N:NPITP00539
+QTD:50
+EstoqueM:25
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:50
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

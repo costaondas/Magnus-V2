@@ -1,0 +1,11 @@
+CN:400
+Name:PASADENA_PAINEL_USB
+P/N:MRO3NZAKUB0010
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Zerado
+Estoque Inicial:
+Data NPI:

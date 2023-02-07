@@ -1,0 +1,11 @@
+CN:529
+Name:TP_SLEEPY_AUTO_FALANTE_R
+P/N:MROPK23000ZU00
+QTD:43
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

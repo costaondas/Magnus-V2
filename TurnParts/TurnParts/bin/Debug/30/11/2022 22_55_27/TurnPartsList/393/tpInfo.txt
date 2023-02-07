@@ -1,0 +1,11 @@
+CN:393
+Name:PASADENA_CABO_LVDS_NO_TOUCH
+P/N:MRODD0ZALLC002
+QTD:73
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Alerta
+Estoque Inicial:
+Data NPI:

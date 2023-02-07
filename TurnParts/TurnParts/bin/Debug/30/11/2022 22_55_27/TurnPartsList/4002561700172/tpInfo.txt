@@ -1,0 +1,14 @@
+CN:4002561700172
+Name:ZAK DA0ZAKMB6E0
+P/N:4002561700172-72ZAKMB36K0
+QTD:0
+EstoqueM:0
+Descrição:ZAK DA0ZAKMB6E0
+SKUs:
+Modelo:PASADENA MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

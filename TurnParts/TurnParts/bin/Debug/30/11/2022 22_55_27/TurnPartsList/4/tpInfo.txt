@@ -1,0 +1,11 @@
+CN:4
+Name:BULLSEYE CABO I/O - 16P 1MM (IO-4)
+P/N:MRONBX0002KN00
+QTD:793
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Alerta
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:626
+Name:BORNE VERDE
+P/N:
+QTD:263
+EstoqueM:0
+Descrição:BORNE P/ CABO DO FAN 
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

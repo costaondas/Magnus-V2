@@ -1,0 +1,11 @@
+CN:545
+Name:TP_ROSE_FAN
+P/N:MROIP00704
+QTD:8
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

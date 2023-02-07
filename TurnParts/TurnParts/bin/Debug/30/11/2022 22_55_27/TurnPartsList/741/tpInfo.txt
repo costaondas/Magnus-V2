@@ -1,0 +1,14 @@
+CN:741
+Name:TP_Placa adaptadora PADDLE C TO C DB-1696P R1
+P/N:NPIU72A03Q31005
+QTD:99
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:100
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

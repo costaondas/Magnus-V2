@@ -1,0 +1,14 @@
+CN:812
+Name:TP_EXTENSOR_MCU                                   
+P/N:NPIUNBX0002RM00
+QTD:126
+EstoqueM:0
+Descrição:TP_EXTENSOR_MCU                                   
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:126
+Data NPI:
+grupo:
+picture:
+validacao:

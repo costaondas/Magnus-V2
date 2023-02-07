@@ -1,0 +1,14 @@
+CN:SMTB;FTKT24
+Name:Fixture
+P/N:ESD0785
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:KYOTO FX
+picture:KYOTO FX
+validacao:

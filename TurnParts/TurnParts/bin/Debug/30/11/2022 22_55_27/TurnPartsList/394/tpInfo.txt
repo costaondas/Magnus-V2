@@ -1,0 +1,11 @@
+CN:394
+Name:PASADENA_CABO_LVDS_TOUCH
+P/N:MRODDZALALC002
+QTD:5
+EstoqueM:2
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Moderado
+Estoque Inicial:
+Data NPI:

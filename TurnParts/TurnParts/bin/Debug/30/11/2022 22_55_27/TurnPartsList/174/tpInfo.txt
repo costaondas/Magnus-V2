@@ -1,0 +1,11 @@
+CN:174
+Name:TP_COSUS_CABO DMIC
+P/N:MRO4641-05NJ000
+QTD:7
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

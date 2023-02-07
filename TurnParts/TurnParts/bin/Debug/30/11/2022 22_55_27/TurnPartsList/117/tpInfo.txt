@@ -1,0 +1,11 @@
+CN:117
+Name:SELEK CABO_BATERIA
+P/N:MRO4500H7070011
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SELEK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

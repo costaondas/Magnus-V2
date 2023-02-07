@@ -1,0 +1,11 @@
+CN:249
+Name:SIF wlan
+P/N:NPIPK32000JV3L
+QTD:0
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:50
+Data NPI:

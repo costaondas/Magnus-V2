@@ -1,0 +1,14 @@
+CN:432
+Name:TP_GPT54_FAN
+P/N:NPIDC28000N6F0
+QTD:50
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:42
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-841,75

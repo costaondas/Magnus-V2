@@ -1,0 +1,11 @@
+CN:609
+Name:SIF I7
+P/N:N/A
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:12
+Data NPI:

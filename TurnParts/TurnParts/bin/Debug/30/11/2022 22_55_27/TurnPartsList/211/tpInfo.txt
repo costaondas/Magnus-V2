@@ -1,0 +1,11 @@
+CN:211
+Name:HUB USB 3.0 4 PORTAS TP-LINK UH400
+P/N:MRON002581
+QTD:3
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

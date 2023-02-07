@@ -1,0 +1,14 @@
+CN:CN0042CNCMC0022H0004A00
+Name:GDM50 LA-L241P
+P/N:7335171500004
+QTD:1
+EstoqueM:0
+Descrição:IDENTIFICADO ERRADO?ͶͶPRECISA VERIFICAR
+SKUs:
+Modelo:WARLOCK SG MLK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

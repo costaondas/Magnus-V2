@@ -1,0 +1,14 @@
+CN:4002414000009
+Name:WDJXR$JA
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:WDJXR$JA
+SKUs:
+Modelo:SOUTH PEAK 13 MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

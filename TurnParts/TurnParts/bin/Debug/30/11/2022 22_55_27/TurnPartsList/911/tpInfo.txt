@@ -1,0 +1,15 @@
+CN:911
+Name:Extender keyboard 30 Vias
+P/N:
+QTD:135
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Trivial
+Estoque Inicial:136
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:
+CycleLife:NaN

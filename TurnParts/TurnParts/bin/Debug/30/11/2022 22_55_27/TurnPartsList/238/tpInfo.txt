@@ -1,0 +1,11 @@
+CN:238
+Name:Thermal 1ZAL
+P/N:NPIAT36U001ZAL
+QTD:0
+EstoqueM:20
+Descrição:Compativel com 8FL se alterado imagem de testeͶͶRange de 40% para 50%
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:90
+Data NPI:

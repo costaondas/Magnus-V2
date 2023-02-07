@@ -1,0 +1,11 @@
+CN:41
+Name:MOCKINGBIRD ADAPTADOR
+P/N:MRO70VTC
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

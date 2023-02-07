@@ -1,0 +1,11 @@
+CN:522
+Name:TP_SLEEPY_CABO_HALLSENSOR
+P/N:MRONBX0002JO00
+QTD:9
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

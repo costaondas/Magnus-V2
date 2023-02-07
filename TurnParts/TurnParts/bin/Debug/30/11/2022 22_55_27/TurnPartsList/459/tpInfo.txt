@@ -1,0 +1,11 @@
+CN:459
+Name:TP_FAN UMA
+P/N:NPIDC28000WFS0
+QTD:2
+EstoqueM:50
+Descrição:O FAN DA WARLOCK MLK FUNCIONA
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

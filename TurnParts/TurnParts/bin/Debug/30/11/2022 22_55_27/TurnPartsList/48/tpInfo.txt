@@ -1,0 +1,11 @@
+CN:48
+Name:SOUTH PEAK 14 LVDS
+P/N:MRODC02C00RH00
+QTD:432
+EstoqueM:500
+Descrição:NF1455 05/07/2022ͶͶSALDO DE ENTRADA 77 UNI.
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:600
+Data NPI:

@@ -1,0 +1,11 @@
+CN:178
+Name:TP_COSUS_FLAT 10PIN
+P/N:MRO4160-02JY000
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

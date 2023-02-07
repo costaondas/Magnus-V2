@@ -1,0 +1,11 @@
+CN:539
+Name:TP_ROSE_SSD
+P/N:MROIP00620
+QTD:9
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

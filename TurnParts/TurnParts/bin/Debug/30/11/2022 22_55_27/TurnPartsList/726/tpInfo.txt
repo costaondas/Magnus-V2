@@ -1,0 +1,14 @@
+CN:726
+Name:TP_Conjunto autofalante - DPN: 0X60D
+P/N:NPIUPK230014O00
+QTD:308
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:345
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

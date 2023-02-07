@@ -1,0 +1,11 @@
+CN:28
+Name:MOCKINGBIRD FAN
+P/N:MRO023100JY0011
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

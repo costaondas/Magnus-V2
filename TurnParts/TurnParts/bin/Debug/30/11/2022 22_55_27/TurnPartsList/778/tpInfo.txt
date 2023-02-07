@@ -1,0 +1,14 @@
+CN:778
+Name:TP_Conjunto Thermal/Fan - Cooler - DPN: CMX1D
+P/N:AT3IW003ZCL
+QTD:80
+EstoqueM:0
+Descrição:CMX1D
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:105
+Data NPI:
+grupo:
+picture:
+validacao:

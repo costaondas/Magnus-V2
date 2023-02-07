@@ -1,0 +1,15 @@
+CN:648
+Name:TP_SD CARD 3.0
+P/N:NPI3500FX0I0001
+QTD:10
+EstoqueM:98
+Descrição:CABO SD CARD 6PIN
+SKUs:
+Modelo:AEGIS
+Status:Extremamente crítico
+Estoque Inicial:196
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:184,07
+ForcastUsed:0

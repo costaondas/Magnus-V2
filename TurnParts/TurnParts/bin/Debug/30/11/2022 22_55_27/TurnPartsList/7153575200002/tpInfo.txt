@@ -1,0 +1,14 @@
+CN:7153575200002
+Name:GDL58 LA-K455P
+P/N:CN0JF5JCCMC001780002A00
+QTD:0
+EstoqueM:0
+Descrição:GDL58 LA-K455P
+SKUs:
+Modelo:SIF MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

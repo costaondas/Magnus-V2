@@ -1,0 +1,11 @@
+CN:132
+Name:Extensor 4p Fan
+P/N:NPITP00481
+QTD:5868
+EstoqueM:80
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Trivial
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:904
+Name:Plug Aterramento Femea
+P/N:
+QTD:99
+EstoqueM:70
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Alerta
+Estoque Inicial:100
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:

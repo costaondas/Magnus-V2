@@ -1,0 +1,14 @@
+CN:747
+Name:TP_MODULO WWAN - L850-GL-03-03 - DPN: 284DC       
+P/N:NPIUPK29200TH1L
+QTD:0
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Zerado
+Estoque Inicial:20
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

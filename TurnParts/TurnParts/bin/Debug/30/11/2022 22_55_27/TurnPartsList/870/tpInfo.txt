@@ -1,0 +1,14 @@
+CN:870
+Name:TP_GDM54_IO BOARD
+P/N:NPIU455PCR31L21
+QTD:41
+EstoqueM:771
+Descrição:PCBA IO/B SL241 GDM54 N3 34PIN GLK AMD
+SKUs:
+Modelo:WARLOCK MLK
+Status:Extremamente crítico
+Estoque Inicial:1542
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:

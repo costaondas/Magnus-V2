@@ -1,0 +1,14 @@
+CN:458
+Name:TP_CABO FP
+P/N:NPIPK09000TD0L
+QTD:2016
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location:3
+location2:E
+location3:BURITI

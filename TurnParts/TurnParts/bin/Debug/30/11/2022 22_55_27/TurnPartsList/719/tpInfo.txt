@@ -1,0 +1,14 @@
+CN:719
+Name:TP_LCD Touch Screen B140HAK02.4 - DPN: 9PN3R
+P/N:NPIUAC60001N65L
+QTD:0
+EstoqueM:59
+Descrição:NÃO UTILIZADO
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Zerado
+Estoque Inicial:118
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:BR045CV9CMM002630191
+Name:CYBORG-N15 MB TGL NEW PD
+P/N:BR045CV9CMM002630192
+QTD:0
+EstoqueM:0
+Descrição:CYBORG-N15 MB TGL NEW PD
+SKUs:
+Modelo:CYBORG PN
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

@@ -1,0 +1,17 @@
+CN:876
+Name:TP_FINGERPRINT JYAAE0137HR
+P/N:NPIUPK09000TE00
+QTD:492
+EstoqueM:268
+Descrição:FINGPRINT JYT JYAAE0137HR APOLLO MATTE
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:539
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:8
+location2:E
+location3:BURITI

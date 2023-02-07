@@ -1,0 +1,11 @@
+CN:369
+Name:TP_STONIC_CABO BATERIA
+P/N:MRODC02C00PW00
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

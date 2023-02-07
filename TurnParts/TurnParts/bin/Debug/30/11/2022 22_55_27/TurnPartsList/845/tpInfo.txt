@@ -1,0 +1,14 @@
+CN:845
+Name:ADAPTADOR_TYPEC DELL PN: R2M8K
+P/N:NPIUR2M8K
+QTD:27
+EstoqueM:14
+Descrição:ADAPTADOR_TYPEC DELL PN: R2M8K
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:27
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

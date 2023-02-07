@@ -1,0 +1,11 @@
+CN:375
+Name:TT_PLACA_USB
+P/N:MROIP01226
+QTD:5
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

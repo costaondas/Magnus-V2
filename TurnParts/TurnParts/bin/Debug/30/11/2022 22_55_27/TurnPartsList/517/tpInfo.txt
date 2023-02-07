@@ -1,0 +1,11 @@
+CN:517
+Name:TP_SLEEPY IL_LCD
+P/N:MROAC60001I1L0
+QTD:8
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

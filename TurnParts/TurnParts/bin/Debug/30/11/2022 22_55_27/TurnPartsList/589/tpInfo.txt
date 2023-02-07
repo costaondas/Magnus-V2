@@ -1,0 +1,13 @@
+CN:589
+Name:LVDS
+P/N:NPIDC02003Q800
+QTD:504
+EstoqueM:335
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:106
+Data NPI:18/03/2022 00
+valorUnitario:13,36
+alerta:5

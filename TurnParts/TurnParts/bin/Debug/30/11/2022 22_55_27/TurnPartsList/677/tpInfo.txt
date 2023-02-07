@@ -1,0 +1,14 @@
+CN:677
+Name:TP_ADAPTADOR HDMI
+P/N:NPITP00458
+QTD:11
+EstoqueM:5
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Moderado
+Estoque Inicial:11
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

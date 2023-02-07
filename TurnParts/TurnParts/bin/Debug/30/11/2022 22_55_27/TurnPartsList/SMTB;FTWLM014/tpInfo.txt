@@ -1,0 +1,18 @@
+CN:SMTB;FTWLM014
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:LISO
+SKUs:
+Modelo:WARLOCK MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK MLK FX
+picture:WARLOCK MLK FX
+validacao:
+Days_INTERVALO:45
+DATA_MANUT:21/09/2022
+DATA_PROX:20/12/2022
+Responsavel:Eduardo Costa

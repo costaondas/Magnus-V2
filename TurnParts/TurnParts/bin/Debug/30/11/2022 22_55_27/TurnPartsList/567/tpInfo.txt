@@ -1,0 +1,11 @@
+CN:567
+Name:CABO_FAN
+P/N:NPITP00482
+QTD:36
+EstoqueM:300
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Extremamente crítico
+Estoque Inicial:600
+Data NPI:

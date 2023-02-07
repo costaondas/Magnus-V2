@@ -1,0 +1,11 @@
+CN:205
+Name:UNIVERSAL_WLAN_2
+P/N:PK32000JE50
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

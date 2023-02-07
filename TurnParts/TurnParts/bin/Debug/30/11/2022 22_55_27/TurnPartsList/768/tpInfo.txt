@@ -1,0 +1,14 @@
+CN:768
+Name:TP_TOUCH_PAD                                      
+P/N:NPIUPK09000R319
+QTD:65
+EstoqueM:33
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:65
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

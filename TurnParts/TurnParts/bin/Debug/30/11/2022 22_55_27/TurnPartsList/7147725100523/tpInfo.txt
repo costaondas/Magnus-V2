@@ -1,0 +1,14 @@
+CN:7147725100523
+Name:GDL55 LA-K662P
+P/N:CN0983D5CMC00171020BA00
+QTD:0
+EstoqueM:0
+Descrição:GDL55 LA-K662P
+SKUs:
+Modelo:SIF MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

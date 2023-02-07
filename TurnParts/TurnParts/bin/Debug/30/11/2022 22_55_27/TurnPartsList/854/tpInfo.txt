@@ -1,0 +1,14 @@
+CN:854
+Name:FINGER PRINTER
+P/N:NPIU05425176M03
+QTD:413
+EstoqueM:223
+Descrição:FINGER PRINTER
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:445
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

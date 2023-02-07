@@ -1,0 +1,17 @@
+CN:896
+Name:TP_CABO_LVDS
+P/N:NPIUDC020040F00
+QTD:3681
+EstoqueM:0
+Descrição:H-CONN SET 3MJ MB-EDP 15 120 44P AL A31$
+SKUs:
+Modelo:WARLOCK MLK
+Status:Sem Controle
+Estoque Inicial:3701
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:8
+location2:A
+location3:BURITI

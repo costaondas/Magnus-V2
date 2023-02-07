@@ -1,0 +1,14 @@
+CN:CN00M22MWSC0026N0GFJA00
+Name:SOUTH PEAK 13 MLK
+P/N:4DJ9KHSJ00222139600289
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 13 MLK PN
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:28/07/2022 00:00:00
+grupo:GOLDENS
+picture:
+validacao:

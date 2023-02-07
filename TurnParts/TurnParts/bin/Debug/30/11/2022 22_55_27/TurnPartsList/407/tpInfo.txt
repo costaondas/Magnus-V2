@@ -1,0 +1,11 @@
+CN:407
+Name:CABO TOUCH PAD
+P/N:NPI4500MZ040011
+QTD:600
+EstoqueM:0
+Descrição:Touch da Warlock funciona na Cyborg
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

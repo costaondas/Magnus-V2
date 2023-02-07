@@ -1,0 +1,14 @@
+CN:574
+Name:TECLADO MAXPRINT USB ABNT2
+P/N:
+QTD:82
+EstoqueM:0
+Descrição:PARA O PROJETO KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:35
+Data NPI:
+grupo:
+picture:
+validacao:

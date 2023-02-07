@@ -1,0 +1,14 @@
+CN:6001641500893
+Name:GDI4A LA-K032P
+P/N:CN06PGNJCMC000BI037DA00
+QTD:0
+EstoqueM:0
+Descrição:GDI4A LA-K032P
+SKUs:
+Modelo:BULLSEYE MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

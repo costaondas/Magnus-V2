@@ -1,0 +1,11 @@
+CN:380
+Name:FLAT KEYBOARD 28P
+P/N:MROIP01229
+QTD:501
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

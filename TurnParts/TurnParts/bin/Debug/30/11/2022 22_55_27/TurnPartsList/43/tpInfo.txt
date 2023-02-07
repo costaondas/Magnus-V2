@@ -1,0 +1,11 @@
+CN:43
+Name:UNIVERSAL MEMORIA DDR4 - 4GB
+P/N:MROCDT82$CA
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

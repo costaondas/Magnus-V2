@@ -1,0 +1,11 @@
+CN:150
+Name:SOUTHPEAK 13 TP_BULLSEYE_SSD 128GB
+P/N:MRODD900013W2L
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

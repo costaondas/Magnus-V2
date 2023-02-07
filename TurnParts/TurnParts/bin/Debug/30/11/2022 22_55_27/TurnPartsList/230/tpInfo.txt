@@ -1,0 +1,11 @@
+CN:230
+Name:SIF flat pwr
+P/N:NPINBX0002RO00
+QTD:480
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:2228
+Data NPI:

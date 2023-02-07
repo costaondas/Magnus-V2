@@ -1,0 +1,11 @@
+CN:268
+Name:SIF USB L29
+P/N:NPI435PAB31L01
+QTD:5
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:24
+Data NPI:

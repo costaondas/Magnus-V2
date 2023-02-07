@@ -1,0 +1,14 @@
+CN:736
+Name:TP_Dissipador de calor&FAN - Cooler - DPN: V0N0P
+P/N:NPIUAT3IT00CZCL
+QTD:53
+EstoqueM:59
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Crítico
+Estoque Inicial:118
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

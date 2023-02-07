@@ -1,0 +1,14 @@
+CN:SMTB;FTS4M061
+Name:Fixture
+P/N:
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SOUTH PEAK 14 MLK
+picture:SOUTH PEAK 14 MLK
+validacao:

@@ -1,0 +1,11 @@
+CN:168
+Name:TP_COSUS_CAMERA
+P/N:MRO0420-01950DE
+QTD:25
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

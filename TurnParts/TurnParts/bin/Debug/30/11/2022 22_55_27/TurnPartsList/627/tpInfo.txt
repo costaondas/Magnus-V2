@@ -1,0 +1,11 @@
+CN:627
+Name:PEN-DRIVE USB 3.0 32 GB
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:PEN-DRIVE USB 3.0 32 GB
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

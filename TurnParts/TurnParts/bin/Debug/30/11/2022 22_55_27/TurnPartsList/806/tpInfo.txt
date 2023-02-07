@@ -1,0 +1,14 @@
+CN:806
+Name:TP_EXTENSOR_BOTAO_ON/OFF                          
+P/N:NPIUNBX0002RO00
+QTD:147
+EstoqueM:0
+Descrição:TP_EXTENSOR_BOTAO_ON/OFF                          
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:147
+Data NPI:
+grupo:
+picture:
+validacao:

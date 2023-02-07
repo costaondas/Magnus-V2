@@ -1,0 +1,14 @@
+CN:884
+Name:TP_POWER_CORD
+P/N:NPIUGA000015Y0L
+QTD:75
+EstoqueM:0
+Descrição:PWR CORD VNUS15FS3X0.914MXVNC5FS 3P US V
+SKUs:
+Modelo:WARLOCK MLK
+Status:Sem Controle
+Estoque Inicial:75
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:

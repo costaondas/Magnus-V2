@@ -1,0 +1,14 @@
+CN:887
+Name:TP_LAN BOARD
+P/N:NPIU455PIL31L51
+QTD:10
+EstoqueM:404
+Descrição:PCBA LAN/B LSL942 HDL54 MLK AMD V3 15
+SKUs:
+Modelo:WARLOCK MLK
+Status:Extremamente crítico
+Estoque Inicial:808
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:

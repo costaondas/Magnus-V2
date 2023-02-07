@@ -1,0 +1,14 @@
+CN:SMTB;FTSP312
+Name:Fixture
+P/N:ESD1328
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 13 FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SOUTH PEAK 13 FX
+picture:SOUTH PEAK 13 FX
+validacao:

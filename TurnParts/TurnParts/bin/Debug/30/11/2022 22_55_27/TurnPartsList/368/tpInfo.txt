@@ -1,0 +1,11 @@
+CN:368
+Name:TP_STONIC_TOUCH PAD
+P/N:MROPK09000LK20
+QTD:22
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

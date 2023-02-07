@@ -1,0 +1,11 @@
+CN:2
+Name:BULLSEYE CABO HDD - 12P 0.5MM
+P/N:MRONBX0002KX00
+QTD:441
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Crítico
+Estoque Inicial:
+Data NPI:

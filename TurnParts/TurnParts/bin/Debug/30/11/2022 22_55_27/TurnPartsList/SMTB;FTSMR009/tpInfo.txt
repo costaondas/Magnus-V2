@@ -1,0 +1,14 @@
+CN:SMTB;FTSMR009
+Name:Fixture
+P/N:ESD2179
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF AMD MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF AMD MLK FX
+picture:SIF AMD MLK FX
+validacao:

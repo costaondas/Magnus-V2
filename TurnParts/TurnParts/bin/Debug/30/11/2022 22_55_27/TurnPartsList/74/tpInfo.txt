@@ -1,0 +1,11 @@
+CN:74
+Name:UNIVERSAL FFC 20PIN*0.5*280mm
+P/N:MROIP01160
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

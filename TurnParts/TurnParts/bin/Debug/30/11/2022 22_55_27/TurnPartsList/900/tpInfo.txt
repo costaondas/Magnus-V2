@@ -1,0 +1,14 @@
+CN:900
+Name:D9 TYPE C (VERMELHO)
+P/N:
+QTD:26
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

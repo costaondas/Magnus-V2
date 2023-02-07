@@ -1,0 +1,14 @@
+CN:805
+Name:TP_CABO DE ALIMENTACAO                            
+P/N:NPIUGA00000J90L
+QTD:43
+EstoqueM:0
+Descrição:TP_CABO DE ALIMENTACAO                            
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:43
+Data NPI:
+grupo:
+picture:
+validacao:

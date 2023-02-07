@@ -1,0 +1,14 @@
+CN:SMTB;FTSL018
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:DESMONTADO-05/09/2022ͶͶSAIDAͶͶESD271
+SKUs:
+Modelo:SELEK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SELEK FX
+picture:SELEK FX
+validacao:

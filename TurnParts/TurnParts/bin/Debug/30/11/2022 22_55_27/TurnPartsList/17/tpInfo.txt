@@ -1,0 +1,11 @@
+CN:17
+Name:BULLSEYE CABO I/O PARA FP - 8P 0.5MM (IO-1)
+P/N:MRONBX0002LB00
+QTD:2227
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

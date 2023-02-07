@@ -1,0 +1,11 @@
+CN:45
+Name:MOCKINGBIRD BATERIA
+P/N:MROGC02002YT1L
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

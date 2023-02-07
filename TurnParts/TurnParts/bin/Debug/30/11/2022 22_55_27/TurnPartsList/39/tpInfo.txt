@@ -1,0 +1,11 @@
+CN:39
+Name:MOCKINGBIRD LVDS
+P/N:MRO4500KA020031
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

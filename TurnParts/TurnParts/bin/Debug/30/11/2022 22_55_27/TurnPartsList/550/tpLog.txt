@@ -1,0 +1,2 @@
+CN:550 22/12/2021 14:11:58 Q:-1 ID: Fixture: OUT
+CN:550 17/01/2022 07:30:19 Q:-1 ID: Fixture: OUT

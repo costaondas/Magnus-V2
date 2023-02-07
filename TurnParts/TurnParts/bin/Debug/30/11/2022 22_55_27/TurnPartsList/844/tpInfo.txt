@@ -1,0 +1,14 @@
+CN:844
+Name:WWAN DELL PN: 284DC
+P/N:NPIU284DC
+QTD:49
+EstoqueM:34
+Descrição:WWAN DELL PN: 284DC
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:68
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

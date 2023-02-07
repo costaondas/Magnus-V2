@@ -1,0 +1,14 @@
+CN:4SELEKG300001
+Name:19795-1
+P/N:CN0HN4GNWSC0007V0UHIA00
+QTD:0
+EstoqueM:0
+Descrição:19795-1
+SKUs:
+Modelo:SELEK MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

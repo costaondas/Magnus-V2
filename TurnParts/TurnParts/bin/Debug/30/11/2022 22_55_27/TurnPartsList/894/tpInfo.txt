@@ -1,0 +1,17 @@
+CN:894
+Name:TP_ALTO FALANTE 2W
+P/N:NPIUPK230015900
+QTD:239
+EstoqueM:147
+Descrição:SPK PACK 3MJ 2W 4OHM MAIN L+R 3209 A31~
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:293
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:8
+location2:C
+location3:BURITI

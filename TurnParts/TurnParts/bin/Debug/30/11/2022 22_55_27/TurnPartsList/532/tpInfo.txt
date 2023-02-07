@@ -1,0 +1,11 @@
+CN:532
+Name:TP_SLEEPY_KL_EXTENSOR TECLADO
+P/N:MROIP00683
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

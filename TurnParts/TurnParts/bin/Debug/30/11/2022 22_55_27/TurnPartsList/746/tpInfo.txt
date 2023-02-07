@@ -1,0 +1,14 @@
+CN:746
+Name:TP_MODULO WWAN - DPN: 49GXJ                       
+P/N:NPIUPK29200U6NL
+QTD:123
+EstoqueM:62
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:123
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

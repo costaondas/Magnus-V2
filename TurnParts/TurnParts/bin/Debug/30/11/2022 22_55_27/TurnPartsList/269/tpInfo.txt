@@ -1,0 +1,11 @@
+CN:269
+Name:SIF camera ir flat
+P/N:NPIDC02003VK00
+QTD:193
+EstoqueM:100
+Descrição:PARA REVISAR
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:209
+Data NPI:

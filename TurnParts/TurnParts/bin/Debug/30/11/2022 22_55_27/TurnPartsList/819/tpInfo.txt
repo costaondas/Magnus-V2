@@ -1,0 +1,14 @@
+CN:819
+Name:TP_BOARD_PWR_SK668                                
+P/N:NPIU435P9B31L51
+QTD:134
+EstoqueM:0
+Descrição:TP_BOARD_PWR_SK668                                
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:147
+Data NPI:
+grupo:
+picture:
+validacao:

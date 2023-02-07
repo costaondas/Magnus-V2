@@ -1,0 +1,14 @@
+CN:187
+Name:Flat Keyboard Maldives 32p
+P/N:MROIP01874
+QTD:972
+EstoqueM:220
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Trivial
+Estoque Inicial:1000
+Data NPI:26/09/2022 00:00:00
+grupo:
+picture:
+validacao:

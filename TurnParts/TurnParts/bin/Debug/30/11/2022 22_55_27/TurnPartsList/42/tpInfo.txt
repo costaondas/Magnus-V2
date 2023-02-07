@@ -1,0 +1,11 @@
+CN:42
+Name:MOCKINGBIRD LCD
+P/N:MROC8TCK
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:SMTB;FTCB49
+Name:Fixture
+P/N:ESD1316
+QTD:1
+EstoqueM:0
+Descrição:OBE
+SKUs:
+Modelo:CYBORG FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:CYBORG FX
+picture:CYBORG FX
+validacao:

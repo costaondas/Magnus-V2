@@ -1,0 +1,11 @@
+CN:54
+Name:SOUTH PEAK 14 TOUCH_PAD
+P/N:MROPK09000R31L
+QTD:228
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

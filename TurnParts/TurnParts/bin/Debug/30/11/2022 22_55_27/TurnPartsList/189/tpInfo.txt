@@ -1,0 +1,11 @@
+CN:189
+Name:Type C USB
+P/N:
+QTD:29
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

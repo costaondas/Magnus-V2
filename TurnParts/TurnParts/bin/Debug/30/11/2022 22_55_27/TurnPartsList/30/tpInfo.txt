@@ -1,0 +1,11 @@
+CN:30
+Name:MOCKINGBIRD FINGER PRINT
+P/N:MRO05425141M019
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

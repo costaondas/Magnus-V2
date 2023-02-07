@@ -1,0 +1,14 @@
+CN:800
+Name:TP_ALTO FALANTE_L+R                               
+P/N:NPIUPK230016E00
+QTD:76
+EstoqueM:0
+Descrição:TP_ALTO FALANTE_L+R                               
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:85
+Data NPI:
+grupo:
+picture:
+validacao:

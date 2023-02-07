@@ -1,0 +1,11 @@
+CN:708
+Name:ADAPTADOR GIGABIT LAN USB 3.0 RJ45
+P/N:AGLAN111
+QTD:72
+EstoqueM:35
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Moderado
+Estoque Inicial:72
+Data NPI:

@@ -1,0 +1,11 @@
+CN:272
+Name:SIF small board
+P/N:NPI435PBE31L02
+QTD:3
+EstoqueM:15
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:40
+Data NPI:

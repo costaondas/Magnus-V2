@@ -1,0 +1,14 @@
+CN:SMTB;FTMT005
+Name:Fixture
+P/N:ESD0919
+QTD:1
+EstoqueM:0
+Descrição:SEM ETIQUETA DE ESD
+SKUs:
+Modelo:MONTREUX FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MONTREUX FX
+picture:MONTREUX FX
+validacao:

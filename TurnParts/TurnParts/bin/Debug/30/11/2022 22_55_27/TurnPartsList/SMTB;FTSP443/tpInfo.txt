@@ -1,0 +1,14 @@
+CN:SMTB;FTSP443
+Name:Fixture
+P/N:ESD0304
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SOUTH PEAK 14 FX
+picture:SOUTH PEAK 14 FX
+validacao:

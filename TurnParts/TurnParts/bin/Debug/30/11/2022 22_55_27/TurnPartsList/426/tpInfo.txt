@@ -1,0 +1,14 @@
+CN:426
+Name:TP_GPT54_WLAN CARD
+P/N:NPIPK32000HM10
+QTD:198
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:255
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:118,14

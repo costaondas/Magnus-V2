@@ -1,0 +1,14 @@
+CN:846
+Name:LCD 13 DELL PN: HHYCY
+P/N:NPIUHHYCY
+QTD:27
+EstoqueM:19
+Descrição:LCD 13 DELL PN: HHYCY
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:37
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

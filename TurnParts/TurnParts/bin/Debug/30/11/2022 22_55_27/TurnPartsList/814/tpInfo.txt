@@ -1,0 +1,14 @@
+CN:814
+Name:TP_CABO_BATERIA_P210P180156                       
+P/N:NPIUDC02003U700
+QTD:340
+EstoqueM:0
+Descrição:TP_CABO_BATERIA_P210P180156                       
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:340
+Data NPI:
+grupo:
+picture:
+validacao:

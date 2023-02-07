@@ -1,0 +1,11 @@
+CN:610
+Name:SIF I5
+P/N:N/A
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:21
+Data NPI:

@@ -1,0 +1,14 @@
+CN:4PCBAF;TA7
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:ROSE FX
+picture:ROSE FX
+validacao:

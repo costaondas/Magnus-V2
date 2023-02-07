@@ -1,0 +1,15 @@
+CN:646
+Name: TP_DMIC_CABLE
+P/N:NPI3500FX0J0001
+QTD:330
+EstoqueM:90
+Descrição:
+SKUs:
+Modelo:AEGIS
+Status:Moderado
+Estoque Inicial:370
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:837,5
+ForcastUsed:0

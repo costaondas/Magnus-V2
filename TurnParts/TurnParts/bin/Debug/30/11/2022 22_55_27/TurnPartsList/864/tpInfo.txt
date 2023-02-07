@@ -1,0 +1,14 @@
+CN:864
+Name:CABO LVDS
+P/N:NPIUDC02C00XV00
+QTD:277
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:372
+Name:TP_DDR4
+P/N:MROPK054009320
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

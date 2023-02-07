@@ -1,0 +1,11 @@
+CN:502
+Name:TP_CAMERA
+P/N:MROPK40001T310
+QTD:36
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

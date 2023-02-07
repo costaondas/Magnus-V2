@@ -1,0 +1,11 @@
+CN:194
+Name:Extensor 4p Fan
+P/N:
+QTD:121
+EstoqueM:80
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Alerta
+Estoque Inicial:
+Data NPI:

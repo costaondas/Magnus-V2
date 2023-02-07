@@ -1,0 +1,11 @@
+CN:120
+Name:SELEK CABO_HD
+P/N:MRO4500K7040011
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SELEK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

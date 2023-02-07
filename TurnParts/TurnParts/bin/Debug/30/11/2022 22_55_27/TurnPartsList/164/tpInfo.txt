@@ -1,0 +1,11 @@
+CN:164
+Name:TP_COSUS_PLACA ADAPTADORA 9 PIN
+P/N:MRO4641-04LB000
+QTD:592
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

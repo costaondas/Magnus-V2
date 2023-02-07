@@ -1,0 +1,11 @@
+CN:376
+Name:TT_NPI_ADAPTADOR RJ45
+P/N:MROIP01080
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

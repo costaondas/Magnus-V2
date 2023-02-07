@@ -1,0 +1,11 @@
+CN:165
+Name:TP_COSUS_LCD
+P/N:MRO1823-02P80DE
+QTD:29
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

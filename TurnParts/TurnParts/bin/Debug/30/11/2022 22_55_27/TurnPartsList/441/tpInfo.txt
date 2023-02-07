@@ -1,0 +1,15 @@
+CN:441
+Name:TP_GPT54_EXTENSOR_USB
+P/N:NPINBX0002H000
+QTD:18
+EstoqueM:100
+Descrição:REPOSIÇÃO DE ESTOQUE 08/09/2022 (CEB)ͶͶQTD:150 
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:150
+Data NPI:
+CycleLife:88,61
+PlacasProd:6734
+DateUsed:10/07/2022
+ItensINLine:30

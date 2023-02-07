@@ -1,0 +1,11 @@
+CN:512
+Name:TP_LCD
+P/N:MROAC60000RQT0
+QTD:46
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

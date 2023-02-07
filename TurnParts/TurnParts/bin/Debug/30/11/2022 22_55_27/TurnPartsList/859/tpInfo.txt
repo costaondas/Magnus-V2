@@ -1,0 +1,14 @@
+CN:859
+Name:LVDS
+P/N:NPIU4500PE05001
+QTD:334
+EstoqueM:171
+Descrição:LVDS
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:342
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

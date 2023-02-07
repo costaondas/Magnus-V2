@@ -1,0 +1,11 @@
+CN:62
+Name:SOUTH PEAK 14 BANDEJA USIM
+P/N:MROFA30K000S00
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

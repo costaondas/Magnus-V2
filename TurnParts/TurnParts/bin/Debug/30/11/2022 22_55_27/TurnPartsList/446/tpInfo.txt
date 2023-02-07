@@ -1,0 +1,14 @@
+CN:446
+Name:TP_IO BOARD 34PIN
+P/N:NPI455PCR31L01
+QTD:1253
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:1289
+Data NPI:
+location2:F
+location3:BURITI_A
+location:BURITI_A

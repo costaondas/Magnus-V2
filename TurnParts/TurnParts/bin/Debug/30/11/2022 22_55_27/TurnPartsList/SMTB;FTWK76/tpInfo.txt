@@ -1,0 +1,14 @@
+CN:SMTB;FTWK76
+Name:Fixture
+P/N:ESD0478
+QTD:1
+EstoqueM:0
+Descrição:fixture sem etiqueta change over geovana
+SKUs:
+Modelo:WARLOCK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK FX
+picture:WARLOCK FX
+validacao:

@@ -1,0 +1,11 @@
+CN:533
+Name:TP_SLEEPY_KL_EXTENSOR TOUCH PAD
+P/N:MROIP00684
+QTD:24
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:543
+Name:TP_ROSE_FFC_IO
+P/N:MROIP00702
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

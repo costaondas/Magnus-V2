@@ -1,0 +1,11 @@
+CN:557
+Name:CABO USB 2.0 X MACHO FEMEA
+P/N:NPIN000051
+QTD:80
+EstoqueM:50
+Descrição:UTILIZADO SLEEPY IL, STONIC, ROSE, PASADENA, 100E, KIOTO&TROY
+SKUs:
+Modelo:UNIVERSAL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

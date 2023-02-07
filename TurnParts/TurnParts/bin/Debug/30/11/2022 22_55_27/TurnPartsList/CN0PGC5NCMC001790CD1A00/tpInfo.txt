@@ -1,0 +1,14 @@
+CN:CN0PGC5NCMC001790CD1A00
+Name:GDL5L LA-K4454P
+P/N:7154219400001
+QTD:0
+EstoqueM:0
+Descrição:SIF AMD R5
+SKUs:
+Modelo:SIF MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

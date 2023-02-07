@@ -1,0 +1,11 @@
+CN:367
+Name:ALTOFALANTE DIREITO
+P/N:MROPK230011T00
+QTD:27
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

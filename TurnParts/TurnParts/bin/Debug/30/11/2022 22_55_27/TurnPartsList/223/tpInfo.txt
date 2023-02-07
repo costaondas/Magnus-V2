@@ -1,0 +1,11 @@
+CN:223
+Name:SIF touch pad
+P/N:NPIPK09000S41L
+QTD:93
+EstoqueM:80
+Descrição:I5, CML, LA2, R5, R7
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:222
+Data NPI:

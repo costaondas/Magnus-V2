@@ -1,0 +1,14 @@
+CN:200
+Name:Cabo de Rede
+P/N:
+QTD:21
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+location:
+location3:
+location2:

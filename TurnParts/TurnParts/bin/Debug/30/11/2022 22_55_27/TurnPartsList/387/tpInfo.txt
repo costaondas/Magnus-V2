@@ -1,0 +1,11 @@
+CN:387
+Name:PASADENA_LCD TOUCH
+P/N:MROAA116XAK015
+QTD:7
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

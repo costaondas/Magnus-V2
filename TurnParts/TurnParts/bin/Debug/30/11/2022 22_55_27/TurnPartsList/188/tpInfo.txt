@@ -1,0 +1,11 @@
+CN:188
+Name:Cabo USB 2.0 - 2 METROS
+P/N:
+QTD:19
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

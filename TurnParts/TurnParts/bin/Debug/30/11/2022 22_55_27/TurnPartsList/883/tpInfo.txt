@@ -1,0 +1,14 @@
+CN:883
+Name:TP_ADPATADOR_65W
+P/N:NPIUPK10001LA1L
+QTD:40
+EstoqueM:39
+Descrição:AC ADAP LITE ON PA-1650-03D5 65W 3P 0FD
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:77
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:

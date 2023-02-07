@@ -1,0 +1,9 @@
+C:\Controle_wizard\TurnParts\TurnParts\bin\Debug\TurnParts.exe.config
+C:\Controle_wizard\TurnParts\TurnParts\bin\Debug\TurnParts.exe
+C:\Controle_wizard\TurnParts\TurnParts\bin\Debug\TurnParts.pdb
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Properties.Resources.resources
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.csproj.GenerateResource.cache
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.csproj.CoreCompileInputs.cache
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.exe
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.pdb

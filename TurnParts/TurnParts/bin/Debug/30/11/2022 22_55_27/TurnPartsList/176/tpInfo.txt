@@ -1,0 +1,11 @@
+CN:176
+Name:TP_COSUS_CABO CAMERA
+P/N:MRO4641-05NM000
+QTD:122
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

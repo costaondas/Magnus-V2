@@ -1,0 +1,11 @@
+CN:73
+Name:UNIVERSAL FLAT 4P*1.0*280mm
+P/N:MROIP01145
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

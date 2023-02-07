@@ -1,0 +1,11 @@
+CN:473
+Name:TP_SPEAK
+P/N:NPI023400ND0001
+QTD:5
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

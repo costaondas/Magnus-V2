@@ -1,0 +1,11 @@
+CN:390
+Name:PASADENA_WLAN
+P/N:MROADPC9560032
+QTD:117
+EstoqueM:63
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Alerta
+Estoque Inicial:
+Data NPI:

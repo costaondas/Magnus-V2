@@ -1,0 +1,14 @@
+CN:809
+Name:TP_WLAN_MT7921LEN                                 
+P/N:NPIUPK32000MP3L
+QTD:70
+EstoqueM:0
+Descrição:TP_WLAN_MT7921LEN                                 
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:95
+Data NPI:
+grupo:
+picture:
+validacao:

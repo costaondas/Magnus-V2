@@ -1,0 +1,14 @@
+CN:720
+Name:TP_Placa Adaptadora - Sensor - DPN: 0TRRF
+P/N:NPIU72A10E31124
+QTD:404
+EstoqueM:257
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:514
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

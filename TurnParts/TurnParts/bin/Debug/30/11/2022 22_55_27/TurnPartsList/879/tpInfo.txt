@@ -1,0 +1,17 @@
+CN:879
+Name:TP_FAN DIS S HUAYING
+P/N:NPIUDC280010CU0
+QTD:422
+EstoqueM:216
+Descrição:FAN DC5V HUAYING 501-00261-1 DIS S
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:432
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:6
+location2:D
+location3:BURITI

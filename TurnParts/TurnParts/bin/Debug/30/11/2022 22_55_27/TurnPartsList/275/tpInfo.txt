@@ -1,0 +1,11 @@
+CN:275
+Name:SIF type c board
+P/N:NPI43404U31L01
+QTD:0
+EstoqueM:0
+Descrição:CONFERIR QUANTIDADE INICIAL NA NOTA
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:
+Data NPI:

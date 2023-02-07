@@ -1,0 +1,14 @@
+CN:588
+Name:TOUCH PAD
+P/N:NPIPK09000Q520
+QTD:167
+EstoqueM:95
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:203
+Data NPI:18/03/2022 00
+valorUnitario:56,65
+alerta:5
+CycleLife:

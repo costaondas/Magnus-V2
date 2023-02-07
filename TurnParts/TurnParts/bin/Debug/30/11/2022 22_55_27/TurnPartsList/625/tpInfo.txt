@@ -1,0 +1,11 @@
+CN:625
+Name:CABO 3.0
+P/N:TP00227
+QTD:4
+EstoqueM:0
+Descrição: 
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,13 @@
+CN:579
+Name:FAN
+P/N:NPIDC28000NSF0
+QTD:23
+EstoqueM:15
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:30
+Data NPI:18/03/2022 00
+valorUnitario:38,98
+alerta:3

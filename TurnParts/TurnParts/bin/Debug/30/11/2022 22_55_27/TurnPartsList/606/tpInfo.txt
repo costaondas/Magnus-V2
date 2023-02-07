@@ -1,0 +1,12 @@
+CN:606
+Name:Sleepy
+P/N:N/A
+QTD:18
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:13
+Data NPI:
+itemLocked:true

@@ -1,0 +1,11 @@
+CN:531
+Name:TP_SLEEPY_CAMERA
+P/N:MROPK40001HS10
+QTD:6
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

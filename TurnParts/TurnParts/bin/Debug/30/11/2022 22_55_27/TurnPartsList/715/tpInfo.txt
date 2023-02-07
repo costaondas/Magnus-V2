@@ -1,0 +1,14 @@
+CN:715
+Name:TP_BATERIA_7.54AH
+P/N:NPIUGC02002T919
+QTD:43
+EstoqueM:23
+Descrição:SIF R5/R7
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:45
+Data NPI:21/06/2022 00:00:00
+grupo:
+picture:
+validacao:

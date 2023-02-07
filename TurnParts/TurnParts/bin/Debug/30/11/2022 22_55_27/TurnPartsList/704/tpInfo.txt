@@ -1,0 +1,11 @@
+CN:704
+Name:BORNE PLUG VERMELHO
+P/N:TP7803R   
+QTD:100
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:100
+Data NPI:

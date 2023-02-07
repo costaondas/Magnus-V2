@@ -1,0 +1,11 @@
+CN:51
+Name:SOUTH PEAK 14 TECLADO
+P/N:MROPK1330S1B00
+QTD:100
+EstoqueM:80
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

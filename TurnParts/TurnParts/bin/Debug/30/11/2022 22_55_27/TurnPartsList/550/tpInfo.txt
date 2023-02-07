@@ -1,0 +1,11 @@
+CN:550
+Name:MINI SD SANDISK-16G
+P/N:MROIP01398
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:None
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

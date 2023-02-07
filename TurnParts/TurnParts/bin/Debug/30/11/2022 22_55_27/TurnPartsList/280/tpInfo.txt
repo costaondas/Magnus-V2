@@ -1,0 +1,11 @@
+CN:280
+Name:COLOSSUS SD CARD
+P/N:69-2C118C21P02_2
+QTD:8
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Crítico
+Estoque Inicial:
+Data NPI:

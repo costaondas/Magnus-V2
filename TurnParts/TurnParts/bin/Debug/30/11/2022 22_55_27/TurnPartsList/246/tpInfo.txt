@@ -1,0 +1,11 @@
+CN:246
+Name:SIF USB R5
+P/N:NPI435PE531L02
+QTD:0
+EstoqueM:0
+Descrição:GDL56 LS-K66EP, UTILIZADO NO R5, L39
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:173
+Data NPI:

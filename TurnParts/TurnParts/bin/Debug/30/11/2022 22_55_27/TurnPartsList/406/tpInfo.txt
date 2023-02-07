@@ -1,0 +1,11 @@
+CN:406
+Name:TP_CABO IO (V)                                  
+P/N:NPI4500NC010001
+QTD:0
+EstoqueM:300
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:500
+Data NPI:

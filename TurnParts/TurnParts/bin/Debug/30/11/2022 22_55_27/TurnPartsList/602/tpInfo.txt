@@ -1,0 +1,11 @@
+CN:602
+Name:100E
+P/N:N/A
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:25
+Data NPI:

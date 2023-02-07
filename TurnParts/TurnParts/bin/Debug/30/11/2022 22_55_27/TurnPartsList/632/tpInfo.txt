@@ -1,0 +1,11 @@
+CN:632
+Name:UBS 2.0 CABLE AWN STYLE
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

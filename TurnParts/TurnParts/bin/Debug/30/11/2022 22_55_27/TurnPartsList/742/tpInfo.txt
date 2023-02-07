@@ -1,0 +1,14 @@
+CN:742
+Name:TP_SSD 256GB - KXG60ZNV256G - DPN: 3VFCP
+P/N:NPIUDD90000YT2L
+QTD:700
+EstoqueM:350
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:700
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

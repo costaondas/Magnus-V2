@@ -1,0 +1,14 @@
+CN:434
+Name:TP_GPT54_CABO_DC
+P/N:NPIDC301014K10
+QTD:283
+EstoqueM:150
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:274
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-448,93

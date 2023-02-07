@@ -1,0 +1,14 @@
+CN:918
+Name:Modulo de Teste Type C
+P/N:
+QTD:11
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Alerta
+Estoque Inicial:11
+Data NPI:30/09/2022 00:00:00
+grupo:
+picture:
+validacao:

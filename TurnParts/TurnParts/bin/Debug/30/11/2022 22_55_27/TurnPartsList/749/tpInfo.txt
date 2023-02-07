@@ -1,0 +1,14 @@
+CN:749
+Name:TP_PAINEL LCD - DPN: 9PN3R                        
+P/N:NPIUAC60001N65L
+QTD:0
+EstoqueM:23
+Descrição:NÃO UTILIZADO
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Zerado
+Estoque Inicial:45
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

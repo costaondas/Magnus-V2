@@ -1,0 +1,15 @@
+CN:907
+Name:USB 2.0 A/B
+P/N:
+QTD:269
+EstoqueM:40
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Trivial
+Estoque Inicial:259
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:
+CycleLife:NaN

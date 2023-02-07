@@ -1,0 +1,11 @@
+CN:256
+Name:SIF Bateria
+P/N:NPIGC02002T71L
+QTD:16
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:18
+Data NPI:

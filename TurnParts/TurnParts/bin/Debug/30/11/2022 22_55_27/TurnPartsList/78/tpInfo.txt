@@ -1,0 +1,11 @@
+CN:78
+Name:MONTREUX TOUCH_PAD
+P/N:MROPK09000R31L
+QTD:40
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

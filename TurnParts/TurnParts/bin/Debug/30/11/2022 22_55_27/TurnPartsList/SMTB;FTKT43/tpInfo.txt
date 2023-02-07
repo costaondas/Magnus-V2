@@ -1,0 +1,14 @@
+CN:SMTB;FTKT43
+Name:Fixture
+P/N:ESD1529
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:KYOTO FX
+picture:
+validacao:

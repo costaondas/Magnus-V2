@@ -1,0 +1,11 @@
+CN:469
+Name:TP_BULLSEYE_MEMORIA DDR
+P/N:NPIPK054009C1L
+QTD:1496
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

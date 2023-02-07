@@ -1,0 +1,14 @@
+CN:825
+Name:TP_PLACA ADAPTADORA IO BOARD                      
+P/N:NPIU435PHA31L01
+QTD:54
+EstoqueM:35
+Descrição:TP_PLACA ADAPTADORA IO BOARD                      
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Alerta
+Estoque Inicial:70
+Data NPI:
+grupo:
+picture:
+validacao:

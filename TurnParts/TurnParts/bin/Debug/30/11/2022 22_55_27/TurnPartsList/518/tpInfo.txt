@@ -1,0 +1,11 @@
+CN:518
+Name:TP_SLEEPY_CABO_LVDS
+P/N:MRODC02003K200
+QTD:0
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

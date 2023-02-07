@@ -1,0 +1,11 @@
+CN:20
+Name:BULLSEYE MEMORIA DDR
+P/N:MROPK054009C1L
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Zerado
+Estoque Inicial:
+Data NPI:

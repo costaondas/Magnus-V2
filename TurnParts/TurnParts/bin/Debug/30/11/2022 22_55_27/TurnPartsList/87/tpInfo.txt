@@ -1,0 +1,11 @@
+CN:87
+Name:MONTREUX EXTENSOR_USH/B
+P/N:MRONBX0002QK00
+QTD:1001
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

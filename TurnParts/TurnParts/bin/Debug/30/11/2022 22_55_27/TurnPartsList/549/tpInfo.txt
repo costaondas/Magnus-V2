@@ -1,0 +1,11 @@
+CN:549
+Name:TP_ROSE_BATERIA
+P/N:-
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

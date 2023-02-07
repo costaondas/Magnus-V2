@@ -1,0 +1,11 @@
+CN:622
+Name:SD CARD 32 GB
+P/N:
+QTD:106
+EstoqueM:0
+Descrição: UNIVERSAL SD CARD 32 GB
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

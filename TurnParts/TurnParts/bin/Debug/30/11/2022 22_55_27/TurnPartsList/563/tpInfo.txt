@@ -1,0 +1,14 @@
+CN:563
+Name:CABO HDMI
+P/N:NPITP00389
+QTD:34
+EstoqueM:0
+Descrição:APENAS KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:36
+Data NPI:
+grupo:
+picture:
+validacao:

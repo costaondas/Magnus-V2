@@ -1,0 +1,11 @@
+CN:371
+Name:TP_OCT_PKS_EX 008 - MODULO DE TRANSMISSAO E RECEPC
+P/N:MROPK32000G110
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

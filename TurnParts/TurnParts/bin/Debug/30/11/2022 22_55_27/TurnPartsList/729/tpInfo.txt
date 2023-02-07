@@ -1,0 +1,14 @@
+CN:729
+Name:TP_Placa adaptadora Smart card - DPN: 4PH29
+P/N:NPIUDC04000RT00
+QTD:906
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:925
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

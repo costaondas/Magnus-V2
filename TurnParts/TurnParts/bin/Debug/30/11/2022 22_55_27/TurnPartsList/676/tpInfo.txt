@@ -1,0 +1,14 @@
+CN:676
+Name:TP_PLACA ADAPTADORA - MODULO PS2
+P/N:NPITP00453
+QTD:16
+EstoqueM:8
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:16
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

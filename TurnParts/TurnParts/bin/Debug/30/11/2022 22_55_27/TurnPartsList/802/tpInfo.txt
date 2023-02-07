@@ -1,0 +1,14 @@
+CN:802
+Name:TP_ADAPTADOR_240W                                 
+P/N:NPIUPK10001GO39
+QTD:43
+EstoqueM:0
+Descrição:TP_ADAPTADOR_240W                                 
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:43
+Data NPI:
+grupo:
+picture:
+validacao:

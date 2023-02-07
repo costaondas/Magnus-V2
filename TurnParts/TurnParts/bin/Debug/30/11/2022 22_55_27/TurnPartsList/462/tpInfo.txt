@@ -1,0 +1,14 @@
+CN:462
+Name:TP_FLAT_HDD
+P/N:NPINBX0002VT00
+QTD:6171
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location:2
+location2:E
+location3:BURITI

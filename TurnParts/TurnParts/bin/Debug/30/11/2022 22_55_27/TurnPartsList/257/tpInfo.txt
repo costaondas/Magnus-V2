@@ -1,0 +1,11 @@
+CN:257
+Name:SIF Bateria
+P/N:NPIGC02002T91L
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:35
+Data NPI:

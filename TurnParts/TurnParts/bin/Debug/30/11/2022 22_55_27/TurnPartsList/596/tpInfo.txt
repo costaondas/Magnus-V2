@@ -1,0 +1,11 @@
+CN:596
+Name:South Peak 14
+P/N:N/A
+QTD:6
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Sem Controle
+Estoque Inicial:51
+Data NPI:

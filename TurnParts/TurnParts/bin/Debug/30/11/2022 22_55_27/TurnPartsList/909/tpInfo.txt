@@ -1,0 +1,14 @@
+CN:909
+Name:Plug tomada
+P/N:
+QTD:77
+EstoqueM:40
+Descrição:
+SKUs:
+Modelo:Automação
+Status:Alerta
+Estoque Inicial:77
+Data NPI:27/09/2022 00:00:00
+grupo:
+picture:
+validacao:

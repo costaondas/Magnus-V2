@@ -1,0 +1,14 @@
+CN:SMTB;FTSL014
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:DESMONTADO-05/09/2022ͶͶSAIDAͶͶESD 0272
+SKUs:
+Modelo:SELEK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SELEK FX
+picture:SELEK FX
+validacao:

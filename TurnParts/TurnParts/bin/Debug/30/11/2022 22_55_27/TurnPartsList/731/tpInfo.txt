@@ -1,0 +1,14 @@
+CN:731
+Name:TP_Cabo bateria - DPN: M6GV7
+P/N:NPIUDC02003ZC00
+QTD:2810
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:3189
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

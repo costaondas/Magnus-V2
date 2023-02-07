@@ -1,0 +1,11 @@
+CN:79
+Name:MONTREUX SPEAKER
+P/N:MROPK230012L00
+QTD:5
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

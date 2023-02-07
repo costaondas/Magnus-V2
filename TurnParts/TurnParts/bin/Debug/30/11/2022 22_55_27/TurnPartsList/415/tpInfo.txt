@@ -1,0 +1,11 @@
+CN:415
+Name:PLACA IO BOARD (V)
+P/N:NPI4550MZ020001
+QTD:18
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:60
+Data NPI:

@@ -1,0 +1,14 @@
+CN:855
+Name:SMART CARD
+P/N:NPIU02210004041
+QTD:159
+EstoqueM:84
+Descrição:SMART CARD
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:168
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:25
+Name:BULLSEYE I/O BOARD
+P/N:MRO455OYF31LD2
+QTD:137
+EstoqueM:80
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Alerta
+Estoque Inicial:
+Data NPI:

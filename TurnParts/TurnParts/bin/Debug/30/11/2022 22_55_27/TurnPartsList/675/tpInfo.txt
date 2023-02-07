@@ -1,0 +1,14 @@
+CN:675
+Name:TP_DISPOSITIVO DE ARMAZENAMENTO (SSD 128GB)
+P/N:NPITP00452
+QTD:281
+EstoqueM:252
+Descrição:SSD 128GB
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:503
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

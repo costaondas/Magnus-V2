@@ -1,0 +1,14 @@
+CN:PKWRPB41WG4T4O
+Name:GPT52 LA-K201P
+P/N:PKWRPB41WG4T4N
+QTD:0
+EstoqueM:0
+Descrição:GPT52 LA-K201P
+SKUs:
+Modelo:MALDIVES PN
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

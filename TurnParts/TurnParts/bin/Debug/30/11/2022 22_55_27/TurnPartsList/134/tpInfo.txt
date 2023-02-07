@@ -1,0 +1,12 @@
+CN:134
+Name:Flat 26p 0.5mm
+P/N:MROIP00211
+QTD:1409
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Moderado
+Estoque Inicial:1418
+Data NPI:
+CycleLife:NaN

@@ -1,0 +1,14 @@
+CN:CN0YTHP9CMK0025D0793A00
+Name:KC73K MLK
+P/N:CN0YTHP9CMK0025D0794A00
+QTD:1
+EstoqueM:0
+Descrição:PAINEL DA MONTREUX MLK
+SKUs:
+Modelo:MONTREUX PN MLK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

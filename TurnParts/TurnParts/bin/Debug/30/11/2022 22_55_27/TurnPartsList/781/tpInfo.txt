@@ -1,0 +1,14 @@
+CN:781
+Name:TP_Antena F-0G-FH-6140-003-00 - DPN: CXC4W
+P/N:DC33002LL3L
+QTD:50
+EstoqueM:0
+Descrição:CXC4W
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:50
+Data NPI:
+grupo:
+picture:
+validacao:

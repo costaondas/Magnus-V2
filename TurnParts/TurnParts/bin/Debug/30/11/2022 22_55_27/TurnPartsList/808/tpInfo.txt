@@ -1,0 +1,14 @@
+CN:808
+Name:TP_SMALL/B SK665                                  
+P/N:NPIU455P9E31L01
+QTD:49
+EstoqueM:0
+Descrição:TP_SMALL/B SK665                                  
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:63
+Data NPI:
+grupo:
+picture:
+validacao:

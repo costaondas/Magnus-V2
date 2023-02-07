@@ -1,0 +1,11 @@
+CN:248
+Name:SIF wlan
+P/N:NPIPK32000KT2L
+QTD:79
+EstoqueM:100
+Descrição:AX201
+SKUs:
+Modelo:SIF
+Status:Crítico
+Estoque Inicial:300
+Data NPI:

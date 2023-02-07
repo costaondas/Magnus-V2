@@ -1,0 +1,14 @@
+CN:723
+Name:TP_Cabo Flat (FFC) 4P x 0.3 - LEB/MB - DPN: 1G1MX
+P/N:NPIUNBX0002R100
+QTD:2735
+EstoqueM:1435
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:2870
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

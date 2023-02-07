@@ -1,0 +1,11 @@
+CN:630
+Name:EXTENSOR DE AUDIO VERMELHO 
+P/N:
+QTD:83
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

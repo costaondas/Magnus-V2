@@ -1,0 +1,11 @@
+CN:705
+Name:TP_PLACA ADAPTADORA PADDLE C T C DB
+P/N:NPIU72A03Q3100 
+QTD:2
+EstoqueM:20
+Descrição:SP14 MLK NOVA
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Extremamente crítico
+Estoque Inicial:44
+Data NPI:23/06/2022

@@ -1,0 +1,11 @@
+CN:216
+Name:SIF LVDS
+P/N:NPIDC02C00S000
+QTD:119
+EstoqueM:800
+Descrição:I5, CML, LA2, R5, R7
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:1107
+Data NPI:

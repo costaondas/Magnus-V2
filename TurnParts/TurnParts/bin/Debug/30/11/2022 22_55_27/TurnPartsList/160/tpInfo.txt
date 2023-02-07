@@ -1,0 +1,11 @@
+CN:160
+Name:SOUTHPEAK 13 TP_SP13_LED_BOARD
+P/N:MRO4550M7020001
+QTD:38
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

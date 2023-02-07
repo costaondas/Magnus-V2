@@ -1,0 +1,14 @@
+CN:SMTB;FTBS109
+Name:Fixture
+P/N:ESD1127
+QTD:1
+EstoqueM:0
+Descrição:OPERANDO
+SKUs:
+Modelo:BULLSEYE FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:BULLSEYE FX
+picture:BULLSEYE FX
+validacao:

@@ -1,0 +1,14 @@
+CN:4PCBCM;T26
+Name:Fixture
+P/N:
+QTD:1
+EstoqueM:0
+Descrição:LISO
+SKUs:
+Modelo:CAMILIA FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:CAMILIA FX
+picture:CAMILIA FX
+validacao:

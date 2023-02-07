@@ -1,0 +1,11 @@
+CN:633
+Name:CARTÃO DE MEMORIA 16 GB
+P/N:TP00286
+QTD:32
+EstoqueM:0
+Descrição:CARTAO MEMORIA SD CARD UNIFICADO 16 GB
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

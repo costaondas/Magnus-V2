@@ -1,0 +1,14 @@
+CN:903
+Name:CABO SATA HD
+P/N:
+QTD:115
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

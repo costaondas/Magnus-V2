@@ -1,0 +1,14 @@
+CN:673
+Name:TP_WLAN INTEL (WLAN)
+P/N:NPITP00460
+QTD:375
+EstoqueM:208
+Descrição:WLAN AX211
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:415
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

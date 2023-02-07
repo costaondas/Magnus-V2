@@ -1,0 +1,11 @@
+CN:137
+Name:UNIVERSAL TP_SSD 128 GB
+P/N:MRON001691
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

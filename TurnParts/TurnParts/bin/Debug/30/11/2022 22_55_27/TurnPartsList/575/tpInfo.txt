@@ -1,0 +1,11 @@
+CN:575
+Name:CABO USB 2.0 A/B 1.5M
+P/N:
+QTD:17
+EstoqueM:0
+Descrição:UTILIZADO NA BTU
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:10
+Data NPI:

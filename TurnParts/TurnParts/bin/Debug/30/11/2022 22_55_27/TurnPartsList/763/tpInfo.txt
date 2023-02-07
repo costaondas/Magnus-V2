@@ -1,0 +1,14 @@
+CN:763
+Name:TP_SDD_256GB                                      
+P/N:NPIUDD90001AM2L
+QTD:155
+EstoqueM:78
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:155
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

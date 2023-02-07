@@ -1,0 +1,14 @@
+CN:5996372400321
+Name:GDI5A LA-K033P
+P/N:CN0NX5H3CMC000BD0141A00
+QTD:0
+EstoqueM:0
+Descrição:GDI5A LA-K033P
+SKUs:
+Modelo:BULLSEYE MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

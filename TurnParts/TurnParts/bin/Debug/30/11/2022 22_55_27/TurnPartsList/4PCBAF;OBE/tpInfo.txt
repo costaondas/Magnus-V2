@@ -1,0 +1,14 @@
+CN:4PCBAF;OBE
+Name:
+P/N:ESD1354
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:
+Status:Zerado
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

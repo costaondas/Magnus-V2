@@ -1,0 +1,11 @@
+CN:631
+Name:EXTENSOR DO FAN
+P/N:
+QTD:590
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

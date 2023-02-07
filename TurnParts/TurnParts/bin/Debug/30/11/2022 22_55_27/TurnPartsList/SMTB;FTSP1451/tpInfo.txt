@@ -1,0 +1,14 @@
+CN:SMTB;FTSP1451
+Name:
+P/N:ESD1115
+QTD:4
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

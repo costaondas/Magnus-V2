@@ -1,0 +1,14 @@
+CN:447
+Name:TP_EXTENSOR_ IO_34P
+P/N:NPINBX0002VV00
+QTD:7392
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location3:BURITI
+location:3
+location2:F

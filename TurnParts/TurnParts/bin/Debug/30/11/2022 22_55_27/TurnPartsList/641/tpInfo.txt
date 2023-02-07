@@ -1,0 +1,16 @@
+CN:641
+Name:AEGIS TP_23.8' PANEL
+P/N:NPIDH0HT
+QTD:23
+EstoqueM:22
+Descrição:LCD
+SKUs:
+Modelo:AEGIS
+Status:Alerta
+Estoque Inicial:44
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:2233,33
+ForcastUsed:0
+ItensINLine:10

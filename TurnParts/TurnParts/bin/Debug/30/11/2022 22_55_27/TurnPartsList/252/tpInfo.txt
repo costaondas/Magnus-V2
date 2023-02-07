@@ -1,0 +1,11 @@
+CN:252
+Name:SIF SPEAK
+P/N:NPIPK230013500
+QTD:27
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:49
+Data NPI:

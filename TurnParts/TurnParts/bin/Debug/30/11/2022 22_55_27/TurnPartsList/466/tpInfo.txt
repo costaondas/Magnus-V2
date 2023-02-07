@@ -1,0 +1,14 @@
+CN:466
+Name:TP_ADAPTADOR_LITE ON
+P/N:NPIPK10001LA1L
+QTD:0
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location3:BURITI
+location2:D
+location:4

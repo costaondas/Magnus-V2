@@ -1,0 +1,14 @@
+CN:698
+Name:TP_MODULO DE TESTE AUDIO LOOP BACK
+P/N:NPI7001PER0031
+QTD:95
+EstoqueM:15
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Trivial
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

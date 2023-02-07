@@ -1,0 +1,11 @@
+CN:405
+Name:TP_LVDS (V)                          
+P/N:NPI4500N6010001
+QTD:294
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:700
+Data NPI:

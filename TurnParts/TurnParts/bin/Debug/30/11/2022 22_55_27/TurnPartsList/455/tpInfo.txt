@@ -1,0 +1,11 @@
+CN:455
+Name:TP_EXTENSOR_TOUCH PAD_8P
+P/N:NPINBX0002VS00
+QTD:7128
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

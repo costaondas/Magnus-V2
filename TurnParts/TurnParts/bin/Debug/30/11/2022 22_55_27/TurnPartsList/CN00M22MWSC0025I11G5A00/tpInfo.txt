@@ -1,0 +1,14 @@
+CN:CN00M22MWSC0025I11G5A00
+Name:4DJ9K$LA
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:GS_SPKMK_I7 SOUTH PEAK 13 MLK
+SKUs:
+Modelo:SOUTH PEAK 13 MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

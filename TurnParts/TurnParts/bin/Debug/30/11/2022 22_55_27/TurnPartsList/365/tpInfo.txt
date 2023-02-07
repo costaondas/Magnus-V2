@@ -1,0 +1,11 @@
+CN:365
+Name:TP_STONIC_LCD
+P/N:MROAC60001PQ90
+QTD:10
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

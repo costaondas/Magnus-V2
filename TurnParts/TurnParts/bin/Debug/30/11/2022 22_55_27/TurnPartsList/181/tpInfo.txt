@@ -1,0 +1,11 @@
+CN:181
+Name:TP_COSUS_SSD M2
+P/N:MRO1931-01NCODE
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

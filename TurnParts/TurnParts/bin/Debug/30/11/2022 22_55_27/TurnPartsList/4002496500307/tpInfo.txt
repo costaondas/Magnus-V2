@@ -1,0 +1,14 @@
+CN:4002496500307
+Name:IPTGL-CL
+P/N:BR0YTWC3CMM0017L0130A00
+QTD:0
+EstoqueM:0
+Descrição:IPTGL-CL
+SKUs:
+Modelo:COLOSSUS MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

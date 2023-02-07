@@ -1,0 +1,11 @@
+CN:19
+Name:BULLSEYE TECLADO
+P/N:MROPK132RI1A00
+QTD:208
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Moderado
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:752
+Name:TP_PLACA ADAPTADORA - PLACA BOARD - DPN: H4YYK    
+P/N:NPIU72A0VN31021
+QTD:925
+EstoqueM:463
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:925
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

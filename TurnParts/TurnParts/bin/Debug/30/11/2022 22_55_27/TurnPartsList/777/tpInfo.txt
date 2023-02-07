@@ -1,0 +1,14 @@
+CN:777
+Name:TP_Conjunto autofalante
+P/N:PK230014N00
+QTD:50
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:77
+Data NPI:
+grupo:
+picture:
+validacao:

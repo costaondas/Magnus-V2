@@ -1,0 +1,14 @@
+CN:SMTB;FTCB29
+Name:Fixture
+P/N:ESD0560
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:CYBORG FX
+picture:CYBORG FX
+validacao:

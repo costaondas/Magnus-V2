@@ -1,0 +1,15 @@
+CN:658
+Name:TP_CABO_MODULO TYPE-C
+P/N:NPI60604006A
+QTD:55
+EstoqueM:0
+Descrição:TP_CABO_MODULO TYPE-C
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:56
+Data NPI:07/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:33500
+ForcastUsed:0

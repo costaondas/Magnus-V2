@@ -1,0 +1,11 @@
+CN:235
+Name:FAN CPU 7FL
+P/N:NPIDC28000T7FL
+QTD:0
+EstoqueM:0
+Descrição:Funciona dos dois lados da L39, direito e esquerdo
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:41
+Data NPI:

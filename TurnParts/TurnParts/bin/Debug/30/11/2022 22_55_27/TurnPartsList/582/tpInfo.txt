@@ -1,0 +1,13 @@
+CN:582
+Name:SSD 256GB
+P/N:NPIDD90001FF10
+QTD:242
+EstoqueM:224
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:360
+Data NPI:18/03/2022 00
+valorUnitario:257,36
+alerta:10

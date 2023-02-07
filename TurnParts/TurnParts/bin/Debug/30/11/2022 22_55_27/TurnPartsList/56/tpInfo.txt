@@ -1,0 +1,11 @@
+CN:56
+Name:SOUTH PEAK 14 SPEAK
+P/N:MROPK230012Q00
+QTD:196
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Alerta
+Estoque Inicial:
+Data NPI:

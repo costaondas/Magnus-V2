@@ -1,0 +1,11 @@
+CN:514
+Name:BATERIA DE LITIO ION
+P/N:MROTR00116
+QTD:53
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

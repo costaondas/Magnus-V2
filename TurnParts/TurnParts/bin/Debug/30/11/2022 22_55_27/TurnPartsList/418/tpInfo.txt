@@ -1,0 +1,11 @@
+CN:418
+Name:FAN
+P/N:NPI4600JT0T0001
+QTD:9
+EstoqueM:0
+Descrição:É O MESMO DA SOUTH PEAK 13
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:65
+Data NPI:

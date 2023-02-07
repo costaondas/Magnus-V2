@@ -1,0 +1,11 @@
+CN:267
+Name:SIF EXTENSOR camera
+P/N:NPIDA30001JS10
+QTD:116
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:150
+Data NPI:

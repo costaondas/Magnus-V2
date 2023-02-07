@@ -1,0 +1,14 @@
+CN:858
+Name:CABO DE BATERIA
+P/N:NPIU4500PH0B011
+QTD:222
+EstoqueM:121
+Descrição:CABO DE BATERIA
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:241
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

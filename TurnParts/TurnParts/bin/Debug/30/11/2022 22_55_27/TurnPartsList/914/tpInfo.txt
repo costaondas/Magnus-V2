@@ -1,0 +1,14 @@
+CN:914
+Name:SSD SATA
+P/N:
+QTD:42
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Crítico
+Estoque Inicial:73
+Data NPI:28/09/2022 00:00:00
+grupo:
+picture:
+validacao:

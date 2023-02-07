@@ -1,0 +1,14 @@
+CN:133
+Name:Flat 20p 0.5mm
+P/N:MROIP01160
+QTD:2077
+EstoqueM:500
+Descrição:Utilizado no South Peak 14, 13  e Montreux
+SKUs:
+Modelo:Universal
+Status:Trivial
+Estoque Inicial:2148
+Data NPI:26/09/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:70
+Name:SOUTH PEAK 14 ANTENA_WLAN+WWAN
+P/N:MRODC33002GZ2L
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

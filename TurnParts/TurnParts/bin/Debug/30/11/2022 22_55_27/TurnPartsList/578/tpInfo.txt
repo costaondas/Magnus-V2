@@ -1,0 +1,13 @@
+CN:578
+Name:CÂMERA
+P/N:NPIPK40001IT10
+QTD:12
+EstoqueM:14
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Crítico
+Estoque Inicial:15
+Data NPI:18/03/2022 00
+valorUnitario:20,64
+alerta:2

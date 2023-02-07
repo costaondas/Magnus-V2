@@ -1,0 +1,12 @@
+CN:263
+Name:SIF extensor mcu
+P/N:NPINBX0002RY00
+QTD:244
+EstoqueM:81
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Moderado
+Estoque Inicial:224
+Data NPI:
+alerta:10

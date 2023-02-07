@@ -1,0 +1,11 @@
+CN:266
+Name:SIF USB L30
+P/N:NPI435PAB31L02
+QTD:0
+EstoqueM:8
+Descrição:Utilizado no L30
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:18
+Data NPI:

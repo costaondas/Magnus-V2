@@ -1,0 +1,11 @@
+CN:410
+Name:TECLADO
+P/N:NPI4900MZ07BL1D
+QTD:5
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:70
+Data NPI:

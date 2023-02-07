@@ -1,0 +1,14 @@
+CN:743
+Name:TP_Modulo DDR4 - HMA851S6DJR6N-XN - DPN:CDT82
+P/N:NPIUPK054009C1L
+QTD:630
+EstoqueM:350
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:700
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

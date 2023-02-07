@@ -1,0 +1,14 @@
+CN:185
+Name:Flat 30p (passo 0.8)
+P/N:MROIP01887
+QTD:3293
+EstoqueM:600
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Trivial
+Estoque Inicial:
+Data NPI:26/09/2022 00:00:00
+grupo:
+picture:
+validacao:

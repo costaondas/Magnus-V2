@@ -1,0 +1,14 @@
+CN:810
+Name:TP_LCD_B156HAN12                                  
+P/N:NPIUAC60001WGKL
+QTD:25
+EstoqueM:0
+Descrição:TP_LCD_B156HAN12                                  
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:55
+Data NPI:
+grupo:
+picture:
+validacao:

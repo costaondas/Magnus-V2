@@ -1,0 +1,14 @@
+CN:437
+Name:TP_GPT54_EXTENSOR_FPR
+P/N:NPINBX0002GV00
+QTD:62
+EstoqueM:100
+Descrição:REPOSIÇÃO ESTOQUE 08/09/2022ͶͶPERGUNTAR STATUS DE COMPRAͶͶCHEGOU SÓ 12
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:100
+Data NPI:
+CycleLife:67,34
+PlacasProd:6734
+DateUsed:10/07/2022

@@ -1,0 +1,11 @@
+CN:199
+Name:Ethernet USB 2.0
+P/N:
+QTD:61
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

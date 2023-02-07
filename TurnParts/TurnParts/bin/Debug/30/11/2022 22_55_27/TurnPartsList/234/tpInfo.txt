@@ -1,0 +1,11 @@
+CN:234
+Name:Thermal 10FL
+P/N:NPIAT36L0010FL
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:20
+Data NPI:

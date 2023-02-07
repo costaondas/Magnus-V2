@@ -1,0 +1,14 @@
+CN:915
+Name:ADAPTADOR SSD
+P/N:
+QTD:99
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Alerta
+Estoque Inicial:99
+Data NPI:28/09/2022 00:00:00
+grupo:
+picture:
+validacao:

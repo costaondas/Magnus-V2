@@ -1,0 +1,11 @@
+CN:198
+Name:Type C - HDMI
+P/N:
+QTD:52
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

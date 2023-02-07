@@ -1,0 +1,14 @@
+CN:796
+Name:TP_Parafuso para I/ Board
+P/N:MA00000A4G0
+QTD:64
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:64
+Data NPI:
+grupo:
+picture:
+validacao:

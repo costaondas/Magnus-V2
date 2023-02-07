@@ -1,0 +1,14 @@
+CN:4PCBAFçT32
+Name:
+P/N:NT
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:
+Status:Zerado
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

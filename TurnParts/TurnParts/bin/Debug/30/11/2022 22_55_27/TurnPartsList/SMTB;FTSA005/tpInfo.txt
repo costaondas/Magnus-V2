@@ -1,0 +1,14 @@
+CN:SMTB;FTSA005
+Name:Fixture
+P/N:ESD0537
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF AMD
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF AMD
+picture:SIF AMD
+validacao:

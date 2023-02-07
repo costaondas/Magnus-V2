@@ -1,0 +1,11 @@
+CN:139
+Name:SOUTHPEAK 13 TP_SP13_CABO_LVDS
+P/N:MRO4500M7040001
+QTD:334
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Alerta
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:7126305500001
+Name:FH51S LA-K181P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:FH51S LA-K181P
+SKUs:
+Modelo:MALDIVES MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

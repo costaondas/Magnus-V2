@@ -1,0 +1,14 @@
+CN:922
+Name:Base Extrator
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Zerado
+Estoque Inicial:0
+Data NPI:06/10/2022 00:00:00
+grupo:
+picture:
+validacao:

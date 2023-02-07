@@ -1,0 +1,12 @@
+CN:61
+Name:SOUTH PEAK 14 CABO_BATERIA
+P/N:MRODC02003PI00
+QTD:304
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:327
+Data NPI:
+CycleLife:NaN

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "TurnParts\Main.csproj", "{C099CE56-3DD9-43EE-907F-D5034AE22279}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MagnusSetup", "MagnusSetup\MagnusSetup.vdproj", "{C521066E-315D-431C-B6CB-76407ACA4EBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C099CE56-3DD9-43EE-907F-D5034AE22279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C099CE56-3DD9-43EE-907F-D5034AE22279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C099CE56-3DD9-43EE-907F-D5034AE22279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C099CE56-3DD9-43EE-907F-D5034AE22279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C521066E-315D-431C-B6CB-76407ACA4EBA}.Debug|Any CPU.ActiveCfg = Debug
+		{C521066E-315D-431C-B6CB-76407ACA4EBA}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07F9EE9B-F043-42DC-AE7D-D47669443F81}
+	EndGlobalSection
+EndGlobal

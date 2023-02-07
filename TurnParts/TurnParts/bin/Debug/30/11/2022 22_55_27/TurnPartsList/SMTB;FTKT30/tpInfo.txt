@@ -1,0 +1,14 @@
+CN:SMTB;FTKT30
+Name:Fixture
+P/N:
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:KYOTO FX
+picture:
+validacao:

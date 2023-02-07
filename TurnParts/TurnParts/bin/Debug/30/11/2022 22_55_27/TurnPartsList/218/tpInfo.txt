@@ -1,0 +1,11 @@
+CN:218
+Name:SIF LVDS
+P/N:NPIDC02C00S800
+QTD:53
+EstoqueM:100
+Descrição:L30
+SKUs:
+Modelo:SIF
+Status:Crítico
+Estoque Inicial:250
+Data NPI:

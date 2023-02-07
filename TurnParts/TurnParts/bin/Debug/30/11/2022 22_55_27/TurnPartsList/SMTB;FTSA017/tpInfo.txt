@@ -1,0 +1,14 @@
+CN:SMTB;FTSA017
+Name:Fixture
+P/N:ESD0543
+QTD:0
+EstoqueM:0
+Descrição:LISO  FIXTURE SEM NENHUM TURN PART
+SKUs:
+Modelo:SIF AMD
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF AMD
+picture:SIF AMD
+validacao:

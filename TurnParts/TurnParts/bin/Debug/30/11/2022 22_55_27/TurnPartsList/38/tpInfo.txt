@@ -1,0 +1,11 @@
+CN:38
+Name:MOCKINGBIRD DC-IN
+P/N:MRO4500KD0C0001
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

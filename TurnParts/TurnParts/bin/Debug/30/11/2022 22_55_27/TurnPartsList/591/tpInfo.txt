@@ -1,0 +1,12 @@
+CN:591
+Name:BATERIA AP16M5J
+P/N:GC02002MU30
+QTD:0
+EstoqueM:9
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Zerado
+Estoque Inicial:31
+Data NPI:22/03/2022 00
+alerta:3

@@ -1,0 +1,11 @@
+CN:709
+Name:ADAPTADOR USB 3.0 X TIPO C 3.1 F
+P/N:1.169.90
+QTD:100
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Alerta
+Estoque Inicial:100
+Data NPI:

@@ -1,0 +1,12 @@
+CN:607
+Name:Pasadena
+P/N:N/A
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:14
+Data NPI:
+itemLocked:true

@@ -1,0 +1,14 @@
+CN:848
+Name:CABO LED
+P/N:NPIU4500PD02011
+QTD:342
+EstoqueM:171
+Descrição:CABO LED
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:342
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

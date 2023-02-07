@@ -1,0 +1,11 @@
+CN:711
+Name:CABO P2 ST X J2
+P/N:1.1.367  
+QTD:50
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Moderado
+Estoque Inicial:50
+Data NPI:

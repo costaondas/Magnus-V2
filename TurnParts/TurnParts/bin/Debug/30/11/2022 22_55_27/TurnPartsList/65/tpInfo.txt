@@ -1,0 +1,11 @@
+CN:65
+Name:SOUTH PEAK 14 ANTENA_RFID
+P/N:MRODC33002GY0L
+QTD:145
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Alerta
+Estoque Inicial:
+Data NPI:

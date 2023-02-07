@@ -1,0 +1,11 @@
+CN:568
+Name:CABO_ALTO_FALANTE
+P/N:NPITP00481
+QTD:1040
+EstoqueM:300
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Moderado
+Estoque Inicial:600
+Data NPI:

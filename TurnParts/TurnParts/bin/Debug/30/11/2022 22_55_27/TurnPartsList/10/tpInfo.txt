@@ -1,0 +1,11 @@
+CN:10
+Name:BULLSEYE WLAN
+P/N:MROPK32000GG0L
+QTD:185
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

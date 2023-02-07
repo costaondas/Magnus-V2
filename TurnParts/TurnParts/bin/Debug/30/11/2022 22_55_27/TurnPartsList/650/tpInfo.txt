@@ -1,0 +1,15 @@
+CN:650
+Name:TP_UMA MB CPU THERMAL
+P/N:NPI3600FX010001
+QTD:24
+EstoqueM:12
+Descrição:
+SKUs:
+Modelo:AEGIS
+Status:Alerta
+Estoque Inicial:24
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:∞
+ForcastUsed:0

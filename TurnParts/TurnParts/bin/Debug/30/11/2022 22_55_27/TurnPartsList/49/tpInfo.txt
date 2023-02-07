@@ -1,0 +1,11 @@
+CN:49
+Name:SOUTH PEAK 14 MERION_14 LCD 
+P/N:MROAC60001N65L
+QTD:35
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

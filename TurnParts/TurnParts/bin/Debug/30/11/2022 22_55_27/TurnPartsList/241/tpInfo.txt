@@ -1,0 +1,11 @@
+CN:241
+Name:SIF LAN BOARD I5 CML
+P/N:NPI455PAL31L01
+QTD:0
+EstoqueM:80
+Descrição:0PMY37, UTILIZADA NOS MODELOS I5, CML
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:147
+Data NPI:

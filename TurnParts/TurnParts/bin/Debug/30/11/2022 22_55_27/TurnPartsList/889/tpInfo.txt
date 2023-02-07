@@ -1,0 +1,17 @@
+CN:889
+Name:TP_CABO FLAT (FFC)_HDD
+P/N:NPIUNBX0002VT00
+QTD:793
+EstoqueM:404
+Descrição:FFC 12P H P0.5 PAD=0.3 115MM MB-HDD 3LE
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:808
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:6
+location2:F
+location3:BURITI

@@ -1,0 +1,14 @@
+CN:678
+Name:TP_ALTO FALANTE
+P/N:NPITP00456
+QTD:187
+EstoqueM:106
+Descrição:SPEAKER
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:30
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

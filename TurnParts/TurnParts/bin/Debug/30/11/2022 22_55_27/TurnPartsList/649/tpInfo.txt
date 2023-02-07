@@ -1,0 +1,16 @@
+CN:649
+Name:TP_CAMERA
+P/N:NPI5J53N$AA
+QTD:30
+EstoqueM:28
+Descrição:CÂMERA
+SKUs:
+Modelo:AEGIS
+Status:Alerta
+Estoque Inicial:56
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:2093,75
+ForcastUsed:0
+ItensINLine:10

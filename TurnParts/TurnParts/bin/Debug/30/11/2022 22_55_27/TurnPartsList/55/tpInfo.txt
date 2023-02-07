@@ -1,0 +1,11 @@
+CN:55
+Name:SOUTH PEAK 14 EXTENSOR_TP
+P/N:MRONBX0002R200
+QTD:3
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

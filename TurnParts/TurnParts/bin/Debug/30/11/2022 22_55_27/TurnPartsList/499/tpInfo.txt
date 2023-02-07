@@ -1,0 +1,11 @@
+CN:499
+Name:SLEEPY IL ADAPTER
+P/N:
+QTD:1
+EstoqueM:3
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:593
+Name:CASE USB 3.0 PARA HD 2,5" SATA 3
+P/N:NPIN000065
+QTD:60
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:60
+Data NPI:22/02/2022 00
+grupo:
+picture:
+validacao:

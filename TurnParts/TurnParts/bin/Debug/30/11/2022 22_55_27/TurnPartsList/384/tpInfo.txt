@@ -1,0 +1,11 @@
+CN:384
+Name:PASADENA_AUTO FALANTE
+P/N:MRO3KZALSATN10
+QTD:20
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

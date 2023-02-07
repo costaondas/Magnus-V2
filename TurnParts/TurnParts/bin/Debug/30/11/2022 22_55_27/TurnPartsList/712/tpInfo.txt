@@ -1,0 +1,11 @@
+CN:712
+Name:ADAPTADOR BORNE MACHO X P4
+P/N:15.2.10   
+QTD:100
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Alerta
+Estoque Inicial:100
+Data NPI:

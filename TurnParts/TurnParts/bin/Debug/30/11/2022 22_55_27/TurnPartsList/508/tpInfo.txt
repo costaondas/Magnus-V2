@@ -1,0 +1,11 @@
+CN:508
+Name:TP_ALTO FALANTE
+P/N:MROPK230013O00
+QTD:3087
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:100E
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

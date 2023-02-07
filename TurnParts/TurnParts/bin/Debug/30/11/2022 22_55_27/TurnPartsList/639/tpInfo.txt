@@ -1,0 +1,11 @@
+CN:639
+Name:4 PINOS INVERTIDO CABO FLAT
+P/N:N/S
+QTD:4960
+EstoqueM:0
+Descrição:4 PINOS INVERTIDO CABO FLAT
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

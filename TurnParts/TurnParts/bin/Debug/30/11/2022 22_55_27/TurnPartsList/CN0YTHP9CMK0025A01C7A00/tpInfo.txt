@@ -1,0 +1,14 @@
+CN:CN0YTHP9CMK0025A01C7A00
+Name:LA-L581P
+P/N:08920422C333
+QTD:0
+EstoqueM:0
+Descrição:LA-L581P MLK
+SKUs:
+Modelo:MONTREUX MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

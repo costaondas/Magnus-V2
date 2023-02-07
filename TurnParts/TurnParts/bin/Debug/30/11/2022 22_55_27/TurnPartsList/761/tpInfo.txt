@@ -1,0 +1,14 @@
+CN:761
+Name:TP_PLACA ADAPTADORA USH                           
+P/N:NPIU72A0ZQ31149
+QTD:615
+EstoqueM:308
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:615
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,17 @@
+CN:880
+Name:TP_CABO_DC_JACK
+P/N:NPIUDC301017I00
+QTD:1497
+EstoqueM:771
+Descrição:CONN SET 3LE DCJACK-MB DCW-03GQBKAB-U
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:1542
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:6
+location2:B
+location3:BURITI

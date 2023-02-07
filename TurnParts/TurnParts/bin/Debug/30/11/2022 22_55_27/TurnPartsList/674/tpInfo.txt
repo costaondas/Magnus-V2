@@ -1,0 +1,14 @@
+CN:674
+Name:TP_CPU THERMAL (FAN)
+P/N:NPITP00451
+QTD:67
+EstoqueM:34
+Descrição:FAN
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:67
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

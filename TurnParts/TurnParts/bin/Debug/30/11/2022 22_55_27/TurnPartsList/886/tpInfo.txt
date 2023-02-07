@@ -1,0 +1,17 @@
+CN:886
+Name:TP_WLAN
+P/N:NPIUPK32000MB0L
+QTD:499
+EstoqueM:270
+Descrição:W/L_BT _ T99H307.00
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:539
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location3:BURITI
+location2:D
+location:7

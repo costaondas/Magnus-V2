@@ -1,0 +1,11 @@
+CN:516
+Name:TP_SLEEPY_PLACA_SENSOR
+P/N:MRO435OXBBOL51
+QTD:11
+EstoqueM:5
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,17 @@
+CN:869
+Name:TP_CAMERA - LUXVISIONS 1M
+P/N:NPIUPK40001RO1L
+QTD:133
+EstoqueM:82
+Descrição:CAMERA M 0SF103N3 LUXVISIONS 1M
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:163
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:
+location:5
+location2:D
+location3:BURITI

@@ -1,0 +1,11 @@
+CN:411
+Name:FONTE 65W TYPE C
+P/N:NPIVT148       
+QTD:46
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:60
+Data NPI:

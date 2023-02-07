@@ -1,0 +1,11 @@
+CN:212
+Name:TP_FFC
+P/N:MRO4500M8050001
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Zerado
+Estoque Inicial:
+Data NPI:

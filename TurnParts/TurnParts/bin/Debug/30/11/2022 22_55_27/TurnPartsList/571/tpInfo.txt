@@ -1,0 +1,14 @@
+CN:571
+Name:CABO TYPE-C TO USB 3.0
+P/N:NPITP00387
+QTD:7
+EstoqueM:0
+Descrição:PARA O PROJETO KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:30
+Data NPI:
+grupo:
+picture:
+validacao:

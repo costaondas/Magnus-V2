@@ -1,0 +1,14 @@
+CN:453
+Name:TP_TOUCH PAD
+P/N:NPIPK09000UD0L
+QTD:339
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location3:BURITI
+location2:D
+location:2

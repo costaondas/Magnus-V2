@@ -1,0 +1,11 @@
+CN:413
+Name:TP_FINGER PRINT    
+P/N:NPI05425141M026
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:120
+Data NPI:

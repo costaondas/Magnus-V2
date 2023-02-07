@@ -1,0 +1,11 @@
+CN:355
+Name:TP_ADPATER
+P/N:MROPK10001FO10
+QTD:4
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

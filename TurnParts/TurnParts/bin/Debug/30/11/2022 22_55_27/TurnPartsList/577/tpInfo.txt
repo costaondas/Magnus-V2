@@ -1,0 +1,13 @@
+CN:577
+Name:ADAPTADOR
+P/N:NPIPK10001HX10
+QTD:0
+EstoqueM:9
+Descrição:ROSE, CAMELLIA
+SKUs:
+Modelo:CAMELIA
+Status:Zerado
+Estoque Inicial:21
+Data NPI:18/03/2022 00
+valorUnitario:277,81
+alerta:1

@@ -1,0 +1,11 @@
+CN:548
+Name:TP_ROSE_PLACA USB
+P/N:MROIP00707
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

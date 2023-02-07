@@ -1,0 +1,15 @@
+CN:693
+Name:AEGIS
+P/N:NPINA00029
+QTD:10
+EstoqueM:0
+Descrição:FIXTURE AEGIS
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:23
+Data NPI:07/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:2576,92
+ForcastUsed:0

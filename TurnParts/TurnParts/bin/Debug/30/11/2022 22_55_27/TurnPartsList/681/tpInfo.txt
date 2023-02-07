@@ -1,0 +1,14 @@
+CN:681
+Name:FERRAMENTA MEC STAGE M38119-001
+P/N:NPITP00541
+QTD:50
+EstoqueM:25
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:50
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

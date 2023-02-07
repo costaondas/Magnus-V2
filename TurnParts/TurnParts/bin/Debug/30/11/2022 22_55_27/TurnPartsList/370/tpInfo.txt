@@ -1,0 +1,11 @@
+CN:370
+Name:CABO ELETRICO
+P/N:MRODC02003P000
+QTD:0
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

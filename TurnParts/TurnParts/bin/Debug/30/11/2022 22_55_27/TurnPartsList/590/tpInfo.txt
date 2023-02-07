@@ -1,0 +1,13 @@
+CN:590
+Name:WLAN
+P/N:NPIPK32000LW20
+QTD:203
+EstoqueM:226
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Crítico
+Estoque Inicial:381
+Data NPI:18/03/2022 00
+valorUnitario:27,55
+alerta:4

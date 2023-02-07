@@ -1,0 +1,11 @@
+CN:88
+Name:MONTREUX EXTENSOR_MB-TP
+P/N:MRONBX0002QM00
+QTD:411
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

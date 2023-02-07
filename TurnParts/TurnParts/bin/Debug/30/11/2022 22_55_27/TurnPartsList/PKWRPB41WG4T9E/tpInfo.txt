@@ -1,0 +1,14 @@
+CN:PKWRPB41WG4T9E
+Name:GPT52 LA-K201P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:GPT52 LA-K201P - TIGER LAKE
+SKUs:
+Modelo:MALDIVES MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

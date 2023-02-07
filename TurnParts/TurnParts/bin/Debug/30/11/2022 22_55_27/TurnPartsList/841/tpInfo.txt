@@ -1,0 +1,14 @@
+CN:841
+Name:TP_ROSE_CABO_FFC
+P/N:HQ22020552002
+QTD:385
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:450
+Data NPI:
+grupo:
+picture:
+validacao:

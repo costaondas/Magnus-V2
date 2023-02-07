@@ -1,0 +1,18 @@
+CN:840
+Name:LVDS AEGIS
+P/N:NPIU3500FX05021
+QTD:428
+EstoqueM:0
+Descrição:M4P2200668ͶͶ
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:430
+Data NPI:
+grupo:
+picture:
+validacao:
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:33500
+ForcastUsed:0

@@ -1,0 +1,14 @@
+CN:SMTB;FTCB50
+Name:Fixture
+P/N:ESD0574
+QTD:1
+EstoqueM:0
+Descrição:TS
+SKUs:
+Modelo:CYBORG FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:CYBORG FX
+picture:CYBORG FX
+validacao:

@@ -1,0 +1,11 @@
+CN:21
+Name:UNIVERSAL SSD_M 128G
+P/N:MRODD900013W2L
+QTD:0
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Zerado
+Estoque Inicial:
+Data NPI:

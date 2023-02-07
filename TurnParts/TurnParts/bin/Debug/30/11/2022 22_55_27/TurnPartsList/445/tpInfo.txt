@@ -1,0 +1,14 @@
+CN:445
+Name:PLACA ADAPTACAO FPI50 USB/B LS-H327P
+P/N:NPI435OX632L01
+QTD:5
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:∞

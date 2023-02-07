@@ -1,0 +1,14 @@
+CN:572
+Name:EXTENSOR_SSD
+P/N:NPITP00323
+QTD:199
+EstoqueM:0
+Descrição:PARA O PROJETO KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:100
+Data NPI:
+grupo:
+picture:
+validacao:

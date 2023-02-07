@@ -1,0 +1,14 @@
+CN:881
+Name:TP_THERMAL
+P/N:NPIUAT3QI0030F0
+QTD:20
+EstoqueM:10
+Descrição:HDL54_UMA_BARCELO_THM_ASSY_FORCECON
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:20
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:

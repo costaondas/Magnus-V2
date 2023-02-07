@@ -1,0 +1,11 @@
+CN:506
+Name:TP_EXTENSOR_SB_SINAL
+P/N:MRONBX0002UH00
+QTD:3469
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:100E
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:SMTB;FTSMR020
+Name:Fixture
+P/N:
+QTD:1
+EstoqueM:0
+Descrição:LISO
+SKUs:
+Modelo:SIF AMD MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF AMD MLK FX
+picture:SIF AMD MLK FX
+validacao:

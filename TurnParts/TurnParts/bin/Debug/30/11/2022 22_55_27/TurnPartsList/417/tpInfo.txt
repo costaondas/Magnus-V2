@@ -1,0 +1,11 @@
+CN:417
+Name:TP_CÂMERA
+P/N:NPIF43K8$BB    
+QTD:1
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:70
+Data NPI:

@@ -1,0 +1,14 @@
+CN:787
+Name:TP_Cabo Flat (FFC) 4P x 0.5 - MB/LED
+P/N:NBX0002W300
+QTD:499
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:499
+Data NPI:
+grupo:
+picture:
+validacao:

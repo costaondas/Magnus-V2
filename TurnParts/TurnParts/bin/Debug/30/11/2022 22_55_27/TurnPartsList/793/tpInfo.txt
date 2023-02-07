@@ -1,0 +1,14 @@
+CN:793
+Name:TP_Modulo WWAN - DPN: 49GXJ
+P/N:PK29200U6NL
+QTD:123
+EstoqueM:0
+Descrição:49GXJ
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:123
+Data NPI:
+grupo:
+picture:
+validacao:

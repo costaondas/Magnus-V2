@@ -1,0 +1,11 @@
+CN:36
+Name:MOCKINGBIRD FINGER FLAT
+P/N:MRO4500KA090021
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

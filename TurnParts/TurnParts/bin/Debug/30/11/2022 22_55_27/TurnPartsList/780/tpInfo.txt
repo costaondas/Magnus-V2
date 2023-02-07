@@ -1,0 +1,14 @@
+CN:780
+Name:TP_Antena 81ELA115 - DPN: 2D9DY
+P/N:DC33002LN2L
+QTD:47
+EstoqueM:33
+Descrição:2D9DY
+SKUs:
+Modelo:MONTREUX MLK
+Status:Alerta
+Estoque Inicial:50
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

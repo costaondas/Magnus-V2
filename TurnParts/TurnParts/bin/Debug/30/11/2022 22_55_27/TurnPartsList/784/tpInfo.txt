@@ -1,0 +1,14 @@
+CN:784
+Name:TP_Placa adaptadora Smart card
+P/N:DC04000RV00
+QTD:174
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:174
+Data NPI:
+grupo:
+picture:
+validacao:

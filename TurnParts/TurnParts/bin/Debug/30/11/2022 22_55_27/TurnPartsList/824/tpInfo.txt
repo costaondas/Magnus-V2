@@ -1,0 +1,14 @@
+CN:824
+Name:TP_EXTENSOR_TOUCHPAD                              
+P/N:NPIUNBX0002RK00
+QTD:310
+EstoqueM:0
+Descrição:TP_EXTENSOR_TOUCHPAD                              
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:310
+Data NPI:
+grupo:
+picture:
+validacao:

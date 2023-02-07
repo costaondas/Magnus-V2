@@ -1,0 +1,12 @@
+CN:129
+Name:Keyboard Flat Marrom 30p 1.0mm
+P/N:NPITP00225
+QTD:1112
+EstoqueM:1200
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+itemLocked:false

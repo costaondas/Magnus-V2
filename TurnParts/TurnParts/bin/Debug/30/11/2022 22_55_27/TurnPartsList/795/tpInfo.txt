@@ -1,0 +1,14 @@
+CN:795
+Name:TP_Bracket - AB10
+P/N:AM30R000R00
+QTD:34
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:34
+Data NPI:
+grupo:
+picture:
+validacao:

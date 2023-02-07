@@ -1,0 +1,14 @@
+CN:770
+Name:TP_Cabo de Alimentação - DPN: K260C
+P/N:GA00001590L
+QTD:36
+EstoqueM:0
+Descrição:K260C
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:36
+Data NPI:
+grupo:
+picture:
+validacao:

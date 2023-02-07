@@ -1,0 +1,14 @@
+CN:716
+Name:TP_BATERIA 3.18AH - DPN: Y86WG
+P/N:NPIUGC02003421L
+QTD:42
+EstoqueM:26
+Descrição:MONTREUX MLK
+SKUs:
+Modelo:MONTREUX MLK
+Status:Alerta
+Estoque Inicial:52
+Data NPI:21/06/2022 00:00:00
+grupo:
+picture:
+validacao:

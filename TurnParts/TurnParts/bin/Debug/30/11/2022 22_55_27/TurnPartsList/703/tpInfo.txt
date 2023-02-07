@@ -1,0 +1,11 @@
+CN:703
+Name:COLMEIA 12V 5A
+P/N:PNFS-308/FC1205CN     
+QTD:40
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:40
+Data NPI:

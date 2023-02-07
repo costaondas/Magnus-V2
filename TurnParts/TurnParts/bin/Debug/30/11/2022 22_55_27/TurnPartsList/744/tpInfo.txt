@@ -1,0 +1,14 @@
+CN:744
+Name:TP_MEMORIA DDR HMA851S6DJR6N                      
+P/N:NPIUPK054009C1L
+QTD:700
+EstoqueM:350
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:700
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

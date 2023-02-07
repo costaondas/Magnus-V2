@@ -1,0 +1,14 @@
+CN:7344910200003
+Name:FH5AT LA-K093P
+P/N:7344910200004
+QTD:0
+EstoqueM:0
+Descrição:FH5AT LA-K093P
+SKUs:
+Modelo:CAMELIA PN
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

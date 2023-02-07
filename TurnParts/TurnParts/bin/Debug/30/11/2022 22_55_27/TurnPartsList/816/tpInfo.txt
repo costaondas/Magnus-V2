@@ -1,0 +1,14 @@
+CN:816
+Name:TECLADO BRANCO
+P/N:NPIUPK133LP2C44
+QTD:15
+EstoqueM:0
+Descrição:TP_TECLADO_DLM20                                  
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:26
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:395
+Name:PASADENA_CABO_USB
+P/N:MRODDZAMAMU000
+QTD:348
+EstoqueM:179
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Alerta
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:5
+Name:BULLSEYE CABO TOUCH PAD - 8P*1MM
+P/N:MRONBX0002KZ00
+QTD:1687
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

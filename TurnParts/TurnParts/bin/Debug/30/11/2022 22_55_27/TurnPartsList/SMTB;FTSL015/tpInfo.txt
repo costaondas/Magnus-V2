@@ -1,0 +1,14 @@
+CN:SMTB;FTSL015
+Name:Fixture
+P/N:ESD0276
+QTD:1
+EstoqueM:0
+Descrição:DESMONTADO-03/09/22ͶͶSAIDA
+SKUs:
+Modelo:SELEK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SELEK FX
+picture:SELEK FX
+validacao:

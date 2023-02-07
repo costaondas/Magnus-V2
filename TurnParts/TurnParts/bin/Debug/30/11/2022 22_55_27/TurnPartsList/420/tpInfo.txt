@@ -1,0 +1,11 @@
+CN:420
+Name:LCD NO TOUCH (V)
+P/N:NPICWJ6F       
+QTD:13
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:60
+Data NPI:

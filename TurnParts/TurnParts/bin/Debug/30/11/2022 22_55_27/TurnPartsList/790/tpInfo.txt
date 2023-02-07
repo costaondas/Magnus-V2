@@ -1,0 +1,14 @@
+CN:790
+Name:TP_Placa adaptadora USH
+P/N:72A0ZQ31149
+QTD:118
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:174
+Data NPI:
+grupo:
+picture:
+validacao:

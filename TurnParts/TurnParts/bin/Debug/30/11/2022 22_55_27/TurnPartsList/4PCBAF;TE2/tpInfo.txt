@@ -1,0 +1,14 @@
+CN:4PCBAF;TE2
+Name:Fixture
+P/N:ESD0293
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:PASADENA FX
+picture:PASADENA FX
+validacao:

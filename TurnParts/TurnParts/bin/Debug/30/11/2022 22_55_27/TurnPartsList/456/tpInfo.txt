@@ -1,0 +1,11 @@
+CN:456
+Name:TP_TECLADO
+P/N:NPIPK133LE1A44
+QTD:239
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

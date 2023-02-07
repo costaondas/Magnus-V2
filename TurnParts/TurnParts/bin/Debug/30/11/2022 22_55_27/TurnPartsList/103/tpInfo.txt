@@ -1,0 +1,11 @@
+CN:103
+Name:MONTREUX PLACA ADAPTACAO_TYPE C
+P/N:MRO43404U31L01
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

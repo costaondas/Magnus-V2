@@ -1,0 +1,14 @@
+CN:739
+Name:TP_Antena 260-24342 - DPN: 5DG4G
+P/N:NPIUDC33002GZ2L
+QTD:20
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:20
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

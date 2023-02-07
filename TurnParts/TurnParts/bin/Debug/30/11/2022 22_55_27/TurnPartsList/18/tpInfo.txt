@@ -1,0 +1,11 @@
+CN:18
+Name:BULLSEYE ADAPTADOR 65W
+P/N:MROPK10000Q820
+QTD:57
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

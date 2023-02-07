@@ -1,0 +1,11 @@
+CN:507
+Name:TP_EXTENSOR_SB_POWER
+P/N:MRONBX0002UI00
+QTD:738
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:100E
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

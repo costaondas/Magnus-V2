@@ -1,0 +1,14 @@
+CN:694
+Name:PS2 CABLE
+P/N:2000CAB0ECD
+QTD:175
+EstoqueM:75
+Descrição:CABO PS2
+SKUs:
+Modelo:KYOTO_TROY
+Status:Moderado
+Estoque Inicial:150
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:7129211001086
+Name:GDL56 LA-K453P
+P/N:CN09YV3RCMC00163043EA00
+QTD:0
+EstoqueM:0
+Descrição:GDL56 LA-K453P
+SKUs:
+Modelo:SIF MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:628
+Name:EXTENSOR UNIVERSAL
+P/N:
+QTD:68
+EstoqueM:100
+Descrição:EXTENSOR FAN/SPEAK
+SKUs:
+Modelo:UNIVERSAL
+Status:Crítico
+Estoque Inicial:
+Data NPI:
+location:A
+location2:1
+location3:J

@@ -1,0 +1,11 @@
+CN:99
+Name:MONTREUX BANDEJA USIM
+P/N:MROFA30S000O00
+QTD:10
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:7168859500524
+Name:GL1EA LA-A131P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:GL1EA LA-A131P
+SKUs:
+Modelo:LENOVO MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:SMTB;FTMT010
+Name:Fixture
+P/N:ESD0324
+QTD:1
+EstoqueM:0
+Descrição:OBE
+SKUs:
+Modelo:MONTREUX FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MONTREUX FX
+picture:MONTREUX FX
+validacao:

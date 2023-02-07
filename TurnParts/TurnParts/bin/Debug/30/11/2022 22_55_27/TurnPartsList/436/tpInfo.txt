@@ -1,0 +1,14 @@
+CN:436
+Name:TP_GPT54_EXTENSOR_AUDIO
+P/N:NPINBX0002GU00
+QTD:403
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:220
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-36,8

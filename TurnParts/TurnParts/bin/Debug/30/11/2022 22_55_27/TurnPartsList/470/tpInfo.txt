@@ -1,0 +1,11 @@
+CN:470
+Name:TP_BATERIA_3.42AH
+P/N:NPIGC020032T1L
+QTD:135
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

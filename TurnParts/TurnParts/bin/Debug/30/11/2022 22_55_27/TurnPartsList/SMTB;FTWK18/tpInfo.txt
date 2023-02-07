@@ -1,0 +1,14 @@
+CN:SMTB;FTWK18
+Name:Fixture
+P/N:ESD0504
+QTD:1
+EstoqueM:0
+Descrição:FIXTURE COM ELETROIMA (LID)
+SKUs:
+Modelo:WARLOCK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK FX
+picture:WARLOCK FX
+validacao:

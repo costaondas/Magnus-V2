@@ -1,0 +1,11 @@
+CN:504
+Name:TP_TOUCH PAD
+P/N:MROPK09000K470
+QTD:183
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

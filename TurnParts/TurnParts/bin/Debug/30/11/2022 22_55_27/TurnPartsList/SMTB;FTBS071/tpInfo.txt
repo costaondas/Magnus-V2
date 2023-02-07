@@ -1,0 +1,14 @@
+CN:SMTB;FTBS071
+Name:Fixture
+P/N:ESD0888
+QTD:0
+EstoqueM:0
+Descrição:VIROU UM CAMELIA
+SKUs:
+Modelo:BULLSEYE FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:BULLSEYE FX
+picture:BULLSEYE FX
+validacao:

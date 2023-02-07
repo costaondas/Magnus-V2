@@ -1,0 +1,14 @@
+CN:750
+Name:TP_PARAFUSO PARA I/ BOARD                         
+P/N:NPIUMA00000A4G0
+QTD:2000
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:2000
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

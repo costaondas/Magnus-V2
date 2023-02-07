@@ -1,0 +1,11 @@
+CN:690
+Name:TP_CABO FP
+P/N:NPIPK09000TE00
+QTD:1311
+EstoqueM:750
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Alerta
+Estoque Inicial:1311
+Data NPI:00/00/2022 00:00:00

@@ -1,0 +1,14 @@
+CN:916
+Name:Pincel PILOTO marcador
+P/N:
+QTD:79
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:Escritório
+Status:Alerta
+Estoque Inicial:86
+Data NPI:30/09/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:CN0042CNCMC0022H0002A00
+Name:GDM50  LA-L241P
+P/N:CN0042CNCMC0022H0001A00
+QTD:0
+EstoqueM:0
+Descrição:GDM50  LA-L241P
+SKUs:
+Modelo:WARLOCK PN
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

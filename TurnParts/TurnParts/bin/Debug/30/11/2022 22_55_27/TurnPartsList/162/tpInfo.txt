@@ -1,0 +1,11 @@
+CN:162
+Name:TP_COSUS_PLACA ADAPTADORA 10 PIN
+P/N:MRO4641-05NQ000
+QTD:163
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

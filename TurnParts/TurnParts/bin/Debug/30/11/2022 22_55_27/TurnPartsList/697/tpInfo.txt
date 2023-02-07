@@ -1,0 +1,14 @@
+CN:697
+Name:TT_CABO_AUDIO
+P/N:NPI2000CAB00D4
+QTD:0
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Zerado
+Estoque Inicial:100
+Data NPI:
+grupo:
+picture:
+validacao:

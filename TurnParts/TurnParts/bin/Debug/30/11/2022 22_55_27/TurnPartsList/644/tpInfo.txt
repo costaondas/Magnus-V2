@@ -1,0 +1,15 @@
+CN:644
+Name:AEGIS TP_BACKLIGHT CABLE
+P/N:NPI3500FX030001
+QTD:50
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:AEGIS
+Status:Crítico
+Estoque Inicial:100
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:656,86
+ForcastUsed:0

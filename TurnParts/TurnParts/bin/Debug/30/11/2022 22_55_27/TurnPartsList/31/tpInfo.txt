@@ -1,0 +1,11 @@
+CN:31
+Name:MOCKINGBIRD TOUCH PAD
+P/N:MRO05617011M005
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

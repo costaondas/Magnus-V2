@@ -1,0 +1,14 @@
+CN:767
+Name:TP_TECLADO - DPN: CW3R5                           
+P/N:NPIUPK1330S1B00
+QTD:47
+EstoqueM:24
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:47
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

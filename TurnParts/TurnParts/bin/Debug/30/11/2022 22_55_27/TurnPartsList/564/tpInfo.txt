@@ -1,0 +1,14 @@
+CN:564
+Name:CABO_USB 3.0
+P/N:NPITP00480
+QTD:276
+EstoqueM:0
+Descrição:APENAS KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:78
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:PPZWHB4SHGGPL7
+Name:GPT52 LA-K201P
+P/N:4002768701781
+QTD:1
+EstoqueM:0
+Descrição:PLACA PADRÃO FIXTURE
+SKUs:
+Modelo:MALDIVES TGL MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

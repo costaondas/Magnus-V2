@@ -1,0 +1,14 @@
+CN:130
+Name:Flat Touch
+P/N:NPITP00477
+QTD:1258
+EstoqueM:1500
+Descrição:UTILIZADO EM TODOS OS TOUCH PAD A31.
+SKUs:
+Modelo:Universal
+Status:Crítico
+Estoque Inicial:1620
+Data NPI:26/09/2022 00:00:00
+grupo:
+picture:
+validacao:

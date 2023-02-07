@@ -1,0 +1,11 @@
+CN:8
+Name:BULLSEYE TOUCH PAD
+P/N:MROPK09000QE1L
+QTD:0
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Zerado
+Estoque Inicial:
+Data NPI:

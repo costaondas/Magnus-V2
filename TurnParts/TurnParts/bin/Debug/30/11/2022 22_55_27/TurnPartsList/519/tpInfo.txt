@@ -1,0 +1,11 @@
+CN:519
+Name:Fan da Sleepy
+P/N:MRODC28000NSD0
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

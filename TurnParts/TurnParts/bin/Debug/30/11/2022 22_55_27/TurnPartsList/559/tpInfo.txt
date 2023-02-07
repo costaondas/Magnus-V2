@@ -1,0 +1,11 @@
+CN:559
+Name:LVDS
+P/N:NPIDC02C00QJ00
+QTD:249
+EstoqueM:250
+Descrição:APENAS UTILIZADO TIGER LAKER
+SKUs:
+Modelo:TIGER LAKE
+Status:Crítico
+Estoque Inicial:346
+Data NPI:12/03/2022 00

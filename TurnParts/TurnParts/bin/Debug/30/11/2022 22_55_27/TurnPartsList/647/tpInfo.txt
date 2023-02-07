@@ -1,0 +1,15 @@
+CN:647
+Name:TP_TYPEC_CABLE
+P/N:NPI3500FX0A0001
+QTD:0
+EstoqueM:28
+Descrição:CABO TYPE C
+SKUs:
+Modelo:AEGIS
+Status:Zerado
+Estoque Inicial:56
+Data NPI:13/04/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:598,21
+ForcastUsed:0

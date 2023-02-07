@@ -1,0 +1,15 @@
+CN:660
+Name:TP_LOOPBACK NETWORK CABLE
+P/N:NPI60604007T
+QTD:24
+EstoqueM:0
+Descrição:TP_LOOPBACK NETWORK CABLE
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:24
+Data NPI:07/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:∞
+ForcastUsed:0

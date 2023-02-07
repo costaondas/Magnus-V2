@@ -1,0 +1,14 @@
+CN:4PCBAAF;TA4
+Name:Fixture
+P/N:ESD0710
+QTD:1
+EstoqueM:0
+Descrição:OPERANTE
+SKUs:
+Modelo:STONIC FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:STONIC FX
+picture:STONIC FX
+validacao:

@@ -1,0 +1,12 @@
+CN:6
+Name:BULLSEYE CABO MB PARA FP - 8P*0.5MM (IO-3)
+P/N:MRONBX0002KP00
+QTD:973
+EstoqueM:1000
+Descrição:RECONTADO 01/10/22
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:1082
+Data NPI:
+CycleLife:NaN

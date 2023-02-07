@@ -1,0 +1,11 @@
+CN:12
+Name:BULLSEYE LVDS
+P/N:MRODC02003L000
+QTD:601
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

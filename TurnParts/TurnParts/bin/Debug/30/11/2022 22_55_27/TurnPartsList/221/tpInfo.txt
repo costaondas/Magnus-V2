@@ -1,0 +1,11 @@
+CN:221
+Name:SIF LCD
+P/N:NPIAC60001WGBL
+QTD:9
+EstoqueM:8
+Descrição:L30 EMPRESTADO PARA O TS ID000033
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:17
+Data NPI:

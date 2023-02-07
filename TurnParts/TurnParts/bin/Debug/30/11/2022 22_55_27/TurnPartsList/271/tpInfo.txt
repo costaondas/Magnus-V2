@@ -1,0 +1,11 @@
+CN:271
+Name:SIF LAN 91GKF L29 L30
+P/N:NPI435P9C31L81
+QTD:1
+EstoqueM:9
+Descrição:91GKF sem led!!
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:10
+Data NPI:

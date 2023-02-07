@@ -1,0 +1,14 @@
+CN:701
+Name:TP_PLACA ADAPTADORA TYPE C
+P/N:NPITP00461
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:46
+Data NPI:
+grupo:
+picture:
+validacao:

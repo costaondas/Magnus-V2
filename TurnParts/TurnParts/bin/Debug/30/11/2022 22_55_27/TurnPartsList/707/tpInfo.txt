@@ -1,0 +1,11 @@
+CN:707
+Name:CABO EXTENSOR 3.0 USB MACHO X FEMEA 1 METRO
+P/N:M-F 1M  
+QTD:100
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Alerta
+Estoque Inicial:100
+Data NPI:

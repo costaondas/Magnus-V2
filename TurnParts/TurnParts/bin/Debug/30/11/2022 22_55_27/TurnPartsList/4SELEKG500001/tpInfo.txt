@@ -1,0 +1,14 @@
+CN:4SELEKG500001
+Name:SELEK MLK N18E
+P/N:CN0DV11CWSC0007V0V1RA00
+QTD:0
+EstoqueM:0
+Descrição:SELEK MLK N18E
+SKUs:
+Modelo:SELEK MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

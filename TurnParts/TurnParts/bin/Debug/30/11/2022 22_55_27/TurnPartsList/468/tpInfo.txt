@@ -1,0 +1,14 @@
+CN:468
+Name:TP_WLAN
+P/N:NPIPK32000MB0L
+QTD:1754
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location2:F
+location:2
+location3:BURITI

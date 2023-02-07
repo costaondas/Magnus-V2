@@ -1,0 +1,11 @@
+CN:396
+Name:PASADENA_CABO_USB_30P
+P/N:MRODEFC0599020
+QTD:227
+EstoqueM:132
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Alerta
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:279
+Name:SIF SSD
+P/N:NPIDD90001A72L
+QTD:143
+EstoqueM:80
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Alerta
+Estoque Inicial:308
+Data NPI:

@@ -1,0 +1,11 @@
+CN:153
+Name:SOUTHPEAK 13 Cabo sensor
+P/N:vr com Bruno
+QTD:146
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:721
+Name:TP_Teclado - Backlight - DPN: MV4X8
+P/N:NPIUPK133IW1B00
+QTD:120
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:165
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

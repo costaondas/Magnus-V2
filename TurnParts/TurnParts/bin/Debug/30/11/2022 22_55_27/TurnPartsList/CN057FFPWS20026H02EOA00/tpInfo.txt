@@ -1,0 +1,14 @@
+CN:CN057FFPWS20026H02EOA00
+Name:9PVYR$FA
+P/N:CN057FFPWS20026H02EOA00
+QTD:0
+EstoqueM:0
+Descrição:TROY MLK
+SKUs:
+Modelo:TROY MLK MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:28/07/2022 00:00:00
+grupo:GOLDENS
+picture:
+validacao:

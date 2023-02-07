@@ -1,0 +1,14 @@
+CN:430
+Name:TP_GPT54_AUTO FALANTE
+P/N:NPIPK23000Z800
+QTD:775
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:222
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-12,18

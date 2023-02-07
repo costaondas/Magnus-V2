@@ -1,0 +1,11 @@
+CN:201
+Name:Bastão de Cola Quente
+P/N:
+QTD:296
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

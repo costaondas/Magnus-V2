@@ -1,0 +1,11 @@
+CN:190
+Name:Flat Touch Invertido
+P/N:
+QTD:0
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Zerado
+Estoque Inicial:
+Data NPI:

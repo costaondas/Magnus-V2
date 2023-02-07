@@ -1,0 +1,14 @@
+CN:782
+Name:TP_Sensor biometria - DPN: 5XWC3
+P/N:PK09000S20L
+QTD:131
+EstoqueM:0
+Descrição:5XWC3
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:123
+Data NPI:
+grupo:
+picture:
+validacao:

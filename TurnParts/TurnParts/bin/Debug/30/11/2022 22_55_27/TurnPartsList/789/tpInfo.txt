@@ -1,0 +1,14 @@
+CN:789
+Name:TP_Placa adaptadora LED
+P/N: 72A0ZQ31147
+QTD:153
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:174
+Data NPI:
+grupo:
+picture:
+validacao:

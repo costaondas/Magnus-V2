@@ -1,0 +1,11 @@
+CN:388
+Name:PASADENA_LCD NO TOUCH
+P/N:MROAA116XTN040
+QTD:21
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

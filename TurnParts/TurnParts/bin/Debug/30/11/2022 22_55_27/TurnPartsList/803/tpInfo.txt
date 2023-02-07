@@ -1,0 +1,14 @@
+CN:803
+Name:TP_THERMAL_FAN_115W                               
+P/N:NPIUAT3LQ001ZVL
+QTD:320
+EstoqueM:0
+Descrição:TP_THERMAL_FAN_115W                               
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:200
+Data NPI:
+grupo:
+picture:
+validacao:

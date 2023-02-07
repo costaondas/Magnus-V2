@@ -1,0 +1,11 @@
+CN:37
+Name:MOCKINGBIRD CABO_IO
+P/N:MRO4500KA0A0021
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

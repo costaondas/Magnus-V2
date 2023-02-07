@@ -1,0 +1,13 @@
+CN:580
+Name:EXTENSOR_32P
+P/N:NPINBX0002PB00
+QTD:1110
+EstoqueM:772
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Alerta
+Estoque Inicial:1058
+Data NPI:18/03/2022 00
+valorUnitario:1,83
+alerta:5

@@ -1,0 +1,11 @@
+CN:23
+Name:BULLSEYE FAN
+P/N:MRODC28000K7F0
+QTD:333
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Moderado
+Estoque Inicial:
+Data NPI:

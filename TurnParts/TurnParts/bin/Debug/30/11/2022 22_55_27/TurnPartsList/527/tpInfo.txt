@@ -1,0 +1,11 @@
+CN:527
+Name:TP_SLEEPY IL_TECLADO
+P/N:MROPK132WV1A29
+QTD:0
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

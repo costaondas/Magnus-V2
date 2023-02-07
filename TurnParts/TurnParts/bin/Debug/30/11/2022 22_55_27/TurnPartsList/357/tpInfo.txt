@@ -1,0 +1,11 @@
+CN:357
+Name:TP_STONIC_FAN
+P/N:MRODC28000QEF0
+QTD:2
+EstoqueM:8
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

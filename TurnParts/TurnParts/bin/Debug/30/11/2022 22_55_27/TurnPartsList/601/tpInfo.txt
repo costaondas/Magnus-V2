@@ -1,0 +1,11 @@
+CN:601
+Name:South Peak 13
+P/N:N/A
+QTD:8
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:12
+Data NPI:

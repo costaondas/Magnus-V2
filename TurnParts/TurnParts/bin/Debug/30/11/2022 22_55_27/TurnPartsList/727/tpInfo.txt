@@ -1,0 +1,14 @@
+CN:727
+Name:TP_Placa adaptadora USH - DPN: 292DT
+P/N:NPIU72A0ZQ31149
+QTD:411
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:441
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

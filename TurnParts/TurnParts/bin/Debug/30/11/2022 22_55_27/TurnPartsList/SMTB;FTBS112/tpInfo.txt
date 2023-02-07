@@ -1,0 +1,14 @@
+CN:SMTB;FTBS112
+Name:Fixture
+P/N:ESD0906
+QTD:1
+EstoqueM:0
+Descrição:DESMONTADO-03/09/22ͶͶ
+SKUs:
+Modelo:BULLSEYE FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:BULLSEYE FX
+picture:BULLSEYE FX
+validacao:

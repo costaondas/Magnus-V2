@@ -1,0 +1,14 @@
+CN:CN0Y20X4WSC0018L1DK2A00
+Name:CYBORG-N15 MB TGL NEW PD
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:CYBORG-N15 MB TGL NEW PD
+SKUs:
+Modelo:CYBORG MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

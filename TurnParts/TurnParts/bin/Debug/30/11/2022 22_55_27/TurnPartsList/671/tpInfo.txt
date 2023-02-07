@@ -1,0 +1,14 @@
+CN:671
+Name:TP_SODIMM DDR4 4GB (MEMORIA)
+P/N:NPITP00449
+QTD:30
+EstoqueM:235
+Descrição:MEMORIA 4GB
+SKUs:
+Modelo:KYOTO_TROY
+Status:Extremamente crítico
+Estoque Inicial:469
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

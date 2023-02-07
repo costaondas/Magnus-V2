@@ -1,0 +1,14 @@
+CN:SMTB;FTVO05
+Name:Fixture
+P/N:ESD1359
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:LENOVO FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:LENOVO FX
+picture:LENOVO FX
+validacao:

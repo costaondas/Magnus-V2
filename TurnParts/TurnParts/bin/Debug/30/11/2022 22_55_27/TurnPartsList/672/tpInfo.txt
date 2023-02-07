@@ -1,0 +1,14 @@
+CN:672
+Name:TP_WLAN CARD_ AX210 (WLAN)
+P/N:NPITP00450
+QTD:501
+EstoqueM:209
+Descrição:WLAN AX210
+SKUs:
+Modelo:KYOTO_TROY
+Status:Moderado
+Estoque Inicial:417
+Data NPI:13/04/2022 00
+grupo:
+picture:
+validacao:

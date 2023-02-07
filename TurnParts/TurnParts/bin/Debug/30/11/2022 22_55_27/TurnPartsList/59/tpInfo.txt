@@ -1,0 +1,11 @@
+CN:59
+Name:SOUTH PEAK 14 SMART CARD
+P/N:MRODC04000RT00
+QTD:38
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Crítico
+Estoque Inicial:
+Data NPI:

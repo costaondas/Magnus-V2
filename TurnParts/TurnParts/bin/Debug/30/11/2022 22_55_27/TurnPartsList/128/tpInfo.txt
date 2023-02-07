@@ -1,0 +1,11 @@
+CN:128
+Name:UNIVERSAL ADAPTADOR TYPE-C_HDMI 4K
+P/N:MRON002013
+QTD:192
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

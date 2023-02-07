@@ -1,0 +1,14 @@
+CN:773
+Name:TP_camera Hello - DPN: 327J7
+P/N:PK40001V71L
+QTD:76
+EstoqueM:0
+Descrição:327J7
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:102
+Data NPI:
+grupo:
+picture:
+validacao:

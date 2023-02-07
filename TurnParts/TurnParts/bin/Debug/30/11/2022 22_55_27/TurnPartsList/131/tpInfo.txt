@@ -1,0 +1,11 @@
+CN:131
+Name:KEYBOARD FLAT 4P 1.0MM
+P/N:NPITP00478
+QTD:2151
+EstoqueM:1500
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Alerta
+Estoque Inicial:
+Data NPI:

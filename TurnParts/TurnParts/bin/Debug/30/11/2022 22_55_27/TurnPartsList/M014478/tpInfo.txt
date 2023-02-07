@@ -1,0 +1,14 @@
+CN:M014478
+Name:MULTÍMETRO
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:EQUIPAMENTOS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MULTIMETRO
+picture:MULTIMETRO
+validacao:

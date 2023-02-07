@@ -1,0 +1,14 @@
+CN:699
+Name:TP_CABO_DE ADAPTACAO_PS2_MICROSERIAL
+P/N:NPITP00454     
+QTD:132
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

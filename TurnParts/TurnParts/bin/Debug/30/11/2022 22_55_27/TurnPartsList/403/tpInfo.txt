@@ -1,0 +1,11 @@
+CN:403
+Name:TP_DC IN                              
+P/N:NPI4500MZ030011
+QTD:29
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:500
+Data NPI:

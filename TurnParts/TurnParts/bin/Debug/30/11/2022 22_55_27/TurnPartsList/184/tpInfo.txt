@@ -1,0 +1,11 @@
+CN:184
+Name:TP_COSUS_MODULO DDR4 4GB
+P/N:MRO03A3-00C40DE
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

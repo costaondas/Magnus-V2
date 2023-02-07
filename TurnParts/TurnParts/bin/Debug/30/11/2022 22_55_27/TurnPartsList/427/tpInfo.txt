@@ -1,0 +1,14 @@
+CN:427
+Name:TP_GPT54_WEBCAM/DIG MIC
+P/N:NPIPK40001TF10
+QTD:10
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:40
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:224,47

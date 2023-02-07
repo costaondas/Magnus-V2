@@ -1,0 +1,14 @@
+CN:717
+Name:TP_Camera - Hello - DPN: 6XX8D
+P/N:NPIUPK40001V51L
+QTD:413
+EstoqueM:248
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:495
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

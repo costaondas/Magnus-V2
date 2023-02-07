@@ -1,0 +1,11 @@
+CN:58
+Name:SOUTH PEAK 14 EXTENSOR_USH
+P/N:MRONBX0002R000
+QTD:0
+EstoqueM:200
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Zerado
+Estoque Inicial:
+Data NPI:

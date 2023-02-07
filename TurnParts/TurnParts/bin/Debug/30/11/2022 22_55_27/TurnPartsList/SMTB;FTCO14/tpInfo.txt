@@ -1,0 +1,14 @@
+CN:SMTB;FTCO14
+Name:Fixture
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:SEM ESDͶͶDESMONTADO-03/09/22
+SKUs:
+Modelo:COLOSSUS FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:COLOSSUS FX
+picture:COLOSSUS FX
+validacao:

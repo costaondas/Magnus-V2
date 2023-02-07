@@ -1,0 +1,14 @@
+CN:811
+Name:TP_IO_BOARD_LSL65H                                
+P/N:NPIU435PH931L01
+QTD:40
+EstoqueM:0
+Descrição:TP_IO_BOARD_LSL65H                                
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:54
+Data NPI:
+grupo:
+picture:
+validacao:

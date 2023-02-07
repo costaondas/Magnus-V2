@@ -1,0 +1,11 @@
+CN:538
+Name:TP_ROSE_FFC_HDD
+P/N:MROIP00615
+QTD:681
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

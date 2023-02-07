@@ -1,0 +1,11 @@
+CN:3
+Name:BULLSEYE CABO POWER - 4P 1MM (IO-2)
+P/N:MRONBX0002KL00
+QTD:1535
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Alerta
+Estoque Inicial:
+Data NPI:

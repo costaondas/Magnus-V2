@@ -1,0 +1,11 @@
+CN:64
+Name:SOUTH PEAK 14 NOTHBAY_MLK_WWAN
+P/N:MROPK29200TH1L
+QTD:1
+EstoqueM:5
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

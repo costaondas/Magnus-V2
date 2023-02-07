@@ -1,0 +1,11 @@
+CN:397
+Name:PASADENA_CABO_USB_40P
+P/N:NPIDEFC0599021
+QTD:228
+EstoqueM:40
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Trivial
+Estoque Inicial:
+Data NPI:

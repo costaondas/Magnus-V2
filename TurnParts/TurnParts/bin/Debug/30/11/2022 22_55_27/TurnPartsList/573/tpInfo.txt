@@ -1,0 +1,14 @@
+CN:573
+Name:PATCH CORD U/UTP 2.5M
+P/N:
+QTD:84
+EstoqueM:0
+Descrição:PARA O PROJETO KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:90
+Data NPI:
+grupo:
+picture:
+validacao:

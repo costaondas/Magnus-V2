@@ -1,0 +1,14 @@
+CN:SMTB;FTWK46
+Name:Fixture
+P/N:ESD0463
+QTD:1
+EstoqueM:0
+Descrição:PINO REMOVIDO NA EXTRA
+SKUs:
+Modelo:WARLOCK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK FX
+picture:WARLOCK FX
+validacao:

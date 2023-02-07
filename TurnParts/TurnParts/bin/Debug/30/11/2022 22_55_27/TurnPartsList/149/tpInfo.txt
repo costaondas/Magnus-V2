@@ -1,0 +1,11 @@
+CN:149
+Name:SOUTHPEAK 13 TP_SP13_TECLADO
+P/N:MRO4900M7070201
+QTD:17
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

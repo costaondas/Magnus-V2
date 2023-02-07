@@ -1,0 +1,11 @@
+CN:127
+Name:UNIVERSAL ADAPTER USB 3.0 TO TYPE C
+P/N:MRON000888
+QTD:25
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

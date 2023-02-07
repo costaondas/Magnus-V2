@@ -1,0 +1,11 @@
+CN:537
+Name:TP_ROSE_FFC_TECLADO
+P/N:MROIP00613
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

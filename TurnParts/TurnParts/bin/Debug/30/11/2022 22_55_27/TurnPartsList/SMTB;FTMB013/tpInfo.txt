@@ -1,0 +1,14 @@
+CN:SMTB;FTMB013
+Name:Fixture
+P/N:ESD0748
+QTD:1
+EstoqueM:0
+Descrição:DESMONTADO-03/09/22ͶͶSAIDA
+SKUs:
+Modelo:MOCKINGBIRD FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MOCKINGBIRD FX
+picture:MOCKINGBIRD FX
+validacao:

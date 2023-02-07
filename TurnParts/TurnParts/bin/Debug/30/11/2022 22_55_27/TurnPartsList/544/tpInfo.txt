@@ -1,0 +1,11 @@
+CN:544
+Name:TP_ROSE_FFC_TOUCH PAD
+P/N:MROIP00703
+QTD:188
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

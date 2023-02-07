@@ -1,0 +1,14 @@
+CN:748
+Name:TP_PAINEL LCD                                     
+P/N:NPIUAC60001SF1L
+QTD:84
+EstoqueM:59
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:118
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

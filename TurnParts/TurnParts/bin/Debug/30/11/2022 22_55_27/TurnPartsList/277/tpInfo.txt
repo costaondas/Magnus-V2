@@ -1,0 +1,11 @@
+CN:277
+Name:SIF CABO BATERIA
+P/N:NPIDC02003U700
+QTD:9
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:1128
+Data NPI:

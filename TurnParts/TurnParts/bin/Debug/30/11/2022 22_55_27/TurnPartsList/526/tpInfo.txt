@@ -1,0 +1,11 @@
+CN:526
+Name:TP_SLEEPY_TOUCH PAD
+P/N:MROPK09000BB60
+QTD:0
+EstoqueM:0
+Descrição:SLEEPY IL, ROSE
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

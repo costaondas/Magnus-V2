@@ -1,0 +1,11 @@
+CN:154
+Name:SOUTHPEAK 13 Flat TP
+P/N:450.0M805.0001
+QTD:284
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

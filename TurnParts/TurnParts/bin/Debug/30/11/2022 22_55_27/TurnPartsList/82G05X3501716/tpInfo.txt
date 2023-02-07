@@ -1,0 +1,14 @@
+CN:82G05X3501716
+Name:Processador
+P/N:NPITP00448
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:I5-12600
+picture:ProcI5
+validacao:

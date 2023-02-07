@@ -1,0 +1,14 @@
+CN:433
+Name:TP_GPT54_CABO_EDP
+P/N:NPIDC02C00LO00
+QTD:316
+EstoqueM:250
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:374
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:114,14

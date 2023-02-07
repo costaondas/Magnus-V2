@@ -1,0 +1,11 @@
+CN:50
+Name:SOUTH PEAK 14 SENSOR/B
+P/N:MRO455P8631L01
+QTD:12
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

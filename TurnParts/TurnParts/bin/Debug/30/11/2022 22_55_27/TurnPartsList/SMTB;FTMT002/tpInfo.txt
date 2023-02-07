@@ -1,0 +1,14 @@
+CN:SMTB;FTMT002
+Name:Fixture
+P/N:ESD1249
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MONTREUX FX
+picture:MONTREUX FX
+validacao:

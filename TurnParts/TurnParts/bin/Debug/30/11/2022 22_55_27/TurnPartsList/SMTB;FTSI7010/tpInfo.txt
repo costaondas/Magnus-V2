@@ -1,0 +1,14 @@
+CN:SMTB;FTSI7010
+Name:Fixture
+P/N:ESD2053
+QTD:1
+EstoqueM:0
+Descrição:OBE (FIXTURE SEM ETIQUETA ESD)
+SKUs:
+Modelo:SIF I7 FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:SIF I7 FX
+picture:SIF I7 FX
+validacao:

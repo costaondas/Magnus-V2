@@ -1,0 +1,14 @@
+CN:733
+Name:TP_Modulo WLAN  -AX211.NGWD - DPN: G83J7
+P/N:NPIUPK32000MH3L
+QTD:502
+EstoqueM:311
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:622
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:210
+Name:TP_BULLSEYE_BATERIA
+P/N:MROGC02002PS1L
+QTD:52
+EstoqueM:50
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Alerta
+Estoque Inicial:
+Data NPI:

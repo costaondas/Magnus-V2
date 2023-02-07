@@ -1,0 +1,11 @@
+CN:414
+Name:MEMORIA 8GB
+P/N:NPIKRVFX$AA    
+QTD:90
+EstoqueM:0
+Descrição:M4P2200753ͶͶSALDO DE ENTRADA 140 UNI.
+SKUs:
+Modelo:CYBORG
+Status:Sem Controle
+Estoque Inicial:120
+Data NPI:

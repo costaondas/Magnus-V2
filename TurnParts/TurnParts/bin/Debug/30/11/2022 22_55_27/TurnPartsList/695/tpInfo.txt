@@ -1,0 +1,14 @@
+CN:695
+Name:SERIAL TEST JIG
+P/N:2000FIX0007
+QTD:9
+EstoqueM:25
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Extremamente crítico
+Estoque Inicial:54
+Data NPI:
+grupo:
+picture:
+validacao:

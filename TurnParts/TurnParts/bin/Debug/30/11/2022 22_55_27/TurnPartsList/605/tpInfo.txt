@@ -1,0 +1,11 @@
+CN:605
+Name:Rose
+P/N:N/A
+QTD:4
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:15
+Data NPI:

@@ -1,0 +1,14 @@
+CN:740
+Name:TP_Placa adaptadora mini sd card
+P/N:NPIU72A04631114
+QTD:903
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:925
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:751
+Name:TP_PARAFUSO PARA THERMAL/FAN - COOLER             
+P/N:NPIUMA00001GRG0
+QTD:2000
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:2000
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

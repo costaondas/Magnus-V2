@@ -1,0 +1,14 @@
+CN:4002422500104
+Name:GDC31 LA-K371P
+P/N:BR095Y8JCMM0014J0062
+QTD:0
+EstoqueM:0
+Descrição:GDC31 LA-K371P
+SKUs:
+Modelo:MONTREUX MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:467
+Name:TP_GDC41_CABO_ELETRICO
+P/N:NPIGA000015Y0L
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

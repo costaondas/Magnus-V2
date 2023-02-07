@@ -1,0 +1,15 @@
+CN:692
+Name:TP_MEMORIA DDR4/4GB - MPN - HMA851S6DJR6N-XNN0
+P/N:NPIN000085
+QTD:33
+EstoqueM:150
+Descrição:MEMORIA 4GB - ADATA NACIONAL
+SKUs:
+Modelo:AEGIS
+Status:Extremamente crítico
+Estoque Inicial:299
+Data NPI:06/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:274,59
+ForcastUsed:0

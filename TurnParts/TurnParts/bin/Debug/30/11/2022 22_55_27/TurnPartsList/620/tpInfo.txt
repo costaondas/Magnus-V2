@@ -1,0 +1,11 @@
+CN:620
+Name:CABO USB AM X BM 3.0
+P/N:
+QTD:18
+EstoqueM:0
+Descrição:CABO USB AM X BM 3.0
+SKUs:
+Modelo:UNIVERSAL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

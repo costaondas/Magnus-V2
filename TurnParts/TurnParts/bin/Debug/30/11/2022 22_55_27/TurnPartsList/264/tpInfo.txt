@@ -1,0 +1,11 @@
+CN:264
+Name:SIF extensor io
+P/N:NPINBX0002RL00
+QTD:380
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Moderado
+Estoque Inicial:209
+Data NPI:

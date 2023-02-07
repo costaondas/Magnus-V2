@@ -1,0 +1,14 @@
+CN:558
+Name:CABO_DISPLAYPORT 4K
+P/N:NPIN000052
+QTD:59
+EstoqueM:0
+Descrição:UTILIZADO NA SIF, KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

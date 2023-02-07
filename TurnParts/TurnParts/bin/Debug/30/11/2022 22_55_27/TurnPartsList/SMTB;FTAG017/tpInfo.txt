@@ -1,0 +1,14 @@
+CN:SMTB;FTAG017
+Name:Fixture
+P/N:NT
+QTD:1
+EstoqueM:0
+Descrição:SEM RETRABALHO
+SKUs:
+Modelo:AEGES FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:AEGES FX
+picture:AEGES FX
+validacao:

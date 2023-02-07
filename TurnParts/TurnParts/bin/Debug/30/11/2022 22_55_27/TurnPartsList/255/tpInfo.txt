@@ -1,0 +1,11 @@
+CN:255
+Name:SIF DC Jack
+P/N:NPIDC301017900
+QTD:253
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:831
+Data NPI:

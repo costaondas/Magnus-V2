@@ -1,0 +1,14 @@
+CN:SMTB;FTMTM001
+Name:Fixture
+P/N:ESD2094
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:MONTREUX MLK FX
+picture:MONTREUX MLK FX
+validacao:

@@ -1,0 +1,11 @@
+CN:258
+Name:SIF ADAPTER 180W
+P/N:NPIPK10000PZ2L
+QTD:11
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Sem Controle
+Estoque Inicial:53
+Data NPI:

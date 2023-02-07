@@ -1,0 +1,14 @@
+CN:797
+Name:TP_SSD 256GB - KBG40ZNS256G - DPN: FWJTG
+P/N:DD900013U2L
+QTD:155
+EstoqueM:0
+Descrição:FWJTG
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:155
+Data NPI:
+grupo:
+picture:
+validacao:

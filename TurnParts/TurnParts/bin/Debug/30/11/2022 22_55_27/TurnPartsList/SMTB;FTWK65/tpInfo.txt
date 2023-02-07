@@ -1,0 +1,14 @@
+CN:SMTB;FTWK65
+Name:Fixture
+P/N:ESD1977
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:WARLOCK FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:WARLOCK FX
+picture:WARLOCK FX
+validacao:

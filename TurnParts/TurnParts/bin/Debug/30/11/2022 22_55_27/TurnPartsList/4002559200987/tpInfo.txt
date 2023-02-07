@@ -1,0 +1,14 @@
+CN:4002559200987
+Name:GDF40 LA-K491P
+P/N:BR0XK71DCMM001A600AD
+QTD:0
+EstoqueM:0
+Descrição:GDF40 LA-K491P
+SKUs:
+Modelo:SOUTH PEAK 14 MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

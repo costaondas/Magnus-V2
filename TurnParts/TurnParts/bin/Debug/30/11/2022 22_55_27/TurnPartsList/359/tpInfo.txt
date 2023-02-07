@@ -1,0 +1,11 @@
+CN:359
+Name:TP_OCTAVIA_FLAT HHD
+P/N:MRONBX0002HK00
+QTD:0
+EstoqueM:100
+Descrição:CABO DO HD, UTILIZADO
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

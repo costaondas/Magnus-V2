@@ -1,0 +1,14 @@
+CN:CN03MJW9CMC0026100FAA00
+Name:HDK51 LA-L658P
+P/N:CN03MJW9CMC0026100F9A00
+QTD:0
+EstoqueM:0
+Descrição:PAINEL MONTADO
+SKUs:
+Modelo:SIF R5 PN MLK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

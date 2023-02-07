@@ -1,0 +1,11 @@
+CN:135
+Name:UNIVERSAL CABO USB 3.0 AB - NACIONAL
+P/N:MRON002118
+QTD:76
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Crítico
+Estoque Inicial:
+Data NPI:

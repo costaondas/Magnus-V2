@@ -1,0 +1,11 @@
+CN:409
+Name:TOUCH PAD
+P/N:NPI05617002M026
+QTD:210
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:71
+Data NPI:

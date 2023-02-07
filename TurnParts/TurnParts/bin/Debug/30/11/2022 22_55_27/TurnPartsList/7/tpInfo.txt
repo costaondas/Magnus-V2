@@ -1,0 +1,11 @@
+CN:7
+Name:BULLSEYE DC JACK IN
+P/N:MRODC301015Q00
+QTD:2090
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Moderado
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:856
+Name:ANTENA NFC
+P/N:NPIU025901RI001
+QTD:241
+EstoqueM:121
+Descrição:ANTENA NFC
+SKUs:
+Modelo:SOUTH PEAK 13 MLK
+Status:Alerta
+Estoque Inicial:241
+Data NPI:06/08/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,14 @@
+CN:4PASADENA0001
+Name:ZAK DA0ZAKMB6E0
+P/N:94200TW5MBQC00002
+QTD:0
+EstoqueM:0
+Descrição:ZAK DA0ZAKMB6E0
+SKUs:
+Modelo:PASADENA MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

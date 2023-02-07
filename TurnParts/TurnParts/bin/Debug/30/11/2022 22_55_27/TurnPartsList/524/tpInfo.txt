@@ -1,0 +1,11 @@
+CN:524
+Name:TP_SLEEPY_CABO_IO
+P/N:MRONBX0002JT00
+QTD:242
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

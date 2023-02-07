@@ -1,0 +1,11 @@
+CN:101
+Name:MONTREUX ADAPTACAO_SPK
+P/N:MRO435P8431L01
+QTD:120
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

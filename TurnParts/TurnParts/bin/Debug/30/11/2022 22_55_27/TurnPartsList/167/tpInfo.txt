@@ -1,0 +1,11 @@
+CN:167
+Name:TP_COSUS_MICROVENTILADOR
+P/N:MRO1323-011R0DE
+QTD:41
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

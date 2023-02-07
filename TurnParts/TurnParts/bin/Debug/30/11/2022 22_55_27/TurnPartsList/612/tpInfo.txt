@@ -1,0 +1,14 @@
+CN:612
+Name:CABO 4 PINOS FAN
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Zerado
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

@@ -1,0 +1,11 @@
+CN:236
+Name:FAN GPU 8FL
+P/N:NPIDC28000T8FL
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:41
+Data NPI:

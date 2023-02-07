@@ -1,0 +1,11 @@
+CN:534
+Name:TP_SLEEPY_KL_EXTENSOR FAN
+P/N:MROIP00681
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,14 @@
+CN:460
+Name:TP_CABO_BATERIA
+P/N:NPIDC02003X800
+QTD:2208
+EstoqueM:1000
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location:4
+location2:F
+location3:BURITI

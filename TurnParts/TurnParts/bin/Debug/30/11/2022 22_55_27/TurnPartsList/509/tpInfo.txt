@@ -1,0 +1,11 @@
+CN:509
+Name:TP_ADAPTER_100E
+P/N:MROPK10001GG20
+QTD:36
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

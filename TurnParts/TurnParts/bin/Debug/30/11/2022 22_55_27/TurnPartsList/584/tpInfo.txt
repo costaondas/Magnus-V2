@@ -1,0 +1,13 @@
+CN:584
+Name:LCD
+P/N:NPIAC60001GAQ0
+QTD:9
+EstoqueM:14
+Descrição:
+SKUs:
+Modelo:CAMELIA
+Status:Crítico
+Estoque Inicial:21
+Data NPI:18/03/2022 00
+valorUnitario:607,82
+alerta:2

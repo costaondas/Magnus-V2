@@ -1,0 +1,11 @@
+CN:378
+Name:TT_CABO_FAN
+P/N:MROIP01227
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

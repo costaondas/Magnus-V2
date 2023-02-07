@@ -1,0 +1,14 @@
+CN:438
+Name:TP_GPT54_EXTENSOR_SD
+P/N:NPINBX0002GW00
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:∞

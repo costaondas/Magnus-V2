@@ -1,0 +1,11 @@
+CN:391
+Name:PASADENA_TECLADO
+P/N:MROAEZAL600010
+QTD:0
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:PASADENA
+Status:Zerado
+Estoque Inicial:
+Data NPI:

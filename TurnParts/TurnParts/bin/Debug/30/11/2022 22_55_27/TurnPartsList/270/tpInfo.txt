@@ -1,0 +1,11 @@
+CN:270
+Name:SIF small board
+P/N:NPI455P9E31L01
+QTD:1
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:86
+Data NPI:

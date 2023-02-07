@@ -1,0 +1,11 @@
+CN:366
+Name:ALTOFALANTE ESQUERDO
+P/N:MROPK230011S00
+QTD:25
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

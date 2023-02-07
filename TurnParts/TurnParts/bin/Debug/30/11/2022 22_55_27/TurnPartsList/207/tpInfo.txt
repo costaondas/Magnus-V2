@@ -1,0 +1,12 @@
+CN:207
+Name:UNIVERSAL_PLACA USB 3.0
+P/N:
+QTD:60
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Moderado
+Estoque Inicial:59
+Data NPI:
+CycleLife:NaN

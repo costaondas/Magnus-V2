@@ -1,0 +1,14 @@
+CN:4PCBAF;TB2
+Name:Fixture
+P/N:ESD0401
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:ROSE FX
+picture:ROSE FX
+validacao:

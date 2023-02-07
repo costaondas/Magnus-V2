@@ -1,0 +1,14 @@
+CN:823
+Name:TP_MODULO DDR5                                    
+P/N:NPIUPK05500016L
+QTD:62
+EstoqueM:0
+Descrição:TP_MODULO DDR5                                    
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:95
+Data NPI:
+grupo:
+picture:
+validacao:

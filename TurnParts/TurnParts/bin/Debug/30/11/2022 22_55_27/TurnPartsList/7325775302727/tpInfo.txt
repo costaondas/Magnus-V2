@@ -1,0 +1,14 @@
+CN:7325775302727
+Name:GDM50  LA-L241P
+P/N:CN069V6GCMC002210AA7A00
+QTD:0
+EstoqueM:0
+Descrição:GDM50  LA-L241P
+SKUs:
+Modelo:WARLOCK MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

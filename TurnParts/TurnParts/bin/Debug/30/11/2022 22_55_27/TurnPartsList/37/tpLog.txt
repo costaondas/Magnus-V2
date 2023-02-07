@@ -1,0 +1,2 @@
+CN:25 22/12/2021 08:33:26 Q:-1 ID: Fixture: OUT
+CN:25 22/12/2021 08:33:45 Q:7 ID: Fixture: IN

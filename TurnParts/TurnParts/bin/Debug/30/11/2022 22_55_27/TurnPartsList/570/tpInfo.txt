@@ -1,0 +1,14 @@
+CN:570
+Name:EXTENSOR_I/O 32P*0.5*280mm
+P/N:NPITP00483
+QTD:1500
+EstoqueM:0
+Descrição:KYOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:1500
+Data NPI:
+grupo:
+picture:
+validacao:

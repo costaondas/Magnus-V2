@@ -1,0 +1,11 @@
+CN:513
+Name:TT_SB_GL1EA
+P/N:MRO435PCZ38L01
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

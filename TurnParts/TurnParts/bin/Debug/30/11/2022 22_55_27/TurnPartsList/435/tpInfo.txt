@@ -1,0 +1,14 @@
+CN:435
+Name:TP_GPT54_ANTENA
+P/N:NPIDC330029M00
+QTD:86
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:39
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:-143,28

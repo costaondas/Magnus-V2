@@ -1,0 +1,14 @@
+CN:440
+Name:TP_GPT54_EXTENSOR_TP_MODULO
+P/N:NPINBX0002GZ00
+QTD:68
+EstoqueM:100
+Descrição:REPOSIÇÃO ESTOQUE 08/09/2022
+SKUs:
+Modelo:MALDIVES
+Status:Extremamente crítico
+Estoque Inicial:143
+Data NPI:
+CycleLife:47,09
+PlacasProd:6734
+DateUsed:10/07/2022

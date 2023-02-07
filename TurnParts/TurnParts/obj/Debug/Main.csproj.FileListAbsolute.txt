@@ -1,0 +1,95 @@
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.GenerateResource.cache
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.CoreCompileInputs.cache
+C:\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe.config
+C:\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe
+C:\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.pdb
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Properties.Resources.resources
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.exe
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.pdb
+C:\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csprojAssemblyReference.cache
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe.config
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.pdb
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.AssemblyReference.cache
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.SuggestedBindingRedirects.cache
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Properties.Resources.resources
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.GenerateResource.cache
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.CoreCompileInputs.cache
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.exe
+C:\Users\TP\Documents\Visual\Magnus Versões\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.pdb
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe.config
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.pdb
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csprojAssemblyReference.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Properties.Resources.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.GenerateResource.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.exe
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_02122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.pdb
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe.config
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.pdb
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Properties.Resources.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.GenerateResource.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.exe
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.pdb
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csprojAssemblyReference.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.ResolveComReference.cache
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form2.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form3.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.LoadScreen.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form4.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form5.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form6.resources
+C:\Users\eduar\Documents\Visual\Magnus Versoes\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.testForm.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.AssemblyReference.cache
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.SuggestedBindingRedirects.cache
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.ResolveComReference.cache
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form2.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form3.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form4.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form5.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form6.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.LoadScreen.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Properties.Resources.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.testForm.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.GenerateResource.cache
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Main.csproj.CoreCompileInputs.cache
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.exe
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\Magnus.pdb
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe.config
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.exe
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\bin\Debug\Magnus.pdb
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form7.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form8.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form9.resources
+C:\Users\eduardo_costa\Documents\Magnus\Controle_wizard_03122021\Controle_wizard\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form10.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\bin\Debug\Magnus.exe.config
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\bin\Debug\Magnus.exe
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\bin\Debug\Magnus.pdb
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Main.csproj.AssemblyReference.cache
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Main.csproj.SuggestedBindingRedirects.cache
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Main.csproj.ResolveComReference.cache
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\TurnParts.Form1.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form10.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form2.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form3.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form4.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form5.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form6.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form7.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form8.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form9.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.LoadScreen.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Properties.Resources.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.testForm.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Main.csproj.GenerateResource.cache
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Main.csproj.CoreCompileInputs.cache
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Magnus.exe
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Magnus.pdb

@@ -1,0 +1,14 @@
+CN:592
+Name:MOUSE PS2 PRETO FEASSO
+P/N:NPIN000048
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:51
+Data NPI:22/02/2022 00
+grupo:
+picture:
+validacao:

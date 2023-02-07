@@ -1,0 +1,11 @@
+CN:227
+Name:SIF teclado
+P/N:NPIPK1336N1B00
+QTD:0
+EstoqueM:20
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:82
+Data NPI:

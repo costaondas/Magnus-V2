@@ -1,0 +1,14 @@
+CN:817
+Name:TP_DC_JACK_3K5 PJC086                             
+P/N:NPIUDC301017D00
+QTD:115
+EstoqueM:0
+Descrição:TP_DC_JACK_3K5 PJC086                             
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:113
+Data NPI:
+grupo:
+picture:
+validacao:

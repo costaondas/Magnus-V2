@@ -1,0 +1,14 @@
+CN:NIDGOLDEN1
+Name:GDP50 LA-K452P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:GDP50 LA-K452P
+SKUs:
+Modelo:SIF MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

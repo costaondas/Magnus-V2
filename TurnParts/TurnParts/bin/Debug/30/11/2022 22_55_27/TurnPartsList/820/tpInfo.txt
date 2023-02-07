@@ -1,0 +1,14 @@
+CN:820
+Name:TP_CAMERA LUXVISIONS                              
+P/N:NPIUPK40001V21L
+QTD:71
+EstoqueM:0
+Descrição:TP_CAMERA LUXVISIONS                              
+SKUs:
+Modelo:SIF R5/R7 MLK
+Status:Sem Controle
+Estoque Inicial:83
+Data NPI:
+grupo:
+picture:
+validacao:

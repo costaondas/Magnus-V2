@@ -1,0 +1,11 @@
+CN:53
+Name:SOUTH PEAK 14 EXTENSOR_LED
+P/N:MRONBX0002R100
+QTD:0
+EstoqueM:200
+Descrição:NF1455 05/07/2022ͶͶSALDO DE ENTRADA 223 UNI.
+SKUs:
+Modelo:SOUTH PEAK 14
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

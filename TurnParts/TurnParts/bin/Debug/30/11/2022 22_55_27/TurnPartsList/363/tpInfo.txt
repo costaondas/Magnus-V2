@@ -1,0 +1,11 @@
+CN:363
+Name:TP_SSD_256G
+P/N:MRODD900018K10
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

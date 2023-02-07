@@ -1,0 +1,11 @@
+CN:233
+Name:Thermal 3ZSL
+P/N:NPIAT36L003ZSL
+QTD:0
+EstoqueM:0
+Descrição:ALTERNATIVO  8FL
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:36
+Data NPI:

@@ -1,0 +1,11 @@
+CN:546
+Name:TP_ROSE_TOUCH PAD
+P/N:MROIP00705
+QTD:15
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:ROSE
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:566
+Name:CABO_BATERIA 8PX2.0X300MM
+P/N:NPITP00479
+QTD:1085
+EstoqueM:0
+Descrição:APENAS KYOTO&TROY
+SKUs:
+Modelo:CAMELIA
+Status:Sem Controle
+Estoque Inicial:600
+Data NPI:

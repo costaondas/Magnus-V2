@@ -1,0 +1,14 @@
+CN:4002817500002
+Name:AEGIS ADL-P MB UMA
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:AEGIS ADL-P MB UMA
+SKUs:
+Modelo:AEGES MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

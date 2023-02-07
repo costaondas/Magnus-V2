@@ -1,0 +1,14 @@
+CN:756
+Name:TP_PLACA ADAPTADORA LED                           
+P/N:NPIU72A0ZQ31147
+QTD:173
+EstoqueM:87
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:174
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

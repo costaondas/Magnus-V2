@@ -1,0 +1,11 @@
+CN:525
+Name:TP_SLEEPY_CABOTP
+P/N:MRONBX0002JS00
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SLEEPY IL
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

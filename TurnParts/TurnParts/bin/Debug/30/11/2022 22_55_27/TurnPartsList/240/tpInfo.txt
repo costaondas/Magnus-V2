@@ -1,0 +1,11 @@
+CN:240
+Name:Thermal 2ZCL
+P/N:NPIAT36M002ZCL
+QTD:0
+EstoqueM:40
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:34
+Data NPI:

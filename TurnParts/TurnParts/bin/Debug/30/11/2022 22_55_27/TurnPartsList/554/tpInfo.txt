@@ -1,0 +1,11 @@
+CN:554
+Name:Thermal
+P/N:
+QTD:904
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:Universal
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

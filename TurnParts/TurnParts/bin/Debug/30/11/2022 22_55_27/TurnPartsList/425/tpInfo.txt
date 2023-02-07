@@ -1,0 +1,14 @@
+CN:425
+Name:TP_GPT54_ADAPTADOR_DIS 65W
+P/N:NPIPK10001F400
+QTD:34
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MALDIVES
+Status:Sem Controle
+Estoque Inicial:40
+Data NPI:
+PlacasProd:6734
+DateUsed:10/07/2022
+CycleLife:1122,33

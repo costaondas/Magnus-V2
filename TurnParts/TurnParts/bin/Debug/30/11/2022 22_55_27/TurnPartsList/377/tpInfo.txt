@@ -1,0 +1,11 @@
+CN:377
+Name:TP_BULLSEYE_CABO TYPE-C/USB 3.0
+P/N:MROIP00970
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Zerado
+Estoque Inicial:
+Data NPI:

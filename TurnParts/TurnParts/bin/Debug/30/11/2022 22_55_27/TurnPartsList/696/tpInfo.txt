@@ -1,0 +1,14 @@
+CN:696
+Name:TP_CABO_AUDIO_4PIN
+P/N:NPI2000CAB0133
+QTD:231
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Trivial
+Estoque Inicial:40
+Data NPI:
+grupo:
+picture:
+validacao:

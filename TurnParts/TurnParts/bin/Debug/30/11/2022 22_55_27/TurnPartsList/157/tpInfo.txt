@@ -1,0 +1,11 @@
+CN:157
+Name:SOUTHPEAK 13 TP_SP13_MICROVENTILADOR
+P/N:MRO023100LA0011
+QTD:18
+EstoqueM:0
+Descrição:É O MESMO DA CYBORG
+SKUs:
+Modelo:SOUTHPEAK 13
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

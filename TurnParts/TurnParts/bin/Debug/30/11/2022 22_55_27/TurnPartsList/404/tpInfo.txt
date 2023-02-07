@@ -1,0 +1,20 @@
+CN:404
+Name:TP_CABO IO (N)                                  
+P/N:NPI4500MZ050011
+QTD:56
+EstoqueM:200
+Descrição:Cycle Life Calculado desde 23/12/21
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:885
+Data NPI:
+PPNP:48327
+Forcast:120000
+PlacasProd:48327
+ForcastUsed:120000
+DateUsed:09/20/2022
+CycleLife:67,78
+QTDPFP:1771
+QTDFinalizar:1771
+QTDcompra:1599

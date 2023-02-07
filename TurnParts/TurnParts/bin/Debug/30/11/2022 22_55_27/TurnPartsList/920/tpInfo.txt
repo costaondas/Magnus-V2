@@ -1,0 +1,14 @@
+CN:920
+Name:Extrator
+P/N:
+QTD:2
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:0
+Data NPI:06/10/2022 00:00:00
+grupo:
+picture:
+validacao:

@@ -1,0 +1,15 @@
+CN:661
+Name:TP_MODULO DE TESTE AUDIO LOOP BACK
+P/N:NPI307030025
+QTD:56
+EstoqueM:0
+Descrição:TP_MODULO DE TESTE AUDIO LOOP BACK
+SKUs:
+Modelo:AEGIS
+Status:Sem Controle
+Estoque Inicial:56
+Data NPI:07/05/2022 00:00:00
+PlacasProd:33500
+DateUsed:10/01/2022
+CycleLife:∞
+ForcastUsed:0

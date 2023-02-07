@@ -1,0 +1,14 @@
+CN:565
+Name:TECLADO USB
+P/N:
+QTD:1
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:0
+Data NPI:
+grupo:
+picture:
+validacao:

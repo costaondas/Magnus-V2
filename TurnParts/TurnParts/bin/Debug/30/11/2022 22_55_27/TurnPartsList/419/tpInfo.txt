@@ -1,0 +1,11 @@
+CN:419
+Name:WLAN
+P/N:NPIXVV0P       
+QTD:0
+EstoqueM:32
+Descrição:M4P2200753 ͶͶSALDO DE ENTRADA 55 UNI.
+SKUs:
+Modelo:CYBORG
+Status:Extremamente crítico
+Estoque Inicial:400
+Data NPI:

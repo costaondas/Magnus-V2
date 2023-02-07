@@ -1,0 +1,14 @@
+CN:4002587000079
+Name:GDM52 LA-L243P
+P/N:
+QTD:0
+EstoqueM:0
+Descrição:GDM52 LA-L243P
+SKUs:
+Modelo:WARLOCK MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

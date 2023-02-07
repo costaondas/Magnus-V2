@@ -1,0 +1,11 @@
+CN:242
+Name:SIF USB CML,LA2
+P/N:NPI435P9D31L01
+QTD:17
+EstoqueM:20
+Descrição:08Y03W, UTILIZADO NO CML, LA2
+SKUs:
+Modelo:SIF
+Status:Crítico
+Estoque Inicial:28
+Data NPI:

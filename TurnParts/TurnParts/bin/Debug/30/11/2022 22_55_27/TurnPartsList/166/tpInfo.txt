@@ -1,0 +1,11 @@
+CN:166
+Name:TP_COSUS_ADAPTADOR
+P/N:MRO0432-04RD0DE
+QTD:12
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

@@ -1,0 +1,11 @@
+CN:180
+Name:TP_COSUS_PLACA LIGA/DESLIGA
+P/N:MRO69C109B01B01
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:COLOSSUS
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

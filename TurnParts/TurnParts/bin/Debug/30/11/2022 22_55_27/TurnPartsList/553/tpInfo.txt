@@ -1,0 +1,11 @@
+CN:553
+Name:ADAPTADOR ROSE
+P/N:
+QTD:7
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:None
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

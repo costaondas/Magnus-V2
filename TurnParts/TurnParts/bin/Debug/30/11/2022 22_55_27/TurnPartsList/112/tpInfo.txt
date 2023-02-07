@@ -1,0 +1,11 @@
+CN:112
+Name:SELEK SPEAKER
+P/N:MRO023400L30011
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SELEK
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

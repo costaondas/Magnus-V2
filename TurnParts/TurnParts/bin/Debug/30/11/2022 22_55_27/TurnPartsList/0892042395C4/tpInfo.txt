@@ -1,0 +1,14 @@
+CN:0892042395C4
+Name:HDB42 LA-L591P
+P/N:CN04X33NCMK0025B04E0A00
+QTD:0
+EstoqueM:0
+Descrição:HDB42 LA-L591P
+SKUs:
+Modelo:SOUTH PEAK 14 MB
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:GOLDENS
+picture:
+validacao:

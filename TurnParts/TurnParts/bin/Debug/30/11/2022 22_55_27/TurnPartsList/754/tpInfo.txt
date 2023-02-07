@@ -1,0 +1,14 @@
+CN:754
+Name:TP_PLACA ADAPTADORA AUDIO                         
+P/N:NPIU72A0ZQ31141
+QTD:174
+EstoqueM:87
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Alerta
+Estoque Inicial:174
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

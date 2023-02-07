@@ -1,0 +1,11 @@
+CN:253
+Name:SIF Extensor Audio
+P/N:NPINBX0002RW00
+QTD:17
+EstoqueM:100
+Descrição:Utilizado na L29, L30.
+SKUs:
+Modelo:SIF
+Status:Extremamente crítico
+Estoque Inicial:224
+Data NPI:

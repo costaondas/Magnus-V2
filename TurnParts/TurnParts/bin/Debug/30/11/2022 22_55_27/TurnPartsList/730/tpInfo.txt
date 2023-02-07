@@ -1,0 +1,14 @@
+CN:730
+Name:TP_Sensor biometria - DPN: 5XWC3
+P/N:NPIUPK09000S20L
+QTD:443
+EstoqueM:500
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Crítico
+Estoque Inicial:700
+Data NPI:02/07/2022 00:00:00
+grupo:
+picture:
+validacao:

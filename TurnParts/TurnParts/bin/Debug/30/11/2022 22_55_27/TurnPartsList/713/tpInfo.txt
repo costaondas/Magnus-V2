@@ -1,0 +1,11 @@
+CN:713
+Name:HUB USB 3.0 4 PORTAS 
+P/N:294187
+QTD:36
+EstoqueM:15
+Descrição:
+SKUs:
+Modelo:UNIVERSAL
+Status:Extremamente crítico
+Estoque Inicial:36
+Data NPI:

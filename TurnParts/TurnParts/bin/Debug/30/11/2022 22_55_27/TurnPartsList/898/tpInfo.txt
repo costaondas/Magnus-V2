@@ -1,0 +1,14 @@
+CN:898
+Name:TP_CABO FLAT (FFC)_IO/B
+P/N:NPIUNBX0002VU00
+QTD:2469
+EstoqueM:1267
+Descrição:FFC 44P F P.5 PAD.3 129MM MB-IO/B AL V3
+SKUs:
+Modelo:WARLOCK MLK
+Status:Alerta
+Estoque Inicial:2533
+Data NPI:23/08/2022 00:00:00
+grupo:
+picture:
+validacao:

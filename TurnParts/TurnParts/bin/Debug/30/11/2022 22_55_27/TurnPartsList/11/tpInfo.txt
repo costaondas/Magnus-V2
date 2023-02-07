@@ -1,0 +1,11 @@
+CN:11
+Name:BULLSEYE LCD
+P/N:MROAC60001UJAL
+QTD:130
+EstoqueM:30
+Descrição:
+SKUs:
+Modelo:BULLSEYE
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

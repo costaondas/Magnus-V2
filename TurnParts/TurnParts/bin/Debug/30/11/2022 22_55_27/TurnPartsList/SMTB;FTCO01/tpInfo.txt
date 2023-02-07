@@ -1,0 +1,14 @@
+CN:SMTB;FTCO01
+Name:Fixture
+P/N:ESD0523
+QTD:1
+EstoqueM:0
+Descrição:DESMONTADO-03/09/22ͶͶSAIDA
+SKUs:
+Modelo:COLOSSUS FX
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:
+grupo:COLOSSUS FX
+picture:COLOSSUS FX
+validacao:

@@ -1,0 +1,11 @@
+CN:274
+Name:SIF parafuso
+P/N:MA00000ECG0
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:25
+Data NPI:

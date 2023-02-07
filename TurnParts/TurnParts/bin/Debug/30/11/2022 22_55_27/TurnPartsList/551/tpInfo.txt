@@ -1,0 +1,11 @@
+CN:551
+Name:Fita Isolante
+P/N:
+QTD:27
+EstoqueM:10
+Descrição:
+SKUs:
+Modelo:None
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

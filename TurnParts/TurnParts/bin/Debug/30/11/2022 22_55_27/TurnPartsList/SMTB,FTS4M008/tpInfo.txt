@@ -1,0 +1,14 @@
+CN:SMTB,FTS4M008
+Name:
+P/N:ESD2086
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:
+Status:Zerado
+Estoque Inicial:
+Data NPI:
+grupo:
+picture:
+validacao:

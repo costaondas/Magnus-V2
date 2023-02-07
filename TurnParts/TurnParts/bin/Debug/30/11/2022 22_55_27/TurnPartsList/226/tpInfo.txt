@@ -1,0 +1,11 @@
+CN:226
+Name:SIF extensor TP
+P/N:NPINBX0002RX00
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SIF
+Status:Zerado
+Estoque Inicial:224
+Data NPI:

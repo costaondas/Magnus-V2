@@ -1,0 +1,14 @@
+CN:738
+Name:TP_Cabo alimentação - DPN: HMMDD
+P/N:NPIUGA00001590L
+QTD:79
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:SOUTH PEAK 14 MLK
+Status:Sem Controle
+Estoque Inicial:79
+Data NPI:02/07/2022 00
+grupo:
+picture:
+validacao:

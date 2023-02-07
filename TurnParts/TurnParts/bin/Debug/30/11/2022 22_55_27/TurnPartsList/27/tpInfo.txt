@@ -1,0 +1,11 @@
+CN:27
+Name:MOCKINGBIRD PLACA I/O
+P/N:MRO4550KD020001
+QTD:0
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MOCKINGBIRD
+Status:Zerado
+Estoque Inicial:
+Data NPI:

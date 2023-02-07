@@ -1,0 +1,14 @@
+CN:461
+Name:TP_DC_JACK
+P/N:NPIDC301017I00
+QTD:1926
+EstoqueM:800
+Descrição:
+SKUs:
+Modelo:WARLOCK
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:
+location3:BURITI
+location:2
+location2:C

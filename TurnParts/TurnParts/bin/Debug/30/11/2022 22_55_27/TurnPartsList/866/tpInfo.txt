@@ -1,0 +1,14 @@
+CN:866
+Name:CPU THERMAL
+P/N:NPITP00451
+QTD:121
+EstoqueM:66
+Descrição:
+SKUs:
+Modelo:KYOTO_TROY
+Status:Alerta
+Estoque Inicial:
+Data NPI:11/08/2022 00
+grupo:
+picture:
+validacao:

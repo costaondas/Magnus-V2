@@ -1,0 +1,14 @@
+CN:791
+Name:TP_Placa adaptadora Audio
+P/N:72A0ZQ31141
+QTD:248
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:MONTREUX MLK
+Status:Sem Controle
+Estoque Inicial:174
+Data NPI:
+grupo:
+picture:
+validacao:

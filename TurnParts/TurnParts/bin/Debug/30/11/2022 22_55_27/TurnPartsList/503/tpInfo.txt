@@ -1,0 +1,11 @@
+CN:503
+Name:TP_EXTENSOR_TP
+P/N:MRONBX0002UG00
+QTD:2226
+EstoqueM:0
+Descrição:
+SKUs:
+Modelo:100E
+Status:Sem Controle
+Estoque Inicial:
+Data NPI:

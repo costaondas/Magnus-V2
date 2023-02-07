@@ -1,0 +1,11 @@
+CN:361
+Name:FLAT CABLE
+P/N:MRONBX0002OQ00
+QTD:1
+EstoqueM:100
+Descrição:
+SKUs:
+Modelo:STONIC
+Status:Extremamente crítico
+Estoque Inicial:
+Data NPI:

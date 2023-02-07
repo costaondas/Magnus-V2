@@ -1,0 +1,11 @@
+CN:561
+Name:CABO DISPLAY PORT 8K
+P/N:DPI420
+QTD:76
+EstoqueM:0
+Descrição:APENAS UTILIZADO NA KIOTO&TROY
+SKUs:
+Modelo:KYOTO_TROY
+Status:Sem Controle
+Estoque Inicial:270
+Data NPI:

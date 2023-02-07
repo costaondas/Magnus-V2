@@ -1,0 +1,11 @@
+CN:560
+Name:WLAN
+P/N:NPIPK32000KI10
+QTD:148
+EstoqueM:0
+Descrição:APENAS UTILIZADO TIGER LAKER
+SKUs:
+Modelo:TIGER LAKE
+Status:Sem Controle
+Estoque Inicial:274
+Data NPI:12/03/2022 00

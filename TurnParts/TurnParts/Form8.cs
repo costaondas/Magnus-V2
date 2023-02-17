@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MagnusSpace
 {
     public partial class Form8 : Form
     {
+        char VarDash = ((char)887);
+        char VarDashPlus = ((char)888);
         public string cn = "";
         public string qtd = "";
         public string qtdCompra = "";
@@ -25,7 +28,7 @@ namespace MagnusSpace
         public string inicioIntervalo = "";
         public string fimIntervalo = "";
         public string cycleLife = "";
-
+        List<string> GruposList = new List<string>();
         public string lastLoadedMode = "HISTORICO";
         bool trig = true;
         public Form8()
@@ -159,9 +162,62 @@ namespace MagnusSpace
             enablePanel(lastLoadedMode);
             clearLabels();
             loadVars();
-            
-        }
+            Item item = new Item();
+            item.Open(cn);
+            string valeu = item.stream("lock");
+            if (valeu == "true")
+            {
+                bloquearToolStripMenuItem.Text = "Desbloquear";
+                label11.Visible = true;
+            }
+            else
+            {
+                bloquearToolStripMenuItem.Text = "Bloquear";
+                label11.Visible = false;
+            }
+            Grupo gp = new Grupo();
 
+            GruposList = gp.allGrupos();
+            
+            List<string> gps = new  List<string>();
+            foreach(string l2 in GruposList.ToList())
+            {
+                gps.Add(l2.Split(VarDashPlus)[0].Split(VarDash)[1]);
+            }
+            comboBox1.DataSource = gps;
+
+            Item item2 = new Item();
+            item2.Open(cn);
+            string fc = item2.getForecast().ToString();
+            textBox3.Text = fc;
+            textBox5.Text = fc;
+            textBox4.Text = fc;
+
+        }
+        public int getTurnsLinha(string grup)
+        {
+            int outLine = 0;
+           foreach(string l in GruposList.ToList())
+            {
+                if (l.StartsWith("CN" + VarDash.ToString() + grup + VarDashPlus.ToString()))
+                {
+                    outLine = 0;
+                    List<string> list = new List<string>();
+                    list = l.Split(VarDashPlus).ToList();
+                    list.RemoveAt(0);
+                    foreach(string tp in list)
+                    {
+                        if (tp.Split(VarDash)[1] == "OUT")
+                        {
+                            outLine++;
+                        }
+                    }
+                    break;
+                }
+            }
+            return outLine;
+           
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -207,6 +263,7 @@ namespace MagnusSpace
 
         private void button1_Click(object sender, EventArgs e)
         {
+            salvarToolStripMenuItem.Text = "Salvar";
             float cycle = 0;
             float qtdF = 0;
             float qtdFimF = 0;
@@ -251,7 +308,7 @@ namespace MagnusSpace
                     placasProduzidasF = (float)Convert.ToInt32(placasProduzidas);
                     if (checkBox5.Checked)
                     {
-                        turnLinhaF = (float)Convert.ToInt32(turnsLinha);
+                        turnLinhaF = (float)Convert.ToInt32(label25.Text);
                     }
                     else
                     {
@@ -263,6 +320,7 @@ namespace MagnusSpace
                     forecastF = (float)Convert.ToInt32(forecast);
                     qtdFimF = forecastF / cycle;
                     qtdCompraF = qtdFimF - qtdF;
+                    turnsLinha = turnLinhaF.ToString();
                     scraps = scrapF.ToString("#.##");
                     cycleLife = cycle.ToString("#.##");
                     qtdCompra = qtdCompraF.ToString("#.##");
@@ -294,14 +352,16 @@ namespace MagnusSpace
                     inicioIntervalo = TimeZoneInfo.ConvertTime(dtini, TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time")).ToString().Split(' ')[0];
                     fimIntervalo = TimeZoneInfo.ConvertTime(dtfim, TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time")).ToString().Split(' ')[0];
 
+                    Item item = new Item();
+                    item.Open(cn);
+                    sc = item.getScraps(dtini,dtfim);
 
-
-                    sc = scrapsRange(inicioIntervalo,fimIntervalo);
+                    //sc = scrapsRange(inicioIntervalo,fimIntervalo);
                     scrapF = (float)(sc);
                     placasProduzidasF = (float)Convert.ToInt32(placasProduzidas);
                     if (checkBox5.Checked)
                     {
-                        turnLinhaF = (float)Convert.ToInt32(turnsLinha);
+                        turnLinhaF = (float)Convert.ToInt32(label25.Text);
                     }
                     else
                     {
@@ -312,6 +372,7 @@ namespace MagnusSpace
                     forecastF = (float)Convert.ToInt32(forecast);
                     qtdFimF = forecastF / cycle;
                     qtdCompraF = qtdFimF - qtdF;
+                    turnsLinha = turnLinhaF.ToString();
                     scraps = scrapF.ToString("#.##");
                     cycleLife = cycle.ToString("#.##");
                     qtdCompra = qtdCompraF.ToString("#.##");
@@ -340,7 +401,7 @@ namespace MagnusSpace
                     //placasProduzidasF = (float)Convert.ToInt32(placasProduzidas);
                     if (checkBox5.Checked)
                     {
-                        turnLinhaF = (float)Convert.ToInt32(turnsLinha);
+                        turnLinhaF = (float)Convert.ToInt32(label25.Text);
                     }
                     else
                     {
@@ -351,7 +412,7 @@ namespace MagnusSpace
                     forecastF = (float)Convert.ToInt32(forecast);
                     qtdFimF = forecastF / cycle - turnLinhaF;
                     qtdCompraF = qtdFimF - qtdF;
-                   
+                    turnsLinha = turnLinhaF.ToString();
                     cycleLife = cycle.ToString("#.##");
                     qtdCompra = qtdCompraF.ToString("#.##");
                     qtdFIM = qtdFimF.ToString("#.##");
@@ -387,10 +448,13 @@ namespace MagnusSpace
         {
             if (checkBox5.Checked)
             {
-                checkBox5.ForeColor = Color.White;
+                label25.Text = getTurnsLinha(comboBox1.Text).ToString();
+                groupBox9.Enabled = true;
+                checkBox5.ForeColor = Color.FromArgb(20,20,20) ;
             }
             else
             {
+                groupBox9.Enabled= false;
                 checkBox5.ForeColor = Color.Gray;
             }
         }
@@ -398,11 +462,43 @@ namespace MagnusSpace
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             save();
+            salvarToolStripMenuItem.Text = "Salvo";
         }
 
         private void groupBox9_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void bloquearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.Open(cn);
+            string valeu = item.stream("lock");
+            if(valeu == "true")
+            {
+                item.stream("lock","false");
+                label11.Visible = false;
+                bloquearToolStripMenuItem.Text = "Bloquear";
+            }
+            else
+            {
+                item.stream("lock", "true");
+                label11.Visible = true;
+                bloquearToolStripMenuItem.Text = "Desbloquear";
+            }
+            item.Close();
+            
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label25.Text = getTurnsLinha(comboBox1.Text).ToString();
         }
     }
 }

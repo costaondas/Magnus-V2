@@ -24,6 +24,8 @@ namespace MagnusSpace
         public string TasksFolderPath = dataFolder + @"\" + "Tasks";
         public string GrupoFolderPath = dataFolder + @"\" + "Grupos";
         public string versoesFX = dataFolder + @"\" + "VersoesFX";
+        public string logFolder = dataFolder + @"\" + "logFolder";
+        public string Forecast = dataFolder + @"\" + "Forecast";
         public string ListaGeralFolderPath = dataFolder + @"\" + "Other Lists";
         public static string Logs = dataFolder + @"\" + "Logs";
         public static string backUpFolder = dataFolder + @"\" + "Backup";
@@ -72,9 +74,20 @@ namespace MagnusSpace
                 try { Directory.CreateDirectory(Logs); }
                 catch { }
             }
+            if (!Directory.Exists(logFolder))
+            {
+                try { Directory.CreateDirectory(logFolder); }
+                catch { }
+            }
+            //logFolder
             if (!Directory.Exists(versoesFX))
             {
                 try { Directory.CreateDirectory(versoesFX); }
+                catch { }
+            }
+            if (!Directory.Exists(Forecast))
+            {
+                try { Directory.CreateDirectory(Forecast); }
                 catch { }
             }
             if (!Directory.Exists(printPath))
@@ -352,6 +365,54 @@ namespace MagnusSpace
             linhaExcel += lc.streamSEARCH(subList, "COUNT_CRIT") + vd();//12
             return linhaExcel;
         }
+        public bool listmode(string mode)
+        {
+            ListClass lc = new ListClass();
+            
+            List<string> title = new List<string>();
+            switch (mode)
+            {
+                case "padrão":
+                    title = lc.RowTitle(0);
+                    break;
+                case "compras":
+                    title = lc.RowTitle(1);
+                    break;
+                case "QTD":
+                    title = lc.RowTitle(2);
+                    break;
+                case "location":
+
+                    title = lc.RowTitle(3);
+                    break;
+                case "simples":
+                    title = lc.RowTitle(4);
+                    break;
+                case "grupos":
+
+                    title = lc.RowTitle(5);
+                    break;
+            }
+            return buildPlanilhaGeral(title);
+        }
+        public bool buildPlanilhaGeral(List<string> title)
+        {
+            ExcelClass ec = new ExcelClass();
+            List<string> list = new List<string>();
+            
+
+
+            ListClass lc = new ListClass();
+            lc.Open("Mestra");
+            List<string> list2 = new List<string>();
+            list2.Add("Filtrando lista");
+            lc.hasBar(list2);
+            list = lc.toVardashFormat(lc.mainList,title,true);
+            bool resolt = false;
+            resolt = ec.gerarPlanilhaGeral(list);
+            return resolt;
+
+        }
         public bool listaGeral(string action = "none")
         {
             time("lista geral start");
@@ -380,7 +441,7 @@ namespace MagnusSpace
 
 
             ExcelClass ec = new ExcelClass();
-            excelList = ec.sortGeralList(excelList); // demora 47350
+           //excelList = ec.sortGeralList(excelList); // demora 47350
             time("sort");
             listaGeral1 = excelList;
             if (action == "get")

@@ -24,12 +24,13 @@ namespace MagnusSpace
         public string inicioIntervalo = "";
         public string fimIntervalo = "";
         public string cycleLife = "";
+        public string modelo = "";
 
 
 
 
-        Color colorButton = Color.Green;//Color.FromArgb(49, 160, 95);
-        Color GraycolorButton = Color.FromArgb(192, 192, 192);
+        Color colorButton = Color.FromArgb(150, 150, 150);
+        Color GraycolorButton = Color.FromArgb(90, 90, 90);
         private List<string> _myVar = new List<string>();
         public List<string> MyVar
         {

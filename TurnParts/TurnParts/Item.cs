@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Reflection.Emit;
+using TurnParts;
 
 namespace MagnusSpace
 {
@@ -113,7 +116,7 @@ namespace MagnusSpace
         }
         public void Open(string CN, string ID = "")
         {
-            //Console.WriteLine("OPEN " + CN);
+
             openCN = CN;
             ItemCN = CN;
             ID_OP = ID;
@@ -179,8 +182,259 @@ namespace MagnusSpace
                 }
             }
         }
+        public int getScraps(DateTime ini, DateTime fim) 
+        {
+            //ferro
+            int scraps = 0;
+            List<string > list = new List<string>();
+            if(ini == fim)
+            {
+                list = FilterLogList(ini, fim,"ALL");
+            }
+            else
+            {
+                list = FilterLogList(ini, fim);
+            }
+            
+
+            foreach (string s in list)
+            {
+                if (s.Contains("ENTRADA.NF"))
+                {
+                    continue;
+                }
+
+                try
+                {
+                    scraps += Convert.ToInt32(s.Split(' ')[3].Split(':')[1]);
+                }
+                catch { }
+            }
+
+            return scraps*(-1);
+        }
+        public int getTurns()
+        {
+            return 0;
+        }
+        public void loadhowlongwegotModel()
+        {
+            
+            
+            
+        }
+        bool thisistheone = false;
+        public int[] howlongwegot()
+        {
+            int[] days= new int[2];
+            float qtd = (float) QTD("get");
+            float turns = (float) getTurns();
+            float cycle = cycleLife;
+            float howmanywecanproduce = (qtd + turns) * cycle;
+            float howmanywecanproduceStockOnly = (qtd) * cycle;
+            int daysWeGot = howlongUtill((int)howmanywecanproduce);
+            int daysWeGotStockOnly = howlongUtill((int)howmanywecanproduceStockOnly);
+            days[0] = daysWeGot;
+            days[1] = daysWeGotStockOnly;
+            thisistheone = true;
+            if(daysWeGot == -1)
+            {
+                
+                stream("daysWeGot", "OK");
+                stream("daysWeGotStockOnly", "OK");
+            }
+            else
+            {
+                stream("daysWeGot", daysWeGot.ToString());
+                stream("daysWeGotStockOnly", daysWeGotStockOnly.ToString());
+            }
+            setStatus(daysWeGot);
+            
+ 
+            return days;
+
+        }
+        public int howlongUtill(int board)//we only can produce this many
+        {
+            int forcast = 0;
+            ListClass lc = new ListClass();
+            Folders folder = new Folders();
+            lc.Open(ItemModelo, folder.Forecast);
+            List<string> list2 = new List<string>();
+            list2 = lc.mainList;
+            list2.Sort();
+            DateTime dt1 = DateTime.Now;
+
+            foreach (string l in list2)
+            {
+                bool bk = false;
+                if (l.StartsWith("CN"))
+                {
+                    string currentCN = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                    int CCN = 0;
+                    try
+                    {
+                        CCN = Convert.ToInt32(currentCN);
+                    }
+                    catch { bk = true; }
+                    if (bk == false)
+                    {
+
+                        DateTime dt = DateTime.Now;
+                        int yr = dt.Year;
+                        if (CCN >= yr)
+                        {
+                            List<string> list = new List<string>();
+                            list = l.Split(VarDashPlus).ToList();
+                            list.RemoveAt(0);
+                            if (CCN == yr)
+                            {
+                                int mon = dt.Month;
+                                int cm = 0;
+                                foreach (string m in list)
+                                {
+                                    cm = Convert.ToInt32(m.Split(VarDash)[0]);
+                                    if (cm >= mon)
+                                    {
+                                        forcast += Convert.ToInt32(m.Split(VarDash)[1]);
+                                        display(forcast,board,cm,CCN);
+                                        if(forcast > board)
+                                        {
+                                            DateTime dt2 = DateTime.Now;
+                                            return (int)dt2.Subtract(dt1).TotalDays*(-1);
+                                        }
+                                        else
+                                        {
+                                            dt1 = new DateTime(CCN, cm, 1);
+                                            
+                                        }
+                                        /*
+                                        Console.WriteLine($"{forcast} + {board} < {forcast} + {Convert.ToInt32(m.Split(VarDash)[1])}");
+                                        if ((forcast + board) > (forcast + Convert.ToInt32(m.Split(VarDash)[1])))
+                                        {
+                                            forcast += Convert.ToInt32(m.Split(VarDash)[1]);
+                                        }
+
+                                        else
+                                        {
+
+                                            Console.WriteLine($"DateTime dt1 = new DateTime({CCN},{cm},{0});");
+                                            DateTime dt1 = new DateTime(CCN,cm,1);
+                                            DateTime dt2 = DateTime.Now;
+                                            return (int) dt2.Subtract(dt1).TotalDays;
+                                        };
+                                        */
+                                    }
+                                }
+                            }
+                            if (CCN > yr)
+                            {
+                                foreach (string m in list)
+                                {
+                                    
+                                    int cm = Convert.ToInt32(m.Split(VarDash)[0]);
+                                    forcast += Convert.ToInt32(m.Split(VarDash)[1]);
+                                    display(forcast,board,cm,CCN);
+                                    if (forcast > board)
+                                    { 
+                                        DateTime dt2 = DateTime.Now;
+                                        return (int)dt2.Subtract(dt1).TotalDays*(-1);
+                                    }
+                                    else
+                                    {
+                                        dt1 = new DateTime(CCN, cm, 1);
+
+                                    }
+                                    /*
+                                    if ((forcast + board) > (forcast + Convert.ToInt32(m.Split(VarDash)[1])))
+                                    {
+                                        forcast += Convert.ToInt32(m.Split(VarDash)[1]);
+                                    }
+                                        
+                                    else
+                                    {
+                                        DateTime dt1 = new DateTime(CCN, cm, 0);
+                                        DateTime dt2 = DateTime.Now;
+                                        return (int)dt2.Subtract(dt1).TotalDays;
+                                    };
+                                    */
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            return -1;
+
+        }
+
+        public void display(int forvc , int boar , int mont , int year)
+        {
+
+        }
+        public int getForecast()
+        {
+            int forcast = 0;
+            ListClass lc = new ListClass();
+            Folders folder = new Folders();
+            lc.Open(ItemModelo, folder.Forecast);
+
+            foreach (string l in lc.mainList)
+            {
+                bool bk = false;
+                if (l.StartsWith("CN"))
+                {
+                    string currentCN = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                    int CCN = 0;
+                    try
+                    {
+                        CCN = Convert.ToInt32(currentCN);
+                    }
+                    catch { bk = true; }
+                    if (bk == false)
+                    {
+
+                        DateTime dt = DateTime.Now;
+                        int yr = dt.Year;
+                        if (CCN >= yr)
+                        {
+                            List<string> list = new List<string>();
+                            list = l.Split(VarDashPlus).ToList();
+                            list.RemoveAt(0);
+                            if (CCN == yr)
+                            {
+                                int mon = dt.Month;
+                                int cm = 0;
+                                foreach (string m in list)
+                                {
+                                    cm = Convert.ToInt32(m.Split(VarDash)[0]);
+                                    if (cm >= mon)
+                                    {
+                                        forcast += Convert.ToInt32(m.Split(VarDash)[1]);
+                                    }
+                                }
+                            }
+                            if (CCN > yr)
+                            {
+                                foreach (string m in list)
+                                {
+                                    forcast += Convert.ToInt32(m.Split(VarDash)[1]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
         
-            public List<string> groupToList()
+            return forcast;
+
+        }
+
+
+        public List<string> groupToList()
         {
             List<string> gl = new List<string>();
             ListClass lc = new ListClass();
@@ -229,6 +483,62 @@ namespace MagnusSpace
                         ///// este item pertence ao grupo
                         ///
                         
+                        gl.Add(linha_do_tem);
+                    }
+                }
+            }
+            return gl;
+        }
+
+        public List<string> modelToList()
+        {
+            List<string> gl = new List<string>();
+            ListClass lc = new ListClass();
+            lc.Open("Mestra", "ListaGeral");
+            foreach (string l in lc.mainList.ToList())
+            {
+                List<string> subList = l.Split(VarDashPlus).ToList();
+                foreach (string l2 in subList)
+                {
+                    if (l2.Split(VarDash)[0] == "Modelo" && l2.Split(VarDash)[1] == ItemModelo)
+                    {
+                        string dash = VarDash.ToString();
+                        string check = "";
+                        string linha_do_tem = ""; /// linha que deve ser salva no padrão da lista de grupo
+                        List<string> itemInfoList_doItem = subList;
+                        ListClass lc2 = new ListClass();
+
+
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "CN") + dash;
+
+                        check = lc2.streamSEARCH(itemInfoList_doItem, "groupPosition");
+
+                        if (check == "")
+                        {
+                            linha_do_tem += "IN" + dash;
+                        }
+                        else
+                        {
+                            linha_do_tem += check + dash;
+                        }
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "P/N") + dash;
+
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "Descrição") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "Responsavel") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "DATA_MANUT") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "DATA_PROX") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location3") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location2") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location") + dash;
+
+
+                        //esquilo
+
+
+
+                        ///// este item pertence ao grupo
+                        ///
+
                         gl.Add(linha_do_tem);
                     }
                 }
@@ -476,11 +786,66 @@ namespace MagnusSpace
             }
             
         } // set any var in list
-        public void setStatus(string status)
+        public void setStatus(int daysLeft1)
         {
-            Status = stream(Status, status);
-
-
+            int daysLeft = 0;
+            if(daysLeft1 == -1)
+            {
+                daysLeft = int.MaxValue - 1;
+            }
+            else
+            {
+                daysLeft = daysLeft1;
+            }
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            string statusRange = form.criticalRange;
+            List<string> list = new List<string>();
+            List<int> list1 = new List<int>();
+            list = statusRange.Split(',').ToList();
+            int a = 0;
+            foreach(string l in list.ToList())
+            {
+                list1.Add(Convert.ToInt32(l))  ;
+                a++;
+            }
+            list1.Sort();
+            list1.Insert(0,0);
+            list1.Add(int.MaxValue);
+            int counter = 0;
+            foreach(int b in list1)
+            {
+                if (counter == 0)
+                {
+                    counter++; continue;
+                }
+                if (counter == list.Count())
+                    break;
+               // Console.WriteLine($"{list1[counter -1]} < {daysLeft} && {list1[counter]} > {daysLeft}");
+                if (list1[counter -1] < daysLeft && list1[counter] > daysLeft)
+                {
+                    break ;
+                }
+                else
+                {
+                    counter++;
+                }
+                
+            }
+          // Console.WriteLine("Counter = " + counter.ToString());
+            switch (counter)
+            {
+                    case 1:
+                    stream("Status", "Extremamente Crítico"); break;
+                    case 2:
+                    stream("Status", "Crítico"); break;
+                    case 3:
+                    stream("Status", "Alerta"); break;
+                    case 4:
+                    stream("Status", "Moderado"); break;
+                    case 5:
+                    stream("Status", "Trivial"); break;
+            }
 
         }
         public void setName(string name)
@@ -993,7 +1358,7 @@ namespace MagnusSpace
         }
         public void addID_inLog(string text,string action = "ID",int logNum = 1)
         {
-            Console.WriteLine("addID_inLog");
+
             if (!itemExists)
                 return;
             int totalC = logsList.Count();
@@ -1035,7 +1400,7 @@ namespace MagnusSpace
         }
         public void createItem(string itemName, string PN = "", int qtd = 0, int EsM = 0, string description = "", string CN_ = "", List<string> SKUs = null,string Model1="",string qtdINI = "0", string NPIDate = "", string groupItem = "", string picture1 = "",string validacao1 = "")
         {///// FATA CADASTRAR OS ITENS DIREITO MUDAR O CADASTRO
-            Console.WriteLine("createItem");
+     
             Folders folder = new Folders();
             folder.buildStructure();
             List<string> TP = new List<string>();
@@ -1083,7 +1448,6 @@ namespace MagnusSpace
 
             if (CN_ == "") //editar currentCN
             {
-                Console.WriteLine("No CN");
                 itemInfoList = TP;
                 itemInfoupdated = true;
                 //writeList(itemInfoPath, TP);
@@ -1093,11 +1457,11 @@ namespace MagnusSpace
             else //novo CN
             {
             
-                Console.WriteLine("find_line_in_mainCNList Edit");
+
                 int CNline = find_line_in_mainCNList(CN_);
                 if(CNline == -1)//CN não existente, precisa criar um novo
                 {
-                    Console.WriteLine("CN = -1");
+             
                     ListClass lc = new ListClass();
                     lc.Open("Mestra", "ListaGeral");
                     string line = "";//criar linha na planilha
@@ -1170,104 +1534,7 @@ namespace MagnusSpace
             }
             return -1; //didnt found CN in main list
         }
-        public string cycleLifeM()
-        {
-            int scraps = 0;
-            DateTime start = DateTime.Today;
-            DateTime end = DateTime.Today;
-            List<string> logList = new List<string>();
-            if(PPdateStart == ""||PPdateEnd=="" || PPinRange == "")
-            {
-                setStatus(statas[6]);
-                return "";
-            }
-            
-            try
-            {
-                start = stringtoDatetime(PPdateStart);
-                end = stringtoDatetime(PPdateEnd);
-                Console.WriteLine("===============");
-                Console.WriteLine(start.ToString());
-                Console.WriteLine(end.ToString());
-                Console.WriteLine(PPinRange.ToString());
-
-                logList = FilterLogList(start, end,"");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Cant read: " + ex.Message);
-            }
-            foreach(string l in logList)
-            {
-                try
-                {
-                    scraps += Convert.ToInt32(l.Split(' ')[3].Split(':')[1]);
-                }
-                catch { }
-
-                
-            }
-            //calcular o cycle life
-            int days = 0;
-            days = Convert.ToInt32((end - start).TotalDays);
-            float cycle = 0;
-            try { cycle = (float)Convert.ToInt32(PPinRange) / (float)(scraps); }
-            catch { }
-            setVar("CycleLife", cycle);
-
-            int qtd = Convert.ToInt32(QTD("get"));
-            int daysToend = 0;
-            daysToend = qtd * days;
-            int statasIndex = 0;
-            if (scraps == 0) 
-            {
-                setStatus(statas[statasIndex]);
-                return cycle.ToString("#.##");
-            }
-            daysToend = daysToend / scraps;
-            duraçãoEstoque = daysToend.ToString();
-            stream("stockLastsFor", daysToend.ToString());
-            Console.WriteLine("ANALYSE: " + qtd + " days " + days + "scraps " + scraps);
-
-            //"Trivial", "Moderado", "Alerta", "Crítico", "Extremamente crítico", "Zerado", "Sem Controle" };
-            statasIndex = 4;
-            if (daysToend < 30)
-            {
-                statasIndex = 4;
-            }
-            else
-            {
-                if (daysToend < 80)
-                {
-                    statasIndex = 3;
-                }
-                else
-                {
-                    if (daysToend < 120)
-                    {
-                        statasIndex = 2;
-                    }
-                    else
-                    {
-                        if (daysToend < 150)
-                        {
-                            statasIndex = 1;
-                        }
-                        else
-                        {
-                            statasIndex = 0;
-                        }
-                    }
-                }
-            }
-            
-          
-
-            setStatus(statas[statasIndex]);
-
-            Console.WriteLine("Duração: "+duraçãoEstoque + " index " + statasIndex.ToString());
-            return cycle.ToString("#.##");
-        }
+       
         public int getScrapSemanal()
         {
             List<string> logList = new List<string>();
@@ -1275,6 +1542,10 @@ namespace MagnusSpace
             int scrap = 0; 
             foreach(string l in logList.ToList())
             {
+                if (l.Contains("ENTRADA.NF"))
+                {
+                    continue;
+                }
                 try
                 {
                     scrap += Convert.ToInt32(l.Split(' ')[3].Split(':')[1]);
@@ -1291,6 +1562,10 @@ namespace MagnusSpace
             int scrap = 0;
             foreach (string l in logList.ToList())
             {
+                if (l.Contains("ENTRADA.NF"))
+                {
+                    continue;
+                }
                 try
                 {
                     scrap += Convert.ToInt32(l.Split(' ')[3].Split(':')[1]);
@@ -1326,7 +1601,7 @@ namespace MagnusSpace
                     logList = FilterLogList(DateTime.Now, DateTime.Now, "3 meses");
                     break;
                 default:
-                    logList = FilterLogList(DateTime.Now, DateTime.Now);
+                    logList = FilterLogList(DateTime.Now, DateTime.Now, "diario");
                     break;
 
             }
@@ -1340,6 +1615,10 @@ namespace MagnusSpace
             int trocas3 = 0;
             foreach (string l in logList.ToList())
             {
+                if (l.Contains("ENTRADA.NF"))
+                {
+                    continue;
+                }
                 hour = Convert.ToInt32(l.Split(' ')[2].Split(':')[0]);
                 min = Convert.ToInt32(l.Split(' ')[2].Split(':')[1]);
                 sec = Convert.ToInt32(l.Split(' ')[2].Split(':')[2]);
@@ -1380,15 +1659,17 @@ namespace MagnusSpace
 
 
 
-        public List<string> FilterLogList(DateTime start1, DateTime end1, string frequencia = "diario")
+        public List<string> FilterLogList(DateTime start1, DateTime end1, string frequencia = "")
         {
             List<string> scrapList = new List<string>();
             List<string> fullList = new List<string>();
             List<string> idList = new List<string>();
-
+        
             DateTime start = start1;
             DateTime end = end1;
 
+            TimeSpan ts = new TimeSpan(0,0,0);
+            start = start.Date + ts;
             int a = 0;
             int b = 0;
             int c = 0;
@@ -1418,17 +1699,23 @@ namespace MagnusSpace
                     start = end.AddDays(-90);
                     break;
             }
-
+            if (logsList == null)
+                return scrapList;
+    
             if (logsList.Count() == 0)
             {
                 return scrapList;
             }
+            if (frequencia == "ALL")
+                return logsList.ToList();
+
             foreach (string line in logsList.ToList())
             {
                 current = logtoDatetime(line);
+             //   Console.WriteLine($"if ({current} > {end} || {current} < {start})");
                 if (current > end || current < start)
                     continue;
-
+                //Console.WriteLine($"ADD {line}");
                 fullList.Add(line);
             }
        
@@ -1475,7 +1762,11 @@ namespace MagnusSpace
             
             foreach(string line in logsList.ToList())
             {
-                Console.WriteLine("<<<" + line);
+                if (line.Contains("ENTRADA.NF"))
+                {
+                    continue;
+                }
+     
                 current = logtoDatetime(line);
                 if (current > end || current < start)
                     continue;
@@ -1813,7 +2104,6 @@ namespace MagnusSpace
                             try
                             {
                       
-                                Console.WriteLine("path " + logpathAdress);
                                 ListClass lc4 = new ListClass();
              
                                 lc4.Open(ItemCN, Path.GetFullPath(logpathAdress));
@@ -1826,10 +2116,9 @@ namespace MagnusSpace
                                 //newDate = String.
 
                                 lc4.Close();
-                                Console.WriteLine("close sucessfuly");
 
                             }
-                            catch (Exception ex) { Console.WriteLine("catch at OUT: " + ex.Message); }
+                            catch (Exception ex) {  }
                         }
                             lc.Close();
                         return 1;
@@ -1883,7 +2172,7 @@ namespace MagnusSpace
             return qtd;
         }
 
-        public void AddLog(double quantidade = -1, string action = "none")
+        public string AddLog(double quantidade = -1, string action = "none")
         {
             string logFormat = "";
             string modo = "OUT";
@@ -1910,7 +2199,16 @@ namespace MagnusSpace
             logFormat = logFormat + charEspaciador + "Fixture:" + fixtureLoc;
             logFormat = logFormat + charEspaciador + modo;
             logFormat = logFormat + charEspaciador + "QTD:"+ addLog_QTD.ToString();
-            logsList.Add(logFormat);
+            if(action == "get")
+            {
+                return logFormat;
+            }
+            else
+            {
+                logsList.Add(logFormat);
+                return "";
+            }
+            
         }
         public int numberScraps(string time = "day") // revisar!!! esta deixando lento
         {
@@ -1920,8 +2218,11 @@ namespace MagnusSpace
             logs = getLogList(0,"","",time);
             foreach (string l in logs)
             {
-                
-              
+
+                if (l.Contains("ENTRADA.NF"))
+                {
+                    continue;
+                }
                 try
                 {
                     value += Convert.ToInt32(l.Split(' ')[3].Split(':')[1]);
@@ -2019,7 +2320,7 @@ namespace MagnusSpace
 
         }   
 
-            public List<string> getLogList(int num_of_logs = 10,string dateStart = "",string dateEnd = "",string dayWeekMonth = "")
+            public List<string> getLogList(int num_of_logs = 10,string dateStart = "",string dateEnd = "",string dayWeekMonth = "", bool colapsar = false)
         {
             
             if (!itemExists)
@@ -2273,19 +2574,11 @@ namespace MagnusSpace
             
             return combinedString;
         }
-        public void viewListtoConsole(string text, List<string> ls)
-        {
-            DateTime t = DateTime.Now;
-            Console.WriteLine("==================="+ t.ToString() + "======================");
-            foreach (string l4 in ls)
-            {
-                Console.WriteLine(text+ "      " + l4);
-            }
-            Console.WriteLine("============================================================");
-        }
+       
         public void Close()
         {
 
+            
            // Console.WriteLine("close " + ItemCN);
             //vaca
             itemInfoupdated = true; //burlar o sistema

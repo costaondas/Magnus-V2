@@ -24,7 +24,7 @@ namespace MagnusSpace
             if (progressBar1.Value == 100)
             {
                 timer1.Stop();
-
+                
                 TurnParts.Form1 newForm1 = new TurnParts.Form1();
                 this.Hide();
                 newForm1.ShowDialog();

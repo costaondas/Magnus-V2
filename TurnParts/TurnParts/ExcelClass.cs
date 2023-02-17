@@ -8,6 +8,8 @@ using ExcelM = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Collections;
+using TurnParts;
+using Microsoft.Office.Interop.Excel;
 
 namespace MagnusSpace
 {
@@ -142,7 +144,11 @@ namespace MagnusSpace
             string value = "";
             List<string> lineCells = new List<string>();
             exList.Insert(0,"CN Data Hora Quantidade ID Fixture Modo");
-            Console.WriteLine(exList.Last() + ">last 2");  
+            Console.WriteLine(exList.Last() + ">last 2");
+            // Range rg = (Range)sheet.Columns[2];
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            form.setProgressiveBar(exList.Count());
             foreach (string line in exList)
             {
                 lineCells = line.Split(' ').ToList();
@@ -154,6 +160,7 @@ namespace MagnusSpace
                         try
                         {
                             sheet.Cells[lineNumber, cellNumber] = cell.Split(':')[1];
+                            
                         }
                         catch
                         {
@@ -170,10 +177,15 @@ namespace MagnusSpace
                 }
                 cellNumber = 1;
                 lineNumber++;
+                form.AddProgressiveBar("Montando Excel 2/2");
+                System.Windows.Forms.Application.DoEvents();
             }
 
             Console.WriteLine(exList.Last() + ">last " +"3");
             sheet.Columns.AutoFit();
+            // Range rg = (ExcelM.Range)sheet.Cells[1, 2];
+            //rg.EntireColumn.NumberFormat = "DD/MM/YYYY";
+           // rg.EntireColumn.NumberFormat = "DD/MM/YYYY";
             try
             {
                 book.SaveAs(adress, ExcelM.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, ExcelM.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
@@ -200,7 +212,7 @@ namespace MagnusSpace
             while (Marshal.ReleaseComObject(book) != 0) ;
             while (Marshal.ReleaseComObject(excelAplication) != 0) ;
             while (Marshal.ReleaseComObject(xlApp) != 0) ;
-
+            form.AddProgressiveBar("clear");
 
             return Value;
         }
@@ -269,9 +281,10 @@ namespace MagnusSpace
         }
         public List<string> sortGeralList(List<string> list)
         {
-           
-
-
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+          //  form.setProgressiveBar(list.Count());
+            
             List<string> list2 = new List<string>();
             List<string> temp = new List<string>();
             List<string> final = new List<string>();
@@ -284,8 +297,10 @@ namespace MagnusSpace
             bool isNumber = false;
             int biggestNumber = 0;
             int numOfChars = 0;
+            
             foreach (string l in list)
             {
+                
                 line = list[a].Split(vd())[0];
                 try
                 {
@@ -304,7 +319,7 @@ namespace MagnusSpace
                 }
                 numOfChars = biggestNumber.ToString().ToCharArray().Count();
 
-
+             //   form.AddProgressiveBar();
                     a++;
             }
             a = 0;
@@ -313,7 +328,7 @@ namespace MagnusSpace
             string[] many = null;
             foreach (string l in list.ToList())
             {
-
+               // form.setProgressiveBar(list.Count());
                 line = list[a].Split(vd())[0];
                 //line = line.Split(';')[0];
                 try
@@ -338,12 +353,13 @@ namespace MagnusSpace
                     temp[a] = String.Join(vd().ToString(), stringList);
                    
                 }
-
+              //  form.AddProgressiveBar();
                 a++;
             }
            
             temp.Sort();
             a = 0;
+            //form.setProgressiveBar(list.Count());
             foreach (string l in list.ToList())
             {
 
@@ -367,7 +383,7 @@ namespace MagnusSpace
                 }
 
 
-
+//                form.AddProgressiveBar();
                 a++;
             }
      
@@ -410,6 +426,10 @@ namespace MagnusSpace
             int cellNumber = 1;
             string value = "";
             List<string> lineCells = new List<string>();
+
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            form.setProgressiveBar(exList.Count());
             foreach (string line in exList)
             {
                 lineCells = line.Split(vd()).ToList();
@@ -420,6 +440,9 @@ namespace MagnusSpace
                 }
                 cellNumber = 1;
                 lineNumber++;
+                form.AddProgressiveBar("Montando Arquivo Excel");
+                System.Windows.Forms.Application.DoEvents();
+
             }
 
 
@@ -451,7 +474,7 @@ namespace MagnusSpace
             while (Marshal.ReleaseComObject(excelAplication) != 0) ;
             while (Marshal.ReleaseComObject(xlApp) != 0) ;
 
-
+            form.AddProgressiveBar("clear");
             return Value;
         }
 

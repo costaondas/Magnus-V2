@@ -15,14 +15,20 @@ namespace MagnusSpace
     {
         List<string> CNList = TurnParts.Form1.CNList.ToList();
         public int totalButtons = 0;
+        public string searchText = "";
         public bool launch = false;
         char VarDash = ((char)887);
         public List<string> arrayList = new List<string>();
+        TurnParts.Form1 form;
+        
         public Form6()
         {
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as TurnParts.Form1;
             InitializeComponent();
+           // CNList = TurnParts.Form1.CNList.ToList();
+            
             timer1.Interval = 100;
-            timer1.Start();
+           // timer1.Start();
         
         }
         public void loadSerach(string text)
@@ -150,9 +156,10 @@ namespace MagnusSpace
                 }
                 but.Click += (s, args) =>
                 {
-                    TurnParts.Form1.callDisplayCN = cn;
+                    form.callDisplay(cn);
+                    //TurnParts.Form1.callDisplayCN = cn;
             
-                    TurnParts.Form1.callDisplayBoll = true;
+                   // TurnParts.Form1.callDisplayBoll = true;
                 };
 
 
@@ -192,6 +199,11 @@ namespace MagnusSpace
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            loadSerach(searchText);
         }
     }
     public static class StringExtensions

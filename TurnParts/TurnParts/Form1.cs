@@ -13,7 +13,7 @@ using System.Diagnostics;
 using System.Management;
 using System.Windows;
 using System.IO.Ports;
-
+using System.Threading;
 
 namespace TurnParts
 {
@@ -44,7 +44,8 @@ namespace TurnParts
         public event myDelegate loadAllCNs;
         public event myDelegate closeSearchForm;
         public event myDelegate addItemlogPanelButtonDispose;
-
+        bool simpleList = true;
+        public string criticalRange = "30,60,90,120,180";
         SerialPort mainPort = new SerialPort("COM9", 9600);
         string lastCOM = "";
 
@@ -60,9 +61,11 @@ namespace TurnParts
 
         public Form1()
         {
+            Console.WriteLine("components");
             InitializeComponent();
             ganarateLogPanels();
             cycleLifeLayouy("hide");
+           
             timer1.Interval = 100;
             timer1.Start();
             timer2.Interval = 50;
@@ -1054,7 +1057,9 @@ namespace TurnParts
             load_panel_layout();
             time("loadpanellayout");
             textBox1.Focus();
+
             List<string> itens = CNList;
+
             /*
             List<string> models = new List<string>();
             
@@ -1180,7 +1185,16 @@ namespace TurnParts
                 PI = true;
 
             time("set settings");
-
+            string range = "";
+            range = config("StatusRange");
+            if (range == "")
+            {
+                range = config("StatusRange", criticalRange);
+            }
+            else
+            {
+                criticalRange = range;
+            }
 
 
             var list3 = new ListClass();
@@ -2008,6 +2022,10 @@ namespace TurnParts
 
 
         }
+        public void focus()
+        {
+            textBox1.Focus();
+        }
         public void display(string CN, int qtd = 1, string ck = "")
         {
             cycleLifeLayouy("hide");
@@ -2024,7 +2042,7 @@ namespace TurnParts
             chart1.Series["Trocas"].Points.Clear();
             chart2.Series["Trocas"].Points.Clear();
             chart3.Series["Trocas"].Points.Clear();
-
+            
             bool gerarLog = true;
             clearChartPanel();
             if (ck != "")
@@ -2055,11 +2073,40 @@ namespace TurnParts
             {
                 searchText = CN;
                 loadNewSearch = true;
-                loadForm(new Form6());
+                // loadForm(new Form6());
+
+                if (this.panel8.Controls.Count > 0)
+                {
+                    this.panel8.Controls.RemoveAt(0);
+                }
+                if (closeSearchForm != null)
+                {
+                    closeSearchForm();
+                }
+                Form12 f = new Form12();
+                f.FormBorderStyle = FormBorderStyle.None;
+                f.changeWithEnter = true;
+                
+                f.size(panel8.Size);
+                f.FixSize = true;
+                closeSearchForm += () =>
+                {
+                    f.Close();
+                };
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                panel8.Controls.Add(f);
+                panel8.Tag = f;
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                List<string> list = lc.search(lc.mainList.ToList(),CN);
+                f.displayList = list;
+                f.headList = lc.RowTitle(9);
+                f.Show();
 
 
 
-               
+
 
                 return;
             }
@@ -2334,7 +2381,7 @@ namespace TurnParts
             else
             {
                 label58.Text = "";
-                label36.Text = item.stream("Forcast");
+                label36.Text = item.getForecast().ToString();
                 label38.Text = item.stream("PlacasProd");
                 label40.Text = item.stream("dataDoCalculo"); ;
                 label42.Text = item.stream("ItensINLine");
@@ -3359,7 +3406,7 @@ namespace TurnParts
                 a++;
             }
         }
-        private string buttonMode(string mode = "")
+        public string buttonMode(string mode = "")
         {
 
             if (mode == "next")
@@ -3696,17 +3743,16 @@ namespace TurnParts
             }
 
         }
-
+        string listOpenMode = "padrão";
         private void listaGeralToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+            listOpenMode = "padrão";
             Folders folder1 = new Folders();
             folder1.buildStructure();
-            string listaGeralPath = folder1.listaGeralPath();
-            bool value = folder1.listaGeral();
-
+            bool value = folder1.listmode(listOpenMode);
             if (value)
                 Process.Start(folder1.listaGeralPath());
-
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -3949,8 +3995,9 @@ namespace TurnParts
                         kill = true;
                         break;
                     case DialogResult.No:
+                        kill = false;
                         return;
-                        break;
+                        
                 }
             }
             if (kill)
@@ -3992,6 +4039,17 @@ namespace TurnParts
             }
             if (button6.Text == "Extrair")
             {
+                if (simpleList)
+                {
+                    List<string > listShow2 = new List<string>();
+                    ListClass lc = new ListClass();
+                    lc.Open("Mestra");
+                    Item item2 = new Item();
+                    item2.Open(currentCN);
+                    listShow2 = lc.filterListVar("grupo", item2.grupo);
+                    lc.Show(lc.RowTitle(7),listShow2);
+                    return;
+                }
                 closeExcel();
                 loadAllFGroups();
                 ExcelClass excel = new ExcelClass();
@@ -4354,13 +4412,21 @@ namespace TurnParts
 
         private void listaComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (simpleList)
+            {
+
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                //listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(1));
+                return;
+            }
+            listOpenMode = "compras";
             Folders folder1 = new Folders();
             folder1.buildStructure();
-            string listaGeralPath = folder1.listaGeralPath();
-            bool value = folder1.listaCompras();
-
+            bool value = folder1.listmode(listOpenMode);
             if (value)
-                Process.Start(folder1.listaComprasPath());
+                Process.Start(folder1.listaGeralPath());
         }
 
         private void forcastToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4680,7 +4746,21 @@ namespace TurnParts
 
         private void scrapsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (simpleList)
+            {
 
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                //listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(2));
+                return;
+            }
+            listOpenMode = "QTD";
+            Folders folder1 = new Folders();
+            folder1.buildStructure();
+            bool value = folder1.listmode(listOpenMode);
+            if (value)
+                Process.Start(folder1.listaGeralPath());
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4978,6 +5058,7 @@ namespace TurnParts
             {
                 return;
             }
+            DateTime dt = DateTime.Now;
             f.cn = currentCN;
             f.qtd = item.QTD("get").ToString();
             f.qtdCompra = item.stream("QTDcompra");
@@ -4986,10 +5067,11 @@ namespace TurnParts
             f.forecast = item.stream("Forcast");
             f.data = item.stream("dataDoCalculo");
             f.turnsLinha = item.stream("ItensINLine");
-            f.scraps = item.getScrap().ToString();
+            f.scraps = item.getScraps(dt,dt).ToString();
             f.inicioIntervalo = item.stream("inicioIntervalo");
             f.fimIntervalo = item.stream("fimIntervalo");
             f.cycleLife = item.stream("CycleLife");
+            f.modelo = item.ItemModelo;
             f.Show();
             /*
       
@@ -5014,13 +5096,23 @@ namespace TurnParts
             {
                 return;
             }
-            closeExcel();
-            loadAllFGroups();
-            ExcelClass excel = new ExcelClass();
+            
             Item item = new Item();
             List<string> listShow = new List<string>();
             item.Open(currentCN);
             string model = item.ItemModelo;
+            if (simpleList)
+            {
+                
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(6), listShow);
+                return;
+            }
+            closeExcel();
+            loadAllFGroups();
+            ExcelClass excel = new ExcelClass();
             string line2 = "";
             string Position = "";
             string adress1 = "";
@@ -5112,7 +5204,7 @@ namespace TurnParts
                 }
 
             }
-
+            
             string line = "";
             line += "CN" + vd().ToString();
             line += "Modelo" + vd().ToString();
@@ -5198,7 +5290,7 @@ namespace TurnParts
 
                 }
 
-
+                return;
                 string text = textBox1.Text;
                 int value = 0;
                 try
@@ -5410,7 +5502,24 @@ namespace TurnParts
 
             }
         }
-
+        public List<string> switchLog(List<string> log)
+        {
+            List<string> list = log;
+            int a = 0;
+            foreach (string l2 in list.ToList())
+            {
+                string l = Convert.ToString(l2);
+                List<string> list2 = l.Split(' ').ToList();
+                List<string> list3 = list2[1].Split('/').ToList();
+                string temp = list3[0];
+                list3[0] = list3[1];
+                list3[1] = temp;
+                list2[1] = string.Join("/", list3);
+                list[a] = string.Join(" ", list2);
+                a++;
+            }
+            return list;
+        }
         private void button11_Click(object sender, EventArgs e)
         {
             //go abobora
@@ -5423,20 +5532,41 @@ namespace TurnParts
                 ExcelClass ex = new ExcelClass();
                 Folders folder = new Folders();
                 string path = folder.planilhaLogsPath();
-
+                setProgressiveBar(CNList.Count());
+                bool colapsar = true;
                 foreach(string cnL in CNList)
                 {
                     List<string> list1 = new List<string>();
                     Item item = new Item();
                     item.Open(cnL.Split(VarDash)[0]);
-                    list1 = item.getLogList(0, dateTimePicker1.Value.ToString().Split(' ')[0], dateTimePicker2.Value.ToString().Split(' ')[0]);
+                    if(!checkBox2.Checked)
+                        if(item.ItemName.Contains("Fixture")|| item.ItemName.Contains("fixture"))
+                        {
+                            AddProgressiveBar("Coletando dados 1/2");
+                            continue;
+                        }
+                    if (checkBox1.Checked)
+                    {
+                        int scraps = item.getScraps(dateTimePicker1.Value, dateTimePicker2.Value);
+
+                        list1.Add(item.AddLog(scraps,"get"));
+                    }
+                    else
+                    {
+                        list1 = item.getLogList(0, dateTimePicker1.Value.ToString().Split(' ')[0], dateTimePicker2.Value.ToString().Split(' ')[0]);
+                    }
+                    
                     item.Close();
-                    list.AddRange(list1);
+                    try { list.AddRange(list1); }
+                    catch { }
+                    AddProgressiveBar("Coletando dados 1/2");
+                  Application.DoEvents();
                 }
 
 
+                list =  switchLog(list);
+     
                 ex.GerarPlanilhaLogs(list, path);
-                
                 Process.Start(path);
                 return;
             }
@@ -5449,7 +5579,13 @@ namespace TurnParts
                 string path = folder.planilhaLogsPath();
                 Item item = new Item();
                 item.Open(currentCN);
-                ex.GerarPlanilhaLogs(item.getLogList(0, dateTimePicker1.Value.ToString().Split(' ')[0], dateTimePicker2.Value.ToString().Split(' ')[0]), path);
+                List<string> list = new List<string>();
+                list = item.getLogList(0, dateTimePicker1.Value.ToString().Split(' ')[0], dateTimePicker2.Value.ToString().Split(' ')[0]);
+                list = switchLog(list);
+
+
+                ex.GerarPlanilhaLogs(list, path);
+                
                 item.Close();
                 Process.Start(path);
                 return;
@@ -5466,7 +5602,7 @@ namespace TurnParts
                 Item itemM = new Item();
                 itemM.Open(currentCN);
                 string Cmodel = itemM.ItemModelo;
-
+                setProgressiveBar(CNList.Count());
                 foreach (string cnL in CNList)
                 {
                     List<string> list1 = new List<string>();
@@ -5474,18 +5610,36 @@ namespace TurnParts
                     item.Open(cnL.Split(VarDash)[0]);
                     if (Cmodel == item.ItemModelo)
                     {
-                        list1 = item.getLogList(0, dateTimePicker1.Value.ToString().Split(' ')[0], dateTimePicker2.Value.ToString().Split(' ')[0]);
+                        if (!checkBox2.Checked)
+                            if (item.ItemName.Contains("Fixture") || item.ItemName.Contains("fixture"))
+                            {
+                                AddProgressiveBar("Coletando dados 1/2");
+                                continue;
+                            }
+                        if (checkBox1.Checked)
+                        {
+                            int scraps = item.getScraps(dateTimePicker1.Value, dateTimePicker2.Value);
+
+                            list1.Add(item.AddLog(scraps, "get"));
+                        }
+                        else
+                        {
+                            list1 = item.getLogList(0, dateTimePicker1.Value.ToString().Split(' ')[0], dateTimePicker2.Value.ToString().Split(' ')[0]);
+                        }
                         item.Close();
-                        list.AddRange(list1);
+                        try { list.AddRange(list1); }
+                        catch { }
+                      
                     }
                     else
                     {
                         item.Close();
                     }
-                    
+                    AddProgressiveBar("Coletando dados 1/2");
+                    Application.DoEvents();
                 }
 
-
+                list = switchLog(list);
                 ex.GerarPlanilhaLogs(list, path);
 
                 Process.Start(path);
@@ -5548,7 +5702,35 @@ namespace TurnParts
             
 
         }
+        public string searchButtonReturnToOriginal()
+        {
+            string searchButtonReturnTO = "REMOVE";
+            string a = "";
+            if (searchButtonReturnTo != "")
+            {
+                searchButtonReturnTO = searchButtonReturnTo;
+            }
+            else
+            {
+                searchButtonReturnTo = config("searchButtonReturnTO");
+                searchButtonReturnTO = searchButtonReturnTo;
+            }
 
+            a = searchButtonReturnTO;
+            if (a != "REMOVE" && a != "CHECK" && a != "ADD")
+            {
+                Console.WriteLine("a " + a);
+                config("searchButtonReturnTO", "REMOVE");
+                searchButtonReturnTO = "REMOVE";
+            }
+            return searchButtonReturnTO;
+        }
+        public void callDisplay(string cn)
+        {
+            string searchButtonReturnTO = searchButtonReturnToOriginal();
+            display(cn, -1, searchButtonReturnTO);
+
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
 
@@ -5825,6 +6007,170 @@ namespace TurnParts
 
             if (value)
                 Process.Start(folder1.listaGeralPath());
+        }
+
+        private void relaçãoDeFixturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (simpleList)
+            {
+
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                //listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(4));
+                return;
+            }
+            listOpenMode = "simples";
+            Folders folder1 = new Folders();
+            folder1.buildStructure();
+            bool value = folder1.listmode(listOpenMode);
+            if (value)
+                Process.Start(folder1.listaGeralPath());
+        }
+
+        private void locaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (simpleList)
+            {
+
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                //listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(3));
+                return;
+            }
+            listOpenMode = "location";
+            Folders folder1 = new Folders();
+            folder1.buildStructure();
+            bool value = folder1.listmode(listOpenMode);
+            if (value)
+                Process.Start(folder1.listaGeralPath());
+        }
+
+        private void gruposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (simpleList)
+            {
+
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                //listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(5));
+                return;
+            }
+            listOpenMode = "grupos";
+            Folders folder1 = new Folders();
+            folder1.buildStructure();
+            bool value = folder1.listmode(listOpenMode);
+            if (value)
+                Process.Start(folder1.listaGeralPath());
+        }
+
+        private void viewPainelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (viewPainelToolStripMenuItem.Text.Contains("Painel"))
+            {
+                viewPainelToolStripMenuItem.Text = "View (Excel)";
+                simpleList = false;
+            }
+            else
+            {
+                viewPainelToolStripMenuItem.Text = "View (Painel)";
+                simpleList = true;
+            }
+           
+        }
+
+        private void modeloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Item item= new Item();
+            item.Open(currentCN);
+            //item.loadhowlongwegotModel();
+
+            List<string> list = new List<string>();
+            list = item.modelToList();
+            foreach (string l in list)
+            {
+                Item item2 = new Item();
+                //Console.WriteLine("open<" + l.Split(VarDash)[0]);
+                item2.Open(l.Split(VarDash)[0]);
+                item2.howlongwegot();
+                item2.Close();
+            }
+
+            ListClass lc = new ListClass();
+            lc.Open("Mestra");
+            List<string> list1 = new List<string>();
+            list1 = lc.filterListVar("Modelo", item.ItemModelo);
+            lc.Show(lc.RowTitle(8), list1);
+
+        }
+        public void setProgressiveBar(int max)
+        {
+            progressBar2.Maximum = max;
+            progressBar2.Value = 0;
+        }
+        public void AddProgressiveBar(string text = "")
+        {
+            if(text == "clear")
+            {
+                label18.Text = "";
+                return;
+            }
+            ProgressBar p = progressBar2;
+            label18.Text = text;
+            label18.Location = new Point(p.Location.X + p.Width - label18.Width,p.Location.Y + p.Height);
+            progressBar2.Value +=1;
+        }
+        private void getCrtiticos()
+        {
+            Thread.CurrentThread.IsBackground = true;
+
+            Item item = new Item();
+            item.Open(currentCN);
+            //item.loadhowlongwegotModel();
+
+            List<string> list = new List<string>();
+            list = CNList;
+            setProgressiveBar(list.Count());
+            foreach (string l in list)
+            {
+                string cn = l.Split(VarDash)[0];
+                AddProgressiveBar($" CN {cn} Calculando Dias");
+                Item item2 = new Item();
+                item2.Open(cn);
+                item2.howlongwegot();
+                item2.Close();
+
+                time(cn + " before events");
+                Application.DoEvents();
+                time(cn + " after events");
+            }
+
+
+            ListClass lc = new ListClass();
+            lc.Open("Mestra");
+            List<string> list1 = new List<string>();
+            List<string> bar = new List<string>();
+            bar.Add("Extremanete Criticos");
+            bar.Add("Criticos");
+            bar.Add("Alerta");
+            lc.hasBar(bar);
+            list1.AddRange(lc.filterListVar("Status", "Extremamente Crítico"));
+            list1.AddRange(lc.filterListVar("Status", "Crítico"));
+            list1.AddRange(lc.filterListVar("Status", "Alerta"));
+            lc.Show(lc.RowTitle(8), list1);
+
+
+        }
+        private void criticosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Thread(() => getCrtiticos()).Start();
+
+
+
+            
+
         }
     }
 

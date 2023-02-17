@@ -1,4 +1,6 @@
-﻿namespace TurnParts
+﻿using System;
+
+namespace TurnParts
 {
     partial class Form1
     {
@@ -59,6 +61,8 @@
             this.relaçãoDeFixturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scrapsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOWERBIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.locaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnPartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.noneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +72,10 @@
             this.comandosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setIOSerialPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPainelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button14_EXTRAIR_TODOS_LOGS = new System.Windows.Forms.Button();
@@ -103,6 +111,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
@@ -158,6 +168,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.label18 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -178,6 +190,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -188,8 +201,10 @@
             this.atividadesToolStripMenuItem,
             this.turnPartToolStripMenuItem,
             this.modelosToolStripMenuItem,
-            this.comandosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.comandosToolStripMenuItem,
+            this.viewPainelToolStripMenuItem,
+            this.statusToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 3);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1924, 33);
@@ -299,7 +314,9 @@
             this.forcastToolStripMenuItem,
             this.relaçãoDeFixturesToolStripMenuItem,
             this.scrapsToolStripMenuItem,
-            this.pOWERBIToolStripMenuItem});
+            this.pOWERBIToolStripMenuItem,
+            this.locaçãoToolStripMenuItem,
+            this.gruposToolStripMenuItem});
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.relatórioToolStripMenuItem.Text = "Relatório";
@@ -308,45 +325,59 @@
             // listaGeralToolStripMenuItem
             // 
             this.listaGeralToolStripMenuItem.Name = "listaGeralToolStripMenuItem";
-            this.listaGeralToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
+            this.listaGeralToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.listaGeralToolStripMenuItem.Text = "Lista Geral";
             this.listaGeralToolStripMenuItem.Click += new System.EventHandler(this.listaGeralToolStripMenuItem_Click);
             // 
             // listaComprasToolStripMenuItem
             // 
             this.listaComprasToolStripMenuItem.Name = "listaComprasToolStripMenuItem";
-            this.listaComprasToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
+            this.listaComprasToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.listaComprasToolStripMenuItem.Text = "Lista Compras";
             this.listaComprasToolStripMenuItem.Click += new System.EventHandler(this.listaComprasToolStripMenuItem_Click);
             // 
             // forcastToolStripMenuItem
             // 
             this.forcastToolStripMenuItem.Name = "forcastToolStripMenuItem";
-            this.forcastToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
+            this.forcastToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.forcastToolStripMenuItem.Text = "Fixtures";
             this.forcastToolStripMenuItem.Click += new System.EventHandler(this.forcastToolStripMenuItem_Click);
             // 
             // relaçãoDeFixturesToolStripMenuItem
             // 
-            this.relaçãoDeFixturesToolStripMenuItem.Enabled = false;
             this.relaçãoDeFixturesToolStripMenuItem.Name = "relaçãoDeFixturesToolStripMenuItem";
-            this.relaçãoDeFixturesToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
-            this.relaçãoDeFixturesToolStripMenuItem.Text = "Relação de Fixtures";
+            this.relaçãoDeFixturesToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.relaçãoDeFixturesToolStripMenuItem.Text = "Simplificada";
+            this.relaçãoDeFixturesToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeFixturesToolStripMenuItem_Click);
             // 
             // scrapsToolStripMenuItem
             // 
-            this.scrapsToolStripMenuItem.Enabled = false;
             this.scrapsToolStripMenuItem.Name = "scrapsToolStripMenuItem";
-            this.scrapsToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
-            this.scrapsToolStripMenuItem.Text = "Scraps";
+            this.scrapsToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.scrapsToolStripMenuItem.Text = "Quantidade";
             this.scrapsToolStripMenuItem.Click += new System.EventHandler(this.scrapsToolStripMenuItem_Click);
             // 
             // pOWERBIToolStripMenuItem
             // 
+            this.pOWERBIToolStripMenuItem.Enabled = false;
             this.pOWERBIToolStripMenuItem.Name = "pOWERBIToolStripMenuItem";
-            this.pOWERBIToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
+            this.pOWERBIToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
             this.pOWERBIToolStripMenuItem.Text = "POWER BI";
             this.pOWERBIToolStripMenuItem.Click += new System.EventHandler(this.pOWERBIToolStripMenuItem_Click);
+            // 
+            // locaçãoToolStripMenuItem
+            // 
+            this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.locaçãoToolStripMenuItem.Text = "Locação";
+            this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.locaçãoToolStripMenuItem_Click);
+            // 
+            // gruposToolStripMenuItem
+            // 
+            this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.gruposToolStripMenuItem.Text = "Grupos";
+            this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
             // 
             // atividadesToolStripMenuItem
             // 
@@ -416,6 +447,36 @@
             this.setIOSerialPortToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.setIOSerialPortToolStripMenuItem.Text = "Set IO Serial Port";
             this.setIOSerialPortToolStripMenuItem.Click += new System.EventHandler(this.setIOSerialPortToolStripMenuItem_Click);
+            // 
+            // viewPainelToolStripMenuItem
+            // 
+            this.viewPainelToolStripMenuItem.Name = "viewPainelToolStripMenuItem";
+            this.viewPainelToolStripMenuItem.Size = new System.Drawing.Size(125, 29);
+            this.viewPainelToolStripMenuItem.Text = "View (Painel)";
+            this.viewPainelToolStripMenuItem.Click += new System.EventHandler(this.viewPainelToolStripMenuItem_Click);
+            // 
+            // statusToolStripMenuItem1
+            // 
+            this.statusToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modeloToolStripMenuItem,
+            this.criticosToolStripMenuItem});
+            this.statusToolStripMenuItem1.Name = "statusToolStripMenuItem1";
+            this.statusToolStripMenuItem1.Size = new System.Drawing.Size(76, 29);
+            this.statusToolStripMenuItem1.Text = "Status";
+            // 
+            // modeloToolStripMenuItem
+            // 
+            this.modeloToolStripMenuItem.Name = "modeloToolStripMenuItem";
+            this.modeloToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.modeloToolStripMenuItem.Text = "Modelo";
+            this.modeloToolStripMenuItem.Click += new System.EventHandler(this.modeloToolStripMenuItem_Click);
+            // 
+            // criticosToolStripMenuItem
+            // 
+            this.criticosToolStripMenuItem.Name = "criticosToolStripMenuItem";
+            this.criticosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.criticosToolStripMenuItem.Text = "Criticos";
+            this.criticosToolStripMenuItem.Click += new System.EventHandler(this.criticosToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -902,6 +963,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.label56);
             this.groupBox2.Controls.Add(this.label55);
             this.groupBox2.Controls.Add(this.label54);
@@ -914,9 +977,33 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(364, 254);
+            this.groupBox2.Size = new System.Drawing.Size(725, 254);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.checkBox2.ForeColor = System.Drawing.Color.White;
+            this.checkBox2.Location = new System.Drawing.Point(435, 104);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(165, 27);
+            this.checkBox2.TabIndex = 37;
+            this.checkBox2.Text = "Incluir Fixtures";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(435, 65);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(156, 27);
+            this.checkBox1.TabIndex = 36;
+            this.checkBox1.Text = "Colapsar Lista";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label56
             // 
@@ -1299,7 +1386,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Snow;
-            this.label16.Location = new System.Drawing.Point(200, 75);
+            this.label16.Location = new System.Drawing.Point(209, 75);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(0, 33);
             this.label16.TabIndex = 13;
@@ -1625,6 +1712,28 @@
             // 
             this.timer3.Interval = 60000;
             // 
+            // progressBar2
+            // 
+            this.progressBar2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.progressBar2.Location = new System.Drawing.Point(0, 0);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(1924, 3);
+            this.progressBar2.TabIndex = 32;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(1755, 6);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(0, 20);
+            this.label18.TabIndex = 22;
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1632,7 +1741,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(243)))), ((int)(((byte)(214)))));
             this.ClientSize = new System.Drawing.Size(1924, 951);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1656,6 +1767,7 @@
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -1795,6 +1907,16 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.ToolStripMenuItem pOWERBIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem locaçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gruposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPainelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem modeloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criticosToolStripMenuItem;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

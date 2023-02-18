@@ -14,6 +14,7 @@ using System.Management;
 using System.Windows;
 using System.IO.Ports;
 using System.Threading;
+using System.Collections;
 
 namespace TurnParts
 {
@@ -45,6 +46,7 @@ namespace TurnParts
         public event myDelegate closeSearchForm;
         public event myDelegate addItemlogPanelButtonDispose;
         bool simpleList = true;
+        bool growSlidePanel = true;
         public string criticalRange = "30,60,90,120,180";
         SerialPort mainPort = new SerialPort("COM9", 9600);
         string lastCOM = "";
@@ -66,8 +68,8 @@ namespace TurnParts
             ganarateLogPanels();
             cycleLifeLayouy("hide");
            
-            timer1.Interval = 100;
-            timer1.Start();
+            timer1.Interval = 10;
+          //  timer1.Start();
             timer2.Interval = 50;
             timer2.Start();
             timer3.Start();
@@ -597,6 +599,8 @@ namespace TurnParts
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel7);
+            panel10.Controls.Add(dataGridView1);
+            dataGridView1.Dock = DockStyle.Fill;
             panel2.Location = p11;
             panel3.Location = p12;
             panel4.Location = p21;
@@ -1894,7 +1898,9 @@ namespace TurnParts
                     ite_.Open(currentCN);
                     string ID_OP = comand.Split('#')[1];
                     ID_OP = pattern("ID", ID_OP);
-                    ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
+                    string idlog = ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
+                    buildDataGrid(ite_.lastLogs());
+                    //addIdtoTable(idlog, currentSelectedLogPanel);
                     updateLogpanels(ite_.getLogList());
                     ite_.Close();
                     return;
@@ -1911,6 +1917,8 @@ namespace TurnParts
                     string ID_OP = comand.Split('$')[1];
                     ID_OP = pattern("Fixture", ID_OP);
                     ite_.addID_inLog(ID_OP, "Fixture", currentSelectedLogPanel);
+                    
+
                     updateLogpanels(ite_.getLogList());
                     ite_.Close();
                     return;
@@ -1977,6 +1985,10 @@ namespace TurnParts
             display(CN, qtd);
         }
         string qtdLabelCurrentValue = "";
+        public void addIdtoTable(string log,int index)
+        {
+            //pintar datagridview1
+        }
         public async void QTD_label_Animation(int increment, string qtdLcurrentValue)
         {
 
@@ -2733,12 +2745,9 @@ namespace TurnParts
                 list2.mainList.Add(line3);
                 list2.Close();
             }
+            List<string> list4 = item.lastLogs();
 
-
-
-
-
-
+            buildDataGrid(list4);
             item.Close();
             if (item.grupo == "")
             {
@@ -2771,6 +2780,71 @@ namespace TurnParts
             lastCN = currentCN;
             stopBlink();
             return;
+
+        }
+        public void buildDataGrid(List<string> list)
+        {
+            //highlight logs ID
+            int maxGridValue = 100;
+            List<bool> grid = new List<bool>();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CN");
+            dt.Rows.Add("");
+            grid.Add(true);
+            int counter1 = 0;
+            
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                if (counter1 == maxGridValue)
+                    break;
+                counter1++;
+                string valeu = list[i];
+                string hora = valeu.Split(' ')[2];
+                string data = valeu.Split(' ')[1];
+                bool id = false;
+                string cID = valeu.Split(' ')[4].Split(':')[1];
+                Console.WriteLine(valeu + " ID<" + cID + ">");
+                if (cID != "")
+                    id = true;
+                data = data.Split('/')[0] + "/" + data.Split('/')[1];
+                valeu = valeu.Split(' ')[0];
+                valeu = valeu.Split(':')[1];
+                valeu += "    " + hora + "    " + data;
+                dt.Rows.Add(valeu);
+                if (id)
+                    grid.Add(true);
+                else
+                    grid.Add(false);
+            }
+            //  ListClass lc = new ListClass();
+
+
+            dataGridView1.DataSource = dt;
+            if (dataGridView1.Columns != null)
+                dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            int counter2 = 0;
+            int maxv = grid.Count;
+            int semID = 0;
+            int totalID = maxv -1;
+            foreach (var l in dataGridView1.Rows)
+            {
+               
+                if (maxv == counter2)
+                    break;
+                Console.WriteLine(grid[counter2]);
+                if (grid[counter2])
+                {
+                    dataGridView1.Rows[counter2].DefaultCellStyle.BackColor = Color.FromArgb(31, 46, 27);
+                }
+                else
+                {
+                    dataGridView1.Rows[counter2].DefaultCellStyle.BackColor = Color.DarkRed;
+                    semID++;
+                }
+                counter2++;
+
+            }
 
         }
         private void loadChart()
@@ -4083,7 +4157,10 @@ namespace TurnParts
             ite_.Open(currentCN);
             string ID_OP = textBox1.Text;
             ID_OP = pattern("ID", ID_OP);
-            ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
+            //ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
+            string idlog = ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
+            buildDataGrid(ite_.lastLogs());
+            //addIdtoTable(idlog, currentSelectedLogPanel);
             updateLogpanels(ite_.getLogList());
             ite_.Close();
             textBox1.Text = "";
@@ -5733,40 +5810,34 @@ namespace TurnParts
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-
-            
-
-            ////////// SOMENTE DISPLAY LIST!!!!!/////////////////////////
-            if (!callDisplayBoll)                           /////////////
-                return;                                     ////////////
-            callDisplayBoll = false;
-
-            string searchButtonReturnTO = "CHECK";
-            string a = "";
-            if(searchButtonReturnTo != "")
+            Console.WriteLine(panel10.Size);
+            int amount = 50;
+            int maxSize = 200;
+            int minSize = 2;
+            if (growSlidePanel)
             {
-                searchButtonReturnTO = searchButtonReturnTo;
+                int newSize = panel10.Width + amount;
+                if(newSize > maxSize)
+                {
+                    panel10.Size = new Size(maxSize, panel10.Height);
+                    timer1.Stop();
+                }  
+                else
+                    panel10.Size = new Size(newSize, panel10.Height);
+                
             }
             else
             {
-                searchButtonReturnTo = config("searchButtonReturnTO");
-                searchButtonReturnTO = searchButtonReturnTo;
+                int newSize = panel10.Width - amount;
+                if (newSize < minSize)
+                {
+                    panel10.Size = new Size(minSize, panel10.Height);
+                    timer1.Stop();
+                }
+                else
+                    panel10.Size = new Size(newSize, panel10.Height);
             }
             
-            a = searchButtonReturnTO;
-            if (a != "REMOVE" && a != "CHECK" && a != "ADD" )
-            {
-                Console.WriteLine("a "+ a);
-                config("searchButtonReturnTO","CHECK");
-                searchButtonReturnTO = "CHECK";
-            }
-            display(callDisplayCN, -1, searchButtonReturnTO);
-            callDisplayCN = "";                             ////////////
-
-            Console.WriteLine("Tick 1");
-
-            /////////////////////////////////////////////////////////////
         }
 
         private void setIOSerialPortToolStripMenuItem_Click(object sender, EventArgs e)
@@ -6171,6 +6242,50 @@ namespace TurnParts
 
             
 
+        }
+
+        private void panel10_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel10_Leave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel10_MouseEnter(object sender, EventArgs e)
+        {
+            Console.WriteLine("Enter");
+            growSlidePanel = true;
+            timer1.Start();
+        }
+
+        private void panel10_MouseLeave(object sender, EventArgs e)
+        {
+            Console.WriteLine("Leave");
+            growSlidePanel = false;
+            timer1.Start();
+        }
+
+        private void dataGridView1_MouseEnter(object sender, EventArgs e)
+        {
+            growSlidePanel = true;
+            timer1.Start();
+        }
+
+        private void dataGridView1_MouseLeave(object sender, EventArgs e)
+        {
+            growSlidePanel = false;
+            timer1.Start();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox1.Focus();
+            if(text != "")
+                callDisplay(text.Split(' ')[0]);
         }
     }
 

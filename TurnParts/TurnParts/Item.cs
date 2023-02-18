@@ -8,11 +8,14 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Reflection.Emit;
 using TurnParts;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Collections;
 
 namespace MagnusSpace
 {
     class Item
     {
+        
         StringComparison comp = StringComparison.OrdinalIgnoreCase;
         private string itemInfoPath = "";
         private string log_path = "";
@@ -24,6 +27,7 @@ namespace MagnusSpace
         public List<string> groupList;
         public List<string> modelList;
         public List<string> CNList;
+        public List<string> LastLogs;
         bool logsListUpdated = false;
         bool setlogsListUpdated = false;
         public string ItemCN = "";
@@ -1356,11 +1360,11 @@ namespace MagnusSpace
             itemInfoList[4] = b + ":" + value.ToString();
             writeList(itemInfoPath, itemInfoList);
         }
-        public void addID_inLog(string text,string action = "ID",int logNum = 1)
+        public string addID_inLog(string text,string action = "ID",int logNum = 1)
         {
-
+            string logRet = "";
             if (!itemExists)
-                return;
+                return "";
             int totalC = logsList.Count();
             string cLog = logsList[totalC - logNum];
             string Clog = "";
@@ -1392,11 +1396,28 @@ namespace MagnusSpace
                 }
                 n++;
             }
-
+            int nl = logNum;
             logsList[totalC - logNum] = Clog;
             writeList(log_path, logsList);
+            ListClass lc = new ListClass();
+            lc.Open("Logs", "ListaGeral");
+            int foundIt = 0;
+            for (int i = lc.mainList.Count - 1; i >= 0; i--)
+            {
+                if(Clog.Split(' ')[0] == lc.mainList[i].Split(' ')[0])
+                {
+                    foundIt++;
+                    if(foundIt == nl)
+                    {
+                        lc.mainList[i] = Clog;
+                        LastLogs = lc.mainList;
+                        lc.Close();
+                        break;
+                    }
+                }
+            }
 
-
+                return Clog;
         }
         public void createItem(string itemName, string PN = "", int qtd = 0, int EsM = 0, string description = "", string CN_ = "", List<string> SKUs = null,string Model1="",string qtdINI = "0", string NPIDate = "", string groupItem = "", string picture1 = "",string validacao1 = "")
         {///// FATA CADASTRAR OS ITENS DIREITO MUDAR O CADASTRO
@@ -1977,7 +1998,32 @@ namespace MagnusSpace
                     break;
             }
         }
+        public void clearAdress()
+        {
+            location = "";
+            location2 = "";
+            location3 = "";
+            location4 = "";
+            stream("location", "");
+            stream("location2", "");
+            stream("location3", "");
+            stream("location4", "");
+
+        }
         double addLog_QTD = 0;
+        public List<string> lastLogs()
+        {
+            if(LastLogs == null)
+            {
+                ListClass lc = new ListClass();
+                lc.Open("Logs", "ListaGeral");
+                return lc.mainList;
+            }
+            else
+            {
+                return LastLogs;
+            }
+        }
         public double QTD(string action, double value = 0)
         {
             //Console.WriteLine("action " +action.ToString() + "      "+ value.ToString());
@@ -2034,56 +2080,22 @@ namespace MagnusSpace
                         
                         if (value > 0)
                         {
-                            foreach(string l in glist.ToList())
-                            {
-                                if(l.Split(VarDash)[0] ==  ItemCN && l.Split(VarDash)[1] != "IN")
-                                {
-                                    itemInfoList = lc5.stream_SET(itemInfoList, "groupPosition", "IN");
-                                    glist[a] = ItemCN + VarDash.ToString() + "IN";
-                                    IN_group++;
-                                    position = "IN";
-                                    AddLog(1);
-                                    a = 0;
-                                    itemPresentinGroup = true;
-                                    break;
-                                }
-                                a++;
-                            }
-                            //abrir lista do grupo e  colocar ele como entrada
-
-
+                            stream("groupPosition", "IN");
+                            IN_group++;
+                            position = "IN";
+                            AddLog(1);
+                            itemPresentinGroup = true;
+                            
                         }
                         else
                         {
-                            foreach (string l in glist.ToList())
-                            {
-                                if (l.Split(VarDash)[0] == ItemCN && l.Split(VarDash)[1] != "OUT")
-                                {
-                                    itemInfoList = lc5.stream_SET(itemInfoList, "groupPosition", "OUT");
-                                    glist[a] = ItemCN + VarDash.ToString() + "OUT";
-                                    
-                                    IN_group--;
-                                    position = "OUT";
-                                    AddLog(-1);
-                                    a = 0;
-                                    itemPresentinGroup = false;
-                                    if (ItemName.Contains("fixture", comp))
-                                    {
-                                       
 
-                                        location = "";
-                                        location2 = "";
-                                        location3 = "";
-                                        location4 = "";
-                                        stream("location", "");
-                                        stream("location2", "");
-                                        stream("location3", "");
-                                        stream("location4", "");
-                                    }
-                                    break;
-                                }
-                                a++;
-                            }
+                            stream("groupPosition", "OUT");
+                            IN_group--;
+                            position = "OUT";
+                            AddLog(-1);
+                            itemPresentinGroup = false;
+                            clearAdress();
                         }
       
 
@@ -2174,6 +2186,8 @@ namespace MagnusSpace
 
         public string AddLog(double quantidade = -1, string action = "none")
         {
+            ListClass lc = new ListClass();
+            lc.Open("Logs", "ListaGeral");
             string logFormat = "";
             string modo = "OUT";
             string charEspaciador = " ";
@@ -2205,6 +2219,24 @@ namespace MagnusSpace
             }
             else
             {
+                lc.mainList.Add(logFormat);
+                int total = lc.mainList.Count;
+                while(total != 0)
+                {
+                    if (total == 0)
+                        break;
+                    if(DateTime.Today.AddMonths(-3) > logtoDatetime(lc.mainList[0]))
+                    {
+                        lc.mainList.RemoveAt(0);
+                        total--;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    
+                }
+                lc.Close();
                 logsList.Add(logFormat);
                 return "";
             }

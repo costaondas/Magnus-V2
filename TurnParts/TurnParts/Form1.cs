@@ -23,6 +23,7 @@ namespace TurnParts
     {
         public event myDelegate resizePanel;
         public event myDelegate updatePanels;
+        public event myDelegate newIDpanel;
         public event myDelegate hideLogPanelLabels;
         public event myDelegate deleteChartPanel;
         public event myDelegate disposeChartLabels;
@@ -46,13 +47,17 @@ namespace TurnParts
         public event myDelegate closeSearchForm;
         public event myDelegate addItemlogPanelButtonDispose;
         bool simpleList = true;
+        int num_of_panels = 10;
+        int maxScrapBars = 20;
         bool growSlidePanel = true;
+        bool growSlidePanelLeft = true;
+        bool editConfigofCritical = false;
         public string criticalRange = "30,60,90,120,180";
         SerialPort mainPort = new SerialPort("COM9", 9600);
         string lastCOM = "";
-
+        int Panel11maxSize = 1000;
         bool burlarLicensa = true;
-
+        string lastID = "";
         bool habilitarLicensa = true;
         bool licenceFound = false; //false
         private string[] keysMaster = { @"USB\VID_14CD&PID_1212\121220160204",
@@ -63,16 +68,35 @@ namespace TurnParts
 
         public Form1()
         {
-            Console.WriteLine("components");
+            string conf = "";
+            try { conf = config("editConfigofCritical");
+                if (conf == "true")
+                    editConfigofCritical = true;
+                if (conf == "")
+                {
+                    editConfigofCritical = false; config("editConfigofCritical", "false", true);
+                }
+            }
+            catch { editConfigofCritical = false; config("editConfigofCritical","false",true); }
+            
+          
             InitializeComponent();
-            ganarateLogPanels();
+            panel11.BringToFront();
+            try { maxScrapBars = Convert.ToInt32(config("maxScrapBars")); }
+            catch { config("maxScrapBars", "20"); maxScrapBars = 20; }
+            // this.Controls.Add(panel11);
+
+            panel11.Location = new Point(0,0);
+            
+            generateLogPanels();
             cycleLifeLayouy("hide");
            
             timer1.Interval = 10;
-          //  timer1.Start();
+            timer3.Interval = 10;
+            //  timer1.Start();
             timer2.Interval = 50;
             timer2.Start();
-            timer3.Start();
+            //timer3.Start();
             int b = 0;
             foreach (bool a in OIpins)
             {
@@ -249,12 +273,43 @@ namespace TurnParts
         }
 
         //configuração
-        public string config(string varName, string value = "null")
+        public string config(string varName, string value = "null",bool bypass = false)
         {
+
+            List<string> criticalList = new List<string>();
+            criticalList.Add("FixtureOUTlogPath");
+
             ListClass list2 = new ListClass();
             list2.Open("Settings", "settings");
             string text = "";
-            text = list2.stream(varName, value);
+            if(editConfigofCritical || bypass)
+            {
+                text = list2.stream(varName, value);
+             
+            }   
+            else
+            {
+                foreach (string l in criticalList)
+                {
+                    if (l == varName)
+                    {
+                        if (value == "null")
+                        {
+                            text = list2.stream(varName);
+                            return text;
+                        }
+                        else
+                        {
+                            return value;
+                        }
+                        
+                    }
+                }
+                text = list2.stream(varName, value);
+            }
+
+                
+                
             list2.Close();
             return text;
 
@@ -578,6 +633,15 @@ namespace TurnParts
                 label12.Visible = true;
                 progressBar1.Visible = true;
             }
+            panel11.Height = panel2.Height;
+            panel11.Controls.Add(chart4);
+            panel11.Controls.Add(label23);
+
+            chart4.Location = new Point(10,10);
+            chart4.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.White;
+            chart4.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            chart4.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.Transparent;
+          //  chart4.ChartAreas[0].AxisX.la
             int[] colunas = new int[2] { 30, 30 };
             int linha1 = proporcao_do_primeiro_painel_em_porcentagem;//60
             int linha2 = proporcao_do_segundo_painel_em_porcentagem;
@@ -1176,6 +1240,8 @@ namespace TurnParts
             try { chartLabel_offset = Convert.ToInt32(config("chartLabel_offset")); }
             catch { config("chartLabel_offset", "50"); chartLabel_offset = 50; }
 
+            
+
             try { COM_port = config("COM_port"); }
             catch { config("COM_port", "COM6"); COM_port = "COM6"; }
 
@@ -1269,7 +1335,7 @@ namespace TurnParts
 
                 PlascasProduzidas.Add(l);
 
-                Console.WriteLine(l);
+            
 
             }
         }
@@ -1615,7 +1681,7 @@ namespace TurnParts
                 ListClass lc2 = new ListClass();
                 lc2.Open("Mestra", "ListaGeral");
                 lc2.mainList.Clear();
-                Console.WriteLine("======================");
+            
                 Folders folder = new Folders();
                 int counter = 0;
                 string[] CNarray = Directory.GetDirectories(folder.TPFolder);
@@ -1827,7 +1893,7 @@ namespace TurnParts
                         return;
                     }
                     item1.set_EstoqueMinimo(ab);
-                    updateLogpanels(item1.getLogList());
+                    updateLogpanels(item1.getLogList(num_of_panels));
                     item1.Close();
                     //item1.setStatus();
 
@@ -1857,7 +1923,7 @@ namespace TurnParts
                         return;
                     }
                     item2.QTD("set", ab);
-                    updateLogpanels(item2.getLogList());
+                    updateLogpanels(item2.getLogList(num_of_panels));
                     labelQTD_value.Text = ab.ToString();
                     item2.Close();
                     //item2.setStatus();
@@ -1893,7 +1959,7 @@ namespace TurnParts
             {
                 if (ch[0].ToString() == "#")
                 {
-                    Console.WriteLine("ID");
+                 
                     Item ite_ = new Item();
                     ite_.Open(currentCN);
                     string ID_OP = comand.Split('#')[1];
@@ -1901,7 +1967,7 @@ namespace TurnParts
                     string idlog = ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
                     buildDataGrid(ite_.lastLogs());
                     //addIdtoTable(idlog, currentSelectedLogPanel);
-                    updateLogpanels(ite_.getLogList());
+                    updateLogpanels(ite_.getLogList(num_of_panels));
                     ite_.Close();
                     return;
 
@@ -1919,7 +1985,7 @@ namespace TurnParts
                     ite_.addID_inLog(ID_OP, "Fixture", currentSelectedLogPanel);
                     
 
-                    updateLogpanels(ite_.getLogList());
+                    updateLogpanels(ite_.getLogList(num_of_panels));
                     ite_.Close();
                     return;
 
@@ -2283,7 +2349,7 @@ namespace TurnParts
             if (item.grupo != "")
             {
                 label57.Text = "Versão do Fixture";
-                label35.Text = "Data da Manutenção";
+                label35.Text = "Data da última modificação de versão";
                // label37.Text = "Próxima manutenção";
                 label39.Text = "Responsável";
               //  label41.Text = "Intervalo";
@@ -2543,7 +2609,7 @@ namespace TurnParts
             }
 
 
-            updateLogpanels(item.getLogList());
+            updateLogpanels(item.getLogList(num_of_panels));
             LastChart = item.chartList(lastCharsScreem);
             loadChart();
 
@@ -2787,11 +2853,12 @@ namespace TurnParts
             //highlight logs ID
             int maxGridValue = 100;
             List<bool> grid = new List<bool>();
-
+            List<bool> grid_entrada = new List<bool>();
             DataTable dt = new DataTable();
             dt.Columns.Add("CN");
             dt.Rows.Add("");
             grid.Add(true);
+            grid_entrada.Add(true);
             int counter1 = 0;
             
             for (int i = list.Count - 1; i >= 0; i--)
@@ -2803,15 +2870,23 @@ namespace TurnParts
                 string hora = valeu.Split(' ')[2];
                 string data = valeu.Split(' ')[1];
                 bool id = false;
+                bool qtdL = false;
                 string cID = valeu.Split(' ')[4].Split(':')[1];
-                Console.WriteLine(valeu + " ID<" + cID + ">");
+                string cQTD = valeu.Split(' ')[3].Split(':')[1];
+             
                 if (cID != "")
                     id = true;
+                if (!cQTD.Contains("-"))
+                    qtdL = true;
                 data = data.Split('/')[0] + "/" + data.Split('/')[1];
                 valeu = valeu.Split(' ')[0];
                 valeu = valeu.Split(':')[1];
                 valeu += "    " + hora + "    " + data;
                 dt.Rows.Add(valeu);
+                if (qtdL)
+                    grid_entrada.Add(true);
+                else
+                    grid_entrada.Add(false);
                 if (id)
                     grid.Add(true);
                 else
@@ -2832,7 +2907,7 @@ namespace TurnParts
                
                 if (maxv == counter2)
                     break;
-                Console.WriteLine(grid[counter2]);
+              
                 if (grid[counter2])
                 {
                     dataGridView1.Rows[counter2].DefaultCellStyle.BackColor = Color.FromArgb(31, 46, 27);
@@ -2841,6 +2916,10 @@ namespace TurnParts
                 {
                     dataGridView1.Rows[counter2].DefaultCellStyle.BackColor = Color.DarkRed;
                     semID++;
+                }
+                if (grid_entrada[counter2])
+                {
+                    dataGridView1.Rows[counter2].DefaultCellStyle.BackColor = Color.DarkBlue;
                 }
                 counter2++;
 
@@ -3311,9 +3390,11 @@ namespace TurnParts
             }
         }
 
-        private void ganarateLogPanels() //paineis
+        private void generateLogPanels() //paineis
         {
-            int num_of_panels = 10;
+            try { num_of_panels = Convert.ToInt32(config("num_of_panels")); }
+            catch { config("num_of_panels", "10"); num_of_panels = 10; }
+            //  num_of_panels = 10;
             int a = 1;
             bool Stripes = true;
             Color c1 = Color.DarkGreen;
@@ -3357,6 +3438,20 @@ namespace TurnParts
                     try
                     {
                         l1.Text = logList_[panelNumb];
+                        if(panelNumb == 1)
+                        {
+                            lastID = logList_[panelNumb];
+                            try
+                            {
+                                lastID = lastID.Split(' ')[3].Split(':')[1];
+                                if(newIDpanel != null)
+                                {
+                                    newIDpanel();
+                                }
+                               // Console.WriteLine($"Save {lastID}");
+                            }
+                            catch { }
+                        }
                         l1.AutoSize = false;
                         l1.Font = new Font("Times New Roman", 13);
                         if (panel.BackColor != Color.DarkBlue)
@@ -4121,6 +4216,7 @@ namespace TurnParts
                     Item item2 = new Item();
                     item2.Open(currentCN);
                     listShow2 = lc.filterListVar("grupo", item2.grupo);
+                    lc.dontFocus = true;
                     lc.Show(lc.RowTitle(7),listShow2);
                     return;
                 }
@@ -4137,8 +4233,8 @@ namespace TurnParts
                 line += "P/N" + vd().ToString();
                 line += "Descrição" + vd().ToString();
                 line += "Responsável" + vd().ToString();
-                line += "Data vistoria" + vd().ToString();
-                line += "Próxima vistoria" + vd().ToString();
+                line += "Data de Modificação" + vd().ToString();
+                line += "Versão" + vd().ToString();
                 line += "Rua" + vd().ToString();
                 line += "Coluna" + vd().ToString();
                 line += "Linha" + vd().ToString();
@@ -4161,10 +4257,150 @@ namespace TurnParts
             string idlog = ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
             buildDataGrid(ite_.lastLogs());
             //addIdtoTable(idlog, currentSelectedLogPanel);
-            updateLogpanels(ite_.getLogList());
+            updateLogpanels(ite_.getLogList(num_of_panels));
             ite_.Close();
             textBox1.Text = "";
             textBox1.Focus();
+
+        }
+        public void createChart()
+        {
+
+        }
+        public void ScrapRanking()
+        {
+            try
+            {
+                chart4.Series["Trocas"].Points.Clear();
+            }
+            catch { }
+            
+            List<string> list = new List<string>();
+            List<string> Sortedlist = new List<string>();
+            ListClass lc = new ListClass();
+            Folders folder = new Folders();
+            DateTime dt = DateTime.Now;
+            string listName = dt.Month + "-" + dt.Year;
+            lc.Open(listName, folder.Scraps);
+            list = lc.mainList;
+
+            for(int c = 0; c< list.Count(); c++)
+            {
+                try
+                {
+                    Convert.ToInt32(list[c].Split(VarDashPlus)[1].Split(VarDash)[1]);
+                }
+                catch
+                {
+                    list[c] = list[c].Split(VarDashPlus)[0] + VarDashPlus.ToString() + "QTD" + VarDash.ToString() + "0";
+                }
+            }
+
+            IList<string> sortedList = list
+       .Select(s => (s.Split(new[] { VarDash.ToString() }, StringSplitOptions.RemoveEmptyEntries)) )
+       
+       .OrderBy(a => Int32.Parse(a[2]))
+       .Select(a => String.Join(VarDash.ToString(), a))
+       .ToList();
+
+            DataTable dt2 = new DataTable();
+            dt2.Columns.Add("Text", typeof(string));
+            dt2.Columns.Add("Value", typeof(int));
+            
+
+            int counter = 0;
+            Console.WriteLine("=========");
+            List<string> list2 = new List<string>();
+            chart4.ChartAreas["ChartArea1"].AxisY.Interval = 1;
+            chart4.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+            //for (int j = sortedList.Count()-1; j >=0; j--)
+            for (int j = sortedList.Count() - maxScrapBars; j < sortedList.Count(); j++)
+                {
+                string l = sortedList[j];
+                string ID = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                int scrapQTD = Convert.ToInt32(l.Split(VarDashPlus)[1].Split(VarDash)[1]) * (-1);
+                chart4.Series["Trocas"].Points.AddXY(ID + " " + scrapQTD.ToString(), scrapQTD);
+                
+                //list2.Add(ID+VarDash.ToString()+ scrapQTD.ToString());
+            }
+            return;
+            // chart4.Series
+            //panel11.Controls.Clear();
+            chart4.ChartAreas["ChartArea1"].AxisY.Interval = 1;
+            chart4.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+            int counter3 = 0;
+            foreach (string l in list2)
+            {
+                string ID = l.Split(VarDash)[0];
+                int scrapsID = Convert.ToInt32(l.Split(VarDash)[1]);
+                chart4.Series["Trocas"].Points.AddXY(ID, scrapsID);
+                counter++;
+                if(counter == maxScrapBars)
+                {
+                    break;
+                }
+            }
+
+            return;
+
+           // panel11.Controls.Clear();
+            ChartClass cl= new ChartClass();
+            List<Button> listbutton = cl.chartBut(list2);
+            Point p = new Point(10,10);
+            foreach(Button but in listbutton)
+            {
+                
+                panel11.Controls.Add(but);
+                but.Location = p;
+                p = new Point(p.X, p.Y + but.Height);
+                Console.WriteLine("ButName:" +but.Name + " "+ "Location NEW button = " + but.Location.ToString() + " Panel size = " + panel11.Size.ToString());
+            }
+            Console.WriteLine("Controls in panel 11 " + panel11.Controls.Count.ToString());
+            return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            int aMax = list.Count;
+            for(int a = 0; a < aMax; a++)
+            {
+                string currentValueText = list[a];
+                int currentV = 0;
+                    try { currentV = Convert.ToInt32(currentValueText.Split(VarDashPlus)[1].Split(VarDash)[1]); }
+                catch { }
+                for (int b = 0; b < Sortedlist.Count(); b++)
+                {
+                    string toAnalase = Sortedlist[b];
+                    int toAnalaseV = 0;
+                    try { toAnalaseV = Convert.ToInt32(toAnalase.Split(VarDashPlus)[1].Split(VarDash)[1]); }
+                    catch { }
+                    if (a == aMax - 1)//last
+                    {
+                        
+                    }
+                    else
+                    {
+
+                    }
+                }
+                if(Sortedlist.Count() == 0)
+                {
+                    Sortedlist.Add(currentValueText);
+                }
+            }
+
 
         }
         private string pattern(string mode, string name)
@@ -4289,7 +4525,7 @@ namespace TurnParts
             string ID_OP = textBox1.Text;
             ID_OP = pattern("Fixture", ID_OP);
             ite_.addID_inLog(ID_OP, "Fixture", currentSelectedLogPanel);
-            updateLogpanels(ite_.getLogList());
+            updateLogpanels(ite_.getLogList(num_of_panels));
             ite_.Close();
             textBox1.Text = "";
             textBox1.Focus();
@@ -5796,7 +6032,7 @@ namespace TurnParts
             a = searchButtonReturnTO;
             if (a != "REMOVE" && a != "CHECK" && a != "ADD")
             {
-                Console.WriteLine("a " + a);
+              
                 config("searchButtonReturnTO", "REMOVE");
                 searchButtonReturnTO = "REMOVE";
             }
@@ -5810,7 +6046,7 @@ namespace TurnParts
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Console.WriteLine(panel10.Size);
+            
             int amount = 50;
             int maxSize = 200;
             int minSize = 2;
@@ -6047,7 +6283,7 @@ namespace TurnParts
 
                         
                         item.stream("versao", versao);
-                        Console.WriteLine("salvo " + versao + " em " + item.ItemCN);
+                    
                         
                         label58.Text = versao;
                         
@@ -6163,7 +6399,7 @@ namespace TurnParts
             foreach (string l in list)
             {
                 Item item2 = new Item();
-                //Console.WriteLine("open<" + l.Split(VarDash)[0]);
+              
                 item2.Open(l.Split(VarDash)[0]);
                 item2.howlongwegot();
                 item2.Close();
@@ -6286,6 +6522,96 @@ namespace TurnParts
             textBox1.Focus();
             if(text != "")
                 callDisplay(text.Split(' ')[0]);
+        }
+
+        private void panel11_MouseEnter(object sender, EventArgs e)
+        {
+           
+
+            growSlidePanelLeft = true;
+            chart4.Visible = true; //true
+            ScrapRanking();
+            timer3.Start();
+        }
+
+        private void panel11_MouseLeave(object sender, EventArgs e)
+        {
+            
+            growSlidePanelLeft = false;
+            chart4.Visible = false;
+            timer3.Start();
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+
+            
+            int amount = 200;
+            
+            int Panel11maxSizeH = 500;
+            int minSize = 2;
+            int minSizeH = 2;
+            if (growSlidePanelLeft)
+            {
+                int newSize = panel11.Width + amount;
+                
+                if (newSize > Panel11maxSize)
+                {
+                    panel11.Size = new Size(Panel11maxSize, panel11.Height);
+                 //   ScrapRanking();
+                    timer3.Stop();
+                }
+                else
+                    panel11.Size = new Size(newSize, panel11.Height);
+
+            }
+            else
+            {
+                int newSize = panel11.Width - amount;
+                if (newSize < minSize)
+                {
+                    panel11.Size = new Size(minSize, panel11.Height);
+                    timer3.Stop();
+                }
+                else
+                    panel11.Size = new Size(newSize, panel11.Height);
+            }
+
+        }
+
+        private void panel11_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart4_MouseEnter(object sender, EventArgs e)
+        {
+            growSlidePanelLeft = true;
+            //chart4.Visible = true;
+            //ScrapRanking();
+            timer3.Start();
+        }
+
+        private void chart4_MouseLeave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel11_SizeChanged(object sender, EventArgs e)
+        {
+            int borderX = 100;
+            int borderY = 100;
+            int newWidth = panel11.Width - borderX;
+            int newHeight = panel11.Height ;
+
+            if (newWidth <= 0)
+                newWidth = 1;
+            if (newHeight <= 0)
+                newHeight = 1;
+            chart4.Size = new Size(newWidth, newHeight);
+           // string locbut = chart4.Controls[3].Location.ToString();
+            Console.WriteLine($"Chart 4 size {chart4.Size}");
+            //schrink()
         }
     }
 

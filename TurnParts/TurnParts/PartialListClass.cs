@@ -132,8 +132,10 @@ namespace MagnusSpace
                     list.Add("P/N" + vd() + "P/N");
                     list.Add("Descrição" + vd() + "Descrição");
                     list.Add("Responsavel" + vd() + "Responsável");
-                    list.Add("DATA_MANUT" + vd() + "Data");
-                   // list.Add("Responsavel" + vd() + "Responsável");
+                    list.Add("DATA_MANUT" + vd() + "Data de Modificação");
+                    list.Add("versao" + vd() + "Versão");
+                    // list.Add("Responsavel" + vd() + "Responsável");
+                    
                     list.Add("grupo" + vd() + "Grupo");
                     list.Add("groupPosition" + vd() + "Posição");
                     list.Add("location3" + vd() + "Rua");

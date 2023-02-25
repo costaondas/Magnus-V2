@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C099CE56-3DD9-43EE-907F-D5034AE22279}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>MagnusSpace</RootNamespace>
     <AssemblyName>Magnus</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChartClass.cs" />
     <Compile Include="ExcelClass.cs" />
     <Compile Include="FixtureClass.cs" />
     <Compile Include="Folders.cs" />

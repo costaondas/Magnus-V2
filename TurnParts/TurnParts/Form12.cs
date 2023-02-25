@@ -21,7 +21,8 @@ namespace MagnusSpace
         Size formSize = new Size();
         public bool FixSize = false;
         public bool changeWithEnter = false;
-        
+        public bool dontFocus = false;
+
         public Form12()
         {
 
@@ -38,6 +39,7 @@ namespace MagnusSpace
         
         private void Form12_Load(object sender, EventArgs e)
         {
+            Console.WriteLine($"Dont focus = {dontFocus}");
             ListClass lc = new ListClass();
             /*
             lc.Open("Mestra");
@@ -153,6 +155,8 @@ namespace MagnusSpace
         }
         private void focus()
         {
+            if (dontFocus)
+                return;
             Form1 form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
             string mode=  form.searchButtonReturnToOriginal();
             form.buttonMode(mode);
@@ -177,7 +181,7 @@ namespace MagnusSpace
             {
                 dataGridView1.DataSource = mainDATA;
             }
-            focus();
+                focus();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -215,17 +219,22 @@ namespace MagnusSpace
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dontFocus)
+                return;
             //int row = dataGridView1.CurrentCell.RowIndex;
             string text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             Form1 form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
             form.callDisplay(text);
             //MessageBox.Show(text);
 
+
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            focus();
+            if (dontFocus)
+                return;
+                focus();
         }
 
         private void Form12_SizeChanged(object sender, EventArgs e)

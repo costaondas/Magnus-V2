@@ -26,6 +26,8 @@ namespace MagnusSpace
         public string versoesFX = dataFolder + @"\" + "VersoesFX";
         public string logFolder = dataFolder + @"\" + "logFolder";
         public string Forecast = dataFolder + @"\" + "Forecast";
+        public string Chart = dataFolder + @"\" + "Chart.png";
+        public string Scraps = dataFolder + @"\" + "Scraps";
         public string ListaGeralFolderPath = dataFolder + @"\" + "Other Lists";
         public static string Logs = dataFolder + @"\" + "Logs";
         public static string backUpFolder = dataFolder + @"\" + "Backup";
@@ -88,6 +90,11 @@ namespace MagnusSpace
             if (!Directory.Exists(Forecast))
             {
                 try { Directory.CreateDirectory(Forecast); }
+                catch { }
+            }
+            if (!Directory.Exists(Scraps))
+            {
+                try { Directory.CreateDirectory(Scraps); }
                 catch { }
             }
             if (!Directory.Exists(printPath))
@@ -441,7 +448,7 @@ namespace MagnusSpace
 
 
             ExcelClass ec = new ExcelClass();
-           //excelList = ec.sortGeralList(excelList); // demora 47350
+          excelList = ec.sortGeralList(excelList); // demora 47350
             time("sort");
             listaGeral1 = excelList;
             if (action == "get")
@@ -506,6 +513,7 @@ namespace MagnusSpace
 
 
             ExcelClass ec = new ExcelClass();
+
             excelList = ec.sortGeralList(excelList); // demora 47350
             time("sort");
             listaGeral1 = excelList;

@@ -31,16 +31,19 @@ namespace TurnParts
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea(); 
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series(); //invoke pokemon
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,6 +81,8 @@ namespace TurnParts
             this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button14_EXTRAIR_TODOS_LOGS = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -178,8 +183,10 @@ namespace TurnParts
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -491,6 +498,8 @@ namespace TurnParts
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.chart4);
+            this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button14_EXTRAIR_TODOS_LOGS);
             this.panel1.Controls.Add(this.button8);
@@ -511,6 +520,70 @@ namespace TurnParts
             this.panel1.Size = new System.Drawing.Size(1977, 789);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // chart4
+            // 
+            this.chart4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.chart4.BorderlineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowColor = System.Drawing.Color.White;
+            this.chart4.ChartAreas.Add(chartArea1);
+            this.chart4.Enabled = false;
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            this.chart4.Legends.Add(legend1);
+            this.chart4.Location = new System.Drawing.Point(360, 166);
+            this.chart4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chart4.Name = "chart4";
+            this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart4.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.OliveDrab,
+        System.Drawing.Color.MediumAquamarine,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Color = System.Drawing.Color.Yellow;
+            series1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsVisibleInLegend = false;
+            series1.LabelForeColor = System.Drawing.Color.Transparent;
+            series1.Legend = "Legend1";
+            series1.Name = "Trocas";
+            this.chart4.Series.Add(series1);
+            this.chart4.Size = new System.Drawing.Size(387, 270);
+            this.chart4.TabIndex = 15;
+            this.chart4.Text = "chart4";
+            this.chart4.MouseEnter += new System.EventHandler(this.chart4_MouseEnter);
+            this.chart4.MouseLeave += new System.EventHandler(this.chart4_MouseLeave);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.panel11.Location = new System.Drawing.Point(12, 8);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(2, 613);
+            this.panel11.TabIndex = 15;
+            this.panel11.SizeChanged += new System.EventHandler(this.panel11_SizeChanged);
+            this.panel11.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
+            this.panel11.MouseLeave += new System.EventHandler(this.panel11_MouseLeave);
+            this.panel11.MouseHover += new System.EventHandler(this.panel11_MouseHover);
             // 
             // button14
             // 
@@ -749,18 +822,18 @@ namespace TurnParts
             // 
             this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.chart2.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.TitleForeColor = System.Drawing.Color.White;
-            this.chart2.Legends.Add(legend1);
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea2.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.ForeColor = System.Drawing.Color.White;
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.TitleForeColor = System.Drawing.Color.White;
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(216, 136);
             this.chart2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chart2.Name = "chart2";
@@ -769,14 +842,14 @@ namespace TurnParts
         System.Drawing.Color.OliveDrab,
         System.Drawing.Color.MediumAquamarine,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Color = System.Drawing.Color.Yellow;
-            series1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.LabelForeColor = System.Drawing.Color.Transparent;
-            series1.Legend = "Legend1";
-            series1.Name = "Trocas";
-            this.chart2.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Color = System.Drawing.Color.Yellow;
+            series2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.LabelForeColor = System.Drawing.Color.Transparent;
+            series2.Legend = "Legend1";
+            series2.Name = "Trocas";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(387, 270);
             this.chart2.TabIndex = 15;
             this.chart2.Text = "chart2";
@@ -984,7 +1057,7 @@ namespace TurnParts
             this.dataGridView1.ColumnHeadersVisible = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -1636,18 +1709,18 @@ namespace TurnParts
             // 
             this.chart3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.chart3.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea2.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea2.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.ForeColor = System.Drawing.Color.White;
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.TitleForeColor = System.Drawing.Color.White;
-            this.chart3.Legends.Add(legend2);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea3.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea3.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.ForeColor = System.Drawing.Color.White;
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.TitleForeColor = System.Drawing.Color.White;
+            this.chart3.Legends.Add(legend3);
             this.chart3.Location = new System.Drawing.Point(37, 15);
             this.chart3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chart3.Name = "chart3";
@@ -1656,14 +1729,14 @@ namespace TurnParts
         System.Drawing.Color.OliveDrab,
         System.Drawing.Color.MediumAquamarine,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Color = System.Drawing.Color.Yellow;
-            series2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.LabelForeColor = System.Drawing.Color.Transparent;
-            series2.Legend = "Legend1";
-            series2.Name = "Trocas";
-            this.chart3.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Color = System.Drawing.Color.Yellow;
+            series3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.LabelForeColor = System.Drawing.Color.Transparent;
+            series3.Legend = "Legend1";
+            series3.Name = "Trocas";
+            this.chart3.Series.Add(series3);
             this.chart3.Size = new System.Drawing.Size(387, 281);
             this.chart3.TabIndex = 35;
             this.chart3.Text = "chart3";
@@ -1721,12 +1794,13 @@ namespace TurnParts
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(90)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.chart1);
-            this.panel2.Location = new System.Drawing.Point(14, 4);
+            this.panel2.Location = new System.Drawing.Point(28, 11);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(388, 199);
@@ -1762,7 +1836,7 @@ namespace TurnParts
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Location = new System.Drawing.Point(20, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 33);
             this.label1.TabIndex = 2;
@@ -1770,7 +1844,7 @@ namespace TurnParts
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(55, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(222, 25);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 62);
@@ -1783,19 +1857,19 @@ namespace TurnParts
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.chart1.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea3.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.TitleForeColor = System.Drawing.Color.White;
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(1, -9);
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea4.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.ForeColor = System.Drawing.Color.White;
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.TitleForeColor = System.Drawing.Color.White;
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(41, 57);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -1803,14 +1877,14 @@ namespace TurnParts
         System.Drawing.Color.OliveDrab,
         System.Drawing.Color.MediumAquamarine,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Color = System.Drawing.Color.Yellow;
-            series3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.LabelForeColor = System.Drawing.Color.Transparent;
-            series3.Legend = "Legend1";
-            series3.Name = "Trocas";
-            this.chart1.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Color = System.Drawing.Color.Yellow;
+            series4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.LabelForeColor = System.Drawing.Color.Transparent;
+            series4.Legend = "Legend1";
+            series4.Name = "Trocas";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(387, 270);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
@@ -1826,7 +1900,7 @@ namespace TurnParts
             // 
             // timer3
             // 
-            this.timer3.Interval = 60000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // progressBar2
             // 
@@ -1849,6 +1923,16 @@ namespace TurnParts
             this.label18.Size = new System.Drawing.Size(0, 20);
             this.label18.TabIndex = 22;
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label23.Location = new System.Drawing.Point(194, 83);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(0, 33);
+            this.label23.TabIndex = 15;
             // 
             // Form1
             // 
@@ -1875,6 +1959,7 @@ namespace TurnParts
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -2043,6 +2128,9 @@ namespace TurnParts
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.Label label23;
     }
 }
 

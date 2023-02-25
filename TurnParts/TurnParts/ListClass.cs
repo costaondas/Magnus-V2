@@ -27,6 +27,7 @@ namespace MagnusSpace
         TurnParts.Form1 form;// new TurnParts.Form1();
         public List<string> barName;
         public int barIndex = -1;
+        public bool dontFocus = false;
 
         ////////////////////////
         #endregion
@@ -114,16 +115,20 @@ namespace MagnusSpace
         }
         private void setBar(int max)
         {
+            if (barName == null)
+                return;
             int total = barName.Count();
             if (total != 0)
             {
                 form.setProgressiveBar(max);
                 barIndex++;
             }
-            MessageBox.Show("");
+          //  MessageBox.Show("");
         }
         private void checkBar()
         {
+            if (barName == null)
+                return;
             int total = barName.Count();
             if (total != 0)
             {
@@ -253,6 +258,7 @@ namespace MagnusSpace
                 form.displayList = list;
             }
             form.headList = head;
+            form.dontFocus = dontFocus;
             form.Show();
 
         }
@@ -352,16 +358,17 @@ namespace MagnusSpace
         }
         public void s(string a)
         {
-
+            Console.WriteLine(a);
         }
 
         #endregion internal
 
         #region writeFiles
 
-        public string streamPlus(string CN,string varName, string value = "null")
+        public string streamPlus(string CN,string varName, string value = "null", bool createCN = false)
         {
             string varValue = "";
+            bool isThereaCNtobeFound = false;
             bool foundCN = false;
             bool foundVAR = false;
             string buildString = "";
@@ -425,6 +432,7 @@ namespace MagnusSpace
                             }
                             if (l2.Split(VarDash)[0] == "CN" && l2.Split(VarDash)[1] == CN)
                             {
+                                isThereaCNtobeFound= true;
                                 foundCN = true;
                             }
 
@@ -434,6 +442,7 @@ namespace MagnusSpace
                     }
                     if (foundVAR && foundCN)
                     {
+                        s("Found var and CN");
                         combinedString = string.Join(VarDashPlus.ToString(), subList.ToArray());
                         mainList[a] = combinedString;
                         break;
@@ -453,6 +462,10 @@ namespace MagnusSpace
 
 
                     a++;
+                }
+                if (!isThereaCNtobeFound&&createCN)
+                {
+                    mainList.Add("CN" + VarDash + CN+ VarDashPlus.ToString() + varName + VarDash.ToString() + value);
                 }
                 return "";
                 // mainList.Add(varName + VarDash.ToString() + value);

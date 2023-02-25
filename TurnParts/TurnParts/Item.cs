@@ -20,6 +20,7 @@ namespace MagnusSpace
         private string itemInfoPath = "";
         private string log_path = "";
         private string set_log_path = "";
+        private string entradaNF = "ENTRADA.NF";
         public List<string> itemInfoList = new List<string>();
         bool itemInfoupdated = false;
         public List<string> logsList;
@@ -203,7 +204,7 @@ namespace MagnusSpace
 
             foreach (string s in list)
             {
-                if (s.Contains("ENTRADA.NF"))
+                if (s.Contains(entradaNF))
                 {
                     continue;
                 }
@@ -474,7 +475,7 @@ namespace MagnusSpace
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "Descrição") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "Responsavel") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "DATA_MANUT") + dash;
-                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "DATA_PROX") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "versao") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location3") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location2") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location") + dash;
@@ -530,7 +531,7 @@ namespace MagnusSpace
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "Descrição") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "Responsavel") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "DATA_MANUT") + dash;
-                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "DATA_PROX") + dash;
+                        linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "versao") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location3") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location2") + dash;
                         linha_do_tem += lc2.streamSEARCH(itemInfoList_doItem, "location") + dash;
@@ -1362,6 +1363,13 @@ namespace MagnusSpace
         }
         public string addID_inLog(string text,string action = "ID",int logNum = 1)
         {
+            int qtdInLog = 0;
+            bool oldID = false;
+            bool newID = false;
+            string oldIDText = "";
+            string newIDText = "";
+            bool isLogBecamingNF = false;
+            string ID = "";
             string logRet = "";
             if (!itemExists)
                 return "";
@@ -1376,8 +1384,33 @@ namespace MagnusSpace
                 l = l1;
                 try
                 {
+                    if (l1.Split(':')[0] == "Q")
+                    {
+                        qtdInLog = Convert.ToInt32(l1.Split(':')[1]);
+                    }
+                }
+                catch
+                {
+                   
+                }
+                try
+                {
                     if (l1.Split(':')[0] == action)
                     {
+                        if(action == "ID")
+                        {
+                            newID = text.Contains(entradaNF);
+                            newIDText = text;
+                            ID = text;
+                        }
+                        else
+                        {
+                            newIDText = l1.Split(':')[1];
+                            newID = l1.Split(':')[1].Contains(entradaNF);
+                            ID = l1.Split(':')[1];
+                        }
+                        oldIDText = l1.Split(':')[1];
+                        oldID = l1.Split(':')[1].Contains(entradaNF);
                         l = l1.Split(':')[0] + ":" + text;
                     }
                 }
@@ -1398,7 +1431,59 @@ namespace MagnusSpace
             }
             int nl = logNum;
             logsList[totalC - logNum] = Clog;
+            Console.WriteLine($"oldIDText<{oldIDText}> newIDText<{newIDText}> oldID<{oldID} newID<{newID}>");
             writeList(log_path, logsList);
+            if(oldIDText != newIDText) //somente salvar sem ID forem diferentes
+            {
+                if (oldIDText != "" && newIDText != "")//Verificar os NF dos dois
+                {
+                    if (!oldID && !newID)//não existe NF nos ID
+                    {
+                        AddToScrapList(oldIDText,qtdInLog*(-1));
+                        AddToScrapList(newIDText,qtdInLog);
+                    }
+                    else//verificar os nf
+                    {
+                        if(oldID && newID)
+                        {
+                            //fazer nada
+                        }
+                        else
+                        {
+                            if (oldID)//old era NF e novo não é
+                            {
+                                AddToScrapList(newIDText, qtdInLog);
+                            }
+                            else
+                            {
+                                AddToScrapList(oldIDText, qtdInLog * (-1));
+                            }
+                        }
+                    }
+                }
+                if (oldIDText != "" && newIDText == "")//Verificar se o antigo tem NF
+                {
+                    if (!oldID)
+                    {
+                        AddToScrapList(oldIDText, qtdInLog * (-1)); 
+                    }
+                }
+                if (oldIDText == "" && newIDText != "")//Verificar NF
+                {
+                    if (!newID)
+                    {
+                        AddToScrapList(newIDText,qtdInLog);
+                    }
+                }
+
+            }
+
+
+
+
+
+          
+            //Add remove log
             ListClass lc = new ListClass();
             lc.Open("Logs", "ListaGeral");
             int foundIt = 0;
@@ -1563,7 +1648,7 @@ namespace MagnusSpace
             int scrap = 0; 
             foreach(string l in logList.ToList())
             {
-                if (l.Contains("ENTRADA.NF"))
+                if (l.Contains(entradaNF))
                 {
                     continue;
                 }
@@ -1583,7 +1668,7 @@ namespace MagnusSpace
             int scrap = 0;
             foreach (string l in logList.ToList())
             {
-                if (l.Contains("ENTRADA.NF"))
+                if (l.Contains(entradaNF))
                 {
                     continue;
                 }
@@ -1636,7 +1721,7 @@ namespace MagnusSpace
             int trocas3 = 0;
             foreach (string l in logList.ToList())
             {
-                if (l.Contains("ENTRADA.NF"))
+                if (l.Contains(entradaNF))
                 {
                     continue;
                 }
@@ -1783,7 +1868,7 @@ namespace MagnusSpace
             
             foreach(string line in logsList.ToList())
             {
-                if (line.Contains("ENTRADA.NF"))
+                if (line.Contains(entradaNF))
                 {
                     continue;
                 }
@@ -2104,13 +2189,16 @@ namespace MagnusSpace
                             string logpathAdress = "";
                             List<string> settigns = new List<string>();
                             ListClass lc3 = new ListClass();
-                            lc3.Open("Settings", "settings");
-                            logpathAdress = lc3.stream("FixtureOUTlogPath");
+                            //Form f = new Form as Form1;
+                            Form1 form; //= new Form9();
+                            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+                            
+                            
+                            logpathAdress = form.config("FixtureOUTlogPath");
                             if (logpathAdress == "")
                             {
                                 Folders folder = new Folders();
-
-                                logpathAdress = lc3.stream("FixtureOUTlogPath", folder.fixtureOutLOGS.ToString());
+                                logpathAdress = form.config("FixtureOUTlogPath", folder.fixtureOutLOGS.ToString());
                                 lc3.Close();
                             }
                             try
@@ -2183,7 +2271,24 @@ namespace MagnusSpace
             //itemInfoList[3] = itemInfoList[3].Split(':')[0] + ":" + qtd.ToString();
             return qtd;
         }
+        public void AddToScrapList(string ID, int qtd) // somente se não tiver NF
+        {
 
+            Console.WriteLine($"AddToScrapList string {ID}, int {qtd}");
+            ListClass lc = new ListClass();
+            Folders folder = new Folders();
+            DateTime dt = DateTime.Now;
+            string listName = dt.Month + "-" + dt.Year;
+            lc.Open(listName, folder.Scraps);
+            string qtd_ = lc.streamPlus(ID,"QTD");
+            int newValue = 0;
+            try { newValue = Convert.ToInt32(qtd_); }
+            catch {  }
+            newValue += qtd;
+            Console.WriteLine($"ID, QTD,{newValue}.ToString()");
+            lc.streamPlus(ID, "QTD",newValue.ToString(),true);
+            lc.Close();
+        }
         public string AddLog(double quantidade = -1, string action = "none")
         {
             ListClass lc = new ListClass();
@@ -2251,7 +2356,7 @@ namespace MagnusSpace
             foreach (string l in logs)
             {
 
-                if (l.Contains("ENTRADA.NF"))
+                if (l.Contains(entradaNF))
                 {
                     continue;
                 }

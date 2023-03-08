@@ -399,6 +399,7 @@
             this.label28.TabIndex = 24;
             this.label28.Text = "LABEL28";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label23
             // 

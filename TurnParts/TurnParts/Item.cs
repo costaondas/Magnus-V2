@@ -10,6 +10,7 @@ using System.Reflection.Emit;
 using TurnParts;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Collections;
+using static System.Windows.Forms.AxHost;
 
 namespace MagnusSpace
 {
@@ -20,17 +21,20 @@ namespace MagnusSpace
         private string itemInfoPath = "";
         private string log_path = "";
         private string set_log_path = "";
+        private string adressesListPath = "";
         private string entradaNF = "ENTRADA.NF";
         public List<string> itemInfoList = new List<string>();
         bool itemInfoupdated = false;
         public List<string> logsList;
         public List<string> SetlogsList;
+        public List<string> AdressesList;
         public List<string> groupList;
         public List<string> modelList;
         public List<string> CNList;
         public List<string> LastLogs;
         bool logsListUpdated = false;
         bool setlogsListUpdated = false;
+        bool adressesListUpdated = false;
         public string ItemCN = "";
         public string ID_OP = "";
         public string Item_description = "";
@@ -39,6 +43,7 @@ namespace MagnusSpace
         public string ItemName = "";
         public string ItemModelo = "";
         public string qtdInicial = "";
+        public int qtdBin = 0;
         public string npiDate = "";
         public string Status = "";
         public string location = "";
@@ -139,13 +144,17 @@ namespace MagnusSpace
             
             log_path = folder.itemLogPath(CN);
             set_log_path = folder.itemSetLogPath(CN);
+            adressesListPath = folder.itemAdressesPath(CN);
             CheckTXT_exists(log_path);
             CheckTXT_exists(set_log_path);
+            CheckTXT_exists(adressesListPath);
             try { readList("mainList"); } //update list}
             catch {  }
             try  { readList(log_path); } // both lists
             catch {  }
             try { readList(set_log_path); } // both lists
+            catch { }
+            try { readList(adressesListPath); } // both lists
             catch { }
             
             try
@@ -313,22 +322,7 @@ namespace MagnusSpace
                                             dt1 = new DateTime(CCN, cm, 1);
                                             
                                         }
-                                        /*
-                                        Console.WriteLine($"{forcast} + {board} < {forcast} + {Convert.ToInt32(m.Split(VarDash)[1])}");
-                                        if ((forcast + board) > (forcast + Convert.ToInt32(m.Split(VarDash)[1])))
-                                        {
-                                            forcast += Convert.ToInt32(m.Split(VarDash)[1]);
-                                        }
-
-                                        else
-                                        {
-
-                                            Console.WriteLine($"DateTime dt1 = new DateTime({CCN},{cm},{0});");
-                                            DateTime dt1 = new DateTime(CCN,cm,1);
-                                            DateTime dt2 = DateTime.Now;
-                                            return (int) dt2.Subtract(dt1).TotalDays;
-                                        };
-                                        */
+                                        
                                     }
                                 }
                             }
@@ -588,6 +582,15 @@ namespace MagnusSpace
                     }
                     catch { Eminimo = 0; }
                 }
+                if (line.Split(VarDash)[0] == "qtdBin")
+                {
+                    try
+                    {
+                        qtdBin = Convert.ToInt32(itemInfoList[a].Split(VarDash)[1]);
+                    }
+                    catch { qtdBin = 0; }
+                }
+                //qtdBin
                 if (line.Split(VarDash)[0] == "Estoque Inicial")
                 {
                     qtdInicial = itemInfoList[a].Split(VarDash)[1];
@@ -826,7 +829,6 @@ namespace MagnusSpace
                 }
                 if (counter == list.Count())
                     break;
-               // Console.WriteLine($"{list1[counter -1]} < {daysLeft} && {list1[counter]} > {daysLeft}");
                 if (list1[counter -1] < daysLeft && list1[counter] > daysLeft)
                 {
                     break ;
@@ -837,7 +839,6 @@ namespace MagnusSpace
                 }
                 
             }
-          // Console.WriteLine("Counter = " + counter.ToString());
             switch (counter)
             {
                     case 1:
@@ -1286,6 +1287,7 @@ namespace MagnusSpace
         }
         public string loadCycleLife()
         {
+            return "";
             refresh();
             float cycle = 0;
             try { cycle = (float)Placas_Produzidas_Periodo / (float)(getVar("scraps")); }
@@ -1430,8 +1432,73 @@ namespace MagnusSpace
                 n++;
             }
             int nl = logNum;
+            bool isthereequallogs = false;
+            string oldLog = logsList[totalC - logNum];
             logsList[totalC - logNum] = Clog;
-            Console.WriteLine($"oldIDText<{oldIDText}> newIDText<{newIDText}> oldID<{oldID} newID<{newID}>");
+            if(logNum != 1 && totalC != logNum)
+            {
+                if (oldLog == logsList[totalC - logNum - 1] || oldLog == logsList[totalC - logNum + 1])
+                {
+                    isthereequallogs = true;
+                }
+            }
+            else //edge log
+            {
+                if (totalC > 1) //there is at least 2 logs
+                {
+                    if (logNum == 1) // primeiro log
+                    {
+                        if (oldLog == logsList[1])
+                            isthereequallogs = true;
+                    }
+                    else // lastLog
+                    {
+                        if (oldLog == logsList[totalC - 2])
+                            isthereequallogs = true;
+                    }
+                }
+               
+            }
+            ListClass lc2 = new ListClass();
+            Folders folders2 = new Folders();
+            DateTime dt2 = logtoDatetime(Clog);
+            string logLibraryName = dt2.Year.ToString() + "-" + dt2.Month.ToString();
+            lc2.Open(logLibraryName, folders2.logLibrary);
+            if (isthereequallogs) //manually search each
+            {
+                int equalLogsCounter = 0;
+                for(int p = 0; p < logNum; p++)
+                {
+                    if (logsList[p] == oldLog)
+                    {
+                        equalLogsCounter++;
+                    }
+                }
+                for(int p1 = 0; p1 < lc2.mainList.Count(); p1++)
+                {
+                    if (lc2.mainList[p1] == oldLog)
+                    {
+                        equalLogsCounter--;
+                    }
+                    if(equalLogsCounter == 0)
+                    {
+                        lc2.mainList[p1] = Clog;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                for (int r = 0; r < lc2.mainList.Count(); r++)
+                {
+                    if (lc2.mainList[r] == oldLog)
+                    {
+                        lc2.mainList[r] = Clog;
+                        break;
+                    }
+                }
+            }
+            lc2.Close();
             writeList(log_path, logsList);
             if(oldIDText != newIDText) //somente salvar sem ID forem diferentes
             {
@@ -1818,10 +1885,8 @@ namespace MagnusSpace
             foreach (string line in logsList.ToList())
             {
                 current = logtoDatetime(line);
-             //   Console.WriteLine($"if ({current} > {end} || {current} < {start})");
                 if (current > end || current < start)
                     continue;
-                //Console.WriteLine($"ADD {line}");
                 fullList.Add(line);
             }
        
@@ -2111,8 +2176,6 @@ namespace MagnusSpace
         }
         public double QTD(string action, double value = 0)
         {
-            //Console.WriteLine("action " +action.ToString() + "      "+ value.ToString());
-            //viewListtoConsole("QTD", itemInfoList);
             string qtd_ = "0";
 
 
@@ -2131,7 +2194,16 @@ namespace MagnusSpace
                 case "add":
                     if(grupo == "")
                     {
-    
+
+                        double bin1 = QTD("bin");
+                        bin1 += value;
+                        if (bin1 < 0)
+                        {
+                            // itemInfoList = lc2.stream_SET(itemInfoList,"QTD","0");
+
+                            return -9876543;
+                        }
+
                         qtd += value;
                         addLog_QTD = qtd;
                         QuantidadeNova = Convert.ToInt32(qtd);
@@ -2139,18 +2211,15 @@ namespace MagnusSpace
                         {
                             MissingDesatualizado = true;
                         }
-
+                        
+                        
+                        
+                        
+                        Console.WriteLine($"QTD set to {qtd}");
                         AddLog(value);
-                        if (qtd < 0)
-                        {
-                            //itemInfoList[3] = itemInfoList[3].Split(':')[0] + ":" + "0";
-                            itemInfoList = lc2.stream_SET(itemInfoList,"QTD","0");
-                            return 0;
-                        }
                     }
                     else
                     {
-                  
                         ListClass lc = new ListClass();
                         lc.Open(grupo, "Grupo");
 
@@ -2165,24 +2234,33 @@ namespace MagnusSpace
                         
                         if (value > 0)
                         {
+                            if(stream("groupPosition")!= "IN")
+                            {
+                                AddLog(1);
+                                IN_group++;
+                            }
                             stream("groupPosition", "IN");
-                            IN_group++;
+                            
                             position = "IN";
-                            AddLog(1);
+                            
                             itemPresentinGroup = true;
                             
                         }
                         else
                         {
 
-                            stream("groupPosition", "OUT");
-                            IN_group--;
+                            
+                            
                             position = "OUT";
-                            AddLog(-1);
+                            if (stream("groupPosition") == "IN")
+                            {
+                                AddLog(1);
+                                IN_group--;
+                            }
+                            stream("groupPosition", "OUT");
                             itemPresentinGroup = false;
                             clearAdress();
                         }
-      
 
                         if (ItemName.Contains("fixture", comp))
                         {
@@ -2192,14 +2270,13 @@ namespace MagnusSpace
                             //Form f = new Form as Form1;
                             Form1 form; //= new Form9();
                             form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
-                            
-                            
+
                             logpathAdress = form.config("FixtureOUTlogPath");
                             if (logpathAdress == "")
                             {
                                 Folders folder = new Folders();
                                 logpathAdress = form.config("FixtureOUTlogPath", folder.fixtureOutLOGS.ToString());
-                                lc3.Close();
+                               // lc3.Close();
                             }
                             try
                             {
@@ -2212,7 +2289,6 @@ namespace MagnusSpace
                                 lc4.mainList.Add(DateTime.Now.ToString());
                                 //lc4.Open(ItemCN + " " + DateTime.Now.ToString(), Path.GetFullPath(logpathAdress) );
 
-
                                 //newDate = String.
 
                                 lc4.Close();
@@ -2220,26 +2296,33 @@ namespace MagnusSpace
                             }
                             catch (Exception ex) {  }
                         }
-                            lc.Close();
+                        lc.Close();
                         return 1;
                     }
                     
                     break;
-                case "addNew":
-                    qtd += value;
-                    QuantidadeNova = Convert.ToInt32(qtd);
-                    if (QuantidadeNova < Eminimo && QuantidadeAntiga >= Eminimo)
+                case "bin":
+                    if(grupo != "")
                     {
-                        MissingDesatualizado = true;
-                    }
-
-                    AddLog(value,"new");
-                    if (qtd < 0)
-                    {
-                        itemInfoList = lc2.stream_SET(itemInfoList, "QTD", "0");
-                        //itemInfoList[3] = itemInfoList[3].Split(':')[0] + ":" + "0";
                         return 0;
                     }
+                    int total = sumCX();
+                    
+                    double bin = Convert.ToInt32(QTD("get")) - total;
+                    if (bin < 0)
+                    {
+                        //QTD("set", bin * (-1));
+                        QTD("set", total);
+                        Console.WriteLine($"bin set to {0}");
+                        return 0;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Bin set to {bin}");
+                        return bin;
+                    }
+                    
+                     
                     break;
                 case "set":
                     string log = "";
@@ -2267,14 +2350,21 @@ namespace MagnusSpace
             }
             //vaca
             itemInfoList = lc2.stream_SET(itemInfoList, "QTD", qtd.ToString());
-            //viewListtoConsole(action.ToString(), itemInfoList);
-            //itemInfoList[3] = itemInfoList[3].Split(':')[0] + ":" + qtd.ToString();
             return qtd;
+        }
+        public int sumCX()
+        {
+            int total = 0;
+
+            foreach (string l in AdressesList)
+            {
+                total += cv(l.Split(VarDashPlus)[1]);
+            }
+            return total;
         }
         public void AddToScrapList(string ID, int qtd) // somente se não tiver NF
         {
 
-            Console.WriteLine($"AddToScrapList string {ID}, int {qtd}");
             ListClass lc = new ListClass();
             Folders folder = new Folders();
             DateTime dt = DateTime.Now;
@@ -2285,13 +2375,16 @@ namespace MagnusSpace
             try { newValue = Convert.ToInt32(qtd_); }
             catch {  }
             newValue += qtd;
-            Console.WriteLine($"ID, QTD,{newValue}.ToString()");
             lc.streamPlus(ID, "QTD",newValue.ToString(),true);
             lc.Close();
         }
         public string AddLog(double quantidade = -1, string action = "none")
         {
+            ListClass lc2 = new ListClass();
             ListClass lc = new ListClass();
+            Folders folder = new Folders();
+            DateTime dt = DateTime.Now;
+            lc2.Open(dt.Year.ToString()+"-"+dt.Month.ToString(),folder.logLibrary);
             lc.Open("Logs", "ListaGeral");
             string logFormat = "";
             string modo = "OUT";
@@ -2325,6 +2418,7 @@ namespace MagnusSpace
             else
             {
                 lc.mainList.Add(logFormat);
+                lc2.mainList.Add(logFormat);
                 int total = lc.mainList.Count;
                 while(total != 0)
                 {
@@ -2342,6 +2436,7 @@ namespace MagnusSpace
                     
                 }
                 lc.Close();
+                lc2.Close();
                 logsList.Add(logFormat);
                 return "";
             }
@@ -2591,6 +2686,257 @@ namespace MagnusSpace
             }
             
         }
+        public List<string> _idScrapsList()
+        {
+            List<string> list = new List<string>();
+            List<string> list2 = new List<string>();
+            List<string> listLogs = new List<string>();
+            DateTime dt = DateTime.Now;
+            listLogs = FilterLogList(dt.AddDays(-30), dt);
+            list.AddRange(listLogs);
+            list2.AddRange(listLogs);
+            int counter = 0;
+            foreach(string l in list.ToList())
+            {
+                list[counter] = l.Split(' ')[4].Split(':')[1];
+                counter++;
+            }
+            list = list.Distinct().ToList();
+            int counter2 = 0;
+            int skipV = 0;
+            bool skip = false;
+            foreach(string l in list.ToList())
+            {
+                if (l.Split(VarDash)[0] == "ENTRADA.NF")
+                {
+                    skipV = counter2;
+                    skip = true;
+                    counter2++;
+                    continue;
+                }
+                list[counter2] = list[counter2] + VarDash.ToString() + "0";
+                counter2++;
+            }
+            if(skip)
+                list.RemoveAt(skipV);
+            foreach(string l in list2) //all logs
+            {
+                int qtd = 0;
+                string cn = l.Split(' ')[0].Split(':')[1];
+                string id = l.Split(' ')[4].Split(':')[1];
+                try { qtd = Convert.ToInt32(l.Split(' ')[3].Split(':')[1]); }
+                catch { qtd = 0; }
+                int counter3 = 0;
+                foreach(string l2 in list.ToList()) //id list
+                {
+                    if(id == l2.Split(VarDash)[0])
+                    {
+                        int qtdS = Convert.ToInt32(list[counter3].Split(VarDash)[1]);
+                        int novaQTD = qtd + qtdS;
+                        list[counter3] = id + VarDash.ToString() + novaQTD.ToString();
+                        break;
+                    }
+                    counter3++;
+                }
+
+            }
+            return list;
+        }
+        private int cv(string number)
+        {
+            string to_convert = number;
+            if (number.Contains(VarDash))
+            {
+                to_convert = number.Split(VarDash)[1];
+            }
+            try
+            {
+                return Convert.ToInt32(to_convert);
+            }
+            catch { return 0; }
+        }
+        public List<string> CXlist()
+        {
+            return AdressesList;
+        }
+        public string editCX(string CX, int qtd,string operation = "") //retorna a mensagem de erro
+        {
+            ListClass lc = new ListClass();
+            
+            lc.mainList = AdressesList;
+            int qtdAtual = 0;
+            string _qtd = "";
+            switch (operation)
+            {
+                case "+":
+                    if (qtd > QTD("bin"))
+                    {
+                        return "Valor insulficiente no bin";
+                    }
+                    qtdAtual = cv(lc.streamPlus(CX, "QTD"));
+                    qtdAtual = qtd + qtdAtual; 
+                    lc.streamPlus(CX, "QTD", qtdAtual.ToString(), true);
+                    if (qtdAtual <= 0)
+                    {
+                        int c = 0;
+                        foreach(string l in lc.mainList.ToList())
+                        {
+                            if (l.StartsWith("CN" + VarDash + CX + VarDashPlus))
+                            {
+                                lc.mainList.RemoveAt(c);
+                                break;
+                            }
+                            c++;
+                        }
+                    }
+                    break;
+
+                case "-":
+                    qtdAtual = cv(lc.streamPlus(CX, "QTD"));
+                    if (qtdAtual < qtd)
+                    {
+                        return "Quantidade indisponível na Caixa";
+                    } 
+                    qtdAtual = qtdAtual - qtd;
+                    lc.streamPlus(CX, "QTD", qtdAtual.ToString(), true);
+                    if (qtdAtual <= 0)
+                    {
+                        int c = 0;
+                        foreach (string l in lc.mainList.ToList())
+                        {
+                            if (l.StartsWith("CN" + VarDash + CX + VarDashPlus))
+                            {
+                                lc.mainList.RemoveAt(c);
+                                break;
+                            }
+                            c++;
+                        }
+                    }
+                    break;
+                case "":
+                    int qtdNaCaixa = 0;
+                    int c2 = 0;
+                    foreach (string l in lc.mainList.ToList())
+                    {
+                        if (l.StartsWith("CN" + VarDash + CX + VarDashPlus))
+                        {
+                            qtdNaCaixa = cv(l.Split(VarDashPlus)[1]);
+                            break;
+                        }
+                        c2++;
+                    }
+                    if (qtd > QTD("bin") + qtdNaCaixa)
+                    {
+                        return "Valor insulficiente no bin";
+                    }
+                    if (qtd <= 0)
+                    {
+                        int c = 0;
+                        foreach (string l in lc.mainList.ToList())
+                        {
+                            if (l.StartsWith("CN" + VarDash + CX + VarDashPlus))
+                            {
+                                lc.mainList.RemoveAt(c);
+                                break;
+                            }
+                            c++;
+                        }
+                        //lc.streamPlus(CX, "QTD", 0.ToString(), true);
+                    }
+                    else
+                    {
+                        lc.streamPlus(CX, "QTD", qtd.ToString(), true);
+                    }
+                    
+                    break;
+            }
+            AdressesList = lc.mainList;
+            if(QTD("get") < sumCX())
+            {
+                QTD("set", sumCX());
+            }
+            return "";
+            //ler e editar qtd abc
+        }
+ 
+        public List<string> filterLogsFromLibrary(DateTime start_, DateTime end_, bool wholeDay = false)
+        {
+            DateTime start = start_;
+            DateTime end = end_;
+            if (wholeDay)
+            {
+                TimeSpan ts = new TimeSpan(0, 0, 0);
+                TimeSpan ts2 = new TimeSpan(24, 0, 0);
+                start = start_.Date + ts;
+                end = end_.Date + ts2;
+            }
+
+
+            List<string> logs = new List<string>();
+            List<string> listNames = new List<string>();
+            string NameStart = start.Year.ToString() + "-" + start.Month.ToString();
+            string NameEnd = end.Year.ToString() + '-' + end.Month.ToString();
+            if(NameStart != NameEnd)
+            {
+                string currentName = NameStart;
+                listNames.Add(currentName);
+                while(currentName!= NameEnd)
+                {
+                    string _year = currentName.Split('-')[0];
+                    string _month = currentName.Split('-')[1];
+                    int year = Convert.ToInt32(_year);
+                    int month = Convert.ToInt32(_month);
+                    if(month == 12)
+                    {
+                        year++;
+                        month = 1;
+                    }
+                    else
+                    {
+                        month++;
+                    }
+                    currentName = year.ToString() + "-" + month.ToString();
+                    listNames.Add(currentName);
+                }
+
+            }
+            else//only 1 month list
+            {
+                listNames.Add(NameEnd);
+            }
+            int counter = 0;
+            int total = listNames.Count;
+            foreach(string ln in listNames)
+            {
+                ListClass lc2 = new ListClass();
+                Folders folders2 = new Folders();
+                lc2.Open(ln, folders2.logLibrary);
+                if(listNames.Count > 2 && counter != 0 && counter != (total-1))
+                {
+                    logs.AddRange(lc2.mainList);
+                }
+                else
+                {
+                    foreach (string l in lc2.mainList.ToList())
+                    {
+                        DateTime currentDate = logtoDatetime(l);
+                        if (currentDate >= start && currentDate <= end)
+                        {
+                            logs.Add(l);
+                        }
+                    }
+                }
+               counter++;
+            }
+
+
+           
+
+
+            return logs;
+
+        }
+
             private void CheckTXT_exists(string path)
         {
             MagnusSpace.Folders folder = new MagnusSpace.Folders();
@@ -2660,8 +3006,26 @@ namespace MagnusSpace
                 }
                 return SetlogsList;
             }
+            if (path == adressesListPath)
+            {
+                if (!adressesListUpdated)
+                {
+                    AdressesList = File.ReadAllLines(adressesListPath).ToList();
+                    adressesListUpdated = true;
+
+                }
+                updateBinQTD();
+                return AdressesList;
+            }
 
             return null;
+
+
+        }
+        public void updateBinQTD()
+        {
+            
+           // qtdBin;
 
 
         }
@@ -2716,13 +3080,11 @@ namespace MagnusSpace
         {
 
             
-           // Console.WriteLine("close " + ItemCN);
             //vaca
             itemInfoupdated = true; //burlar o sistema
             if (itemInfoupdated)
             {
 
-               //viewListtoConsole("LIST AT CLOSE", itemInfoList); //VISUALIZAR LISTA NO CONSOLE
 
                 string combinedString = list_tostring();
                 ListClass lc = new ListClass();
@@ -2786,6 +3148,26 @@ namespace MagnusSpace
 
             }
 
+            if (adressesListUpdated)
+            {
+
+                try
+                {
+                    File.WriteAllLines(adressesListPath, AdressesList);
+                }
+                catch
+                {
+                    Directory.CreateDirectory(adressesListPath);
+                    File.WriteAllLines(adressesListPath, AdressesList);
+                }
+
+                adressesListUpdated = false;
+
+
+
+
+
+            }
 
         }
 

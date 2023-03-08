@@ -54,10 +54,8 @@ namespace MagnusSpace
                 }
                 
             }
-            Console.WriteLine("\r\n=====================");
             foreach (string l in AllModels)
             {
-                Console.WriteLine(l);
             }
 
         }

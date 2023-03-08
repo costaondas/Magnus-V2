@@ -15,6 +15,7 @@ using System.Windows;
 using System.IO.Ports;
 using System.Threading;
 using System.Collections;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace TurnParts
 {
@@ -45,6 +46,7 @@ namespace TurnParts
         public event myDelegate invisibleLabels;
         public event myDelegate loadAllCNs;
         public event myDelegate closeSearchForm;
+        public event myDelegate disposeToolTip;
         public event myDelegate addItemlogPanelButtonDispose;
         bool simpleList = true;
         int num_of_panels = 10;
@@ -54,6 +56,7 @@ namespace TurnParts
         bool editConfigofCritical = false;
         public string criticalRange = "30,60,90,120,180";
         SerialPort mainPort = new SerialPort("COM9", 9600);
+        List<string> adressesList= new List<string>();
         string lastCOM = "";
         int Panel11maxSize = 1000;
         bool burlarLicensa = true;
@@ -89,7 +92,7 @@ namespace TurnParts
             panel11.Location = new Point(0,0);
             
             generateLogPanels();
-            cycleLifeLayouy("hide");
+            //cycleLifeLayouy("hide");
            
             timer1.Interval = 10;
             timer3.Interval = 10;
@@ -282,24 +285,31 @@ namespace TurnParts
             ListClass list2 = new ListClass();
             list2.Open("Settings", "settings");
             string text = "";
-            if(editConfigofCritical || bypass)
+            Console.WriteLine(288);
+            if (editConfigofCritical || bypass)
             {
+                Console.WriteLine(291);
                 text = list2.stream(varName, value);
              
             }   
             else
             {
+                Console.WriteLine(296);
                 foreach (string l in criticalList)
                 {
                     if (l == varName)
                     {
+                        Console.WriteLine(302);
                         if (value == "null")
                         {
+                            Console.WriteLine(305);
                             text = list2.stream(varName);
+                            Console.WriteLine(307);
                             return text;
                         }
                         else
                         {
+                            Console.WriteLine(311);
                             return value;
                         }
                         
@@ -597,7 +607,82 @@ namespace TurnParts
             collection.Dispose();
             return devices;
         }
+        string currentChart = "OG bar";
+        bool ischartVisible = true;
+        public void showChart(string c)
+        {
+            clearChartPanel();
+            switch (c)
+            {
+                case "OG bar":
+                    showChart("Hide All");
+                    Item item = new Item();
+                    item.Open(currentCN);
+                    chart5.Visible = false;
+                    //loadChart();
+                    //if (makeitVisible != null)
+                      //  makeitVisible();
+                    textBox1.Focus();
+                    lastCharsScreem = "";
+                    LastChart = item.chartList(lastCharsScreem);
+                    loadChart();
+                    currentChart = c;
+                    textBox1.Focus();
+                    break;
+                case "Pie":
+                    showChart("Hide All");
+                    //Item item = new Item();
+                    //item.Open(currentCN);
+                    chart5.Visible = true;
+                    button4.Visible = false;
+                    button5.Visible = false;
+                    groupBox2.Visible = false;
+                    chart5.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    textBox1.Focus();
 
+                    currentChart = c;
+                    break;
+                case "Bars":
+                    showChart("Hide All");
+                   // Item item = new Item();
+                    //item.Open(currentCN);
+                    chart5.Visible = true;
+                    button4.Visible = false;
+                    button5.Visible = false;
+                    groupBox2.Visible = false;
+                    chart5.ChartAreas[0].Area3DStyle.Enable3D = false;
+                    textBox1.Focus();
+
+                    currentChart = c;
+
+                    break;
+                case "Hide All":
+                    textBox1.Focus();
+                    groupBox2.Visible = false;
+                    break;
+                case "last":
+                    showChart(currentChart);
+                    break;
+                case "next":
+
+                    switch (currentChart)
+                    {
+                        case "OG bar":
+                            showChart("Pie");
+                            break;
+                        case "Pie":
+                            showChart("OG bar");
+                            break;
+                        case "Bars":
+                            showChart("OG bar");
+                            break;
+                    }
+
+                    break;
+                    
+                    
+            }
+        }
 
         class USBDeviceInfo
         {
@@ -623,12 +708,14 @@ namespace TurnParts
                 label12.Visible = true;
                 progressBar1.Visible = true;
                 label2.Font = new Font("Times New Roman", 20);
+                
                 label2.Size = new Size(panel5.Width, label2.Height);
             }
             else
             {
                 label2.Font = new Font("Times New Roman", 13);
-                label2.Text = "Quantidade";
+                label2.Text = "Bin";
+                label24.Visible = true;
                 label2.AutoSize = true;
                 label12.Visible = true;
                 progressBar1.Visible = true;
@@ -678,6 +765,7 @@ namespace TurnParts
             panel6.Size = new Size(totalWidth - panel2.Width - panel4.Width, p32.Y - p31.Y);
             panel7.Size = new Size(totalWidth * (100 - (colunas[0] + colunas[1])), (totalHeight * (100 - linha3)) / 100 + hc);
             panel5.Controls.Add(labelQTD_value);
+            panel5.Controls.Add(label24);
             panel5.Controls.Add(label2);
 
             label2.BringToFront();
@@ -710,7 +798,10 @@ namespace TurnParts
             {
                 textBox2.Size = new Size(textBox2.Size.Width, boxSize);
             }
-
+            panel8.Controls.Add(chart5);
+            chart5.Location = new Point(0,menuStrip2.Height);
+            chart5.Size = new Size(panel8.Width,panel8.Height - menuStrip2.Height);
+            //chart5.Dock = DockStyle.Fill;
             array = schrink(panel3.Size, 90, 90, "widthOnly");
             textBox1.Location = new Point(array[0].X, panel3.Size.Height - textbox1_offset);/////////////////////////
             //textBox1.Location = new Point(array[0].X, panel3.Size.Height - 80);
@@ -937,6 +1028,7 @@ namespace TurnParts
             label1.Text = "";
             label10.Text = "";
             labelQTD_value.Text = "";
+            label24.Text = "";
             label2.Text = "";
             pictureBox1.Image = null;
             textBox2.Text = "";
@@ -1005,7 +1097,7 @@ namespace TurnParts
                     dateTimePicker2.Visible = false;
                     button4.Visible = false;
                     button5.Visible = false;
-                    
+                    chart5.Visible = false;
                     break;
             }
         }
@@ -1040,6 +1132,7 @@ namespace TurnParts
         public void qtdLabelLocation()
         {
             labelQTD_value.Location = new Point(panel5.Size.Width - labelQTD_value.Size.Width, label2.Size.Height);
+            label24.Location = new Point(0,labelQTD_value.Location.Y);
         }
         private void resize_pic()
         {
@@ -1105,12 +1198,12 @@ namespace TurnParts
             TimeSpan ts = time1 - time2;
             a = Convert.ToInt32(ts.TotalMilliseconds);
             string howlong = a.ToString();
-            Console.WriteLine("Time: " + howlong + " at " + text);
 
         }
 
         private void Form1_Load(object sender, EventArgs e) //chama o carregamento do layout
         {
+            showChart("Hide All");
             time("start");
             validade_License();
             if (!licenceFound)
@@ -1614,7 +1707,13 @@ namespace TurnParts
             f.backup(backFolderPath);
 
         }
-
+        public void erro(string text)
+        {
+            
+            System.Media.SystemSounds.Hand.Play();
+            _messageBox ms = new _messageBox();
+            ms.Show(text);
+        }
         public void computeCode(string imput)
         {
 
@@ -1642,7 +1741,7 @@ namespace TurnParts
             }
             searchList.Clear();
 
-            cycleLifeLayouy("hide");
+            //cycleLifeLayouy("hide");
             //COMANDO ENTRADA
             if (comand.Contains('='))
             {
@@ -1674,8 +1773,126 @@ namespace TurnParts
                         break;
                 }
             }
+            if (comand == "filterallthelogs")
+            {
+                List<string> list = new List<string>();
+                List<string> sublist = new List<string>();
+                List<string> subsublist = new List<string>();
+                ListClass lc2 = new ListClass();
 
-            if (comand == "getthejobdone")
+                lc2.Open("allLogs");
+                int counter = 0;
+                int total = lc2.mainList.Count;
+                foreach(string l in lc2.mainList.ToList())
+                {
+                    sublist = l.Split(' ').ToList();
+                    string first = sublist[0];
+                    string second = sublist[1];
+                    string tird = sublist[2];
+                    sublist[1] = first;
+                    sublist[0] = tird;
+                    sublist[2] = second;
+                    subsublist = sublist[1].Split('/').ToList();
+                    string year = subsublist[2];
+                    string day = subsublist[0];
+                    subsublist[0] = year;
+                    subsublist[2] = day;
+                    sublist[1] = string.Join("/", subsublist);
+                    string editedLog = string.Join(" ", sublist);
+                    list.Add(editedLog);
+                    counter++;
+                    Application.DoEvents();
+                }
+                lc2.mainList = list;
+                lc2.Close();
+            }
+                if (comand == "putallthelogsinonelist")
+            {
+                List<string> listMestra = new List<string>();
+                List<string> list = new List<string>();
+                Folders folder = new Folders();
+                list = Directory.GetDirectories(folder.TPFolder).ToList();
+                int total = list.Count();
+                int counter = 0;
+                foreach(string l in list)
+                {
+                    string cn = l.Split('\\').Last();
+                    string listpath = folder.itemLogPath(cn);
+                    //ListClass lc = new ListClass();
+                    //lc.Open("tpLog",listpath);
+
+                    List<string> list2 = File.ReadAllLines(listpath).ToList();
+                    listMestra.AddRange(list2);
+                    counter++;
+                    Application.DoEvents();
+                }
+                ListClass lc2 = new ListClass();
+                lc2.Open("allLogs");
+                lc2.mainList = listMestra;
+                lc2.Close();
+                return;
+            }
+
+            if (comand.Contains("%CXLOC%"))
+            {
+                int Qtd = 0;
+                string _qtd = "";
+                string caixa = "";
+                string operation = "";
+                try 
+                {
+                    _qtd = comand.Split('%')[0];
+                    caixa = comand.Split('%')[2];
+                    if (buttonMode()=="ADD")
+                    {
+                        operation = "+";
+                        Qtd = Convert.ToInt32(_qtd);
+                    }
+                    else
+                    {
+                        if (buttonMode()=="REMOVE")
+                        {
+                            operation = "-";
+                            Qtd = Convert.ToInt32(_qtd);
+                        }
+                        else
+                        {
+                            if(buttonMode()=="EDIT")
+                                Qtd = Convert.ToInt32(_qtd);
+                            else
+                            {
+                                operation = "none";
+                                return;
+                            }
+                        }
+                        
+                    }
+                    Item item = new Item();
+                    item.Open(currentCN);
+                    if (Qtd < 0)
+                        Qtd *= (-1);
+                    string resolt = item.editCX(caixa, Qtd, operation);
+                    if(resolt == "")
+                    {
+                        labelQTD_value.Text = item.QTD("get").ToString();
+                        label24.Text = item.QTD("bin").ToString();
+                        item.Close();
+
+                        clickLabel11();
+                    }
+                    else
+                    {
+                        erro(resolt);
+                    }
+                    
+
+
+                }
+                catch { }
+                return;
+            }
+
+                if (comand == "getthejobdone")
             {
                 string masterLine = "";
                 ListClass lc2 = new ListClass();
@@ -1925,6 +2142,7 @@ namespace TurnParts
                     item2.QTD("set", ab);
                     updateLogpanels(item2.getLogList(num_of_panels));
                     labelQTD_value.Text = ab.ToString();
+                    label24.Text = item2.QTD("bin").ToString();
                     item2.Close();
                     //item2.setStatus();
                     label12.Text = item2.Status;
@@ -1966,9 +2184,12 @@ namespace TurnParts
                     ID_OP = pattern("ID", ID_OP);
                     string idlog = ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
                     buildDataGrid(ite_.lastLogs());
+
                     //addIdtoTable(idlog, currentSelectedLogPanel);
                     updateLogpanels(ite_.getLogList(num_of_panels));
                     ite_.Close();
+                    ScrapRanking();
+                    loadItemScrapChart(ite_._idScrapsList());
                     return;
 
                 }
@@ -2106,7 +2327,8 @@ namespace TurnParts
         }
         public void display(string CN, int qtd = 1, string ck = "")
         {
-            cycleLifeLayouy("hide");
+            chartButton = false;
+            //cycleLifeLayouy("hide");
             but10Mode("Edit");
             zoom = false;
             button13.Text = "Edit";
@@ -2120,7 +2342,7 @@ namespace TurnParts
             chart1.Series["Trocas"].Points.Clear();
             chart2.Series["Trocas"].Points.Clear();
             chart3.Series["Trocas"].Points.Clear();
-            
+            closeSmallWindow();
             bool gerarLog = true;
             clearChartPanel();
             if (ck != "")
@@ -2188,9 +2410,9 @@ namespace TurnParts
 
                 return;
             }
-                
-   
 
+
+            Console.WriteLine(2384);
             item.Open(CN);
             /////////////////////////////////////////////////////////////////////
             bool foundCN = false; //Motivo CNfound = false
@@ -2225,9 +2447,9 @@ namespace TurnParts
                 }
                 currentCN = CN;
             }
-                
-            /////////////////////////////////////////////////////////////////////
 
+            /////////////////////////////////////////////////////////////////////
+            Console.WriteLine(2421);
             if (gerarLog)
             {
                 if (item.itemLocked == true && lastCN != currentCN)
@@ -2243,26 +2465,49 @@ namespace TurnParts
                         }
                         //labelQTD_value.Text = item.QTD("add", qtd).ToString();
                         qtdLabelCurrentValue = item.QTD("get").ToString();
-             
-                        item.QTD("add", qtd).ToString();
+                        double rul = item.QTD("add", qtd);
+                        
                         if (item.grupo == "")
+                        {
+                            if (rul == -9876543)
+                            {
+                                erro("Valor indisponível no Bin");
+                                return;
+                            }
                             QTD_label_Animation(qtd, qtdLabelCurrentValue);
+                            label24.Text = item.QTD("bin").ToString();
+                        }
+                            
                         break;
 
                     case "REMOVE":
+                        Console.WriteLine(2452);
                         if (closeSearchForm != null)
                         {
                             closeSearchForm();
                         }
                         //labelQTD_value.Text = item.QTD("add", qtd * (-1)).ToString();
+                        
                         qtdLabelCurrentValue = item.QTD("get").ToString();
-                        item.QTD("add", qtd * (-1)).ToString();
+                        Console.WriteLine(2460);
+                        double rul2 = item.QTD("add", qtd * (-1));
+                        Console.WriteLine(2462);
                         if (item.grupo == "")
+                        {
+                            if (rul2 == -9876543)
+                            {
+                                erro("Valor indisponível no Bin");
+                                return;
+                            }
                             QTD_label_Animation(qtd, qtdLabelCurrentValue);
+                            label24.Text = item.QTD("bin").ToString();
+                        }
+                        Console.WriteLine(2470);
                         break;
 
                     case "CHECK":
                         labelQTD_value.Text = item.QTD("get").ToString();
+                        label24.Text = item.QTD("bin").ToString();
                         if(qtd != -1)
                         {
                             if (closeSearchForm != null)
@@ -2277,12 +2522,13 @@ namespace TurnParts
             else
             {
                 labelQTD_value.Text = item.QTD("get").ToString();
+                label24.Text = item.QTD("bin").ToString();
             }
-
             if (item.QTD("get") < 0)
             {
                 item.QTD("set", 0);
                 labelQTD_value.Text = "0";
+                label24.Text = item.QTD("bin").ToString();
             }
             if (item.grupo != "")
             {
@@ -2292,6 +2538,7 @@ namespace TurnParts
                 ab = item.total_group - item.IN_group;
 
                 label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + ab.ToString() + "   TOTAL:" + item.total_group.ToString();
+                label24.Visible = false;
                 if (item.itemPresentinGroup)
                 {
                     labelQTD_value.Text = "IN";
@@ -2319,7 +2566,6 @@ namespace TurnParts
                 pictureBox1.Image = folder.image(item.ItemCN);
             }
 
-
             label1.Text = item.ItemName;
             label10.Text = item.ItemModelo;
             label3.Text = "CN";
@@ -2342,7 +2588,7 @@ namespace TurnParts
             {
                 label7.Text = "unk";
             }
-
+            showChart("last");
             label13.Text = "Quantidade Inicial";
             label14.Text = item.qtdInicial;
             string versaoModel = "";
@@ -2422,7 +2668,7 @@ namespace TurnParts
             
             label28.Text = item.stream("CycleLife");
             //label28.Text = item.cycleLife.ToString("#.##");
-
+            loadItemScrapChart(item._idScrapsList());
 
 
 
@@ -2466,7 +2712,7 @@ namespace TurnParts
             }
 
 
-
+         
 
 
             string rightDate = item.stream("DateUsed");
@@ -2611,7 +2857,7 @@ namespace TurnParts
 
             updateLogpanels(item.getLogList(num_of_panels));
             LastChart = item.chartList(lastCharsScreem);
-            loadChart();
+            //loadChart();
 
             LabInfoLoca();
             int Emin = item.Eminimo;
@@ -2774,7 +3020,7 @@ namespace TurnParts
             }
             label51.Text = "Total do trimestre: " + (scraps1 + scraps2 + scraps3).ToString();
             ///////////////////////////////////////////////////////////////////////////////////////////
-
+            adressesList = item.CXlist();
 
 
             bool getScrapList = false;
@@ -2847,6 +3093,135 @@ namespace TurnParts
             stopBlink();
             return;
 
+        }
+        public void loadItemScrapChart(List<string> list)
+        {
+
+            if (chart5.Series[0].ChartType == SeriesChartType.Bar)
+            {
+                chart5.ChartAreas[0].Area3DStyle.Enable3D = false;
+            }
+            else
+            {
+                chart5.ChartAreas[0].Area3DStyle.Enable3D = true;
+            }
+
+            float percentage = 20;
+            List<string> chartList = new List<string>();
+            //chart5.Series["Trocas"].Points.AddXY(scraps2.ToString(), scraps2);
+            List<int> listN = new List<int>();
+            try
+            {
+                chart5.Series["Trocas"].Points.Clear();
+                if (list == null ||list.Count == 0)
+                    return;
+            }
+            catch { }
+            foreach(string l in list)
+            {
+                int qtd = Convert.ToInt32(l.Split(VarDash)[1]);
+                listN.Add(qtd);
+            }
+            listN.Sort();
+            chart5.ChartAreas["ChartArea1"].AxisY.Interval = 1;
+            chart5.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+            float max = (float)listN.Last();
+            foreach (string l in list.ToList())
+            {
+                string cn = l.Split(VarDash)[0];
+                int qtd = Convert.ToInt32(l.Split(VarDash)[1]);
+               
+                char[] cnAr = cn.ToCharArray();
+                string IDValue = "";
+                int IDValeuint = 0;
+                
+                foreach(char c in cnAr)
+                {
+                    if (char.IsNumber(c))
+                        IDValue += c.ToString();
+                }
+                try
+                {
+                    IDValeuint = Convert.ToInt32(IDValue);
+                    IDValue = IDValeuint.ToString();
+                }
+                catch
+                {
+                    IDValue = cn;
+                }
+                chartList.Add(IDValue + VarDash.ToString() + qtd.ToString());
+            }
+            var listIDs = new List<(string ID, int scraps)> { };
+            max = 0;
+            foreach(string l in chartList)
+            {
+                listIDs.Add((l.Split(VarDash)[0],Convert.ToInt32(l.Split(VarDash)[1])));
+                max += listIDs.Last().scraps;
+            }
+            var sortedList = listIDs.OrderBy(s => s.scraps);
+
+            /*
+            IList<string> sortedList = chartList
+      .Select(s => (s.Split(new[] { VarDash.ToString() }, StringSplitOptions.RemoveEmptyEntries)))
+
+      .OrderBy(a => Int32.Parse(a[2]))
+      .Select(a => String.Join(VarDash.ToString(), a))
+      .ToList();
+            */
+            //max = (float)sortedList.Last().scraps;
+            foreach (var l in sortedList.ToList())
+            {
+                string IDValue = l.ID;
+                int qtd = l.scraps;
+                qtd *= (-1);
+                if(IDValue== "")
+                {
+                    IDValue = "NA";
+                }
+                chart5.Series["Trocas"].Points.AddXY(IDValue, qtd);
+                bool isVisible = false;
+                int p = chart5.Series[0].Points.Count - 1;
+
+                float qtdF = (float)qtd;
+                float val = qtdF / max;
+                val *= -100;
+               
+                if (false)//((val < 4))
+                {
+                    chart5.Series[0].Points[p]["PieLabelStyle"] = "Disabled";
+                }
+                else
+                {
+                    chart5.Series[0].Points[p]["PieLabelStyle"] = "Outside";//"Inside";
+                    
+                }
+              //  chart5.Series[0]["LabelsHorizontalLineSize"] = "50";
+                //["PieLabelStyle"] = "Disabled";
+                //["PieLabelStyle"] = "Outside";
+                //["PieLabelStyle"] = "Ellipse";
+                //["PieLabelStyle"] = "Inside";
+
+            }
+            chart5.Series[0].SmartLabelStyle.AllowOutsidePlotArea = LabelOutsidePlotAreaStyle.Yes;
+            chart5.Series[0].SmartLabelStyle.IsMarkerOverlappingAllowed = false;
+            chart5.Series[0].SmartLabelStyle.MovingDirection = LabelAlignmentStyles.Top;
+            chart5.Series[0]["PieDrawingStyle"] = "SoftEdge";
+            chart5.ChartAreas[0].Area3DStyle.Enable3D = true;
+            chart5.ChartAreas[0].Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chart5.Series[0].CustomProperties = "PieLabelStyle=Outside";
+            chart5.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            chart5.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+
+            // chart5.Series[0].label
+            //IsMarkerOverlappingAllowed = False
+
+            //'.Points(i)("Exploded") = "True"
+            //      '.Points(i)("PieLabelStyle") = "Outside"
+            //     '.Points(i)("PieLineColor") = "Red"
+
+            //  for (var i = 0; i < chart5.Series.Count; i++)
+            //     for (var j = 0; j < chart5.Series[i].Points.Count; j++)
+            //  chart5.Series[i].Points[j]["PieLabelStyle"] = "Enable";
         }
         public void buildDataGrid(List<string> list)
         {
@@ -2928,7 +3303,6 @@ namespace TurnParts
         }
         private void loadChart()
         {
-
             int biggestBut = (panel8.Height * 7) / 10;
             int s1 = 0;
             int d = 0;
@@ -2991,6 +3365,7 @@ namespace TurnParts
                 panel8.Controls.Add(but);
                 deleteChartPanel += () =>
                 {
+                    
                     panel8.Controls.Remove(but);
                 };
                 reapearChartpanel += () =>
@@ -3448,7 +3823,6 @@ namespace TurnParts
                                 {
                                     newIDpanel();
                                 }
-                               // Console.WriteLine($"Save {lastID}");
                             }
                             catch { }
                         }
@@ -3775,60 +4149,33 @@ namespace TurnParts
         {
 
         }
-
+        bool chartButton = false;
         private void button2_Click(object sender, EventArgs e)
         {
-            clearChartPanel();
-            Item item = new Item();
-            item.Open(currentCN);
-            if (button2.Text == "CHART")
+            if(ischartVisible)
             {
-                if (invisibleLabels != null)
-                {
-                    invisibleLabels();
-                }
-                button2.Text = "ID";
-                lastCharsScreem = "ID";
-                LastChart = item.chartList(lastCharsScreem);
-                loadChart();
+                showChart("next");
+
             }
             else
             {
-                if (makeitVisible != null)
-                    makeitVisible();
-                button2.Text = "CHART";
-                lastCharsScreem = "";
-                LastChart = item.chartList(lastCharsScreem);
-                loadChart();
+                showChart(currentChart);
+                ischartVisible = true;
+
             }
-            item.Close();
-            textBox1.Focus();
-            if (reapearChartpanel != null)
-            {
-                reapearChartpanel();
-            }
-            cycleLifeLayouy("hide");
-            dateTimePicker1.Visible = false;
-            dateTimePicker2.Visible = false;
-            button4.Visible = false;
-            button5.Visible = false;
-            groupBox2.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ischartVisible= false;
             textBox1.Focus();
-            if (deleteChartPanel != null)
-            {
-                deleteChartPanel();
-            }
-            if (invisibleLabels != null)
-                invisibleLabels();
-            cycleLifeLayouy();
+            clearChartPanel();
             load_panel_layout();
             dateTimePicker1.Visible = true;
             dateTimePicker2.Visible = true;
             groupBox2.Visible = true;
+            chart5.Visible = false;
+            chartButton = true;
            // button4.Visible = true;
            // button5.Visible = true;
         }
@@ -3991,6 +4338,7 @@ namespace TurnParts
                 item.Open(currentCN);
                 item.QTD("set", value);
                 labelQTD_value.Text = text;
+                label24.Text = item.QTD("bin").ToString();
                 textBox1.Text = "";
                 item.Close();
                 load_panel_layout();
@@ -4099,7 +4447,7 @@ namespace TurnParts
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            button11.Focus();
+          //  button11.Focus();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -4195,6 +4543,7 @@ namespace TurnParts
                         item.Open(currentCN);
                         item.moveAllonGroup("IN");
                         label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + (item.total_group - item.IN_group).ToString() + "   TOTAL:" + item.total_group.ToString();
+                        label24.Visible = false;
                         item.Close();
 
                         break;
@@ -4259,6 +4608,8 @@ namespace TurnParts
             //addIdtoTable(idlog, currentSelectedLogPanel);
             updateLogpanels(ite_.getLogList(num_of_panels));
             ite_.Close();
+            ScrapRanking();
+            loadItemScrapChart(ite_._idScrapsList());
             textBox1.Text = "";
             textBox1.Focus();
 
@@ -4303,18 +4654,29 @@ namespace TurnParts
        .Select(a => String.Join(VarDash.ToString(), a))
        .ToList();
 
+            List<string> list7 = new List<string>();
+            for(int h = sortedList.Count -1; h>=0; h--)
+            {
+                list7.Add(sortedList[h]);
+            }
+            sortedList = list7;
+
             DataTable dt2 = new DataTable();
             dt2.Columns.Add("Text", typeof(string));
             dt2.Columns.Add("Value", typeof(int));
             
 
             int counter = 0;
-            Console.WriteLine("=========");
             List<string> list2 = new List<string>();
             chart4.ChartAreas["ChartArea1"].AxisY.Interval = 1;
             chart4.ChartAreas["ChartArea1"].AxisX.Interval = 1;
             //for (int j = sortedList.Count()-1; j >=0; j--)
-            for (int j = sortedList.Count() - maxScrapBars; j < sortedList.Count(); j++)
+            int minJ = 0;
+            if (sortedList.Count() - maxScrapBars <= 0)
+                minJ = 0;
+            else
+                minJ = sortedList.Count() - maxScrapBars;
+            for (int j =minJ; j < sortedList.Count(); j++)
                 {
                 string l = sortedList[j];
                 string ID = l.Split(VarDashPlus)[0].Split(VarDash)[1];
@@ -4353,9 +4715,7 @@ namespace TurnParts
                 panel11.Controls.Add(but);
                 but.Location = p;
                 p = new Point(p.X, p.Y + but.Height);
-                Console.WriteLine("ButName:" +but.Name + " "+ "Location NEW button = " + but.Location.ToString() + " Panel size = " + panel11.Size.ToString());
             }
-            Console.WriteLine("Controls in panel 11 " + panel11.Controls.Count.ToString());
             return;
 
 
@@ -4508,6 +4868,7 @@ namespace TurnParts
                         item.Open(currentCN);
                         item.moveAllonGroup("OUT");
                         label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + (item.total_group - item.IN_group).ToString() + "   TOTAL:" + item.total_group.ToString();
+                        label24.Visible = false;
                         item.Close();
                         break;
                     case DialogResult.No:
@@ -4973,8 +5334,8 @@ namespace TurnParts
                 item.edit("qi", textBox1.Text);
                 label14.Text = text;
                 textBox1.Text = "";
-                item.loadCycleLife();
-                label28.Text = item.cycleLife.ToString("#.##");
+                //item.loadCycleLife();
+                //label28.Text = item.cycleLife.ToString("#.##");
                 item.Close();
                 load_panel_layout();
             }
@@ -5083,6 +5444,7 @@ namespace TurnParts
 
         private void labelQTD_value_DoubleClick(object sender, EventArgs e)
         {
+            return;
             if (buttonMode() == "EDIT")
             {
                 if (textBox1.Text == "")
@@ -5098,6 +5460,7 @@ namespace TurnParts
                 item.Open(currentCN);
                 item.QTD("set", value);
                 labelQTD_value.Text = text;
+                label24.Text = item.QTD("bin").ToString();
                 textBox1.Text = "";
                 item.Close();
                 load_panel_layout();
@@ -5683,9 +6046,9 @@ namespace TurnParts
                         date = date.Split('/')[1] + "/" + date.Split('/')[0] + "/" + date.Split('/')[2];
                         item2.stream("DateUsed", date);
 
-                        item2.loadCycleLife();
+                        //item2.loadCycleLife();
                         if (currentCN == NewCurrent)
-                            label28.Text = item2.cycleLife.ToString("#.##");
+                           // label28.Text = item2.cycleLife.ToString("#.##");
                         item2.Close();
                         dateU = item2.stream("DateUsed");
                     }
@@ -5798,8 +6161,8 @@ namespace TurnParts
                 catch { }
 
                 item.stream("ItensINLine", value.ToString());
-                item.loadCycleLife();
-                label28.Text = item.cycleLife.ToString("#.##");
+               // item.loadCycleLife();
+              //  label28.Text = item.cycleLife.ToString("#.##");
 
                 item.Close();
 
@@ -5833,14 +6196,101 @@ namespace TurnParts
             }
             return list;
         }
+
+        public void dothetest()
+        {
+           
+
+
+        }
+        bool button11AtWork = false;
         private void button11_Click(object sender, EventArgs e)
         {
             //go abobora
+            
+            if (comboBox1.Text == "TODOS")
+            {
+                textBox1.Focus();
+                List<string> list = new List<string>();
+                List<string> scraplist = new List<string>();
+                Item item = new Item();
+                list = item.filterLogsFromLibrary(dateTimePicker1.Value, dateTimePicker2.Value, true);
+                closeExcel();
+                ExcelClass ex = new ExcelClass();
+                Folders folder = new Folders();
+                string path = folder.planilhaLogsPath();
+                bool colapsar = true;
+                list = switchLog(list);
+                if (checkBox1.Checked)
+                {
+                    List<string> list2 = new List<string>();
+                    foreach(string l in list)
+                    {
+                        string cn = l.Split(' ')[0].Split(':')[1];
+                        list2.Add(cn);
+
+                    }
+                    list2 = list2.Distinct().ToList();
+                    foreach(string l in list2.ToList())
+                    {
+                        scraplist.Add(l + VarDash.ToString() + "0");
+                    }
+                    foreach (string l in list)
+                    {
+                        int qtd = 0;
+                        string qtd_st = l.Split(' ')[3].Split(':')[1];
+                        string cn = l.Split(' ')[0].Split(':')[1];
+                        string ID = l.Split(' ')[4].Split(':')[1];
+                        try
+                        {
+                            qtd = Convert.ToInt32(qtd_st);
+                        }
+                        catch { continue; }
+                        int counterS = 0;
+                        foreach(string l2 in scraplist.ToList())
+                        {
+                            if (l2.Split(VarDash)[0] == cn)
+                            {
+                                int qtd_ = 0;
+                                try { qtd_ = Convert.ToInt32(scraplist[counterS].Split(VarDash)[1]); }
+                                catch { }
+                                qtd *= (-1);
+                                if (ID!= "ENTRADA.NF")//verificar se ID é NF
+                                {
+                                    qtd_ += qtd;
+                                }
+                                
+                                scraplist[counterS] = cn + VarDash.ToString() + qtd_.ToString();
+                                break;
+                            }
+                            counterS++;
+                        }
+                        //somar esta qtd
+                       // list2.Add(cn);
+                    }
+                    ex.GerarPlanilhaColapseLogs(scraplist, path);
+                    Process.Start(path);
+                    return;
+
+                }
+                else
+                {
+                    ex.GerarPlanilhaLogs(list, path);
+                    Process.Start(path);
+                    return;
+                }
+                
+
+            }
             if (comboBox1.Text == "TODOS")
             {
                 List<string> list = new List<string>();
 
                 textBox1.Focus();
+                ///
+                
+                
+                ///
                 closeExcel();
                 ExcelClass ex = new ExcelClass();
                 Folders folder = new Folders();
@@ -5852,8 +6302,9 @@ namespace TurnParts
                     List<string> list1 = new List<string>();
                     Item item = new Item();
                     item.Open(cnL.Split(VarDash)[0]);
-                    if(!checkBox2.Checked)
-                        if(item.ItemName.Contains("Fixture")|| item.ItemName.Contains("fixture"))
+                    //    if(!checkBox2.Checked)
+                    if (true)
+                        if (item.ItemName.Contains("Fixture")|| item.ItemName.Contains("fixture"))
                         {
                             AddProgressiveBar("Coletando dados 1/2");
                             continue;
@@ -5958,6 +6409,7 @@ namespace TurnParts
                 Process.Start(path);
                 return;
             }
+         
         }
 
         private void label40_DoubleClick(object sender, EventArgs e)
@@ -6205,7 +6657,7 @@ namespace TurnParts
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            button11.Focus();
+          //  button11.Focus();
         }
 
         private void comboBox1_ValueMemberChanged(object sender, EventArgs e)
@@ -6492,14 +6944,12 @@ namespace TurnParts
 
         private void panel10_MouseEnter(object sender, EventArgs e)
         {
-            Console.WriteLine("Enter");
             growSlidePanel = true;
             timer1.Start();
         }
 
         private void panel10_MouseLeave(object sender, EventArgs e)
         {
-            Console.WriteLine("Leave");
             growSlidePanel = false;
             timer1.Start();
         }
@@ -6526,8 +6976,8 @@ namespace TurnParts
 
         private void panel11_MouseEnter(object sender, EventArgs e)
         {
-           
 
+            panel11.BringToFront();
             growSlidePanelLeft = true;
             chart4.Visible = true; //true
             ScrapRanking();
@@ -6599,6 +7049,7 @@ namespace TurnParts
 
         private void panel11_SizeChanged(object sender, EventArgs e)
         {
+            
             int borderX = 100;
             int borderY = 100;
             int newWidth = panel11.Width - borderX;
@@ -6610,8 +7061,152 @@ namespace TurnParts
                 newHeight = 1;
             chart4.Size = new Size(newWidth, newHeight);
            // string locbut = chart4.Controls[3].Location.ToString();
-            Console.WriteLine($"Chart 4 size {chart4.Size}");
             //schrink()
+        }
+        Point? prevPosition = null;
+        ToolTip tooltip = new ToolTip();
+
+        ToolTip tt = null;
+        Point tl = Point.Empty;
+        private void chart5_MouseMove(object sender, MouseEventArgs e)
+        {
+
+
+            return;
+            var pos = e.Location;
+            if (prevPosition.HasValue && pos == prevPosition.Value)
+                return;
+            tooltip.RemoveAll();
+            prevPosition = pos;
+            var results = chart1.HitTest(pos.X, pos.Y, false,ChartElementType.DataPoint);
+            
+            foreach (var result in results)
+            {
+                
+                if (result.ChartElementType == ChartElementType.AxisLabels)
+                {
+                    var text = result.Object as Label;
+                    return;
+                    var prop = result.Object as DataPoint;
+                    if (prop != null)
+                    {
+                        var pointXPixel = result.ChartArea.AxisX.ValueToPixelPosition(prop.XValue);
+                        var pointYPixel = result.ChartArea.AxisY.ValueToPixelPosition(prop.YValues[0]);
+
+                        // check if the cursor is really close to the point (2 pixels around the point)
+                        if (Math.Abs(pos.X - pointXPixel) < 2 &&
+                            Math.Abs(pos.Y - pointYPixel) < 2)
+                        {
+                            
+                            tooltip.Show("X=" + prop.XValue + ", Y=" + prop.YValues[0], this.chart5,
+                                            pos.X, pos.Y - 15);
+                        }
+                    }
+                }
+            }
+        }
+        bool chartType = false;
+        private void chart5_Click(object sender, EventArgs e)
+        {
+            chartType = !chartType;
+            if (chartType)
+            {
+                chart5.Series[0].ChartType = SeriesChartType.Bar;
+                chart5.ChartAreas[0].Area3DStyle.Enable3D = false;
+                currentChart = "Bars";
+            }
+            else
+            {
+                chart5.Series[0].ChartType = SeriesChartType.Pie;
+                chart5.ChartAreas[0].Area3DStyle.Enable3D = true;
+                currentChart = "Pie";
+            }
+            
+        }
+
+        private void label11_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label11_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+        private void closeSmallWindow()
+        {
+            try
+            {
+                Form13 form = new Form13();
+                form = System.Windows.Forms.Application.OpenForms["Form13"] as Form13;
+                if(form != null)
+                    form.Close();
+            }
+            catch { }
+            
+        }
+        public void clickLabel11()
+        {
+            closeSmallWindow();
+            //loadForm(new Form13());
+            Form13 f = new Form13();
+            Item item = new Item();
+            item.Open(currentCN);
+            adressesList = item.CXlist();
+            ListClass lc = new ListClass();
+            if (this.panel8.Controls.Count > 0)
+            {
+                this.panel8.Controls.RemoveAt(0);
+            }
+            if (closeSearchForm != null)
+            {
+                closeSearchForm();
+            }
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel8.Controls.Add(f);
+            panel8.Tag = f;
+            f.headList = lc.RowTitle(10);
+            f.displayList = adressesList;
+            f.title = "CN " + currentCN;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.BringToFront();
+            f.Show();
+            //lc.Show(lc.RowTitle(10), adressesList, true,"CN " + currentCN);
+        }
+        public void label11_Click(object sender, EventArgs e)
+        {
+            clickLabel11();
+        }
+
+        private void label24_DoubleClick(object sender, EventArgs e)
+        {
+            if (buttonMode() == "EDIT")
+            {
+                if (textBox1.Text == "")
+                    return;
+                Item item = new Item();
+                string text = textBox1.Text;
+                int value = 0;
+                try
+                {
+                    value = Convert.ToInt32(text);
+                }
+                catch { }
+                if (value < 0)
+                    value *= (-1);
+                item.Open(currentCN);
+                if (item.grupo != "")
+                    return;
+                int total = value + item.sumCX();
+                item.QTD("set", total);
+                labelQTD_value.Text = total.ToString();
+                label24.Text = value.ToString();//item.QTD("bin").ToString();
+                textBox1.Text = "";
+                item.Close();
+                load_panel_layout();
+
+            }
         }
     }
 

@@ -94,3 +94,5 @@ C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Main.cspro
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Magnus.exe
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\Magnus.pdb
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form12.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form13.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace._messageBox.resources

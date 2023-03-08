@@ -500,5 +500,10 @@ namespace MagnusSpace
         {
             label25.Text = getTurnsLinha(comboBox1.Text).ToString();
         }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

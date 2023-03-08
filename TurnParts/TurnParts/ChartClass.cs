@@ -40,7 +40,6 @@ namespace MagnusSpace
                 {
                    // but.Location = new Point(but.Location.X + but.Width, but.Location.Y);
                 };
-                Console.WriteLine("Location button = " + but.Location.ToString());
                 buttons.Add(but);
                 counter++;
             }

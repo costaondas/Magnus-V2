@@ -108,8 +108,6 @@ namespace MagnusSpace
             ListClass lc = new ListClass();
             Folders folder = new Folders();
             lc.Open(grupo, folder.versoesFX);
-            Console.WriteLine(grupo);
-            Console.WriteLine(folder.versoesFX);
             foreach (string l in lc.mainList)
             {
                 textBox3.Text += "(" + l.Split(VarDash)[2] + ")   Versão: " + l.Split(VarDash)[0] + "     " + l.Split(VarDash)[1];
@@ -121,7 +119,6 @@ namespace MagnusSpace
                 {
                     label4.Text = l.Split(VarDash)[0];
                 }
-                Console.WriteLine("ADD " + l);
             }
             lc.Close();
         }

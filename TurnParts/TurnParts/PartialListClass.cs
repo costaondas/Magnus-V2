@@ -163,6 +163,12 @@ namespace MagnusSpace
                     
 
                     break;
+                case 10:
+
+                    list.Add("CN" + vd() + "CAIXA");
+                    list.Add("QTD" + vd() + "Quantidade");
+
+                    break;
             }
 
 

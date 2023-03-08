@@ -39,7 +39,6 @@ namespace MagnusSpace
         
         private void Form12_Load(object sender, EventArgs e)
         {
-            Console.WriteLine($"Dont focus = {dontFocus}");
             ListClass lc = new ListClass();
             /*
             lc.Open("Mestra");
@@ -118,7 +117,6 @@ namespace MagnusSpace
                 if (ctrl.GetType() == typeof(VScrollBar))
                 {
                     offset = ctrl.Width;
-                    Console.WriteLine(offset.ToString());
                     //break;
                 }
             return offset;
@@ -239,7 +237,6 @@ namespace MagnusSpace
 
         private void Form12_SizeChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(this.Size.ToString());
         }
     }
 }

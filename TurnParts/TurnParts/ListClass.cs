@@ -113,6 +113,7 @@ namespace MagnusSpace
             barIndex= 0;
             form = System.Windows.Forms.Application.OpenForms["Form1"] as TurnParts.Form1;
         }
+        
         private void setBar(int max)
         {
             if (barName == null)
@@ -151,7 +152,6 @@ namespace MagnusSpace
             {
                 string line = string.Join(VarDash.ToString(),l);
                 retList.Add(line);
-                Console.WriteLine(line);
                 line = "";
                 checkBar();
                 
@@ -246,20 +246,32 @@ namespace MagnusSpace
 
             return dt;
         }
-        public void Show(List<string> head, List<string> list = null)
+        public void Show(List<string> head, List<string> list = null,bool smallWindow = false,string title = "")
         {
-            Form12 form = new Form12();
-            if (list == null)
+            if(smallWindow == true)
             {
-                form.displayList = mainList;
+                Form13 form = new Form13();
+                form.displayList = list;
+                form.headList = head;
+                form.title = title;
+                form.Show();
             }
             else
             {
-                form.displayList = list;
+                Form12 form = new Form12();
+                if (list == null)
+                {
+                    form.displayList = mainList;
+                }
+                else
+                {
+                    form.displayList = list;
+                }
+                form.headList = head;
+                form.dontFocus = dontFocus;
+                form.Show();
             }
-            form.headList = head;
-            form.dontFocus = dontFocus;
-            form.Show();
+            
 
         }
 
@@ -296,7 +308,7 @@ namespace MagnusSpace
         {
             List<string> list = new List<string>();
             List<string> lineList = new List<string>();
-
+            Console.WriteLine($"count list {inList.Count()}");
             string dashSlot = "";
             foreach (string l in inList.ToList())
             {
@@ -358,7 +370,7 @@ namespace MagnusSpace
         }
         public void s(string a)
         {
-            Console.WriteLine(a);
+           // Console.WriteLine(a);
         }
 
         #endregion internal

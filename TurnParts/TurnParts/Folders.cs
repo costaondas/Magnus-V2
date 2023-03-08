@@ -25,6 +25,7 @@ namespace MagnusSpace
         public string GrupoFolderPath = dataFolder + @"\" + "Grupos";
         public string versoesFX = dataFolder + @"\" + "VersoesFX";
         public string logFolder = dataFolder + @"\" + "logFolder";
+        public string logLibrary = dataFolder + @"\" + "logLibrary";
         public string Forecast = dataFolder + @"\" + "Forecast";
         public string Chart = dataFolder + @"\" + "Chart.png";
         public string Scraps = dataFolder + @"\" + "Scraps";
@@ -39,6 +40,7 @@ namespace MagnusSpace
         public string TPFolder = dataFolder + @"\" + "TurnPartsList";
         private string itemInfo = "tpInfo.txt";
         private string setLog = "setLog.txt";
+        private string adresses = "adresses.txt";
         private string itemLog = "tpLog.txt";
         private string addItensPla = "AddItens.xls";
         private string fxpositions = "FXpositions.xls";
@@ -81,7 +83,11 @@ namespace MagnusSpace
                 try { Directory.CreateDirectory(logFolder); }
                 catch { }
             }
-            //logFolder
+            if (!Directory.Exists(logLibrary))
+            {
+                try { Directory.CreateDirectory(logLibrary); }
+                catch { }
+            }
             if (!Directory.Exists(versoesFX))
             {
                 try { Directory.CreateDirectory(versoesFX); }
@@ -271,7 +277,6 @@ namespace MagnusSpace
             TimeSpan ts = time1 - time2;
             a = Convert.ToInt32(ts.TotalMilliseconds);
             string howlong = a.ToString();
-            Console.WriteLine("Time: " + howlong + " at " + text);
 
         }
         public string CNline(List<string> subList, string action = "")
@@ -448,7 +453,7 @@ namespace MagnusSpace
 
 
             ExcelClass ec = new ExcelClass();
-          excelList = ec.sortGeralList(excelList); // demora 47350
+            //excelList = ec.sortGeralList(excelList); // demora 47350
             time("sort");
             listaGeral1 = excelList;
             if (action == "get")
@@ -546,7 +551,6 @@ namespace MagnusSpace
                // linhaExcel += "" + vd();//13
                 linhaExcel += dt.ToString("MMMM") + vd();//13
                 dt.AddMonths(1);
-                Console.WriteLine(dt.ToString());
             }
 
 
@@ -723,7 +727,6 @@ namespace MagnusSpace
             }
             catch
             {
-                Console.WriteLine("catch");
             }
             try
             {
@@ -780,6 +783,12 @@ namespace MagnusSpace
             string CNpath = TPFolder + @"\" + CN + @"\" + setLog;
             return CNpath;
         }
+        public string itemAdressesPath(string CN)
+        {
+            string CNpath = TPFolder + @"\" + CN + @"\" + adresses;
+            return CNpath;
+        }
+        //itemAdressesPath
         public string itemLogPath(string CN)
         {
             string CNpath = TPFolder + @"\" + CN + @"\" + itemLog;

@@ -127,7 +127,6 @@ namespace MagnusSpace
             string adress = Path;
             ExcelM.Application excelAplication = new Microsoft.Office.Interop.Excel.Application();
             excelAplication.DisplayAlerts = false;
-            //Console.WriteLine(exList.Last()+">last 1");
 
             if (excelAplication == null)
             {
@@ -144,8 +143,6 @@ namespace MagnusSpace
             string value = "";
             List<string> lineCells = new List<string>();
             exList.Insert(0,"CN Data Hora Quantidade ID Fixture Modo");
-            Console.WriteLine(exList.Last() + ">last 2");
-            // Range rg = (Range)sheet.Columns[2];
             Form1 form = new Form1();
             form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
             form.setProgressiveBar(exList.Count());
@@ -180,8 +177,6 @@ namespace MagnusSpace
                 form.AddProgressiveBar("Montando Excel 2/2");
                 System.Windows.Forms.Application.DoEvents();
             }
-
-            Console.WriteLine(exList.Last() + ">last " +"3");
             sheet.Columns.AutoFit();
             // Range rg = (ExcelM.Range)sheet.Cells[1, 2];
             //rg.EntireColumn.NumberFormat = "DD/MM/YYYY";
@@ -198,7 +193,6 @@ namespace MagnusSpace
                 book.Close(false, misValue, misValue);
                 Value = false;
             }
-            Console.WriteLine(exList.Last() + ">last 4");
 
             excelAplication.Quit();
 
@@ -208,6 +202,70 @@ namespace MagnusSpace
             Marshal.ReleaseComObject(excelAplication);
             Marshal.ReleaseComObject(xlApp);
             */
+            while (Marshal.ReleaseComObject(sheet) != 0) ;
+            while (Marshal.ReleaseComObject(book) != 0) ;
+            while (Marshal.ReleaseComObject(excelAplication) != 0) ;
+            while (Marshal.ReleaseComObject(xlApp) != 0) ;
+            form.AddProgressiveBar("clear");
+
+            return Value;
+        }
+        public bool GerarPlanilhaColapseLogs(List<string> exList, string Path)
+        {
+            bool Value = false;
+            Folders folder = new Folders();
+            string adress = Path;
+            ExcelM.Application excelAplication = new Microsoft.Office.Interop.Excel.Application();
+            excelAplication.DisplayAlerts = false;
+
+            if (excelAplication == null)
+            {
+                return false;
+            }
+            ExcelM.Workbook book;
+            ExcelM.Worksheet sheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            book = excelAplication.Workbooks.Add(misValue);
+            sheet = (ExcelM.Worksheet)book.Worksheets.get_Item(1);
+            int lineNumber = 1;
+            int cellNumber = 1;
+            string value = "";
+            List<string> lineCells = new List<string>();
+            exList.Insert(0, "CN" + VarDash.ToString() + "Scraps");
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            form.setProgressiveBar(exList.Count());
+            foreach (string line in exList)
+            {
+                lineCells = line.Split(VarDash).ToList();
+
+                foreach (string cell in lineCells)
+                {
+                    sheet.Cells[lineNumber, cellNumber] = cell;
+                    cellNumber++;
+                }
+                cellNumber = 1;
+                lineNumber++;
+                form.AddProgressiveBar("Montando Excel 2/2");
+                System.Windows.Forms.Application.DoEvents();
+            }
+            sheet.Columns.AutoFit();
+            try
+            {
+                book.SaveAs(adress, ExcelM.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, ExcelM.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                book.Close(true, misValue, misValue);
+                Value = true;
+            }
+            catch
+            {
+                MessageBox.Show("Arquivo aberto");
+                book.Close(false, misValue, misValue);
+                Value = false;
+            }
+
+            excelAplication.Quit();
+
             while (Marshal.ReleaseComObject(sheet) != 0) ;
             while (Marshal.ReleaseComObject(book) != 0) ;
             while (Marshal.ReleaseComObject(excelAplication) != 0) ;

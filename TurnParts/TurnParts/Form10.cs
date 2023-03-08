@@ -354,7 +354,6 @@ namespace MagnusSpace
             progressBar1.Value = 0;
             foreach (string l in list)
             {
-                Console.WriteLine(l);
                 Item item2 = new Item();
                 item2.Open(l.Split(VarDash)[0]);
                 string locked = item2.stream("lock");
@@ -365,7 +364,6 @@ namespace MagnusSpace
                 }
 
                 scrapF = (float)(item2.getScraps(ini, fim));
-                //Console.WriteLine("scraps " + item2.getScraps(dt, dt));
                 if (checkBox5.Checked)
                 {
                     turnLinhaF = (float)Convert.ToInt32(label25.Text);

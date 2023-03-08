@@ -93,7 +93,6 @@ namespace MagnusSpace
             line = list.mainList[index];
             list.Close();
 
-            Console.WriteLine("line:" + line.ToString());
 
             try { textBox1.Text = line.Split(dashC)[0]; } catch { }
             try { textBox2.Text = line.Split(dashC)[2]; } catch { }

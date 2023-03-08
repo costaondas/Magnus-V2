@@ -199,7 +199,6 @@ namespace MagnusSpace
             loadItensListfromFile();
             Folders folder = new Folders();
             pictureBox1.Image = folder.image(groupBox1.Text);
-            Console.WriteLine("LAST PATH " + folder.fulllastImagePath);
         }
         private void pictureBox1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -271,19 +270,16 @@ namespace MagnusSpace
         }
         public int CNtoListIndex(string CN) // retorna -1 se não existir CN
         {
-            Console.WriteLine("SEARCH CN <"+CN+">");
             string name = "";
             string value = "";
             int a = 0;
             foreach(string item in itensList)
             {
-                Console.WriteLine(item);
                 List<string> specs = item.Split(VarDash).ToList();
                 foreach(string spec in specs)
                 {
                     name = spec.Split(VarsubDash)[0];
                     value = spec.Split(VarsubDash)[1];
-                    Console.WriteLine("NAME " + name + " VALUE " + value);
                     if (name == "CN" && value == CN)
                     {
                         return a;
@@ -320,7 +316,6 @@ namespace MagnusSpace
                 {
                     case "CN":
                         CN = value;
-                        Console.WriteLine("<" + value + "> CN que será cadastrado");
                         break;
                     case "RED":
                         red = value;
@@ -357,7 +352,6 @@ namespace MagnusSpace
             int index = CNtoListIndex(CN);
             if (index < 0) // item não existem
             {
-                Console.WriteLine("CN <"+ CN+ "> Não EXISTE");
                 itemLine += "CN" + VarsubDash + CN + VarDash;
                 ////////////////////////////////////////////////////
                 if (red == "")
@@ -392,7 +386,6 @@ namespace MagnusSpace
             }
             else//item existe
             {
-                Console.WriteLine("CN <" + CN + "> EXISTE");
                 List<string> itemSpecs = lc.mainList[index].Split(VarDash).ToList(); ///ITEM QUE PRECISA SER EDITADO
                 foreach (string spec in itemSpecs)
                 {

@@ -191,6 +191,7 @@ namespace TurnParts
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.label18 = new System.Windows.Forms.Label();
+            this.binToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
@@ -342,7 +343,8 @@ namespace TurnParts
             this.scrapsToolStripMenuItem,
             this.pOWERBIToolStripMenuItem,
             this.locaçãoToolStripMenuItem,
-            this.gruposToolStripMenuItem});
+            this.gruposToolStripMenuItem,
+            this.binToolStripMenuItem});
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.relatórioToolStripMenuItem.Text = "Relatório";
@@ -351,35 +353,35 @@ namespace TurnParts
             // listaGeralToolStripMenuItem
             // 
             this.listaGeralToolStripMenuItem.Name = "listaGeralToolStripMenuItem";
-            this.listaGeralToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.listaGeralToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.listaGeralToolStripMenuItem.Text = "Lista Geral";
             this.listaGeralToolStripMenuItem.Click += new System.EventHandler(this.listaGeralToolStripMenuItem_Click);
             // 
             // listaComprasToolStripMenuItem
             // 
             this.listaComprasToolStripMenuItem.Name = "listaComprasToolStripMenuItem";
-            this.listaComprasToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.listaComprasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.listaComprasToolStripMenuItem.Text = "Lista Compras";
             this.listaComprasToolStripMenuItem.Click += new System.EventHandler(this.listaComprasToolStripMenuItem_Click);
             // 
             // forcastToolStripMenuItem
             // 
             this.forcastToolStripMenuItem.Name = "forcastToolStripMenuItem";
-            this.forcastToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.forcastToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.forcastToolStripMenuItem.Text = "Fixtures";
             this.forcastToolStripMenuItem.Click += new System.EventHandler(this.forcastToolStripMenuItem_Click);
             // 
             // relaçãoDeFixturesToolStripMenuItem
             // 
             this.relaçãoDeFixturesToolStripMenuItem.Name = "relaçãoDeFixturesToolStripMenuItem";
-            this.relaçãoDeFixturesToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.relaçãoDeFixturesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.relaçãoDeFixturesToolStripMenuItem.Text = "Simplificada";
             this.relaçãoDeFixturesToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeFixturesToolStripMenuItem_Click);
             // 
             // scrapsToolStripMenuItem
             // 
             this.scrapsToolStripMenuItem.Name = "scrapsToolStripMenuItem";
-            this.scrapsToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.scrapsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.scrapsToolStripMenuItem.Text = "Quantidade";
             this.scrapsToolStripMenuItem.Click += new System.EventHandler(this.scrapsToolStripMenuItem_Click);
             // 
@@ -387,21 +389,21 @@ namespace TurnParts
             // 
             this.pOWERBIToolStripMenuItem.Enabled = false;
             this.pOWERBIToolStripMenuItem.Name = "pOWERBIToolStripMenuItem";
-            this.pOWERBIToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.pOWERBIToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.pOWERBIToolStripMenuItem.Text = "POWER BI";
             this.pOWERBIToolStripMenuItem.Click += new System.EventHandler(this.pOWERBIToolStripMenuItem_Click);
             // 
             // locaçãoToolStripMenuItem
             // 
             this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
-            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.locaçãoToolStripMenuItem.Text = "Locação";
             this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.locaçãoToolStripMenuItem_Click);
             // 
             // gruposToolStripMenuItem
             // 
             this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
-            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.gruposToolStripMenuItem.Text = "Grupos";
             this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
             // 
@@ -2022,6 +2024,13 @@ namespace TurnParts
             this.label18.TabIndex = 22;
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // binToolStripMenuItem
+            // 
+            this.binToolStripMenuItem.Name = "binToolStripMenuItem";
+            this.binToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.binToolStripMenuItem.Text = "Bin";
+            this.binToolStripMenuItem.Click += new System.EventHandler(this.binToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2226,6 +2235,7 @@ namespace TurnParts
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem dIAToolStripMenuItem;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ToolStripMenuItem binToolStripMenuItem;
     }
 }
 

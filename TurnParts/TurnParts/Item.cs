@@ -2184,8 +2184,8 @@ namespace MagnusSpace
             if (qtd_ == "")
                 qtd_ = "0";
 
-            double qtd = Convert.ToDouble(qtd_);
-            int QuantidadeAntiga = Convert.ToInt32(qtd);
+            double qtdL = Convert.ToDouble(qtd_);
+            int QuantidadeAntiga = Convert.ToInt32(qtdL);
             int QuantidadeNova;
             string position = "";
             List<string> infoList = new List<string>();
@@ -2204,9 +2204,9 @@ namespace MagnusSpace
                             return -9876543;
                         }
 
-                        qtd += value;
-                        addLog_QTD = qtd;
-                        QuantidadeNova = Convert.ToInt32(qtd);
+                        qtdL += value;
+                        addLog_QTD = qtdL;
+                        QuantidadeNova = Convert.ToInt32(qtdL);
                         if (QuantidadeNova < Eminimo && QuantidadeAntiga >= Eminimo)
                         {
                             MissingDesatualizado = true;
@@ -2215,8 +2215,9 @@ namespace MagnusSpace
                         
                         
                         
-                        Console.WriteLine($"QTD set to {qtd}");
+                        Console.WriteLine($"QTD set to {qtdL}");
                         AddLog(value);
+                        stream("qtdBin",bin1.ToString());
                     }
                     else
                     {
@@ -2228,7 +2229,7 @@ namespace MagnusSpace
                         glist = groupToList();
                         int a = 0;
                         
-                        qtd = 1;
+                        qtdL = 1;
                         ListClass lc5 = new ListClass();
            
                         
@@ -2313,12 +2314,13 @@ namespace MagnusSpace
                     {
                         //QTD("set", bin * (-1));
                         QTD("set", total);
+                        stream("qtdBin", "0");
                         Console.WriteLine($"bin set to {0}");
                         return 0;
                     }
                     else
                     {
-                        Console.WriteLine($"Bin set to {bin}");
+                        stream("qtdBin", bin.ToString());
                         return bin;
                     }
                     
@@ -2326,10 +2328,13 @@ namespace MagnusSpace
                     break;
                 case "set":
                     string log = "";
-                    log += "SET" + VarDash.ToString() + qtd.ToString() + "->";
+                    log += "SET" + VarDash.ToString() + qtdL.ToString() + "->";
                     log +=  value.ToString() + VarDash.ToString() + DateTime.Now.ToString();
                     SetlogsList.Add(log);
                     itemInfoList = lc2.stream_SET(itemInfoList, "QTD", value.ToString());
+                    
+                    //qtd = value;
+                    stream("qtdBin", QTD("bin").ToString());
                     //itemInfoList[3] = "QTD:" + value.ToString();
                     QuantidadeNova = Convert.ToInt32(value);
                     if (QuantidadeNova < Eminimo && QuantidadeAntiga >= Eminimo)
@@ -2341,7 +2346,7 @@ namespace MagnusSpace
                     break;
                 case "get":
                     if (grupo == "")
-                        return qtd;
+                        return qtdL;
                     else
                     {
                         return 1;
@@ -2349,8 +2354,8 @@ namespace MagnusSpace
                     
             }
             //vaca
-            itemInfoList = lc2.stream_SET(itemInfoList, "QTD", qtd.ToString());
-            return qtd;
+            itemInfoList = lc2.stream_SET(itemInfoList, "QTD", qtdL.ToString());
+            return qtdL;
         }
         public int sumCX()
         {

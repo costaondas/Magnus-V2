@@ -404,6 +404,10 @@ namespace MagnusSpace
 
                     title = lc.RowTitle(5);
                     break;
+                case "Bin":
+
+                    title = lc.RowTitle(11);
+                    break;
             }
             return buildPlanilhaGeral(title);
         }
@@ -453,7 +457,7 @@ namespace MagnusSpace
 
 
             ExcelClass ec = new ExcelClass();
-            //excelList = ec.sortGeralList(excelList); // demora 47350
+            excelList = ec.sortGeralList(excelList); // demora 47350
             time("sort");
             listaGeral1 = excelList;
             if (action == "get")

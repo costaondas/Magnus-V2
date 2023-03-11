@@ -1614,6 +1614,8 @@ namespace TurnParts
 
             if ((Keys)e.KeyChar == Keys.Enter)
             {
+
+
                 string comand = textBox1.Text;
                 textBox1.Text = "";
                 computeCode(comand);
@@ -1833,7 +1835,21 @@ namespace TurnParts
                 return;
             }
 
-            if (comand.Contains("%CXLOC%"))
+            if (comand.Contains("%QTD%"))
+            {
+                int qtd3 = 0;
+                try
+                {
+                    qtd3 = Convert.ToInt32(comand.Split('%')[0]);
+                    textBox1.Text = qtd3.ToString();
+                    textBox1.SelectionStart = textBox1.Text.Length;
+                    textBox1.SelectionLength = 0;
+                    return;
+                }
+                catch { };
+                
+            }
+                if (comand.Contains("%CXLOC%"))
             {
                 int Qtd = 0;
                 string _qtd = "";
@@ -4335,10 +4351,15 @@ namespace TurnParts
                     value = Convert.ToInt32(text);
                 }
                 catch { }
+                if (value < 0)
+                    value *= (-1);
                 item.Open(currentCN);
-                item.QTD("set", value);
-                labelQTD_value.Text = text;
-                label24.Text = item.QTD("bin").ToString();
+                if (item.grupo != "")
+                    return true;
+                int total = value + item.sumCX();
+                item.QTD("set", total);
+                labelQTD_value.Text = total.ToString();
+                label24.Text = value.ToString();//item.QTD("bin").ToString();
                 textBox1.Text = "";
                 item.Close();
                 load_panel_layout();
@@ -5105,6 +5126,32 @@ namespace TurnParts
 
         private void forcastToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+
+            ExcelClass ec = new ExcelClass();
+            List<string> list = new List<string>();
+
+
+            ListClass lc = new ListClass();
+            lc.Open("Mestra");
+            List<string> list2 = new List<string>();
+            list2.Add("Filtrando lista");
+            lc.hasBar(list2);
+            list.AddRange(lc.filterListVar("Name", "Fixture"));
+            list.AddRange(lc.filterListVar("Name", "FIXTURE"));
+            list.AddRange(lc.filterListVar("Name", "fixture"));
+            list = lc.toVardashFormat(list, lc.RowTitle(7), true);
+            bool resolt = false;
+            resolt = ec.gerarPlanilhaGeral(list);
+            if (resolt)
+            {
+                Process.Start(ec.listAdress);
+            }
+
+
+
+
+            return;
             // fixturesA
 
             textBox1.Focus();
@@ -7207,6 +7254,25 @@ namespace TurnParts
                 load_panel_layout();
 
             }
+        }
+
+        private void binToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (simpleList)
+            {
+
+                ListClass lc = new ListClass();
+                lc.Open("Mestra");
+                //listShow = lc.filterListVar("Modelo", model);
+                lc.Show(lc.RowTitle(11));
+                return;
+            }
+            listOpenMode = "Bin";
+            Folders folder1 = new Folders();
+            folder1.buildStructure();
+            bool value = folder1.listmode(listOpenMode);
+            if (value)
+                Process.Start(folder1.listaGeralPath());
         }
     }
 

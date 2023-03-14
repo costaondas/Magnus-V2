@@ -427,7 +427,7 @@ namespace MagnusSpace
             bool resolt = false;
             resolt = ec.gerarPlanilhaGeral(list);
             return resolt;
-
+            
         }
         public bool listaGeral(string action = "none")
         {
@@ -457,7 +457,8 @@ namespace MagnusSpace
 
 
             ExcelClass ec = new ExcelClass();
-            excelList = ec.sortGeralList(excelList); // demora 47350
+            
+            excelList = ec.sortGeralList(excelList); // demora 47350 esse
             time("sort");
             listaGeral1 = excelList;
             if (action == "get")

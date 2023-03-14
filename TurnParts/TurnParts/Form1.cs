@@ -278,38 +278,30 @@ namespace TurnParts
         //configuração
         public string config(string varName, string value = "null",bool bypass = false)
         {
-
             List<string> criticalList = new List<string>();
             criticalList.Add("FixtureOUTlogPath");
 
             ListClass list2 = new ListClass();
             list2.Open("Settings", "settings");
             string text = "";
-            Console.WriteLine(288);
             if (editConfigofCritical || bypass)
             {
-                Console.WriteLine(291);
                 text = list2.stream(varName, value);
              
             }   
             else
             {
-                Console.WriteLine(296);
                 foreach (string l in criticalList)
                 {
                     if (l == varName)
                     {
-                        Console.WriteLine(302);
                         if (value == "null")
                         {
-                            Console.WriteLine(305);
                             text = list2.stream(varName);
-                            Console.WriteLine(307);
                             return text;
                         }
                         else
                         {
-                            Console.WriteLine(311);
                             return value;
                         }
                         
@@ -786,7 +778,9 @@ namespace TurnParts
 
             textBox2.Size = new Size(pictureBox1.Width, textBox2.Size.Height);
             panel2.Controls.Add(button13);
+            panel2.Controls.Add(button10);
             button13.Location = new Point(textBox2.Location.X, textBox2.Location.Y + textBox2.Height);
+            button10.Location = new Point(button13.Location.X,button13.Location.Y + button10.Height+10);
             int shadow = panel2.Height - textBox2.Location.Y;
             int boxSize = 120;
 
@@ -1849,7 +1843,17 @@ namespace TurnParts
                 catch { };
                 
             }
-                if (comand.Contains("%CXLOC%"))
+            if (comand == "inventariado" || comand == "INVENTARIADO")
+            {
+                Item item = new Item();
+                item.Open(currentCN);
+                item.stream("inventariado","TRUE");
+                button10.Visible= true;
+                item.Close();
+                return;
+                //inventariado
+            }
+            if (comand.Contains("%CXLOC%"))
             {
                 int Qtd = 0;
                 string _qtd = "";
@@ -2581,7 +2585,14 @@ namespace TurnParts
             {
                 pictureBox1.Image = folder.image(item.ItemCN);
             }
-
+            if(item.stream("inventariado") == "TRUE")
+            {
+                button10.Visible = true;
+            }
+            else
+            {
+                button10.Visible = false;
+            }
             label1.Text = item.ItemName;
             label10.Text = item.ItemModelo;
             label3.Text = "CN";
@@ -5537,6 +5548,7 @@ namespace TurnParts
 
         private void noneToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            return;
             Item item = new Item();
             item.Open(currentCN);
             if (!item.itemExists)
@@ -5558,6 +5570,7 @@ namespace TurnParts
 
         private void turnPartToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            return;
             Item item = new Item();
             item.Open(currentCN);
             if (!item.itemExists)
@@ -7273,6 +7286,141 @@ namespace TurnParts
             bool value = folder1.listmode(listOpenMode);
             if (value)
                 Process.Start(folder1.listaGeralPath());
+        }
+
+        private void chart4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void marcarTodosComoInventariadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListClass lc = new ListClass();
+            List<string> list = new List<string>();
+            lc.Open("Mestra");
+            list.AddRange(lc.mainList);
+
+            setProgressiveBar(list.Count());
+            foreach (string l in list)
+            {
+
+
+                string cn = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                Item item = new Item();
+                item.Open(cn);
+                if(item.grupo == "" && !item.ItemName.Contains("fixture"))
+                {
+                    item.stream("inventariado", "TRUE");
+                    item.Close();
+                }
+                Application.DoEvents();
+                AddProgressiveBar("Marcando Itens " + cn);
+            }
+            AddProgressiveBar("clear");
+        }
+
+        private void desmarcarTodosComoInventariadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListClass lc = new ListClass();
+            List<string> list = new List<string>();
+            lc.Open("Mestra");
+            list.AddRange(lc.mainList);
+
+            setProgressiveBar(list.Count());
+            foreach (string l in list)
+            {
+
+
+                string cn = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                Item item = new Item();
+                item.Open(cn);
+                if (item.grupo == "" && !item.ItemName.Contains("fixture"))
+                {
+                    item.stream("inventariado", "");
+                    item.Close();
+                }
+                AddProgressiveBar("Dermarcando itens " + cn);
+            }
+            AddProgressiveBar("clear");
+        }
+
+        private void listaDePendentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListClass lc = new ListClass();
+            List<string> list = new List<string>();
+            List<string> list2 = new List<string>();
+            lc.Open("Mestra");
+            foreach (string l in lc.mainList)
+            {
+                if(!l.Contains(VarDashPlus+"inventariado" + VarDash + "TRUE"))
+                {
+                    list.Add(l);
+                }
+            }
+            //list.AddRange(lc.filterListVar("inventariado", ""));
+
+            list = lc.filterList(list, lc.RowTitle(12));
+            foreach (string l in list)
+            {
+                Console.WriteLine(l);
+                bool nameCheck = false;
+                bool grupoCheck = true;
+                foreach (string l2 in l.Split(VarDashPlus).ToList())
+                {
+                    if (l2.Split(VarDash)[0] == "Name")
+                    {
+                        if (!l2.Split(VarDash)[1].Contains("fixture"))
+                        {
+                            nameCheck = true;
+                        }
+                    }
+                    if (l2.Split(VarDash)[0] == "grupo")
+                    {
+                        if (l2.Split(VarDash)[1] != "")
+                        {
+                            grupoCheck = false;
+                        }
+                        Console.WriteLine($"grupo={l2.Split(VarDash)[0]} nome={l2.Split(VarDash)[1]} bool={grupoCheck}");
+                    }
+
+                }
+                if (nameCheck && grupoCheck)
+                {
+                    list2.Add(l);
+                }
+
+            }
+            lc.dontFocus = true;
+            lc.Show(lc.RowTitle(11), list2);
+        }
+
+        private void listaDeInventariadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListClass lc = new ListClass();
+            List<string> list = new List<string>();
+            List<string> list2 = new List<string>();
+            lc.Open("Mestra");
+            list.AddRange(lc.filterListVar("inventariado", "TRUE"));
+            
+            list = lc.filterList(list,lc.RowTitle(11));
+            foreach (string l in list)
+            {
+                foreach(string l2 in l.Split(VarDashPlus).ToList())
+                {
+                    if (l2.Split(VarDash)[0] == "Name")
+                    {
+                        if (l2.Split(VarDash)[1].Contains("fixture"))
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            list2.Add(l);
+                        }
+                    }
+                }
+            }
+            lc.Show(lc.RowTitle(11), list);
         }
     }
 

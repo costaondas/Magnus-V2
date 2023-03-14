@@ -178,6 +178,16 @@ namespace MagnusSpace
                     list.Add("qtdBin" + vd() + "Bin");
                     list.Add("QTD" + vd() + "Total");
                     break;
+                case 12:
+
+                    list.Add("CN" + vd() + "CN");
+                    list.Add("Modelo" + vd() + "Modelo");
+                    list.Add("Name" + vd() + "Nome");
+                    list.Add("P/N" + vd() + "P/N");
+                    list.Add("grupo" + vd() + "grupo");
+                    list.Add("qtdBin" + vd() + "Bin");
+                    list.Add("QTD" + vd() + "Total");
+                    break;
 
                     //qtdBin
             }

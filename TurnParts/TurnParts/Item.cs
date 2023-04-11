@@ -11,6 +11,8 @@ using TurnParts;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Collections;
 using static System.Windows.Forms.AxHost;
+using Microsoft.Office.Interop.Excel;
+using System.Security.Cryptography;
 
 namespace MagnusSpace
 {
@@ -32,6 +34,7 @@ namespace MagnusSpace
         public List<string> modelList;
         public List<string> CNList;
         public List<string> LastLogs;
+        public string justificativa = "";
         bool logsListUpdated = false;
         bool setlogsListUpdated = false;
         bool adressesListUpdated = false;
@@ -41,6 +44,7 @@ namespace MagnusSpace
         public string fixtureLoc = "";
         public string ItemPN = "";
         public string ItemName = "";
+        public string category = "";
         public string ItemModelo = "";
         public string qtdInicial = "";
         public int qtdBin = 0;
@@ -75,8 +79,10 @@ namespace MagnusSpace
         public bool itemLocked = false;
         public bool fixtureValue = false; //é fixture?
         public int IN_group = 0;
+        public int SCRAP_group = 0;
         public int total_group = 0;
         public bool itemPresentinGroup = false;
+        public bool isItemScrap = false;
         private int totalStock = 0;
         bool failItem = false;
         char VarDash = ((char)887);
@@ -638,7 +644,10 @@ namespace MagnusSpace
                 {
                     proxVistoria = itemInfoList[a].Split(VarDash)[1];
                 }
-
+                if (line.Split(VarDash)[0] == "category")
+                {
+                    category = itemInfoList[a].Split(VarDash)[1];
+                }
 
 
 
@@ -662,6 +671,16 @@ namespace MagnusSpace
                                 itemPresentinGroup = true;
                                 stream("groupPosition","IN");
                             }
+                        }
+                        if(l.Split(VarDash)[1] == "SCRAP")
+                        {
+                            if (l.Split(VarDash)[0] == ItemCN)
+                            {
+                                isItemScrap = true;
+                                itemPresentinGroup = true;
+                                stream("groupPosition", "SCRAP");
+                            }
+                            SCRAP_group++;
                         }
 
                         b++;
@@ -784,13 +803,31 @@ namespace MagnusSpace
                 {
                     if (l.Split(VarDash)[0] == varName)
                     {
-                        itemInfoList[a] = varName + VarDash + value;
-                        return value;
+                        if (value == "void")
+                        {
+                            itemInfoList[a] = varName + VarDash + "";
+                            return "";
+                        }
+                        else
+                        {
+                            itemInfoList[a] = varName + VarDash + value;
+                            return value;
+                        }
+                            
                     }
                     a++;
                 }
-                itemInfoList.Add(varName + VarDash + value);
-                return value;
+                if(value == "void")
+                {
+                    itemInfoList.Add(varName + VarDash + "");
+                    return "";
+                }
+                else
+                {
+                    itemInfoList.Add(varName + VarDash + value);
+                    return value;
+                }
+                
             }
             
         } // set any var in list
@@ -1055,18 +1092,82 @@ namespace MagnusSpace
             string sCN, sNOME, sPN, sQTD, sEM,sDesc,model2,QTDINI,npiDATE,grupoItem,pictu,valid;
 
 
-           
 
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            int totalRows = l.Count();
+            form.setProgressiveBar(totalRows);
             foreach (string a in l)
             {
-      
+
+                string[] itemLine = l[b].Split(vd());
                 if (a != "")
                 {
                   
                     try { sCN = l[b].Split(vd())[0]; } catch {  return false; }
                     Item i = new Item();
                     i.Open(sCN);
-                    try 
+                    if (!i.itemExists)
+                    {
+                        ListClass lc = new ListClass();
+                        lc.Open("Mestra");
+                        lc.mainList.Add("CN" + VarDash + sCN);
+                        lc.Close();
+                    }
+                    i.Open(sCN);
+                    if (itemLine[1] != "")
+                    {
+                        i.stream("category", itemLine[1]);
+                    }
+                    if (itemLine[2] != "")
+                    {
+                        i.stream("Modelo", itemLine[2]);
+                    }
+                    if (itemLine[3] != "")
+                    {
+                        i.stream("Name", itemLine[3]);
+                    }
+                    if (itemLine[4] != "")
+                    {
+                        i.stream("P/N", itemLine[4]);
+                    }
+                    if (itemLine[5] != "")
+                    {
+                        i.stream("Descrição", itemLine[5]);
+                    }
+                    if (itemLine[6] != "")
+                    {
+                        i.stream("QTD", itemLine[6]);
+                    }
+                    if (itemLine[7] != "")
+                    {
+                        i.stream("EstoqueM", itemLine[7]);
+                    }
+                    if (itemLine[8] != "")
+                    {
+                        i.stream("Estoque Inicial", itemLine[8]);
+                    }
+                    if (itemLine[9] != "")
+                    {
+                        i.stream("Data NPI", itemLine[9]);
+                    }
+                    if (itemLine[10] != "")
+                    {
+                        i.stream("grupo", itemLine[10]);
+                    }
+                    if (itemLine[11] != "")
+                    {
+                        i.stream("picture", itemLine[11]);
+                    }
+                    if (itemLine[12] != "")
+                    {
+                        i.stream("validacao", itemLine[12]);
+                    }
+                    i.Close();
+                    
+                    /*
+                    //Estoque Inicial
+                    try
                     {
                         if (l[b].Split(vd())[2] != "")
                         {
@@ -1242,10 +1343,14 @@ namespace MagnusSpace
                         catch { }
                     }
                        
-
+                    */
                 }
+                
+                form.AddProgressiveBar($"Editando Itens {b + 1}/{totalRows}");
+                System.Windows.Forms.Application.DoEvents();
                 b++;
             }
+            form.AddProgressiveBar("clear");
             return true;
         }
         public int getVar(string VAR)
@@ -1569,7 +1674,27 @@ namespace MagnusSpace
                 }
             }
 
-                return Clog;
+            if(category == "FIXTURE" && qtdInLog >0)
+            {
+                Form1 form = new Form1();
+                form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+                form.checkMaintananceWindow(ID);
+                //checkMaintananceWindow()
+            }
+            return Clog;
+        }
+        public void markMaintanance(string ItemtoInspect,string status, string technician)
+        {
+            Folders folder = new Folders();
+            ListClass lc2 = new ListClass();
+            string data = DateTime.Now.ToString().Split(' ')[0];
+            string listCN = ItemtoInspect; //ToString();
+            lc2.Open("maintenance", folder.itemFolder(ItemCN));
+            Console.WriteLine("UPDATE MAINTANEnCE");
+            lc2.streamPlus(listCN, "maintDate", data, true);
+            lc2.streamPlus(listCN, "Status", status, true);
+            lc2.streamPlus(listCN, "technician", technician, true);
+            lc2.Close();
         }
         public void createItem(string itemName, string PN = "", int qtd = 0, int EsM = 0, string description = "", string CN_ = "", List<string> SKUs = null,string Model1="",string qtdINI = "0", string NPIDate = "", string groupItem = "", string picture1 = "",string validacao1 = "")
         {///// FATA CADASTRAR OS ITENS DIREITO MUDAR O CADASTRO
@@ -2120,36 +2245,27 @@ namespace MagnusSpace
         public void moveAllonGroup(string command = "IN")
         {
             ListClass lc = new ListClass();
+            lc.Open("Mestra");
             int a = 0;
-            switch (command)
+            foreach (string l in lc.mainList.ToList())
             {
-                case "IN":
-                    
-                    lc.Open(grupo, "Grupo");
-                    foreach(string l in lc.mainList.ToList())
-                    {
-                        lc.mainList[a] = lc.mainList[a].Split(VarDash)[0] + VarDash.ToString() + "IN"; 
-                        a++;
-                    }
-                    lc.Close();
-                    IN_group = total_group;
-                    break;
-
-                case "OUT":
-                    lc.Open(grupo, "Grupo");
-                    foreach (string l in lc.mainList.ToList())
-                    {
-                        lc.mainList[a] = lc.mainList[a].Split(VarDash)[0] + VarDash.ToString() + "OUT";
-                        a++;
-                    }
-
-                    lc.Close();
-                    IN_group = 0;
-                    break;
+                List<string> list = l.Split(VarDashPlus).ToList();
+                if (lc.streamSEARCH(list, "groupPosition") != "SCRAP" && lc.streamSEARCH(list, "grupo") == grupo)
+                {
+                    List<string> list2 = lc.stream_SET(list, "groupPosition", command);
+                    lc.mainList[a] = string.Join(VarDashPlus.ToString(), list2);
+                }
+                a++;
             }
+            lc.Close();
+
         }
-        public void clearAdress()
+        public void clearAdress(bool bypass = true)
         {
+            Console.WriteLine("CLEAR ALL");
+            if (category!="FIXTURE" &&bypass)
+                return;
+            Console.WriteLine("CLEAR sucsess");
             location = "";
             location2 = "";
             location3 = "";
@@ -2231,38 +2347,42 @@ namespace MagnusSpace
                         
                         qtdL = 1;
                         ListClass lc5 = new ListClass();
-           
+
+                        if (stream("groupPosition") == "SCRAP")
+                        {
+                            return 1;
+                        }
+                            if (value > 0)
+                            {
+
+                                if (stream("groupPosition") != "IN")
+                                {
+                                    AddLog(1);
+                                    IN_group++;
+                                }
+                                stream("groupPosition", "IN");
+
+                                position = "IN";
+
+                                itemPresentinGroup = true;
+
+                            }
+                            else
+                            {
+
+
+
+                                position = "OUT";
+                                if (stream("groupPosition") == "IN")
+                                {
+                                    AddLog(-1);
+                                    IN_group--;
+                                }
+                                stream("groupPosition", "OUT");
+                                itemPresentinGroup = false;
+                                clearAdress();
+                            }
                         
-                        if (value > 0)
-                        {
-                            if(stream("groupPosition")!= "IN")
-                            {
-                                AddLog(1);
-                                IN_group++;
-                            }
-                            stream("groupPosition", "IN");
-                            
-                            position = "IN";
-                            
-                            itemPresentinGroup = true;
-                            
-                        }
-                        else
-                        {
-
-                            
-                            
-                            position = "OUT";
-                            if (stream("groupPosition") == "IN")
-                            {
-                                AddLog(1);
-                                IN_group--;
-                            }
-                            stream("groupPosition", "OUT");
-                            itemPresentinGroup = false;
-                            clearAdress();
-                        }
-
                         if (ItemName.Contains("fixture", comp))
                         {
                             string logpathAdress = "";
@@ -2416,7 +2536,8 @@ namespace MagnusSpace
             logFormat = logFormat + charEspaciador + "Fixture:" + fixtureLoc;
             logFormat = logFormat + charEspaciador + modo;
             logFormat = logFormat + charEspaciador + "QTD:"+ addLog_QTD.ToString();
-            if(action == "get")
+            logFormat = logFormat + charEspaciador + "OBS:" + justificativa.Replace(' ','_');
+            if (action == "get")
             {
                 return logFormat;
             }
@@ -2759,6 +2880,125 @@ namespace MagnusSpace
                 return Convert.ToInt32(to_convert);
             }
             catch { return 0; }
+        }
+        public void getScrapList()
+        {
+
+        }
+        public bool maintanenceExpired()
+        {
+            Console.WriteLine("Maintanence expere Enter");
+            ListClass lc2 = new ListClass();
+            lc2.Open("Itens de Manutenção");
+            List<string> globalList = lc2.mainList.ToList();
+            Console.WriteLine($"There are {globalList.Count()} itens in global List");
+            ListClass lc = new ListClass();
+            List<string> localList = maintanenceList(); //lista local
+            lc.mainList = localList;
+            foreach (string localItem in localList.ToList())
+            {
+                Console.WriteLine($"local Item {localItem}");
+                if (!localItem.StartsWith("CN"))
+                    continue;
+                string localCN = localItem.Split(VarDashPlus)[0].Split(VarDash)[1];
+                string date = lc.streamPlus(localCN, "maintDate");
+                if (!date.Contains("/"))
+                    continue;
+                Console.WriteLine($">>>>>>{date}<<<<<<<<<<<<<<<<<<");
+                DateTime localItemDate = Convert.ToDateTime(date);
+                int days = 0;
+                bool isItemStillinUSE = false;
+
+                foreach (string globalItem in globalList)
+                {
+                    Console.WriteLine(globalItem);
+                    if (globalItem.StartsWith("CN" +VarDash+ localCN + VarDashPlus))
+                    {
+                        Console.WriteLine($"Found {localCN} in globalList");
+                        try
+                        {
+                            days = Convert.ToInt32(lc2.streamPlus(localCN, "dias_validade"));
+                            isItemStillinUSE = true;
+                            //break;
+                        }
+                        catch { days = 0; Console.WriteLine("Catch"); }
+                        if (isItemStillinUSE)
+                        {
+                            localItemDate = localItemDate.AddDays(days);
+                            if (DateTime.Now > localItemDate)
+                            {
+                                Console.WriteLine($"VENCIDA! {DateTime.Now} > {localItemDate} days = {days}");
+                                return true;
+                            }
+                        }
+
+                    }
+                }
+                
+
+
+                //consertar
+                
+
+                //localItemDate;
+                //days
+
+
+               
+                
+            }
+            Console.WriteLine("All good");
+            return false;
+
+        }
+        public List<string> maintanenceList(bool returnMainList = false) //precisa retornar a lista local
+        {
+            List<string> list = new List<string>();
+            if (returnMainList)
+            {
+                ListClass lc = new ListClass();
+                lc.Open("Itens de Manutenção");
+                if (lc.mainList == null || lc.mainList.Count < 1)
+                {
+                    string firstLine = "CN" + VarDash + "Aterramento" + VarDashPlus;
+                    firstLine += "Data_de_Verificacao" + VarDash + VarDashPlus;
+                    firstLine += "dias_validade" + VarDash + VarDashPlus;
+                    firstLine += "varType" + VarDash + "UNIVERSAL";
+
+                    lc.mainList.Add("//LISTA DE ITENS DE MANUTENÇÃO");
+                    lc.mainList.Add("//Os tópicos abaixo compoe os itens de manutenção");
+                    lc.mainList.Add(firstLine);
+                    lc.Close();
+                }
+                
+                foreach (string l in lc.mainList)
+                {
+                    if (!l.StartsWith("//"))
+                    {
+                        list.Add(l);
+                    }
+                }
+                ListClass lc2 = new ListClass();
+                Folders folder = new Folders();
+
+
+                return list;
+            }
+            else
+            {
+                ListClass lc2 = new ListClass();
+                Folders folder = new Folders();
+                lc2.Open("maintenance", folder.itemFolder(ItemCN));
+                foreach (string l in lc2.mainList)
+                {
+                    if (l.StartsWith("CN"))
+                    {
+                        list.Add(l);
+                    }
+                }
+                return list;
+            }
+            
         }
         public List<string> CXlist()
         {

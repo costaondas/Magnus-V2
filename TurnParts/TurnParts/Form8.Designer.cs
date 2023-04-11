@@ -800,14 +800,14 @@
             // oPÇÔESToolStripMenuItem
             // 
             this.oPÇÔESToolStripMenuItem.Name = "oPÇÔESToolStripMenuItem";
-            this.oPÇÔESToolStripMenuItem.Size = new System.Drawing.Size(89, 32);
+            this.oPÇÔESToolStripMenuItem.Size = new System.Drawing.Size(89, 30);
             this.oPÇÔESToolStripMenuItem.Text = "Opções";
             this.oPÇÔESToolStripMenuItem.Click += new System.EventHandler(this.oPÇÔESToolStripMenuItem_Click);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(75, 32);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(75, 30);
             this.salvarToolStripMenuItem.Text = "Salvar";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
@@ -828,7 +828,7 @@
             // bloquearToolStripMenuItem
             // 
             this.bloquearToolStripMenuItem.Name = "bloquearToolStripMenuItem";
-            this.bloquearToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
+            this.bloquearToolStripMenuItem.Size = new System.Drawing.Size(98, 30);
             this.bloquearToolStripMenuItem.Text = "Bloquear";
             this.bloquearToolStripMenuItem.Click += new System.EventHandler(this.bloquearToolStripMenuItem_Click);
             // 

@@ -1,0 +1,25 @@
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\Teste botão.exe
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\Teste botão.deps.json
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\Teste botão.runtimeconfig.json
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\Teste botão.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\Teste botão.pdb
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.csproj.AssemblyReference.cache
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste_botão.Form1.resources
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.csproj.GenerateResource.cache
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.AssemblyInfoInputs.cache
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.AssemblyInfo.cs
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.csproj.CoreCompileInputs.cache
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\refint\Teste botão.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.pdb
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.genruntimeconfig.cache
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\ref\Teste botão.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\Neodynamic.SDK.ThermalLabel.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libSkiaSharp.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libSkiaSharp.dll
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste botão.csproj.CopyComplete
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste_botão.Zebra.resources
+C:\Users\eduardo_costa\source\repos\Teste botão\Teste botão\obj\Debug\net6.0-windows\Teste_botão.Properties.Resources.resources

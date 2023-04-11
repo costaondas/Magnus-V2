@@ -23,6 +23,7 @@ namespace MagnusSpace
                 case 0:
 
                     list.Add("CN" + vd() + "CN");
+                    list.Add("category" + vd() + "Categoria");
                     list.Add("Modelo" + vd() + "Modelo");
                     list.Add("Name" + vd() + "Nome");
                     list.Add("P/N" + vd() + "P/N");
@@ -188,7 +189,21 @@ namespace MagnusSpace
                     list.Add("qtdBin" + vd() + "Bin");
                     list.Add("QTD" + vd() + "Total");
                     break;
-
+                case 13:
+                    list.Add("Status" + vd() + "Status");
+                    list.Add("CN" + vd() + "Item");
+                    list.Add("Data_de_Verificacao" + vd() + "Data da verificação");
+                    list.Add("Responsavel" + vd() + "Técnico");
+                    list.Add("DaysGone" + vd() + "Dias Corridos");
+                    break;
+                case 14:
+                    list.Add("CN" + vd() + "Item");
+                    list.Add("maintDate" + vd() + "DATA");
+                    break;
+                case 15:
+                    list.Add("CN" + vd() + "Item");
+                    list.Add("Status" + vd() + "STATUS");
+                    break;
                     //qtdBin
             }
 

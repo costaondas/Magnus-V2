@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurnParts;
 
 namespace MagnusSpace
 {
@@ -270,6 +271,7 @@ namespace MagnusSpace
             List<string> Create = new List<string>();
             Create.Add("");
             Create[0] += textBox1.Text + vd().ToString(); // CN
+            Create[0] += textBox12.Text + vd().ToString(); // CN
             Create[0] += textBox2.Text + vd().ToString(); // CN
             Create[0] += textBox3.Text + vd().ToString(); // CN
             Create[0] += textBox4.Text + vd().ToString(); // CN
@@ -302,7 +304,10 @@ namespace MagnusSpace
             
             item.createItemFromList(Create);
             item.Close();
-
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            form.refresh();
+            this.Close();
 
         
             /*
@@ -534,6 +539,21 @@ namespace MagnusSpace
         private void textBox11_Leave(object sender, EventArgs e)
         {
             label14.ForeColor = cLeave;
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_Enter(object sender, EventArgs e)
+        {
+            label1.ForeColor = cEnter;
+        }
+
+        private void textBox12_Leave(object sender, EventArgs e)
+        {
+            label1.ForeColor = cLeave;
         }
     }
 }

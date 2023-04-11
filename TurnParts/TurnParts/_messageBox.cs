@@ -22,6 +22,10 @@ namespace MagnusSpace
         {
 
         }
+        public void ShowNoDialog(string text)
+        {
+            label2.Text = text;
+        }
         public DialogResult Show(string text)
         {
             label2.Text = text;

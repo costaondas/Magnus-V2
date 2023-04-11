@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Collections;
 using TurnParts;
 using Microsoft.Office.Interop.Excel;
+using System.IO;
 
 namespace MagnusSpace
 {
@@ -277,7 +278,7 @@ namespace MagnusSpace
         public List<string> sheetToList(string path)
         {
            
-            int numCellsInLine = 12;
+            //int numCellsInLine = 12;
             List<string> list = new List<string>();
             ExcelM.Application excelAplication = new Microsoft.Office.Interop.Excel.Application();
             if (excelAplication == null)
@@ -295,9 +296,14 @@ namespace MagnusSpace
             bool emptyCell = false;
             int lineNumber = 1;
             string temp = "";
+            int totalC = sheet.Columns.Count;
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            int totalRows = sheet.UsedRange.Rows.Count;
+            form.setProgressiveBar(totalRows - 1);
             while (!emptyCell)
             {
-                for (colum = 1; colum <= numCellsInLine; colum++)
+                for (colum = 1; colum <= totalC; colum++)
                 {
                     //.WriteLine(lineNumber.ToString() + " " + colum.ToString());
                     if (sheet.Cells[lineNumber, colum].Value == null)
@@ -318,7 +324,7 @@ namespace MagnusSpace
                     {
                         list.Add("");
                     }
-                    if (colum != numCellsInLine)
+                    if (colum != totalC)
                     {
                         
                         list[lineNumber-1] += temp + vd().ToString();
@@ -327,10 +333,16 @@ namespace MagnusSpace
                     {
                         list[lineNumber-1] += temp;
                     }
-                    
 
 
+                    System.Windows.Forms.Application.DoEvents();
                 }
+                if (lineNumber <= totalRows-1)
+                {
+                    form.AddProgressiveBar($"Extraindo Excel {lineNumber}/{totalRows-1}");
+                }
+                
+                //System.Windows.Forms.Application.DoEvents();
                 lineNumber++;
                 colum = 1;
             }

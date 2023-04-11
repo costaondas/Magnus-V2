@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurnParts;
 
 namespace MagnusSpace
 {
@@ -24,7 +25,10 @@ namespace MagnusSpace
             if (progressBar1.Value == 100)
             {
                 timer1.Stop();
-                
+                //Form1 form = new Form1();
+               // form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+                //if(form!=null)
+                 //   form.Close();
                 TurnParts.Form1 newForm1 = new TurnParts.Form1();
                 this.Hide();
                 newForm1.ShowDialog();
@@ -40,6 +44,11 @@ namespace MagnusSpace
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadScreen_Load(object sender, EventArgs e)
         {
 
         }

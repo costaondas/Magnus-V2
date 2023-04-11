@@ -5,6 +5,8 @@ using System.Text;
 using System.Diagnostics;
 //using System.Threading.Tasks;
 using System.IO;
+using System.Collections;
+using TurnParts;
 
 namespace MagnusSpace
 {
@@ -16,23 +18,28 @@ namespace MagnusSpace
         char VarDashPlus = ((char)888);
 
         public static string dataFolder = @"C:\MagnusControl";
+        public static string imagePath = @"C:\MagnusImages";
+        public static string backUpFolder = @"C:\MagnusBackup";
         //T:\Turn_Parts\Magnus\Control
         //public static string dataFolder = @"T:\Turn_Parts\Magnus\Control";
-        public string imagePath = dataFolder + @"\" + "Images";
+        //public string imagePath = dataFolder + @"\" + "Images";
         public string printPath = dataFolder + @"\" + "Print";
         public string settingsPath = dataFolder + @"\" + "Config";
         public string TasksFolderPath = dataFolder + @"\" + "Tasks";
         public string GrupoFolderPath = dataFolder + @"\" + "Grupos";
         public string versoesFX = dataFolder + @"\" + "VersoesFX";
         public string logFolder = dataFolder + @"\" + "logFolder";
+        public string Labels = dataFolder + @"\" + "Labels";
         public string logLibrary = dataFolder + @"\" + "logLibrary";
         public string Forecast = dataFolder + @"\" + "Forecast";
         public string Chart = dataFolder + @"\" + "Chart.png";
         public string Scraps = dataFolder + @"\" + "Scraps";
         public string ListaGeralFolderPath = dataFolder + @"\" + "Other Lists";
         public static string Logs = dataFolder + @"\" + "Logs";
-        public static string backUpFolder = dataFolder + @"\" + "Backup";
+        //public static string LogsManutencao = dataFolder + @"\" + "Logs";
+        //public static string backUpFolder = dataFolder + @"\" + "Backup";
         public string fixtureOutLOGS = Logs + @"\" + "FixtureOUT";
+        public string ManutenfixtureOutLOGS = Logs + @"\" + "ManutençãoLogs";
 
         public string planilhaPath = dataFolder + @"\" + "Planilha";
         public string genericPath = dataFolder + @"\" + "Listas Genericas";
@@ -78,9 +85,19 @@ namespace MagnusSpace
                 try { Directory.CreateDirectory(Logs); }
                 catch { }
             }
+            if (!Directory.Exists(ManutenfixtureOutLOGS))
+            {
+                try { Directory.CreateDirectory(ManutenfixtureOutLOGS); }
+                catch { }
+            }
             if (!Directory.Exists(logFolder))
             {
                 try { Directory.CreateDirectory(logFolder); }
+                catch { }
+            }
+            if (!Directory.Exists(Labels))
+            {
+                try { Directory.CreateDirectory(Labels); }
                 catch { }
             }
             if (!Directory.Exists(logLibrary))
@@ -585,28 +602,46 @@ namespace MagnusSpace
                 try { Directory.CreateDirectory(path); }
                 catch { }
             }
+            /*
             ListClass lc = new ListClass();
             ListClass lc2 = new ListClass();
             lc.Open("Mestra", "ListaGeral");
             lc2.Open("Mestra", path);
             lc2.mainList = lc.mainList;
             lc2.Close();
-            string backupLogsFolder = path + @"\" + "TurnPartsList";
-            CopyFilesRecursively(TPFolder, backupLogsFolder);
+            */
+            string backupLogsFolder = path + @"\" + "MagnusControl";
+            CopyFilesRecursively(dataFolder, backupLogsFolder);
         }
         private static void CopyFilesRecursively(string sourcePath, string targetPath)
         {
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            
             //Now Create all of the directories
-            foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+            string[] directories = Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories);
+            int total = directories.Count();
+            int a = 1;
+            form.setProgressiveBar(total);
+            foreach (string dirPath in directories)
             {
                 Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+                form.AddProgressiveBar($"Criando Diretorios {a}/{total}");
+                a++;
             }
 
             //Copy all the files & Replaces any files with the same name
-            foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
+            string[] allFiles = Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories);
+            total = allFiles.Count();
+            form.setProgressiveBar(total);
+            a = 1;
+            foreach (string newPath in allFiles)
             {
                 File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+                form.AddProgressiveBar($"Copiando arquivos {a}/{total}");
+                a++;
             }
+            form.AddProgressiveBar("clear");
         }
         public bool listaCompras(string action = "none")
         {
@@ -887,6 +922,7 @@ namespace MagnusSpace
             catch { }
             List<string> l = new List<string>();
             string line = "CN" + vd();
+            line += "Categoria" + vd();
             line += "Modelo" + vd();
             line += "Nome" + vd();
             line += "P/N" + vd();

@@ -16,6 +16,7 @@ using System.IO.Ports;
 using System.Threading;
 using System.Collections;
 using System.Windows.Forms.DataVisualization.Charting;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TurnParts
 {
@@ -55,9 +56,13 @@ namespace TurnParts
         bool growSlidePanelLeft = true;
         bool editConfigofCritical = false;
         public string criticalRange = "30,60,90,120,180";
+        public string justificativa_saida = "";
         SerialPort mainPort = new SerialPort("COM9", 9600);
         List<string> adressesList= new List<string>();
         string lastCOM = "";
+        string CN_BOX_QUERY = "";
+        int QTD_BOX_QUERY = 0;
+        string BOX_QUERY = "";
         int Panel11maxSize = 1000;
         bool burlarLicensa = true;
         string lastID = "";
@@ -84,30 +89,10 @@ namespace TurnParts
             
           
             InitializeComponent();
-            panel11.BringToFront();
-            try { maxScrapBars = Convert.ToInt32(config("maxScrapBars")); }
-            catch { config("maxScrapBars", "20"); maxScrapBars = 20; }
-            // this.Controls.Add(panel11);
 
-            panel11.Location = new Point(0,0);
+
+
             
-            generateLogPanels();
-            //cycleLifeLayouy("hide");
-           
-            timer1.Interval = 10;
-            timer3.Interval = 10;
-            //  timer1.Start();
-            timer2.Interval = 50;
-            timer2.Start();
-            //timer3.Start();
-            int b = 0;
-            foreach (bool a in OIpins)
-            {
-                OIpins[b] = false;
-            }
-            loadPlacasProduzidas();
-            // Folders f = new Folders();
-            //itensMissing(f.missingList(), missingConfig);
         }
         bool isITdone = false;
         bool zoom = false;
@@ -280,6 +265,7 @@ namespace TurnParts
         {
             List<string> criticalList = new List<string>();
             criticalList.Add("FixtureOUTlogPath");
+            criticalList.Add("ManutençãoFixtureExpirePath");
 
             ListClass list2 = new ListClass();
             list2.Open("Settings", "settings");
@@ -337,9 +323,203 @@ namespace TurnParts
             }
             ListClass list2 = new ListClass();
             list2.Open(DateTime.Now.ToString().Replace(':',' ').Replace('/','_') +" " +RandomString(8), path);
+            Folders folder = new Folders();
+            Item item = new Item();
+            item.Open(currentCN);
+            ListClass lc2 = new ListClass();
+            int a1 = 0;
+            int b1 = 0;
+            switch (item.category)
+            {
+                case "IMAGE":
+                    
+                    lc2.Open("IMAGEM",folder.Labels);
+                    if (lc2.mainList == null || lc2.mainList.Count == 0)
+                    {
+                        string print = "PRINT";
+                        //Xͷ100͸Yͷ120͸Sizeͷ100͸txtͷH
+                        lc2.mainList.Add("PRINT");
+                        lc2.mainList.Add("//Utilizar FontͷA0 para texto e FontͷB0 para QRcode");
+                        lc2.mainList.Add("//Variaveis são chamadas com a função varͷNOME_DA_VARIAVEL");
+                        lc2.mainList.Add("//A função qtdLabelsͷ1 define a quantidade de labels impressa");
+                        lc2.mainList.Add("//CXͷ100 e CYͷ100 São utilizados para centralizar uma label em um ponto");
+                        lc2.mainList.Add("FontͷA0");
+                        lc2.mainList.Add("Xͷ100");
+                        lc2.mainList.Add("Yͷ120");
+                        lc2.mainList.Add("Sizeͷ100");
+                        lc2.mainList.Add("txtͷTEXTO");
+                        lc2.Close();
+                        //MessageBox.Show("No label found");
+                    }
+                    int counter = 0;
+                    string CX = "";
+                    string CY = "";
+                    int size = 50;
+                    foreach (string l in lc2.mainList)
+                    {
+                        counter++;
+
+                        if (l.StartsWith("txt" + VarDash) || l.StartsWith("var" + VarDash))
+                        {
+                            Printer pt = new Printer();
+                            pt.fonte = size;
+                            if (l.StartsWith("var"))
+                            {
+                                pt.texto = item.stream(l.Split(VarDash)[1]);
+                                if (l.Split(VarDash)[1] == "Modelo")
+                                {
+                                    int total = pt.texto.ToCharArray().Count();
+                                    if(total <= 10)
+                                    {
+                                        printString += "Size" + VarDash + "70" + VarDashPlus;
+                                        pt.fonte = 70;
+                                    }
+                                    else
+                                    {
+                                        printString += "Size" + VarDash + "50" + VarDashPlus;
+                                        pt.fonte = size = 50;
+                                    }
+                                }
+                                
+                            }
+                            else
+                            {
+                                pt.texto = l.Split(VarDash)[1];
+                            }
+                            
+                            if (CX != "")
+                            {
+                                pt.X = CX;
+                                printString += "X" + VarDash + pt.newX() + VarDashPlus;
+                                CX = "";
+                            }
+                            if (CY != "")
+                            {
+                                pt.Y = CY;
+                                printString += "Y" + VarDash + pt.newY() + VarDashPlus;
+                                CY = "";
+                            }
+                        }
+                        if (l.StartsWith("Size" + VarDash))
+                        {
+                            try
+                            {
+                                size = Convert.ToInt32(l.Split(VarDash)[1]);
+                            }
+                            catch { size = 50; }
+                        }
+                        if (l.StartsWith("//"))
+                            continue;
+                        if (!l.Contains(VarDash) && counter != 1)
+                            continue;
+                        if(l.StartsWith("var" + VarDash))
+                        {
+                            printString += "txt" + VarDash+ item.stream(l.Split(VarDash)[1]) + VarDashPlus;
+                            continue;
+                        }
+                        if (l.StartsWith("CX" + VarDash))
+                        {
+                            CX = l;
+                            continue;
+                        }
+                        if (l.StartsWith("CY" + VarDash))
+                        {
+                            CY = l;
+                            continue;
+                        }
 
 
-           
+                        printString += l + VarDashPlus;
+                        
+                    }
+                       
+                   // printString += lc2.mainList[0]; //VarDashPlus.ToString() + "printQTD" + VarDash.ToString() + qtd + VarDashPlus.ToString() + "qtdLabels" + VarDash.ToString() + qtdLabels;
+                    
+                    foreach(string l in printString.Split(VarDashPlus).ToList())
+                    {
+                        Console.WriteLine(l);
+                    }
+                    list2.mainList.Add(printString);
+                    list2.Close();
+                    return;
+
+                case "TEST":
+
+                    printString = "PRINT" + VarDashPlus;
+                    a1 = 0;
+                    b1 = 0;
+                    printString += "Size" + VarDash + 30.ToString() + VarDashPlus;
+                    for (a1 = 0; a1 <= 15; a1++)
+                    {
+                        for (b1 = 0; b1 <= 15; b1++)
+                        {
+                            printString += "X" + VarDash + (a1*100).ToString() + VarDashPlus;
+                            printString += "Y" + VarDash + (b1*100).ToString() + VarDashPlus;
+                            printString += "txt" + VarDash + "+" + VarDashPlus;
+                        }
+                    }
+
+                    // printString += lc2.mainList[0]; //VarDashPlus.ToString() + "printQTD" + VarDash.ToString() + qtd + VarDashPlus.ToString() + "qtdLabels" + VarDash.ToString() + qtdLabels;
+
+                    list2.mainList.Add(printString);
+                    list2.Close();
+                    return;
+                case "TEST1":
+
+                    printString = "PRINT" + VarDashPlus;
+                    printString += "Size" + VarDash + 50.ToString() + VarDashPlus;
+                    a1 = 0;
+                    b1 = 0;
+                    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                    foreach (char c in ABC.ToCharArray())
+                    {
+                        //printString += "X" + VarDash + (a1 * 100).ToString() + VarDashPlus;
+                        printString += "Y" + VarDash + (a1 * (1000 / ABC.Count()) + 50).ToString() + VarDashPlus;
+                        printString += "X" + VarDash + "100" + VarDashPlus;
+                        printString += "txt" + VarDash;
+                        for (b1 = 0; b1 < 30; b1++)
+                        {
+                            printString += c.ToString();
+                        }
+                        printString +=VarDashPlus;
+                        a1++;
+                    }
+
+                    // printString += lc2.mainList[0]; //VarDashPlus.ToString() + "printQTD" + VarDash.ToString() + qtd + VarDashPlus.ToString() + "qtdLabels" + VarDash.ToString() + qtdLabels;
+
+                    list2.mainList.Add(printString);
+                    list2.Close();
+                    return;
+                case "TEST2":
+                    
+                    printString = "PRINT" + VarDashPlus;
+                    printString += "Size" + VarDash + 50.ToString() + VarDashPlus;
+                    a1 = 0;
+                    b1 = 0;
+                    string ABC1 = "abcdefghijklmnopqrstuvwxyz0123456789";
+                    foreach (char c in ABC1.ToCharArray())
+                    {
+                        //printString += "X" + VarDash + (a1 * 100).ToString() + VarDashPlus;
+                        printString += "Y" + VarDash + (a1 * (1000 / ABC1.Count()) + 50).ToString() + VarDashPlus;
+                        printString += "X" + VarDash + "100" + VarDashPlus;
+                        printString += "txt" + VarDash;
+                        for (b1 = 0; b1 < 30; b1++)
+                        {
+                            printString += c.ToString();
+                        }
+                        printString += VarDashPlus;
+                        a1++;
+                    }
+
+                    // printString += lc2.mainList[0]; //VarDashPlus.ToString() + "printQTD" + VarDash.ToString() + qtd + VarDashPlus.ToString() + "qtdLabels" + VarDash.ToString() + qtdLabels;
+
+                    list2.mainList.Add(printString);
+                    list2.Close();
+                    return;
+
+
+            }
+
 
             ListClass lc = new ListClass();
             lc.Open("Mestra", "ListaGeral");
@@ -763,10 +943,12 @@ namespace TurnParts
             label2.BringToFront();
             resize_pic();
             int lab1_wid = panel2.Width;
-
+            panel2.Controls.Add(label25);
+            label25.Location = new Point(panel2.Width / 2 - label25.Size.Width / 2, 5);
+            label25.Size = new Size(panel2.Width,30);
 
             label10.Size = new Size(lab1_wid, label10.Height);
-            label10.Location = new Point(0, 10);//new Point(p11.X,p11.Y);
+            label10.Location = new Point(0, label25.Location.Y + label25.Height + 3);//new Point(p11.X,p11.Y);
             label10.Font = new Font("Times New Roman", 30);//40
             label1.Size = new Size(lab1_wid, label1.Height);
             label1.Location = new Point(label10.Location.X + 10, label10.Location.Y + label10.Height);//new Point(p11.X,p11.Y);
@@ -805,7 +987,9 @@ namespace TurnParts
             button1.Location = new Point(textBox1.Location.X, textBox1.Location.Y - button1.Size.Height - 5);
             panel5.Controls.Add(label2);
             label2.Location = new Point(0, 0);
-
+            button12.Size = button1.Size;
+            panel3.Controls.Add(button12);
+            button12.Location = new Point(button1.Location.X,5);
             if (resizePanel != null)
             {
                 resizePanel();
@@ -1021,6 +1205,7 @@ namespace TurnParts
             currentCN = "";
             label1.Text = "";
             label10.Text = "";
+            label25.Text = "";
             labelQTD_value.Text = "";
             label24.Text = "";
             label2.Text = "";
@@ -1197,6 +1382,32 @@ namespace TurnParts
 
         private void Form1_Load(object sender, EventArgs e) //chama o carregamento do layout
         {
+            panel11.BringToFront();
+            try { maxScrapBars = Convert.ToInt32(config("maxScrapBars")); }
+            catch { config("maxScrapBars", "20"); maxScrapBars = 20; }
+            // this.Controls.Add(panel11);
+
+            panel11.Location = new Point(0, 0);
+
+            generateLogPanels();
+            //cycleLifeLayouy("hide");
+
+            timer1.Interval = 10;
+            timer3.Interval = 10;
+            //  timer1.Start();
+            timer2.Interval = 50;
+            timer2.Start();
+            //timer3.Start();
+            int b = 0;
+            foreach (bool a in OIpins)
+            {
+                OIpins[b] = false;
+            }
+            loadPlacasProduzidas();
+            // Folders f = new Folders();
+            //itensMissing(f.missingList(), missingConfig);
+
+            timer4.Start();
             showChart("Hide All");
             time("start");
             validade_License();
@@ -1710,6 +1921,21 @@ namespace TurnParts
             _messageBox ms = new _messageBox();
             ms.Show(text);
         }
+        public bool callJustify()
+        {
+
+            System.Media.SystemSounds.Hand.Play();
+            _multipleChoice ms = new _multipleChoice();
+            ms.Show();
+            if(justificativa_saida != "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public void computeCode(string imput)
         {
 
@@ -1797,7 +2023,7 @@ namespace TurnParts
                     string editedLog = string.Join(" ", sublist);
                     list.Add(editedLog);
                     counter++;
-                    Application.DoEvents();
+                    System.Windows.Forms.Application.DoEvents();
                 }
                 lc2.mainList = list;
                 lc2.Close();
@@ -1820,7 +2046,7 @@ namespace TurnParts
                     List<string> list2 = File.ReadAllLines(listpath).ToList();
                     listMestra.AddRange(list2);
                     counter++;
-                    Application.DoEvents();
+                    System.Windows.Forms.Application.DoEvents();
                 }
                 ListClass lc2 = new ListClass();
                 lc2.Open("allLogs");
@@ -1832,15 +2058,19 @@ namespace TurnParts
             if (comand.Contains("%QTD%"))
             {
                 int qtd3 = 0;
+                string cn = "";
                 try
                 {
-                    qtd3 = Convert.ToInt32(comand.Split('%')[0]);
-                    textBox1.Text = qtd3.ToString();
-                    textBox1.SelectionStart = textBox1.Text.Length;
-                    textBox1.SelectionLength = 0;
+                    QTD_BOX_QUERY = Convert.ToInt32(comand.Split('%')[0]);
+                    CN_BOX_QUERY = comand.Split('%')[1];
+                    textBox1.Text = "";
                     return;
                 }
-                catch { };
+                catch {
+                    QTD_BOX_QUERY = 0;
+                    CN_BOX_QUERY = "";
+                
+                };
                 
             }
             if (comand == "inventariado" || comand == "INVENTARIADO")
@@ -1853,16 +2083,40 @@ namespace TurnParts
                 return;
                 //inventariado
             }
+            if (comand == "não_inventariado" || comand == "nao_inventariado" || comand == "NÃO_INVENTARIADO" || comand == "NAO_INVENTARIADO")
+            {
+                Item item = new Item();
+                item.Open(currentCN);
+                item.stream("inventariado", "");
+                button10.Visible = false;
+                item.Close();
+                return;
+                //inventariado
+            }
             if (comand.Contains("%CXLOC%"))
             {
                 int Qtd = 0;
                 string _qtd = "";
                 string caixa = "";
                 string operation = "";
+                string cnQ = "";
                 try 
                 {
-                    _qtd = comand.Split('%')[0];
-                    caixa = comand.Split('%')[2];
+                    if (comand.Split('%')[0] != "")
+                    {
+                        _qtd = comand.Split('%')[0];
+                        caixa = comand.Split('%')[2];
+                    }
+                    else
+                    {
+                        if (CN_BOX_QUERY == "")
+                            return;
+                        _qtd = QTD_BOX_QUERY.ToString();
+                        QTD_BOX_QUERY = 0;
+                        caixa = comand.Split('%')[2];
+                        callDisplay(CN_BOX_QUERY,true);
+                    }
+                    
                     if (buttonMode()=="ADD")
                     {
                         operation = "+";
@@ -1887,8 +2141,19 @@ namespace TurnParts
                         }
                         
                     }
+                    bool wasQuery = false;
                     Item item = new Item();
-                    item.Open(currentCN);
+                    if(CN_BOX_QUERY != "")
+                    {
+                        item.Open(CN_BOX_QUERY);
+                        CN_BOX_QUERY = "";
+                        wasQuery = true;
+                    }
+                    else
+                    {
+                        item.Open(currentCN);
+                    }
+                    
                     if (Qtd < 0)
                         Qtd *= (-1);
                     string resolt = item.editCX(caixa, Qtd, operation);
@@ -2288,13 +2553,50 @@ namespace TurnParts
             {
                 CN = comand;
             }
-
-            display(CN, qtd);
+            if (qtd >= 25)
+            {
+                if (callJustify())
+                {
+                    display(CN, qtd);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                display(CN, qtd);
+            }
+            
         }
         string qtdLabelCurrentValue = "";
         public void addIdtoTable(string log,int index)
         {
             //pintar datagridview1
+        }
+        public void checkAllFixturesMaintanence()
+        {
+            ListClass lc = new ListClass();
+            lc.Open("Mestra");
+            int total = lc.mainList.Count();
+            setProgressiveBar(total);
+            int step = 1;
+            foreach(string l in lc.mainList)
+            {
+                string cn = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                Item item = new Item();
+                item.Open(cn);
+                if(item.category == "FIXTURE")
+                {
+                    checkMaintanence(item);
+                }
+                AddProgressiveBar($"Analizando {step}/{total} Fixtures");
+                System.Windows.Forms.Application.DoEvents();
+                step++;
+            }
+            AddProgressiveBar("clear");
+            //checkMaintanence(item);
         }
         public async void QTD_label_Animation(int increment, string qtdLcurrentValue)
         {
@@ -2365,9 +2667,13 @@ namespace TurnParts
             closeSmallWindow();
             bool gerarLog = true;
             clearChartPanel();
-            if (ck != "")
+            if (ck != "" && ck != "OG")
             {
                 buttonMode(ck);
+                gerarLog = false;
+            }
+            if(ck == "OG")
+            {
                 gerarLog = false;
             }
             Item item = new Item();
@@ -2470,6 +2776,13 @@ namespace TurnParts
 
             /////////////////////////////////////////////////////////////////////
             Console.WriteLine(2421);
+            item.justificativa = justificativa_saida;
+            justificativa_saida = "";
+            
+            
+            
+            
+
             if (gerarLog)
             {
                 if (item.itemLocked == true && lastCN != currentCN)
@@ -2501,6 +2814,21 @@ namespace TurnParts
                         break;
 
                     case "REMOVE":
+
+                        if (item.category == "FIXTURE")
+                        {
+                            bool mainBad = checkMaintanence(item);
+                            if (mainBad)
+                            {
+                                erro("MANUTENÇÃO VENCIDA!");
+                                break;
+                            }
+                            else
+                            {
+                                //  MessageBox.Show("ALL GOOD");
+                            }
+                        }
+
                         Console.WriteLine(2452);
                         if (closeSearchForm != null)
                         {
@@ -2555,13 +2883,13 @@ namespace TurnParts
                 button7.Visible = false;
                 button6.Text = "Extrair";
                 int ab = 0;
-                ab = item.total_group - item.IN_group;
+                ab = item.total_group - item.IN_group - item.SCRAP_group;
 
-                label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + ab.ToString() + "   TOTAL:" + item.total_group.ToString();
+                label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + ab.ToString() + "   SCRAP:" + item.SCRAP_group.ToString() + "   TOTAL:" + item.total_group.ToString();
                 label24.Visible = false;
                 if (item.itemPresentinGroup)
                 {
-                    labelQTD_value.Text = "IN";
+                    labelQTD_value.Text = item.stream("groupPosition");
                 }
                 else
                 {
@@ -2595,6 +2923,17 @@ namespace TurnParts
             }
             label1.Text = item.ItemName;
             label10.Text = item.ItemModelo;
+            label25.Text = item.category;
+            if(item.category == "FIXTURE")
+            {
+                button12.Visible = true;
+                
+                    
+            }
+            else
+            {
+                button12.Visible = false;
+            }
             label3.Text = "CN";
             label4.Text = item.ItemCN;
             label5.Text = "P/N";
@@ -3087,6 +3426,7 @@ namespace TurnParts
             List<string> list4 = item.lastLogs();
 
             buildDataGrid(list4);
+            
             item.Close();
             if (item.grupo == "")
             {
@@ -3115,6 +3455,7 @@ namespace TurnParts
                 group_layout = false;
             else
                 group_layout = true;
+            
             load_panel_layout();
             lastCN = currentCN;
             stopBlink();
@@ -3610,6 +3951,63 @@ namespace TurnParts
                 l2.Location = new Point(but.Location.X + but.Width / 2 - l2.Width / 2, but.Location.Y + but.Height);
                 a++;
             }
+        }
+        private bool checkMaintanence(Item item)
+        {
+            bool hasItExpired = false;
+            if (item.category == "FIXTURE")
+            {
+                if (item.maintanenceExpired())
+                {
+
+                    hasItExpired = true;
+                }
+            }
+
+
+            ListClass lc6 = new ListClass();
+            string ManutencPath = "";
+            ManutencPath = config("ManutençãoFixtureExpirePath");
+            if (ManutencPath == "")
+            {
+                Folders folder3 = new Folders();
+                ManutencPath = config("ManutençãoFixtureExpirePath", folder3.ManutenfixtureOutLOGS.ToString(),true);
+                // lc3.Close();
+            }
+
+
+
+            lc6.Open(item.ItemCN, ManutencPath);
+            if (hasItExpired)
+            {
+                //callDisplay(currentCN); //precisa consertar 
+
+                //erro("MANUTENÇÃO VENCIDA!");
+                if (Directory.Exists(ManutencPath))
+                {
+                    lc6.mainList.Clear();
+                    lc6.mainList.Add("MANUTENÇÃO=NOTOK");
+                    lc6.mainList.Add(DateTime.Now.ToString());
+                    lc6.Close();
+                }
+
+                //return;
+            }
+            else
+            {
+                if (Directory.Exists(ManutencPath))
+                {
+                    lc6.mainList.Clear();
+                    lc6.mainList.Add("MANUTENÇÃO=OK");
+                    lc6.mainList.Add(DateTime.Now.ToString());
+                    lc6.Close();
+                }
+
+            }
+
+
+            return hasItExpired;
+           // MessageBox.Show("");
         }
         private List<string> getMissingPage(List<string> fullList, int ItensPerPage, string pageNumber)
         {
@@ -4284,7 +4682,7 @@ namespace TurnParts
                     loadAllCNs();
                 }
             }
-
+            refresh();
         }
         string listOpenMode = "padrão";
         private void listaGeralToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4342,6 +4740,59 @@ namespace TurnParts
             if (keyData == (Keys.Control | Keys.E) && textBox1.Focused)
             {
                 buttonMode("EDIT");
+                return true;
+            }
+            if(keyData == (Keys.F10) && textBox1.Focused)
+            {
+                Item item = new Item();
+                item.Open(currentCN);
+                if (item.grupo == "")
+                    return true;
+                if (item.stream("groupPosition") == "SCRAP")
+                {
+                    item.stream("groupPosition", "IN");
+                    item.Close();
+                    refresh();
+                }
+                else
+                {
+                    item.stream("groupPosition", "SCRAP");
+                    item.Close();
+                    refresh();
+                }
+                return true;
+            }
+            if (keyData == (Keys.F9) && textBox1.Focused)
+            {
+                Item item = new Item();
+                item.Open(currentCN);
+                if (item.stream("inventariado") == "" )
+                {
+                    item.stream("inventariado", "TRUE");
+                    button10.Visible = true;
+                    item.Close();
+                }
+                else
+                {
+                    item.stream("inventariado", "");
+                    button10.Visible = true;
+                    item.Close();
+                }
+                refresh();
+                return true;
+            }
+            if (keyData == (Keys.F5) && textBox1.Focused)
+            {
+                refresh();
+                return true;
+            }
+            if (keyData == (Keys.F8) && textBox1.Focused)
+            {
+                Item item = new Item();
+                item.Open(currentCN);
+                item.clearAdress(false);
+                item.Close();
+                refresh();
                 return true;
             }
             if (keyData == (Keys.Control | Keys.P) && textBox1.Focused)
@@ -4574,10 +5025,8 @@ namespace TurnParts
                         Item item = new Item();
                         item.Open(currentCN);
                         item.moveAllonGroup("IN");
-                        label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + (item.total_group - item.IN_group).ToString() + "   TOTAL:" + item.total_group.ToString();
-                        label24.Visible = false;
-                        item.Close();
-
+                        //item.Close();
+                        refresh();
                         break;
                     case DialogResult.No:
                         return;
@@ -4899,9 +5348,8 @@ namespace TurnParts
                         Item item = new Item();
                         item.Open(currentCN);
                         item.moveAllonGroup("OUT");
-                        label2.Text = "IN:" + item.IN_group.ToString() + "   OUT:" + (item.total_group - item.IN_group).ToString() + "   TOTAL:" + item.total_group.ToString();
-                        label24.Visible = false;
-                        item.Close();
+                        //item.Close();
+                        refresh();
                         break;
                     case DialogResult.No:
                         return;
@@ -5528,8 +5976,7 @@ namespace TurnParts
 
         private void atividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 t = new Form2();
-            t.Show();
+            
 
         }
 
@@ -5787,6 +6234,15 @@ namespace TurnParts
 
         private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form9 form = new Form9();
+            form = System.Windows.Forms.Application.OpenForms["Form9"] as Form9;
+            try
+            {
+                if(form != null)
+                    form.Close();
+            }
+            catch { }
+
             Form9 f = new Form9();
             Item item = new Item();
             item.Open(currentCN);
@@ -6319,7 +6775,8 @@ namespace TurnParts
                                 {
                                     qtd_ += qtd;
                                 }
-                                
+                                Item item2 = new Item();
+
                                 scraplist[counterS] = cn + VarDash.ToString() + qtd_.ToString();
                                 break;
                             }
@@ -6384,7 +6841,7 @@ namespace TurnParts
                     try { list.AddRange(list1); }
                     catch { }
                     AddProgressiveBar("Coletando dados 1/2");
-                  Application.DoEvents();
+                    System.Windows.Forms.Application.DoEvents();
                 }
 
 
@@ -6460,7 +6917,7 @@ namespace TurnParts
                         item.Close();
                     }
                     AddProgressiveBar("Coletando dados 1/2");
-                    Application.DoEvents();
+                    System.Windows.Forms.Application.DoEvents();
                 }
 
                 list = switchLog(list);
@@ -6550,10 +7007,18 @@ namespace TurnParts
             }
             return searchButtonReturnTO;
         }
-        public void callDisplay(string cn)
+        public void callDisplay(string cn, bool keepNButtonMode = false)
         {
             string searchButtonReturnTO = searchButtonReturnToOriginal();
-            display(cn, -1, searchButtonReturnTO);
+            if (keepNButtonMode)
+            {
+                display(cn, -1, "OG");
+            }
+            else
+            {
+                display(cn, -1, searchButtonReturnTO);
+            }
+            
 
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -6962,7 +7427,7 @@ namespace TurnParts
                 item2.Close();
 
                 time(cn + " before events");
-                Application.DoEvents();
+                System.Windows.Forms.Application.DoEvents();
                 time(cn + " after events");
             }
 
@@ -7313,7 +7778,7 @@ namespace TurnParts
                     item.stream("inventariado", "TRUE");
                     item.Close();
                 }
-                Application.DoEvents();
+                System.Windows.Forms.Application.DoEvents();
                 AddProgressiveBar("Marcando Itens " + cn);
             }
             AddProgressiveBar("clear");
@@ -7421,6 +7886,176 @@ namespace TurnParts
                 }
             }
             lc.Show(lc.RowTitle(11), list);
+        }
+
+        private void label45_DoubleClick(object sender, EventArgs e)
+        {
+            //
+            if (buttonMode() == "EDIT")
+            {
+                Item item = new Item();
+                string text = textBox1.Text;
+                item.Open(currentCN);
+                item.clearAdress();
+                label1.Text = text;
+                textBox1.Text = "";
+                item.Close();
+                load_panel_layout();
+
+            }
+        }
+        public void refresh()
+        {
+            callDisplay(currentCN,true);
+        }
+        private void sCRAPToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.Open(currentCN);
+            item.stream("groupPosition","SCRAP");
+            item.Close();
+            refresh();
+
+        }
+
+        private void sCRAPToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.Open(currentCN);
+            item.stream("groupPosition", "IN");
+            item.Close();
+            refresh();
+        }
+
+        private void limparEndereçoF8ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.Open(currentCN);
+            item.clearAdress(false);
+            item.Close();
+            refresh();
+           
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            refresh();
+          
+        }
+
+        private void comoSCRAPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        Color but12C_enter = Color.FromArgb(51, 90, 80);
+        Color but12C_leave = Color.FromArgb(92, 94, 97);
+        private void button12_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button12_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button12_MouseEnter(object sender, EventArgs e)
+        {
+            button12.BackColor = but12C_enter;
+        }
+
+        private void button12_MouseLeave(object sender, EventArgs e)
+        {
+            button12.BackColor = but12C_leave;
+        }
+        public void checkMaintananceWindow(string id)
+        {
+            closeSmallWindow();
+            //loadForm(new Form13());
+            Form13 f = new Form13();
+            f.maintananceStatus = true;
+            f.id = id;
+            f.smallFonte = true;
+            f.leftIliment = true;
+            f.itemCN = currentCN;
+            Item item = new Item();
+            item.Open(currentCN);
+            ListClass lc = new ListClass();
+            if (this.panel8.Controls.Count > 0)
+            {
+                this.panel8.Controls.RemoveAt(0);
+            }
+            if (closeSearchForm != null)
+            {
+                closeSearchForm();
+            }
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel8.Controls.Add(f);
+            panel8.Tag = f;
+            f.headList = lc.RowTitle(15);
+            f.displayList = item.maintanenceList(true); //lista local
+            f.title = "ITENS DE MANUTENÇÃO";
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.BringToFront();
+            f.Show();
+        }
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            closeSmallWindow();
+            //loadForm(new Form13());
+            Form13 f = new Form13();
+            f.maintananceWindow = true;
+            f.smallFonte = true;
+            f.leftIliment = true;
+            f.itemCN = currentCN;
+            Item item = new Item();
+            item.Open(currentCN);
+            ListClass lc = new ListClass();
+            if (this.panel8.Controls.Count > 0)
+            {
+                this.panel8.Controls.RemoveAt(0);
+            }
+            if (closeSearchForm != null)
+            {
+                closeSearchForm();
+            }
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel8.Controls.Add(f);
+            panel8.Tag = f;
+            f.headList = lc.RowTitle(14);
+            f.displayList = item.maintanenceList(true); //lista local
+            f.title = "ITENS DE MANUTENÇÃO";
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.BringToFront();
+            f.Show();
+
+        }
+
+        private void itensDeManutençãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form15 t = new Form15();
+            t.Show();
+        }
+
+        private void turnPartsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 t = new Form2();
+            t.Show();
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            string time = DateTime.Now.ToString().Split(' ')[1];
+            if (time.StartsWith("04:00"))
+            {
+                checkAllFixturesMaintanence();
+            }
+            if (time.StartsWith("04:20"))
+            {
+                dotheBackUp();
+            }
         }
     }
 

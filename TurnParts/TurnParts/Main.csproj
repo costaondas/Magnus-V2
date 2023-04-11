@@ -109,6 +109,18 @@
     <Compile Include="Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14.Designer.cs">
+      <DependentUpon>Form14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15.Designer.cs">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,7 @@
       <DependentUpon>LoadScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="PartialListClass.cs" />
+    <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="testForm.cs">
@@ -181,6 +194,12 @@
     <Compile Include="_messageBox.Designer.cs">
       <DependentUpon>_messageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="_multipleChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_multipleChoice.Designer.cs">
+      <DependentUpon>_multipleChoice.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14.resx">
+      <DependentUpon>Form14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15.resx">
+      <DependentUpon>Form15.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -231,6 +256,9 @@
     <EmbeddedResource Include="_messageBox.resx">
       <DependentUpon>_messageBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_multipleChoice.resx">
+      <DependentUpon>_multipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -264,6 +292,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="leaf.ico" />
+    <None Include="Resources\lockClose.png" />
+    <None Include="Resources\lockOpen.png" />
+    <None Include="Resources\check2.png" />
+    <None Include="Resources\lock2.png" />
+    <None Include="Resources\lock1.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\Magnus.png" />

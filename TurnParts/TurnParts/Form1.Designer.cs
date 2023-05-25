@@ -31,23 +31,23 @@ namespace TurnParts
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarPlanilhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,6 +74,8 @@ namespace TurnParts
             this.atividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itensDeManutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.termoDeCompromissoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sKUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnPartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.noneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeInventariadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +89,9 @@ namespace TurnParts
             this.sCRAPToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.limparEndereçoF8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descontinuarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.correnteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comandosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,23 +105,9 @@ namespace TurnParts
             this.panel11 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button14_EXTRAIR_LISTA_DO_MODELO = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -130,9 +121,21 @@ namespace TurnParts
             this.label35 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel6 = new System.Windows.Forms.Panel();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -143,6 +146,7 @@ namespace TurnParts
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label56 = new System.Windows.Forms.Label();
@@ -200,27 +204,30 @@ namespace TurnParts
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button14_EXTRAIR_LISTA_DO_MODELO = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button6 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.label18 = new System.Windows.Forms.Label();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.sKUToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -271,21 +278,21 @@ namespace TurnParts
             // carregarPlanilhaToolStripMenuItem
             // 
             this.carregarPlanilhaToolStripMenuItem.Name = "carregarPlanilhaToolStripMenuItem";
-            this.carregarPlanilhaToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
+            this.carregarPlanilhaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.carregarPlanilhaToolStripMenuItem.Text = "Adicionar Itens";
             this.carregarPlanilhaToolStripMenuItem.Click += new System.EventHandler(this.carregarPlanilhaToolStripMenuItem_Click);
             // 
             // adicionarToolStripMenuItem
             // 
             this.adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
-            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
+            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.adicionarToolStripMenuItem.Text = "Carregar Itens";
             this.adicionarToolStripMenuItem.Click += new System.EventHandler(this.adicionarToolStripMenuItem_Click);
             // 
             // abrirPastaToolStripMenuItem
             // 
             this.abrirPastaToolStripMenuItem.Name = "abrirPastaToolStripMenuItem";
-            this.abrirPastaToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
+            this.abrirPastaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.abrirPastaToolStripMenuItem.Text = "Abrir Pasta";
             this.abrirPastaToolStripMenuItem.Click += new System.EventHandler(this.abrirPastaToolStripMenuItem_Click);
             // 
@@ -293,7 +300,7 @@ namespace TurnParts
             // 
             this.removerToolStripMenuItem.Enabled = false;
             this.removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            this.removerToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
+            this.removerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.removerToolStripMenuItem.Text = "Remover";
             // 
             // portaSerialToolStripMenuItem
@@ -301,7 +308,7 @@ namespace TurnParts
             this.portaSerialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusToolStripMenuItem});
             this.portaSerialToolStripMenuItem.Name = "portaSerialToolStripMenuItem";
-            this.portaSerialToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
+            this.portaSerialToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.portaSerialToolStripMenuItem.Text = "Porta Serial";
             // 
             // statusToolStripMenuItem
@@ -317,7 +324,7 @@ namespace TurnParts
             this.sortListaGeralToolStripMenuItem,
             this.gerarBackUPToolStripMenuItem});
             this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.configuraçõesToolStripMenuItem.Text = "Configurações";
             this.configuraçõesToolStripMenuItem.Click += new System.EventHandler(this.configuraçõesToolStripMenuItem_Click);
             // 
@@ -360,7 +367,8 @@ namespace TurnParts
             this.pOWERBIToolStripMenuItem,
             this.locaçãoToolStripMenuItem,
             this.gruposToolStripMenuItem,
-            this.binToolStripMenuItem});
+            this.binToolStripMenuItem,
+            this.sKUToolStripMenuItem1});
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.relatórioToolStripMenuItem.Text = "Relatório";
@@ -369,35 +377,35 @@ namespace TurnParts
             // listaGeralToolStripMenuItem
             // 
             this.listaGeralToolStripMenuItem.Name = "listaGeralToolStripMenuItem";
-            this.listaGeralToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.listaGeralToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.listaGeralToolStripMenuItem.Text = "Lista Geral";
             this.listaGeralToolStripMenuItem.Click += new System.EventHandler(this.listaGeralToolStripMenuItem_Click);
             // 
             // listaComprasToolStripMenuItem
             // 
             this.listaComprasToolStripMenuItem.Name = "listaComprasToolStripMenuItem";
-            this.listaComprasToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.listaComprasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.listaComprasToolStripMenuItem.Text = "Lista Compras";
             this.listaComprasToolStripMenuItem.Click += new System.EventHandler(this.listaComprasToolStripMenuItem_Click);
             // 
             // forcastToolStripMenuItem
             // 
             this.forcastToolStripMenuItem.Name = "forcastToolStripMenuItem";
-            this.forcastToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.forcastToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.forcastToolStripMenuItem.Text = "Fixtures";
             this.forcastToolStripMenuItem.Click += new System.EventHandler(this.forcastToolStripMenuItem_Click);
             // 
             // relaçãoDeFixturesToolStripMenuItem
             // 
             this.relaçãoDeFixturesToolStripMenuItem.Name = "relaçãoDeFixturesToolStripMenuItem";
-            this.relaçãoDeFixturesToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.relaçãoDeFixturesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.relaçãoDeFixturesToolStripMenuItem.Text = "Simplificada";
             this.relaçãoDeFixturesToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeFixturesToolStripMenuItem_Click);
             // 
             // scrapsToolStripMenuItem
             // 
             this.scrapsToolStripMenuItem.Name = "scrapsToolStripMenuItem";
-            this.scrapsToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.scrapsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.scrapsToolStripMenuItem.Text = "Quantidade";
             this.scrapsToolStripMenuItem.Click += new System.EventHandler(this.scrapsToolStripMenuItem_Click);
             // 
@@ -405,28 +413,28 @@ namespace TurnParts
             // 
             this.pOWERBIToolStripMenuItem.Enabled = false;
             this.pOWERBIToolStripMenuItem.Name = "pOWERBIToolStripMenuItem";
-            this.pOWERBIToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.pOWERBIToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.pOWERBIToolStripMenuItem.Text = "POWER BI";
             this.pOWERBIToolStripMenuItem.Click += new System.EventHandler(this.pOWERBIToolStripMenuItem_Click);
             // 
             // locaçãoToolStripMenuItem
             // 
             this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
-            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.locaçãoToolStripMenuItem.Text = "Locação";
             this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.locaçãoToolStripMenuItem_Click);
             // 
             // gruposToolStripMenuItem
             // 
             this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
-            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.gruposToolStripMenuItem.Text = "Grupos";
             this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
             // 
             // binToolStripMenuItem
             // 
             this.binToolStripMenuItem.Name = "binToolStripMenuItem";
-            this.binToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.binToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.binToolStripMenuItem.Text = "Bin";
             this.binToolStripMenuItem.Click += new System.EventHandler(this.binToolStripMenuItem_Click);
             // 
@@ -434,7 +442,9 @@ namespace TurnParts
             // 
             this.atividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.turnPartsToolStripMenuItem,
-            this.itensDeManutençãoToolStripMenuItem});
+            this.itensDeManutençãoToolStripMenuItem,
+            this.termoDeCompromissoToolStripMenuItem,
+            this.sKUToolStripMenuItem});
             this.atividadesToolStripMenuItem.Name = "atividadesToolStripMenuItem";
             this.atividadesToolStripMenuItem.Size = new System.Drawing.Size(99, 29);
             this.atividadesToolStripMenuItem.Text = "Cadastro";
@@ -454,6 +464,20 @@ namespace TurnParts
             this.itensDeManutençãoToolStripMenuItem.Text = "Itens de Manutenção";
             this.itensDeManutençãoToolStripMenuItem.Click += new System.EventHandler(this.itensDeManutençãoToolStripMenuItem_Click);
             // 
+            // termoDeCompromissoToolStripMenuItem
+            // 
+            this.termoDeCompromissoToolStripMenuItem.Name = "termoDeCompromissoToolStripMenuItem";
+            this.termoDeCompromissoToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
+            this.termoDeCompromissoToolStripMenuItem.Text = "Termo de Vistoria";
+            this.termoDeCompromissoToolStripMenuItem.Click += new System.EventHandler(this.termoDeCompromissoToolStripMenuItem_Click);
+            // 
+            // sKUToolStripMenuItem
+            // 
+            this.sKUToolStripMenuItem.Name = "sKUToolStripMenuItem";
+            this.sKUToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
+            this.sKUToolStripMenuItem.Text = "SKU";
+            this.sKUToolStripMenuItem.Click += new System.EventHandler(this.sKUToolStripMenuItem_Click);
+            // 
             // turnPartToolStripMenuItem
             // 
             this.turnPartToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -461,7 +485,8 @@ namespace TurnParts
             this.visualizarToolStripMenuItem,
             this.marcarToolStripMenuItem,
             this.limparEndereçoF8ToolStripMenuItem,
-            this.refreshToolStripMenuItem});
+            this.refreshToolStripMenuItem,
+            this.moverToolStripMenuItem});
             this.turnPartToolStripMenuItem.Name = "turnPartToolStripMenuItem";
             this.turnPartToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.turnPartToolStripMenuItem.Text = "Turn Part";
@@ -559,6 +584,31 @@ namespace TurnParts
             this.refreshToolStripMenuItem.Text = "Refresh (F5)";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
+            // moverToolStripMenuItem
+            // 
+            this.moverToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.descontinuarToolStripMenuItem,
+            this.correnteToolStripMenuItem});
+            this.moverToolStripMenuItem.Name = "moverToolStripMenuItem";
+            this.moverToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
+            this.moverToolStripMenuItem.Text = "Mover (F4)";
+            this.moverToolStripMenuItem.Click += new System.EventHandler(this.moverToolStripMenuItem_Click);
+            this.moverToolStripMenuItem.MouseEnter += new System.EventHandler(this.moverToolStripMenuItem_MouseEnter);
+            // 
+            // descontinuarToolStripMenuItem
+            // 
+            this.descontinuarToolStripMenuItem.Name = "descontinuarToolStripMenuItem";
+            this.descontinuarToolStripMenuItem.Size = new System.Drawing.Size(282, 34);
+            this.descontinuarToolStripMenuItem.Text = "para Descontinuados";
+            this.descontinuarToolStripMenuItem.Click += new System.EventHandler(this.descontinuarToolStripMenuItem_Click);
+            // 
+            // correnteToolStripMenuItem
+            // 
+            this.correnteToolStripMenuItem.Name = "correnteToolStripMenuItem";
+            this.correnteToolStripMenuItem.Size = new System.Drawing.Size(282, 34);
+            this.correnteToolStripMenuItem.Text = "para Correntes";
+            this.correnteToolStripMenuItem.Click += new System.EventHandler(this.correnteToolStripMenuItem_Click);
+            // 
             // modelosToolStripMenuItem
             // 
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
@@ -626,12 +676,10 @@ namespace TurnParts
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button14_EXTRAIR_LISTA_DO_MODELO);
             this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel5);
@@ -696,20 +744,6 @@ namespace TurnParts
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button14_EXTRAIR_LISTA_DO_MODELO
-            // 
-            this.button14_EXTRAIR_LISTA_DO_MODELO.BackColor = System.Drawing.Color.Yellow;
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14_EXTRAIR_LISTA_DO_MODELO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Location = new System.Drawing.Point(96, 240);
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Name = "button14_EXTRAIR_LISTA_DO_MODELO";
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Size = new System.Drawing.Size(56, 62);
-            this.button14_EXTRAIR_LISTA_DO_MODELO.TabIndex = 29;
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Text = "MD";
-            this.button14_EXTRAIR_LISTA_DO_MODELO.UseVisualStyleBackColor = false;
-            this.button14_EXTRAIR_LISTA_DO_MODELO.Click += new System.EventHandler(this.button14_EXTRAIR_LISTA_DO_MODELO_Click);
-            // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -725,208 +759,10 @@ namespace TurnParts
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.DarkGreen;
-            this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(212, 225);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(138, 66);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "FIXTURE";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.OliveDrab;
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(69, 225);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 66);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "ID";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(90)))), ((int)(((byte)(80)))));
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.chart2);
-            this.panel7.Location = new System.Drawing.Point(1533, 702);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(423, 181);
-            this.panel7.TabIndex = 5;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Snow;
-            this.label9.Location = new System.Drawing.Point(-33, -6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(522, 50);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Trocas Diárias, Semanais e Mensais";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.panel9.Controls.Add(this.label52);
-            this.panel9.Controls.Add(this.label51);
-            this.panel9.Controls.Add(this.label50);
-            this.panel9.Controls.Add(this.label49);
-            this.panel9.Controls.Add(this.label48);
-            this.panel9.Controls.Add(this.label47);
-            this.panel9.Controls.Add(this.label46);
-            this.panel9.Controls.Add(this.button9);
-            this.panel9.Location = new System.Drawing.Point(18, 30);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(327, 92);
-            this.panel9.TabIndex = 6;
-            this.panel9.SizeChanged += new System.EventHandler(this.panel9_SizeChanged);
-            this.panel9.Resize += new System.EventHandler(this.panel9_Resize);
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.Snow;
-            this.label52.Location = new System.Drawing.Point(190, 54);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(0, 45);
-            this.label52.TabIndex = 37;
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.Color.Snow;
-            this.label51.Location = new System.Drawing.Point(181, 44);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(0, 45);
-            this.label51.TabIndex = 36;
-            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.Snow;
-            this.label50.Location = new System.Drawing.Point(188, 28);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(0, 45);
-            this.label50.TabIndex = 35;
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.Snow;
-            this.label49.Location = new System.Drawing.Point(178, 40);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(0, 45);
-            this.label49.TabIndex = 34;
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.Snow;
-            this.label48.Location = new System.Drawing.Point(172, 34);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(0, 45);
-            this.label48.TabIndex = 33;
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.Snow;
-            this.label47.Location = new System.Drawing.Point(163, 24);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(0, 45);
-            this.label47.TabIndex = 32;
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Snow;
-            this.label46.Location = new System.Drawing.Point(214, 18);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(0, 45);
-            this.label46.TabIndex = 31;
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Ivory;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(163, 30);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(126, 41);
-            this.button9.TabIndex = 12;
-            this.button9.Text = ">";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // chart2
-            // 
-            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.chart2.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea6.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea6.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea6);
-            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend6.ForeColor = System.Drawing.Color.White;
-            legend6.IsTextAutoFit = false;
-            legend6.Name = "Legend1";
-            legend6.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend6.TitleForeColor = System.Drawing.Color.White;
-            this.chart2.Legends.Add(legend6);
-            this.chart2.Location = new System.Drawing.Point(216, 136);
-            this.chart2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.OliveDrab,
-        System.Drawing.Color.MediumAquamarine,
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Color = System.Drawing.Color.Yellow;
-            series6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series6.LabelForeColor = System.Drawing.Color.Transparent;
-            series6.Legend = "Legend1";
-            series6.Name = "Trocas";
-            this.chart2.Series.Add(series6);
-            this.chart2.Size = new System.Drawing.Size(387, 270);
-            this.chart2.TabIndex = 15;
-            this.chart2.Text = "chart2";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(40)))), ((int)(((byte)(26)))));
+            this.panel3.Controls.Add(this.checkBox4);
             this.panel3.Controls.Add(this.label58);
             this.panel3.Controls.Add(this.label57);
             this.panel3.Controls.Add(this.label42);
@@ -940,12 +776,25 @@ namespace TurnParts
             this.panel3.Controls.Add(this.label35);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(168, 364);
+            this.panel3.Location = new System.Drawing.Point(185, 408);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(308, 156);
+            this.panel3.Size = new System.Drawing.Size(694, 222);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.checkBox4.ForeColor = System.Drawing.Color.White;
+            this.checkBox4.Location = new System.Drawing.Point(384, 109);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(224, 27);
+            this.checkBox4.TabIndex = 39;
+            this.checkBox4.Text = "Incluir descontinuados";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Visible = false;
             // 
             // label58
             // 
@@ -1109,11 +958,195 @@ namespace TurnParts
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DarkGreen;
+            this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(212, 225);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(138, 66);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "FIXTURE";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(90)))), ((int)(((byte)(80)))));
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.chart2);
+            this.panel7.Location = new System.Drawing.Point(1449, 662);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(423, 181);
+            this.panel7.TabIndex = 5;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Snow;
+            this.label9.Location = new System.Drawing.Point(-33, -6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(522, 50);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Trocas Diárias, Semanais e Mensais";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.panel9.Controls.Add(this.label52);
+            this.panel9.Controls.Add(this.label51);
+            this.panel9.Controls.Add(this.label50);
+            this.panel9.Controls.Add(this.label49);
+            this.panel9.Controls.Add(this.label48);
+            this.panel9.Controls.Add(this.label47);
+            this.panel9.Controls.Add(this.label46);
+            this.panel9.Controls.Add(this.button9);
+            this.panel9.Location = new System.Drawing.Point(18, 30);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(327, 92);
+            this.panel9.TabIndex = 6;
+            this.panel9.SizeChanged += new System.EventHandler(this.panel9_SizeChanged);
+            this.panel9.Resize += new System.EventHandler(this.panel9_Resize);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.Snow;
+            this.label52.Location = new System.Drawing.Point(190, 54);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(0, 45);
+            this.label52.TabIndex = 37;
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.Snow;
+            this.label51.Location = new System.Drawing.Point(181, 44);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(0, 45);
+            this.label51.TabIndex = 36;
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Snow;
+            this.label50.Location = new System.Drawing.Point(188, 28);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(0, 45);
+            this.label50.TabIndex = 35;
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Snow;
+            this.label49.Location = new System.Drawing.Point(178, 40);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(0, 45);
+            this.label49.TabIndex = 34;
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Snow;
+            this.label48.Location = new System.Drawing.Point(172, 34);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(0, 45);
+            this.label48.TabIndex = 33;
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Snow;
+            this.label47.Location = new System.Drawing.Point(163, 24);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(0, 45);
+            this.label47.TabIndex = 32;
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Snow;
+            this.label46.Location = new System.Drawing.Point(214, 18);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(0, 45);
+            this.label46.TabIndex = 31;
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Ivory;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(163, 30);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(126, 41);
+            this.button9.TabIndex = 12;
+            this.button9.Text = ">";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.chart2.BorderlineColor = System.Drawing.Color.DimGray;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(216, 136);
+            this.chart2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.OliveDrab,
+        System.Drawing.Color.MediumAquamarine,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Color = System.Drawing.Color.Yellow;
+            series1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelForeColor = System.Drawing.Color.Transparent;
+            series1.Legend = "Legend1";
+            series1.Name = "Trocas";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(387, 270);
+            this.chart2.TabIndex = 15;
+            this.chart2.Text = "chart2";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(90)))), ((int)(((byte)(59)))));
             this.panel6.Controls.Add(this.chart4);
-            this.panel6.Controls.Add(this.chart3);
             this.panel6.Controls.Add(this.chart5);
             this.panel6.Controls.Add(this.dataGridView1);
             this.panel6.Controls.Add(this.panel10);
@@ -1137,32 +1170,32 @@ namespace TurnParts
             // 
             this.chart4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.chart4.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea7.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea7.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea7.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea7.AxisX2.LineColor = System.Drawing.Color.White;
-            chartArea7.AxisX2.TitleForeColor = System.Drawing.Color.White;
-            chartArea7.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea7.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea7.AxisY2.LineColor = System.Drawing.Color.White;
-            chartArea7.AxisY2.TitleForeColor = System.Drawing.Color.White;
-            chartArea7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea7.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea7.BorderColor = System.Drawing.Color.White;
-            chartArea7.Name = "ChartArea1";
-            chartArea7.ShadowColor = System.Drawing.Color.White;
-            this.chart4.ChartAreas.Add(chartArea7);
+            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY2.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea2.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            chartArea2.ShadowColor = System.Drawing.Color.White;
+            this.chart4.ChartAreas.Add(chartArea2);
             this.chart4.Enabled = false;
-            legend7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend7.ForeColor = System.Drawing.Color.White;
-            legend7.IsTextAutoFit = false;
-            legend7.Name = "Legend1";
-            legend7.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend7.TitleForeColor = System.Drawing.Color.White;
-            this.chart4.Legends.Add(legend7);
-            this.chart4.Location = new System.Drawing.Point(15, 27);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.ForeColor = System.Drawing.Color.White;
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.TitleForeColor = System.Drawing.Color.White;
+            this.chart4.Legends.Add(legend2);
+            this.chart4.Location = new System.Drawing.Point(3, 118);
             this.chart4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chart4.Name = "chart4";
             this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -1170,15 +1203,15 @@ namespace TurnParts
         System.Drawing.Color.OliveDrab,
         System.Drawing.Color.MediumAquamarine,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series7.Color = System.Drawing.Color.Yellow;
-            series7.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series7.IsVisibleInLegend = false;
-            series7.LabelForeColor = System.Drawing.Color.Transparent;
-            series7.Legend = "Legend1";
-            series7.Name = "Trocas";
-            this.chart4.Series.Add(series7);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series2.Color = System.Drawing.Color.Yellow;
+            series2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.IsVisibleInLegend = false;
+            series2.LabelForeColor = System.Drawing.Color.Transparent;
+            series2.Legend = "Legend1";
+            series2.Name = "Trocas";
+            this.chart4.Series.Add(series2);
             this.chart4.Size = new System.Drawing.Size(387, 270);
             this.chart4.TabIndex = 15;
             this.chart4.Text = "chart4";
@@ -1186,73 +1219,37 @@ namespace TurnParts
             this.chart4.MouseEnter += new System.EventHandler(this.chart4_MouseEnter);
             this.chart4.MouseLeave += new System.EventHandler(this.chart4_MouseLeave);
             // 
-            // chart3
-            // 
-            this.chart3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.chart3.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea8.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea8.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea8);
-            legend8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend8.ForeColor = System.Drawing.Color.White;
-            legend8.IsTextAutoFit = false;
-            legend8.Name = "Legend1";
-            legend8.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend8.TitleForeColor = System.Drawing.Color.White;
-            this.chart3.Legends.Add(legend8);
-            this.chart3.Location = new System.Drawing.Point(576, 78);
-            this.chart3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chart3.Name = "chart3";
-            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart3.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.OliveDrab,
-        System.Drawing.Color.MediumAquamarine,
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series8.Color = System.Drawing.Color.Yellow;
-            series8.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series8.LabelForeColor = System.Drawing.Color.Transparent;
-            series8.Legend = "Legend1";
-            series8.Name = "Trocas";
-            this.chart3.Series.Add(series8);
-            this.chart3.Size = new System.Drawing.Size(387, 281);
-            this.chart3.TabIndex = 35;
-            this.chart3.Text = "chart3";
-            // 
             // chart5
             // 
             this.chart5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.chart5.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea9.AxisX.LabelAutoFitMinFontSize = 5;
-            chartArea9.AxisY.LabelAutoFitMinFontSize = 5;
-            chartArea9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea9.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea9.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea9);
-            legend9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend9.Enabled = false;
-            legend9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend9.ForeColor = System.Drawing.Color.White;
-            legend9.IsTextAutoFit = false;
-            legend9.Name = "Legend1";
-            legend9.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend9.TitleForeColor = System.Drawing.Color.White;
-            this.chart5.Legends.Add(legend9);
-            this.chart5.Location = new System.Drawing.Point(702, 81);
+            chartArea3.AxisX.LabelAutoFitMinFontSize = 5;
+            chartArea3.AxisY.LabelAutoFitMinFontSize = 5;
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea3.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea3.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend3.Enabled = false;
+            legend3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.ForeColor = System.Drawing.Color.White;
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.TitleForeColor = System.Drawing.Color.White;
+            this.chart5.Legends.Add(legend3);
+            this.chart5.Location = new System.Drawing.Point(771, 245);
             this.chart5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chart5.Name = "chart5";
             this.chart5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series9.Color = System.Drawing.Color.Yellow;
-            series9.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series9.LabelForeColor = System.Drawing.Color.White;
-            series9.Legend = "Legend1";
-            series9.Name = "Trocas";
-            this.chart5.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Color = System.Drawing.Color.Yellow;
+            series3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Trocas";
+            this.chart5.Series.Add(series3);
             this.chart5.Size = new System.Drawing.Size(387, 281);
             this.chart5.TabIndex = 36;
             this.chart5.Text = "chart5";
@@ -1270,14 +1267,14 @@ namespace TurnParts
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(718, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -1368,6 +1365,7 @@ namespace TurnParts
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.chart3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.label56);
@@ -1398,6 +1396,42 @@ namespace TurnParts
             this.checkBox3.Text = "Incluir ajuste de saldo";
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.Visible = false;
+            // 
+            // chart3
+            // 
+            this.chart3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.chart3.BorderlineColor = System.Drawing.Color.DimGray;
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea4.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.ForeColor = System.Drawing.Color.White;
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.TitleForeColor = System.Drawing.Color.White;
+            this.chart3.Legends.Add(legend4);
+            this.chart3.Location = new System.Drawing.Point(348, -115);
+            this.chart3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chart3.Name = "chart3";
+            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart3.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.OliveDrab,
+        System.Drawing.Color.MediumAquamarine,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Color = System.Drawing.Color.Yellow;
+            series4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.LabelForeColor = System.Drawing.Color.Transparent;
+            series4.Legend = "Legend1";
+            series4.Name = "Trocas";
+            this.chart3.Series.Add(series4);
+            this.chart3.Size = new System.Drawing.Size(387, 281);
+            this.chart3.TabIndex = 35;
+            this.chart3.Text = "chart3";
             // 
             // checkBox2
             // 
@@ -1523,11 +1557,11 @@ namespace TurnParts
             // 
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.button15);
-            this.groupBox1.Location = new System.Drawing.Point(628, 61);
+            this.groupBox1.Location = new System.Drawing.Point(488, 61);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(460, 98);
+            this.groupBox1.Size = new System.Drawing.Size(600, 98);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             // 
@@ -2068,8 +2102,10 @@ namespace TurnParts
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button14_EXTRAIR_LISTA_DO_MODELO);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.chart1);
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Location = new System.Drawing.Point(28, 28);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
@@ -2122,6 +2158,20 @@ namespace TurnParts
             this.label1.TabIndex = 2;
             this.label1.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
             // 
+            // button14_EXTRAIR_LISTA_DO_MODELO
+            // 
+            this.button14_EXTRAIR_LISTA_DO_MODELO.BackColor = System.Drawing.Color.Yellow;
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14_EXTRAIR_LISTA_DO_MODELO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Location = new System.Drawing.Point(81, 206);
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Name = "button14_EXTRAIR_LISTA_DO_MODELO";
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Size = new System.Drawing.Size(56, 62);
+            this.button14_EXTRAIR_LISTA_DO_MODELO.TabIndex = 29;
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Text = "MD";
+            this.button14_EXTRAIR_LISTA_DO_MODELO.UseVisualStyleBackColor = false;
+            this.button14_EXTRAIR_LISTA_DO_MODELO.Click += new System.EventHandler(this.button14_EXTRAIR_LISTA_DO_MODELO_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(222, 25);
@@ -2137,18 +2187,18 @@ namespace TurnParts
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.chart1.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            chartArea10.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            legend10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend10.ForeColor = System.Drawing.Color.White;
-            legend10.IsTextAutoFit = false;
-            legend10.Name = "Legend1";
-            legend10.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend10.TitleForeColor = System.Drawing.Color.White;
-            this.chart1.Legends.Add(legend10);
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            chartArea5.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            legend5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.ForeColor = System.Drawing.Color.White;
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            legend5.TitleFont = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.TitleForeColor = System.Drawing.Color.White;
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(41, 57);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chart1.Name = "chart1";
@@ -2157,18 +2207,32 @@ namespace TurnParts
         System.Drawing.Color.OliveDrab,
         System.Drawing.Color.MediumAquamarine,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))))};
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series10.Color = System.Drawing.Color.Yellow;
-            series10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series10.LabelForeColor = System.Drawing.Color.Transparent;
-            series10.Legend = "Legend1";
-            series10.Name = "Trocas";
-            this.chart1.Series.Add(series10);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Color = System.Drawing.Color.Yellow;
+            series5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.LabelForeColor = System.Drawing.Color.Transparent;
+            series5.Legend = "Legend1";
+            series5.Name = "Trocas";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(387, 270);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.OliveDrab;
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(22, 98);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(138, 66);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "ID";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // timer1
             // 
@@ -2209,6 +2273,13 @@ namespace TurnParts
             this.timer4.Interval = 60000;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
+            // sKUToolStripMenuItem1
+            // 
+            this.sKUToolStripMenuItem1.Name = "sKUToolStripMenuItem1";
+            this.sKUToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.sKUToolStripMenuItem1.Text = "SKU";
+            this.sKUToolStripMenuItem1.Click += new System.EventHandler(this.sKUToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2234,21 +2305,21 @@ namespace TurnParts
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -2430,6 +2501,13 @@ namespace TurnParts
         private System.Windows.Forms.ToolStripMenuItem itensDeManutençãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem turnPartsToolStripMenuItem;
         private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.ToolStripMenuItem moverToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descontinuarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem correnteToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.ToolStripMenuItem termoDeCompromissoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sKUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sKUToolStripMenuItem1;
     }
 }
 

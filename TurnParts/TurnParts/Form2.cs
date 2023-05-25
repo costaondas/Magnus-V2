@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TurnParts;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MagnusSpace
 {
@@ -267,6 +268,24 @@ namespace MagnusSpace
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string CNanalisys = textBox1.Text;
+            ListClass lc = new ListClass();
+            string listName = "";
+            listName = "ItensDescontinuados";
+            lc.Open(listName, "ListaGeral");
+            foreach(string l in lc.mainList.ToList())
+            {
+                if(l.StartsWith("CN" + VarDash + CNanalisys + lc.VarDashPlus))
+                {
+                    string text = "O CN em questão está bloqueado para edição";
+                    System.Media.SystemSounds.Hand.Play();
+                    _messageBox ms = new _messageBox();
+                    ms.Show(text);
+                    return;
+                }
+            }
+
+
             string descrip = "";
             List<string> Create = new List<string>();
             Create.Add("");
@@ -306,7 +325,8 @@ namespace MagnusSpace
             item.Close();
             Form1 form = new Form1();
             form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
-            form.refresh();
+            form.callDisplay(CNanalisys);
+            //form.refresh();
             this.Close();
 
         
@@ -554,6 +574,11 @@ namespace MagnusSpace
         private void textBox12_Leave(object sender, EventArgs e)
         {
             label1.ForeColor = cLeave;
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

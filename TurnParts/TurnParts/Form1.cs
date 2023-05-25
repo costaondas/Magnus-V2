@@ -17,6 +17,9 @@ using System.Threading;
 using System.Collections;
 using System.Windows.Forms.DataVisualization.Charting;
 using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Input;
+using System.Text.RegularExpressions;
+using System.Windows.Forms.VisualStyles;
 
 namespace TurnParts
 {
@@ -32,6 +35,7 @@ namespace TurnParts
         public event myDelegate reapearChartpanel;
         public event myDelegate relocateBut;
         public event myDelegate revertPanelColor;
+        public event myDelegate GrayPanelColor;
         public event myDelegate deleteItensPanel;
         public event myDelegate reapearItempanel;
         public event myDelegate deleteItemPanel;
@@ -44,11 +48,13 @@ namespace TurnParts
         public event myDelegate shutBlinkVersao;
         public event myDelegate shutBlinkStatus;
         public event myDelegate makeitVisible;
+        public event myDelegate serialComand;
         public event myDelegate invisibleLabels;
         public event myDelegate loadAllCNs;
         public event myDelegate closeSearchForm;
         public event myDelegate disposeToolTip;
         public event myDelegate addItemlogPanelButtonDispose;
+        public string serialComandTxt = "";
         bool simpleList = true;
         int num_of_panels = 10;
         int maxScrapBars = 20;
@@ -122,6 +128,7 @@ namespace TurnParts
         public List<string> PlascasProduzidas = new List<string>();
         public static List<string> searchList = new List<string>();
         string currentCN = "";
+        bool formGrayOUT = false;
         string lastCN = "!!!!!!!!";
         int missing_page = 1;
         string lastCharsScreem = "";
@@ -147,6 +154,77 @@ namespace TurnParts
 
         ///////////////////////////// 
 
+        public static string currentScannerCOM = "";
+        public static List<SerialPort> Ports= new List<SerialPort>();
+        SerialPort currentPort;
+        private void setupScanners2()
+        {
+            /*
+            serialComand += () =>
+            {
+                if(serialComandTxt != "")
+                    computeCode(serialComandTxt);
+            };
+            */
+            var _serialPort = new SerialPort("COM3", 115200, Parity.None, 8, StopBits.One);
+            _serialPort.ReadTimeout = 500;
+            _serialPort.WriteTimeout = 500;
+            _serialPort.BaudRate = 115200;
+            _serialPort.Parity = Parity.None;
+            _serialPort.DataBits = 8;
+            _serialPort.StopBits = StopBits.One;
+            _serialPort.Handshake = Handshake.None;
+            _serialPort.RtsEnable = true;
+            _serialPort.DtrEnable = true;
+            _serialPort.Open();
+            //_serialPort.DataReceived += new SerialDataReceivedEventHandler(port_OnReceiveDatazz);
+            currentPort = _serialPort;
+            Thread thr = new Thread(SerialPortProgram);
+            thr.Start();
+        }
+        
+        private void SerialPortProgram()
+        {
+
+            SerialPort port = currentPort;
+
+            while (true)
+            {
+                try
+                {
+
+                    string input = port.ReadExisting();//port.ReadLine();
+                    if(input != "")
+                    {
+                        serialComandTxt = input;
+                        if (serialComand != null)
+                            serialComand();
+                        //string command = "\x16M\x0d\x16T\x0d";
+                        string command = "BASFQ24200";
+                        string commandLine = ""; //"\x16t\r\n";
+                        string prefix = "\x16M\r\n";
+                        string Name = "Xenon";
+                        commandLine += prefix;
+                        commandLine += "[";
+                        commandLine += Name;
+                        commandLine += "]";
+                        commandLine += command;
+                        //command += "\x16";
+                        //command += "t";
+                        //command += " BASFQ24200";
+                        //command += "\r\n";
+                        port.Write(commandLine);
+                        //MessageBox.Show("SEND!");
+                        //Console.WriteLine($"{input}");
+                    }
+                    
+
+                }
+                catch (TimeoutException) { }
+            }
+            
+
+        }
         private void validade_License()
         {
             if (burlarLicensa)
@@ -265,7 +343,10 @@ namespace TurnParts
         {
             List<string> criticalList = new List<string>();
             criticalList.Add("FixtureOUTlogPath");
+            criticalList.Add("printAdress");
             criticalList.Add("ManutençãoFixtureExpirePath");
+            criticalList.Add("requestAdress");
+            //criticalList.Add("assinaturaAdress");
 
             ListClass list2 = new ListClass();
             list2.Open("Settings", "settings");
@@ -325,6 +406,8 @@ namespace TurnParts
             list2.Open(DateTime.Now.ToString().Replace(':',' ').Replace('/','_') +" " +RandomString(8), path);
             Folders folder = new Folders();
             Item item = new Item();
+            if (formGrayOUT)
+                item.itemDescontinued = true;
             item.Open(currentCN);
             ListClass lc2 = new ListClass();
             int a1 = 0;
@@ -522,7 +605,16 @@ namespace TurnParts
 
 
             ListClass lc = new ListClass();
-            lc.Open("Mestra", "ListaGeral");
+            if (item.itemDescontinued)
+            {
+                
+                lc.Open("ItensDescontinuados", "ListaGeral");
+            }
+            else
+            {
+                lc.Open("Mestra", "ListaGeral");
+            }
+            
 
             int a = 0;
             foreach (string l in lc.mainList.ToList())
@@ -1195,6 +1287,7 @@ namespace TurnParts
 
             label41.Location = new Point(button14_EXTRAIR_TODOS_LOGS.Location.X + button14_EXTRAIR_TODOS_LOGS.Width + spacelabels, label39.Location.Y + label41.Height + spacelabels);
             label42.Location = new Point(panel3.Width - label42.Width, label41.Location.Y);
+            checkBox4.Location = new Point(label41.Location.X, label41.Location.Y + checkBox4.Height + spacelabels);
             //panel7.Controls.Add(label9);
             //label9.Location = new Point(panel6.Width / 2 - label9.Width / 2, 0);
 
@@ -1382,11 +1475,23 @@ namespace TurnParts
 
         private void Form1_Load(object sender, EventArgs e) //chama o carregamento do layout
         {
+            serialComand += () =>
+            {
+                if (serialComandTxt != "")
+                {
+                    Invoke(new Action(() =>
+                    {
+                        computeCode(serialComandTxt);
+                        
+                    }));
+                }
+                    
+            };
             panel11.BringToFront();
             try { maxScrapBars = Convert.ToInt32(config("maxScrapBars")); }
             catch { config("maxScrapBars", "20"); maxScrapBars = 20; }
             // this.Controls.Add(panel11);
-
+            loadSKUtoolstrip();
             panel11.Location = new Point(0, 0);
 
             generateLogPanels();
@@ -1593,7 +1698,7 @@ namespace TurnParts
             }
             
             Action backUpAction = new Action(dotheBackUp);
-
+            //setupScanners2();
             //ScheduleAction(backUpAction, DateTime.Today.AddHours(addHour));
 
 
@@ -1938,10 +2043,11 @@ namespace TurnParts
         }
         public void computeCode(string imput)
         {
+            
 
             string comand = "";
-
-            comand = replaceChars(imput); ////////////////erro
+            string replacement = Regex.Replace(imput, @"\t|\n|\r", "");
+            comand = replaceChars(replacement); ////////////////erro
             validade_License();
             if (!licenceFound)
             {
@@ -2143,6 +2249,8 @@ namespace TurnParts
                     }
                     bool wasQuery = false;
                     Item item = new Item();
+                    if(formGrayOUT)
+                        item.itemDescontinued = true;
                     if(CN_BOX_QUERY != "")
                     {
                         item.Open(CN_BOX_QUERY);
@@ -2395,6 +2503,8 @@ namespace TurnParts
                         return;
                     }
                     item1.set_EstoqueMinimo(ab);
+                    
+                    updateLogpanelsFull(item1.logsList);
                     updateLogpanels(item1.getLogList(num_of_panels));
                     item1.Close();
                     //item1.setStatus();
@@ -2425,6 +2535,7 @@ namespace TurnParts
                         return;
                     }
                     item2.QTD("set", ab);
+                    updateLogpanelsFull(item2.logsList);
                     updateLogpanels(item2.getLogList(num_of_panels));
                     labelQTD_value.Text = ab.ToString();
                     label24.Text = item2.QTD("bin").ToString();
@@ -2471,7 +2582,9 @@ namespace TurnParts
                     buildDataGrid(ite_.lastLogs());
 
                     //addIdtoTable(idlog, currentSelectedLogPanel);
+                    updateLogpanelsFull(ite_.logsList);
                     updateLogpanels(ite_.getLogList(num_of_panels));
+                    
                     ite_.Close();
                     ScrapRanking();
                     loadItemScrapChart(ite_._idScrapsList());
@@ -2489,8 +2602,9 @@ namespace TurnParts
                     string ID_OP = comand.Split('$')[1];
                     ID_OP = pattern("Fixture", ID_OP);
                     ite_.addID_inLog(ID_OP, "Fixture", currentSelectedLogPanel);
-                    
 
+
+                    updateLogpanelsFull(ite_.logsList);
                     updateLogpanels(ite_.getLogList(num_of_panels));
                     ite_.Close();
                     return;
@@ -2647,6 +2761,60 @@ namespace TurnParts
         {
             textBox1.Focus();
         }
+        private Color toGray(Color ogColor)
+        {
+            int grayScale = (int)((ogColor.R * .3) + (ogColor.G *
+                    .59) + (ogColor.B * .11));
+            return Color.FromArgb(grayScale, grayScale, grayScale);
+        }
+        public void grayColors(string action = "none")
+        {
+            if(action == "revert")
+            {
+                panel1.BackColor = Color.FromArgb(255, 255, 128);
+                panel2.BackColor = Color.FromArgb(51, 90, 59);
+                panel3.BackColor = Color.FromArgb(22, 40, 26);
+                panel4.BackColor = Color.FromArgb(39, 82, 40);
+                panel5.BackColor = Color.FromArgb(31, 46, 27);
+                panel6.BackColor = Color.FromArgb(51, 90, 59);
+                panel7.BackColor = Color.FromArgb(51, 90, 80);
+                panel8.BackColor = Color.FromArgb(51, 80, 59);
+                panel9.BackColor = Color.FromArgb(45, 70, 80);
+                chart1.BackColor = Color.FromArgb(45, 70, 80);
+                chart2.BackColor = Color.FromArgb(45, 70, 80);
+                chart3.BackColor = Color.FromArgb(45, 70, 80);
+                chart1.Legends[0].BackColor = Color.FromArgb(45, 70, 80);
+                chart2.Legends[0].BackColor = Color.FromArgb(45, 70, 80);
+                chart3.Legends[0].BackColor = Color.FromArgb(45, 70, 80);
+                chart1.ChartAreas[0].BackColor = Color.FromArgb(45, 70, 80);
+                chart2.ChartAreas[0].BackColor = Color.FromArgb(45, 70, 80);
+                chart3.ChartAreas[0].BackColor = Color.FromArgb(45, 70, 80);
+            }
+            else
+            {
+                panel1.BackColor = toGray(panel1.BackColor);
+                panel2.BackColor = toGray(panel2.BackColor);
+                panel3.BackColor = toGray(panel3.BackColor);
+                panel4.BackColor = toGray(panel4.BackColor);
+                panel5.BackColor = toGray(panel5.BackColor);
+                panel6.BackColor = toGray(panel6.BackColor);
+                panel7.BackColor = toGray(panel7.BackColor);
+                panel8.BackColor = toGray(panel8.BackColor);
+                panel9.BackColor = toGray(panel9.BackColor);
+                chart1.BackColor = toGray(chart1.BackColor);
+                chart2.BackColor = toGray(chart2.BackColor);
+                chart3.BackColor = toGray(chart3.BackColor);
+                chart1.Legends[0].BackColor = toGray(chart1.Legends[0].BackColor);
+                chart2.Legends[0].BackColor = toGray(chart2.Legends[0].BackColor);
+                chart3.Legends[0].BackColor = toGray(chart3.Legends[0].BackColor);
+                chart1.ChartAreas[0].BackColor = toGray(chart1.ChartAreas[0].BackColor);
+                chart2.ChartAreas[0].BackColor = toGray(chart2.ChartAreas[0].BackColor);
+                chart3.ChartAreas[0].BackColor = toGray(chart3.ChartAreas[0].BackColor);
+                if (GrayPanelColor != null)
+                    GrayPanelColor();
+            }
+            
+        }
         public void display(string CN, int qtd = 1, string ck = "")
         {
             chartButton = false;
@@ -2725,7 +2893,17 @@ namespace TurnParts
                 panel8.Tag = f;
                 ListClass lc = new ListClass();
                 lc.Open("Mestra");
-                List<string> list = lc.search(lc.mainList.ToList(),CN);
+
+                List<string> listSearch = new List<string>();
+                listSearch.AddRange(lc.mainList.ToList());
+                if(checkBox4.Visible = true && checkBox4.Checked)
+                {
+                    ListClass lc2 = new ListClass();
+                    lc2.Open("ItensDescontinuados", "ListaGeral");
+                    listSearch.AddRange(lc2.mainList.ToList());
+                }
+                
+                List<string> list = lc.search(listSearch, CN);
                 f.displayList = list;
                 f.headList = lc.RowTitle(9);
                 f.Show();
@@ -2738,8 +2916,8 @@ namespace TurnParts
             }
 
 
-            Console.WriteLine(2384);
             item.Open(CN);
+            formGrayOUT = false;
             /////////////////////////////////////////////////////////////////////
             bool foundCN = false; //Motivo CNfound = false
             if (!item.itemExists)
@@ -2755,9 +2933,22 @@ namespace TurnParts
                 }
                 if (!foundCN)
                 {
-                    group_layout = false;
-                    loadNoItemLayout();
-                    return;
+                    item.itemDescontinued = true;
+                    item.Open(CN);
+                    if (item.itemExists)
+                    {
+                        foundCN = true;
+                        formGrayOUT = true;
+                        currentCN = CN;
+                        grayColors();
+                    }
+                    else
+                    {
+                        group_layout = false;
+                        loadNoItemLayout();
+                        return;
+                    }
+                    
                 }
                 else
                 {
@@ -2773,7 +2964,11 @@ namespace TurnParts
                 }
                 currentCN = CN;
             }
-
+            if (!item.itemDescontinued)
+            {
+                grayColors("revert");
+            }
+            enableButtons(!formGrayOUT);
             /////////////////////////////////////////////////////////////////////
             Console.WriteLine(2421);
             item.justificativa = justificativa_saida;
@@ -3171,7 +3366,8 @@ namespace TurnParts
                 MaxScraps = Convert.ToInt32(item.stream("alerta")) * (-1);
                 if (Nscraps > MaxScraps)
                 {
-                    panel6.BackColor = Color.FromArgb(51, 90, 59);
+                    if(!item.itemDescontinued)
+                        panel6.BackColor = Color.FromArgb(51, 90, 59);
                 
                 }
                 else
@@ -3191,7 +3387,8 @@ namespace TurnParts
             }
             catch
             {
-                panel6.BackColor = Color.FromArgb(51, 90, 59);
+                if (!item.itemDescontinued)
+                    panel6.BackColor = Color.FromArgb(51, 90, 59);
               
             }
 
@@ -3221,6 +3418,7 @@ namespace TurnParts
             }
 
 
+            updateLogpanelsFull(item.logsList);
             updateLogpanels(item.getLogList(num_of_panels));
             LastChart = item.chartList(lastCharsScreem);
             //loadChart();
@@ -3810,6 +4008,7 @@ namespace TurnParts
             }
         }
         List<string> logList_;
+        List<string> logList_Full;
         List<string> currentMissingList = null;
         List<string> lastWorkingMissing = null;
         private void loadChart_backup()
@@ -4073,114 +4272,39 @@ namespace TurnParts
         {
 
             return;
-            List<string> missingList = missing;
-            int offset = 0;
-            Size total = new Size(panel6.Size.Width, panel7.Size.Height);
-            int linhas = lineColumns[0]; //7
-            int colunas = lineColumns[1]; //2
-
-
-            ////////////////////////
-
-            if (butDispose != null)
-            {
-                butDispose();
-            }
-
-            int count = 0;
-
-            int breakAll = 0;
-
-
-            listbuttons += () =>
-            {
-
-                foreach (string l in missingList)
-                {
-
-                }
-                for (int a = 0; a < linhas; a++)
-                {
-                    if (breakAll == 1)
-                    {
-                        break;
-                    }
-                    for (int b = 0; b < colunas; b++)
-                    {
-
-                        try
-                        {
-
-                            if (count == missingList.Count())
-                            {
-                                breakAll = 1;
-                                break;
-                            }
-
-                        }
-                        catch
-                        {
-                            break;
-                        }
-                        int smaller = 0;
-                        Button but = new Button();
-
-                        // but.Size = new Size(total.Width / colunas - smaller, total.Height / linhas - smaller);
-                        int butHeight = (panel9.Height - button8.Height) / (linhas);
-                        butHeight = (panel9.Height) / (linhas);
-                        total = new Size(panel6.Size.Width, panel9.Size.Height);
-                        but.Size = new Size(total.Width / colunas - smaller, butHeight);
-                        but.BackColor = Color.FromArgb(62, 51, 161);
-                        but.Location = new Point((total.Width / colunas + smaller) * b, but.Height * a + offset);
-                        Size S1 = but.Size;
-                        Point p1 = but.Location;
-                        int Column = b;
-                        int Line = a;
-                        resizeMissin += () =>
-                        {
-                            butHeight = (panel9.Height) / (linhas);
-                            //butHeight = (panel9.Height - button8.Height) / (linhas);
-                            total = new Size(panel6.Size.Width, panel9.Size.Height);
-                            but.Size = new Size(total.Width / colunas - smaller, butHeight);
-                            but.Location = new Point((total.Width / colunas + smaller) * Column, but.Height * Line + offset);
-
-                            //but.Size = S1;
-                            //but.Location = p1;
-
-                        };
-
-                        but.FlatStyle = FlatStyle.Flat;
-                        but.Font = new Font("Times New Roman", 14);
-                        but.ForeColor = Color.White;
-                        but.TextAlign = ContentAlignment.MiddleCenter;
-                        butDispose += () =>
-                        {
-                            but.Dispose();
-                        };
-                        but.Text = missingList[count].ToString().Split(vd())[0];
-                        string codg = missingList[count].ToString().Split(vd())[1];
-                        but.Click += (s, args) =>
-                        {
-                            textBox1.Focus();
-                            display(codg, 1, "CHECK");
-                        };
-                        panel9.Controls.Add(but);
-
-                        count++;
-                    }
-
-                }
-            };
-
-            if (listbuttons != null)
-                listbuttons();
-
-
+            
 
 
 
         }
-
+        private void updateLogpanelsFull(List<string> list)
+        {
+            List<string> newMainList = new List<string>();
+            newMainList.AddRange(list);
+            Console.WriteLine("Update");
+            List<string> list2 = new List<string>();
+            if (newMainList.Count < num_of_panels)
+            {
+                logList_Full = newMainList;
+                logList_Full.Reverse();
+                Console.WriteLine("Small list");
+            }
+            else
+            {
+                Console.WriteLine("BigList");
+                //logList_Full = list.GetRange(list.Count +1 - num_of_panels, num_of_panels);
+                for (int a = newMainList.Count - 1; a > newMainList.Count - 1 - num_of_panels; a--)
+                {
+                    list2.Add(newMainList[a]);
+                    Console.WriteLine($"log3 = {newMainList[a]}");
+                }
+                logList_Full = list2;
+            }
+            
+            
+            
+            
+        }
         private void updateLogpanels(List<string> list)
         {
             logList_ = list;
@@ -4207,11 +4331,14 @@ namespace TurnParts
                 panel.Size = new Size(panel4.Width, 30);
 
                 Label l1 = new Label(); //log
+               // l1.Visible = false;
                 //Label l2 = new Label();//ID
                 panel.Controls.Add(l1);
                 //panel.Controls.Add(l2);
-
-
+                Button bt = new Button();
+                string btRequest = "";
+                panel.Controls.Add(bt);
+                bt.BringToFront();
 
 
                 //panel.Controls.Add(l1);
@@ -4226,18 +4353,52 @@ namespace TurnParts
                 hideLogPanelLabels += () =>
                 {
                     l1.Text = "";
+                    bt.Visible = false;
                 };
 
-                updatePanels += () =>
+                updatePanels += () => //editar aqui os logs REQ
 
                 {
                     if (logList_ == null)
                         return;
                     int panelNumb = (panel.Location.Y - previewsLoc) / panel.Height;
-
+                    bool panelsHasFlag = false;
+                    string requisição = "";
                     try
                     {
+                       // Console.WriteLine($"LOG FULL {logList_Full[panelNumb]}");
+                        List<string> list1 = new List<string>();
                         l1.Text = logList_[panelNumb];
+                        if(logList_Full!= null)
+                        {
+                            list1 = logList_Full[panelNumb-1].Split(' ').ToList();
+                            foreach (string l in list1)
+                            {
+                                if (l.StartsWith("REQ:"))
+                                {
+                                    //Console.WriteLine($"the log {logList_Full[panelNumb]} has REQ l1 = {l1.Text}");
+                                    panelsHasFlag = true;
+                                    requisição = l.Split(':')[1];
+                                    btRequest = requisição;
+
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                        }
+                        
+                        if (panelsHasFlag)
+                        {
+                            bt.Visible = true;
+                            Console.WriteLine($"bt visible l1 = {l1.Text}");
+                        }
+                        else
+                        {
+                            //bt.Visible = true;
+                            bt.Visible = false;
+                        }
                         if(panelNumb == 1)
                         {
                             lastID = logList_[panelNumb];
@@ -4274,9 +4435,10 @@ namespace TurnParts
                         Point[] array = new Point[2] { new Point(0, 0), new Point(0, 0) };
                         array = schrink(panel.Size, 90, 90, "heightOnly");
                         //textBox2.Location = array[0];
+                        bt.Size = new Size(20,20);
                         l1.Location = new Point(0, panel.Height / 2 - l1.Height / 2);
-
-
+                        bt.Location = new Point(panel.Width - bt.Width, panel.Height / 2 - bt.Height / 2);
+                        bt.BringToFront();
                         //l2.Location = new Point(panel.Size.Width - l2.Size.Width, 0);
 
 
@@ -4311,6 +4473,56 @@ namespace TurnParts
                     {
                         l1.ForeColor = Color.White;
                     }
+
+
+                };
+                GrayPanelColor += () =>
+                {
+                    panel.BackColor = toGray(cl);
+                };
+                bt.Click += (s,args) =>
+                {
+                    textBox1.Focus();
+                    Console.WriteLine(btRequest);
+                    Form17 f = new Form17();
+
+                    string adress = "";
+                    adress = config("requestAdress");
+                    if (adress == "")
+                    {
+                        config("requestAdress", "R:", true);
+                    }
+                    adress += "\\Assinaturas";
+                    string listName = "";//= DateTime.Now.ToString().Replace(':', '_');
+                    //listName = listName.Replace('/', '_');
+                    ListClass lc = new ListClass();
+                    if (!Directory.Exists(adress))
+                    {
+                        System.Media.SystemSounds.Hand.Play();
+                        _messageBox ms = new _messageBox();
+                        ms.Show("Diretorio de assinaturas inexistente");
+                        return;
+                    }
+                   
+                    adress += "\\" + btRequest.Replace('-',' ');
+                    Console.WriteLine($"{"Lista"}||{adress}");
+                    lc.Open("Lista", adress);
+                    foreach(string l in lc.mainList)
+                    {
+                        Console.WriteLine($"list<{l}");
+                    }
+                    f.relação = lc.mainList.ToList();
+
+                    ListClass lc2 = new ListClass();
+                    lc2.Open("Nomes",adress);
+                    f.testemunha1 = lc2.stream("Nome1");
+                    f.testemunha2 = lc2.stream("Nome2");
+                    // lc.mainList = txb_to_list();
+                    //lc.Close();
+                    string extension = ".png";
+                    f.Imagetestemunha1 = System.Drawing.Image.FromFile(adress + "\\" + "Assinatura-01" + extension);
+                    f.Imagetestemunha2 = System.Drawing.Image.FromFile(adress + "\\" + "Assinatura-02"+ extension);
+                    f.Show();
 
 
                 };
@@ -4376,7 +4588,8 @@ namespace TurnParts
         }
         public string buttonMode(string mode = "")
         {
-
+            if(mode != "SEARCH" && mode != "")
+                checkBox4.Visible = false;
             if (mode == "next")
             {
                 switch (button1.Text)
@@ -4462,6 +4675,7 @@ namespace TurnParts
                     case "SEARCH":
                         button1.Text = "SEARCH";
                         button1.BackColor = Color.FromArgb(135, 125, 54);
+                        checkBox4.Visible = true;
                         IO_mode("IDLE");
                         textBox1.Focus();
                         return button1.Text;
@@ -4622,6 +4836,7 @@ namespace TurnParts
         }
         private void carregarPlanilhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             if (carregarPlanilhaToolStripMenuItem.Text == "Adicionar Itens")
             {
                 Folders folder1 = new Folders();
@@ -4659,6 +4874,7 @@ namespace TurnParts
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             Folders folder = new Folders();
             Item item = new Item();
             bool operationSucesssfull = false;
@@ -4795,6 +5011,34 @@ namespace TurnParts
                 refresh();
                 return true;
             }
+            if (keyData == (Keys.F4) && textBox1.Focused)
+            {
+                if (!formGrayOUT)
+                {
+                    Item item = new Item();
+                    item.MoveItem("descontinue", currentCN);
+                    int c = 0;
+                    foreach (string l in CNList.ToList())
+                    {
+                        if (l.Split(VarDashPlus)[0].Split(VarDash)[1] == currentCN)
+                        {
+                            Console.WriteLine($"REMOVE <{CNList[c]}>");
+                            CNList.RemoveAt(c);
+                            break;
+                        }
+                        c++;
+                    }
+                }
+                else
+                {
+                    Item item = new Item();
+                    item.MoveItem("bringItBack", currentCN);
+
+                }
+                refresh();
+                return true;
+            }
+            //iscurrentCNdescontinued
             if (keyData == (Keys.Control | Keys.P) && textBox1.Focused)
             {
                 print(textBox1.Text, textBox7.Text) ;
@@ -5087,6 +5331,7 @@ namespace TurnParts
             string idlog = ite_.addID_inLog(ID_OP, "ID", currentSelectedLogPanel);
             buildDataGrid(ite_.lastLogs());
             //addIdtoTable(idlog, currentSelectedLogPanel);
+            updateLogpanelsFull(ite_.logsList);
             updateLogpanels(ite_.getLogList(num_of_panels));
             ite_.Close();
             ScrapRanking();
@@ -5366,6 +5611,7 @@ namespace TurnParts
             string ID_OP = textBox1.Text;
             ID_OP = pattern("Fixture", ID_OP);
             ite_.addID_inLog(ID_OP, "Fixture", currentSelectedLogPanel);
+            updateLogpanelsFull(ite_.logsList);
             updateLogpanels(ite_.getLogList(num_of_panels));
             ite_.Close();
             textBox1.Text = "";
@@ -6283,6 +6529,7 @@ namespace TurnParts
 
         private void button14_EXTRAIR_LISTA_DO_MODELO_Click(object sender, EventArgs e)
         {
+            
             textBox1.Focus();
             if (currentCN == "")
             {
@@ -6421,6 +6668,7 @@ namespace TurnParts
 
         private void button14_EXTRAIR_TODOS_LOGS_Click(object sender, EventArgs e)
         {
+            
             textBox1.Focus();
             if (currentCN == "")
             {
@@ -6722,8 +6970,9 @@ namespace TurnParts
         bool button11AtWork = false;
         private void button11_Click(object sender, EventArgs e)
         {
-            //go abobora
             
+            //go abobora
+
             if (comboBox1.Text == "TODOS")
             {
                 textBox1.Focus();
@@ -7146,6 +7395,71 @@ namespace TurnParts
             lc.mainList = excelList;
             lc.Close();
 
+        }
+        public void enableButtons(bool value)
+        {
+            if (value)
+            {
+                button14_EXTRAIR_LISTA_DO_MODELO.Enabled = true;
+                button14_EXTRAIR_TODOS_LOGS.Enabled = true;
+                menuStrip1.Enabled = true;
+                button11.Enabled = true;
+
+
+                filesToolStripMenuItem.Enabled = true;
+                imagensToolStripMenuItem.Enabled = true;
+                editarToolStripMenuItem.Enabled = true;
+                relatórioToolStripMenuItem.Enabled = true;
+                atividadesToolStripMenuItem.Enabled = true;
+                modelosToolStripMenuItem.Enabled = true;
+                comandosToolStripMenuItem.Enabled = true;
+                viewPainelToolStripMenuItem.Enabled = true;
+                statusToolStripMenuItem1.Enabled = true;
+                //////
+                ///
+                noneToolStripMenuItem.Enabled = true;
+                visualizarToolStripMenuItem.Enabled = true;
+                marcarToolStripMenuItem.Enabled = true;
+                limparEndereçoF8ToolStripMenuItem.Enabled = true;
+                refreshToolStripMenuItem.Enabled = true;
+
+
+                turnPartsToolStripMenuItem.Enabled = true;
+                moverToolStripMenuItem.Enabled = true;
+
+
+            }
+            else
+            {
+                button14_EXTRAIR_LISTA_DO_MODELO.Enabled = false;
+                button14_EXTRAIR_TODOS_LOGS.Enabled = false;
+                //menuStrip1.Enabled = false;
+                button11.Enabled = false;
+
+
+                /////////
+                filesToolStripMenuItem.Enabled = false;
+                imagensToolStripMenuItem.Enabled = false;
+                editarToolStripMenuItem.Enabled = false;
+                relatórioToolStripMenuItem.Enabled = false;
+                atividadesToolStripMenuItem.Enabled = false;
+                modelosToolStripMenuItem.Enabled = false;
+                comandosToolStripMenuItem.Enabled = false;
+                viewPainelToolStripMenuItem.Enabled = false;
+                statusToolStripMenuItem1.Enabled = false;
+                //////
+                ///
+                noneToolStripMenuItem.Enabled = false;
+                visualizarToolStripMenuItem.Enabled = false;
+                marcarToolStripMenuItem.Enabled=false;
+                limparEndereçoF8ToolStripMenuItem.Enabled = false;
+                refreshToolStripMenuItem.Enabled = false;
+
+
+                turnPartsToolStripMenuItem.Enabled = true;
+                moverToolStripMenuItem.Enabled = true;
+
+            }
         }
 
         private void gerarBackUPToolStripMenuItem_Click(object sender, EventArgs e)
@@ -7676,6 +7990,8 @@ namespace TurnParts
             //loadForm(new Form13());
             Form13 f = new Form13();
             Item item = new Item();
+            if(formGrayOUT)
+                item.itemDescontinued= true;
             item.Open(currentCN);
             adressesList = item.CXlist();
             ListClass lc = new ListClass();
@@ -8056,6 +8372,193 @@ namespace TurnParts
             {
                 dotheBackUp();
             }
+        }
+
+        private void descontinuarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.MoveItem("descontinue", currentCN);
+            int c = 0;
+            foreach (string l in CNList.ToList())
+            {
+                if (l.Split(VarDashPlus)[0].Split(VarDash)[1] == currentCN)
+                {
+                    Console.WriteLine($"REMOVE <{CNList[c]}>");
+                    CNList.RemoveAt(c);
+                    break;
+                }
+                c++;
+            }
+            refresh();
+
+        }
+
+        private void correnteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.MoveItem("bringItBack", currentCN);
+            refresh();
+        }
+
+        private void moverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void moverToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (!formGrayOUT)
+            {
+                descontinuarToolStripMenuItem.Enabled = true;
+                correnteToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                descontinuarToolStripMenuItem.Enabled = false;
+                correnteToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void termoDeCompromissoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form16 t = new Form16();
+            t.Show();
+        }
+
+        private void sKUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form18 t = new Form18();
+            t.Show();
+        }
+
+        public void loadSKUtoolstrip()
+        {
+            Folders folder = new Folders();
+            List<string> clientsList = new List<string>();
+            folder.build(folder.skuPath);
+            string[] direc = Directory.GetDirectories(folder.skuPath);
+            foreach (string direcItem in direc)
+            {
+                clientsList.Add(direcItem.Split('\\').Last());
+            }
+            sKUToolStripMenuItem1.DropDownItems.Clear();
+
+            foreach (string l in clientsList)
+            {
+                Console.WriteLine(l);
+                ToolStripMenuItem client = new ToolStripMenuItem();
+                client.Text = l;
+                sKUToolStripMenuItem1.DropDownItems.Add(client);
+
+
+
+
+                List<string> modeloList = new List<string>();
+                string[] direc2 = Directory.GetDirectories(folder.skuPath + "\\" + l);
+                foreach (string direcItem in direc2)
+                {
+                    modeloList.Add(direcItem.Split('\\').Last());
+                }
+                client.DropDownItems.Clear();
+                foreach(string model in modeloList)
+                {
+                    ToolStripMenuItem modelTool = new ToolStripMenuItem();
+                    modelTool.Text = model;
+                    client.DropDownItems.Add(modelTool);
+
+                    string skuadress = folder.skuPath + "\\" + l  + "\\" + model;
+
+                    ////////
+                    ///
+
+                    string[] files = new string[1];
+                    try
+                    {
+                        files = Directory.GetFiles(skuadress);
+                    }
+                    catch {  }
+
+                    if (files.Count() > 0)
+                    {
+                        foreach (string file in files)
+                        {
+                            try
+                            {
+                                if (file.Contains(".txt"))
+                                {
+                                    string fileName = file.Split('.')[0].Split('\\').Last();
+                                    //ListClass lc = new ListClass();
+                                    ToolStripMenuItem skulist = new ToolStripMenuItem();
+                                    skulist.Text = fileName;
+                                    modelTool.DropDownItems.Add(skulist);
+                                    skulist.Click += (s,args) =>
+                                    {
+                                        if(buttonMode() == "EDIT")
+                                        {
+                                            Form19 t = new Form19();
+                                            t.listAdress= file;
+                                            t.listName = fileName;
+                                            t.Show();
+                                        }
+                                        else
+                                        {
+                                            ListClass lc = new ListClass();
+                                            // lc.mainList = 
+                                            lc.ListPath = file;
+                                            lc.mainList = lc.readList();
+                                            lc.Show(lc.RowTitle(16), null, false, fileName);
+                                        }
+                                        
+                                    };
+                                }
+                            }
+                            catch { }
+                        }
+                    }
+
+                    /*/////////////////////////////////
+
+
+                    string[] files = new string[1];
+                    try
+                    {
+                        files = Directory.GetFiles(listFolder);
+                    }
+                    catch { Console.WriteLine("No Network"); }
+
+                    if (files.Count() > 0)
+                    {
+                        foreach (string file in files)
+                        {
+                            try
+                            {
+                                if (file.Contains(".txt"))
+                                {
+                                    Console.WriteLine(file);
+                                    ListClass lc = new ListClass();
+
+                                }
+                            }
+                            catch(){}
+                    }}
+
+                                    */////////////////////////////////
+
+                }
+
+
+
+
+
+
+                            }
+
+        }
+        private void sKUToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+
+            
         }
     }
 

@@ -99,3 +99,7 @@ C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpac
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace._multipleChoice.resources
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form14.resources
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form15.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form16.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form17.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form18.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form19.resources

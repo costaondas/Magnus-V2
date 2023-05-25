@@ -19,7 +19,7 @@ namespace MagnusSpace
     {
         #region Vars
         ////////////////////////
-        string ListPath = "";
+        public string ListPath = "";
         public List<string> mainList = new List<string>();
         private bool ListUpdated = false;
         public char VarDash = ((char)887);
@@ -231,6 +231,7 @@ namespace MagnusSpace
         {
 
             List<string[]> list = new List<string[]>();
+            Console.WriteLine("Convert lis to datatable");
             list = listtoArray(inList, title);
             DataTable dt = new DataTable();
             string[] titleArray;
@@ -308,7 +309,6 @@ namespace MagnusSpace
         {
             List<string> list = new List<string>();
             List<string> lineList = new List<string>();
-            Console.WriteLine($"count list {inList.Count()}");
             string dashSlot = "";
             foreach (string l in inList.ToList())
             {
@@ -564,7 +564,7 @@ namespace MagnusSpace
 
         }
         bool canYOUREAD = true;
-        private List<string> readList()
+        public List<string> readList()
         {
             try
             {

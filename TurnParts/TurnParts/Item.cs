@@ -13,6 +13,7 @@ using System.Collections;
 using static System.Windows.Forms.AxHost;
 using Microsoft.Office.Interop.Excel;
 using System.Security.Cryptography;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MagnusSpace
 {
@@ -94,7 +95,7 @@ namespace MagnusSpace
         public string PPdateEnd = "";
         public string PPinRange = "";
         public string duraçãoEstoque = "";
-
+        public bool itemDescontinued = false;
 
 
 
@@ -130,6 +131,61 @@ namespace MagnusSpace
         {
 
         }
+        public void MoveItem(string action = "descontinue",string cn = "") // dont Close() item when using this!
+        {
+
+            string listName1 = "Mestra";
+            string listName2 = "ItensDescontinuados";
+            if(action == "bringItBack")
+            {
+                listName2 = "Mestra";
+                listName1 = "ItensDescontinuados";
+            }
+
+            ListClass lc = new ListClass();
+
+            lc.Open(listName1, "ListaGeral");
+            int c = 0;
+            string CN_ = "";
+            if(cn == "")
+            {
+                CN_ = ItemCN;
+            }
+            else
+            {
+                CN_ = cn;
+            }
+            string CNLine = "";
+            bool foundit = false;
+            foreach(string l in lc.mainList)
+            {
+                try
+                {
+                    if (l.Split(VarDashPlus)[0].Split(VarDash)[1] == CN_)
+                    {
+                        Console.WriteLine("CN<" + CN_ + ">");
+                        Console.WriteLine("Line === " + l);
+                        CNLine = l;
+                        foundit = true;
+                        break;
+                    }
+                }
+                catch { }
+                
+                c++;
+            }
+            if (foundit)
+            {
+                lc.mainList.RemoveAt(c);
+                lc.Close();
+                ListClass lc2 = new ListClass();
+                lc2.Open(listName2, "ListaGeral");
+                lc2.mainList.Add(CNLine);
+                lc2.Close();
+            }
+            
+            
+        }
         public void Open(string CN, string ID = "")
         {
 
@@ -147,7 +203,7 @@ namespace MagnusSpace
             {
                 return;
             }
-            
+            //NPI451ATP32L71\tpLog.txt
             log_path = folder.itemLogPath(CN);
             set_log_path = folder.itemSetLogPath(CN);
             adressesListPath = folder.itemAdressesPath(CN);
@@ -188,8 +244,13 @@ namespace MagnusSpace
         }
         public void itemExistsMethod()
         {
+            string listName = "Mestra";
             ListClass lc = new ListClass();
-            lc.Open("Mestra", "ListaGeral");
+            if (itemDescontinued)
+            {
+                listName = "ItensDescontinuados";
+            }
+            lc.Open(listName, "ListaGeral");
             foreach (string l in lc.mainList.ToList())
             {
                 List<string> subList = l.Split(VarDashPlus).ToList();
@@ -1096,6 +1157,35 @@ namespace MagnusSpace
             Form1 form = new Form1();
             form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
             int totalRows = l.Count();
+            ListClass lc7 = new ListClass();
+            lc7.Open("ItensDescontinuados", "ListaGeral");
+            List<string> listError = new List<string>();
+            foreach(string a in l)
+            {
+                string CNanalisys = l[b].Split(vd())[0];
+                foreach (string l2 in lc7.mainList.ToList())
+                {
+                    if (l2.Split(VarDashPlus)[0].Split(VarDash)[1] == CNanalisys)
+                    {
+                        listError.Add(l2);
+                        break;
+                    }
+                }
+                
+            }
+
+            if(listError.Count > 0)
+            {
+                string text = "Alguns dos CNs se encontram bloqueados";
+                System.Media.SystemSounds.Hand.Play();
+                _messageBox ms = new _messageBox();
+                ms.Show(text);
+                ListClass lc8 = new ListClass();
+                lc8.mainList = listError;
+                lc8.Show(lc8.RowTitle(2),listError,false,"CNs bloqueados");
+                return false;
+            }
+
             form.setProgressiveBar(totalRows);
             foreach (string a in l)
             {
@@ -1683,6 +1773,58 @@ namespace MagnusSpace
             }
             return Clog;
         }
+        public string varValue(string l)
+        {
+            return l.Split(VarDash)[1];
+        }
+        public int howManyFXwecanbuild()
+        {
+            List<string> list = new List<string>();
+            ListClass lc = new ListClass();
+            lc.Open("Mestra");
+            Folders folder = new Folders();
+            ListClass lc2 = new ListClass();
+            lc2.Open("dependentes", folder.itemFolder(ItemCN));
+            int counter = 0;
+            foreach(string l in lc2.mainList.ToList()) // para cada item dependente
+            {
+                string qtdDisponivel = VarDashPlus + "QTDdisp" + VarDash;
+                string dependentCN = varValue(l.Split(VarDashPlus)[0]);
+                foreach(string l2 in lc.mainList.ToList())
+                {
+                    string mainCN = varValue(l2.Split(VarDashPlus)[0]);
+                    if(mainCN == dependentCN)
+                    {
+                        ListClass lc3 = new ListClass();
+                        lc3.mainList = l2.Split(VarDashPlus).ToList();
+                        qtdDisponivel += lc3.stream("QTD");
+                        //list.Add(l2);
+                        break;
+                    }
+                }
+                lc2.mainList[counter] = lc2.mainList[counter] + qtdDisponivel;
+                counter++;
+
+            }
+            //at this point list conteins all itens of dependent list
+            foreach(string l in lc2.mainList.ToList())
+            {
+                string cn = l.Split(VarDashPlus)[0].Split(VarDash)[1];
+                string _qtdN = l.Split(VarDashPlus)[1].Split(VarDash)[1];
+                string _qtdEst = l.Split(VarDashPlus)[2].Split(VarDash)[1];
+                int qtdN_INT = cv(_qtdN);
+                int qtdEst_INT = cv(_qtdEst);
+                float qtdN = (float)qtdN_INT;
+                float qtdEst = (float)qtdEst_INT;
+                int qtdFixtures = (int)(qtdEst / qtdN);
+
+            }
+
+
+            // CN:  QTDneeded:
+            return 0;//lc2.mainList;
+        }
+
         public void markMaintanance(string ItemtoInspect,string status, string technician)
         {
             Folders folder = new Folders();
@@ -2480,7 +2622,14 @@ namespace MagnusSpace
         public int sumCX()
         {
             int total = 0;
-
+            if(AdressesList == null)
+            {
+                string text = "Lista de endereços de caixas não encontrada";
+                System.Media.SystemSounds.Hand.Play();
+                _messageBox ms = new _messageBox();
+                ms.Show(text);
+                return 0;
+            }
             foreach (string l in AdressesList)
             {
                 total += cv(l.Split(VarDashPlus)[1]);
@@ -3216,7 +3365,16 @@ namespace MagnusSpace
 
                     //itemInfoList = File.ReadAllLines(itemInfoPath).ToList();
                     ListClass lc = new ListClass();
-                    lc.Open("Mestra","ListaGeral");
+                    string listName = "";
+                    if (itemDescontinued)
+                    {
+                        listName = "ItensDescontinuados";
+                    }
+                    else
+                    {
+                        listName = "Mestra";
+                    }
+                    lc.Open(listName, "ListaGeral");
                     foreach(string l in lc.mainList.ToList())
                     {
                         List<string> subList = l.Split(VarDashPlus).ToList();
@@ -3333,7 +3491,16 @@ namespace MagnusSpace
 
                 string combinedString = list_tostring();
                 ListClass lc = new ListClass();
-                lc.Open("Mestra", "ListaGeral");
+                string listName = "";
+                if (itemDescontinued)
+                {
+                    listName = "ItensDescontinuados";
+                }
+                else
+                {
+                    listName = "Mestra";
+                }
+                lc.Open(listName, "ListaGeral");
 
                 int a = 0;
                 foreach (string l in lc.mainList.ToList())

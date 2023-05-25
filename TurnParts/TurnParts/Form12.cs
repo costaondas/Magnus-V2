@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,9 +53,12 @@ namespace MagnusSpace
             dataGridView1.Columns.Clear();
             displayList = lc.mainList;
             */
-           
+
+            Console.WriteLine("get main data");
             mainDATA = lc.toDataTable(displayList, headList);
+            Console.WriteLine("main data ok");
             displayList = lc.filterList(displayList, headList);
+            Console.WriteLine("Filtered");
             dataGridView1.DataSource = mainDATA;
 
             //AutoSize = true;
@@ -222,7 +226,7 @@ namespace MagnusSpace
             //int row = dataGridView1.CurrentCell.RowIndex;
             string text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             Form1 form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
-            form.callDisplay(text);
+            form.callDisplay(text); // procurar em EOL tambem
             //MessageBox.Show(text);
 
 
@@ -237,6 +241,39 @@ namespace MagnusSpace
 
         private void Form12_SizeChanged(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ListClass lc = new ListClass();
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            string adress = "";
+            adress = form.config("requestAdress"); //ok
+            if (adress == "")
+            {
+                form.config("requestAdress", "R:", true);
+                return;
+            }
+            adress += "\\Listas";
+            if (!Directory.Exists(adress))
+            {
+                try
+                {
+                    Directory.CreateDirectory(adress);
+                }
+                catch
+                {
+                    return;
+                }
+                
+            }
+            string listName = DateTime.Now.ToString().Replace(':', '_');
+            listName = listName.Replace('/', '_');
+            lc.Open(listName,adress);
+            lc.mainList.Add(String.Join(lc.VarDashPlus.ToString(),headList));
+            lc.mainList.AddRange(displayList);
+            lc.Close();
         }
     }
 }

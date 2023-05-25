@@ -45,7 +45,7 @@ namespace MagnusSpace
             {
                 loc = DataGridViewContentAlignment.MiddleLeft;
             }
-            
+            Console.WriteLine("Form 13 to data table");
             dataGridView1.DataSource = lc.toDataTable(displayList, headList);
             try
             {
@@ -157,6 +157,11 @@ namespace MagnusSpace
                 }
             }
             
+
+        }
+
+        private void tabletToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

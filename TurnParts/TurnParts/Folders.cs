@@ -24,6 +24,7 @@ namespace MagnusSpace
         //public static string dataFolder = @"T:\Turn_Parts\Magnus\Control";
         //public string imagePath = dataFolder + @"\" + "Images";
         public string printPath = dataFolder + @"\" + "Print";
+        public string skuPath = dataFolder + @"\" + "SKU";
         public string settingsPath = dataFolder + @"\" + "Config";
         public string TasksFolderPath = dataFolder + @"\" + "Tasks";
         public string GrupoFolderPath = dataFolder + @"\" + "Grupos";
@@ -70,121 +71,32 @@ namespace MagnusSpace
         }
         public void buildStructure() 
         {
-            if (!Directory.Exists(dataFolder))
-            {
-                try{ Directory.CreateDirectory(dataFolder); }
-                catch { }
-            }
-            if (!Directory.Exists(planilhaPath))
-            {
-                try { Directory.CreateDirectory(planilhaPath); }
-                catch { }
-            }
-            if (!Directory.Exists(Logs))
-            {
-                try { Directory.CreateDirectory(Logs); }
-                catch { }
-            }
-            if (!Directory.Exists(ManutenfixtureOutLOGS))
-            {
-                try { Directory.CreateDirectory(ManutenfixtureOutLOGS); }
-                catch { }
-            }
-            if (!Directory.Exists(logFolder))
-            {
-                try { Directory.CreateDirectory(logFolder); }
-                catch { }
-            }
-            if (!Directory.Exists(Labels))
-            {
-                try { Directory.CreateDirectory(Labels); }
-                catch { }
-            }
-            if (!Directory.Exists(logLibrary))
-            {
-                try { Directory.CreateDirectory(logLibrary); }
-                catch { }
-            }
-            if (!Directory.Exists(versoesFX))
-            {
-                try { Directory.CreateDirectory(versoesFX); }
-                catch { }
-            }
-            if (!Directory.Exists(Forecast))
-            {
-                try { Directory.CreateDirectory(Forecast); }
-                catch { }
-            }
-            if (!Directory.Exists(Scraps))
-            {
-                try { Directory.CreateDirectory(Scraps); }
-                catch { }
-            }
-            if (!Directory.Exists(printPath))
-            {
-                try { Directory.CreateDirectory(printPath); }
-                catch { }
-            }
-            if (!Directory.Exists(fixtureOutLOGS))
-            {
-                try { Directory.CreateDirectory(fixtureOutLOGS); }
-                catch { }
-            }
-            if (!Directory.Exists(ListaGeralFolderPath))
-            {
-                try { Directory.CreateDirectory(ListaGeralFolderPath); }
-                catch { }
-            }
-            if (!Directory.Exists(GrupoFolderPath))
-            {
-                try { Directory.CreateDirectory(GrupoFolderPath); }
-                catch { }
-            }
-            if (!Directory.Exists(settingsPath))
-            {
-                try { Directory.CreateDirectory(settingsPath); }
-                catch { }
-            }
-            if (!Directory.Exists(TasksFolderPath))
-            {
-                try { Directory.CreateDirectory(TasksFolderPath); }
-                catch { }
-            }
-            if (!Directory.Exists(genericPath))
-            {
-                try { Directory.CreateDirectory(genericPath); }
-                catch { }
-            }
-            if (!Directory.Exists(imagePath))
-            {
-                try { Directory.CreateDirectory(imagePath); }
-                catch { }
-            }
-            if (!Directory.Exists(TPFolder))
-            {
-                try { Directory.CreateDirectory(TPFolder); }
-                catch { }
-            }
-            if (!Directory.Exists(mainListEXPath))
-            {
-                try { Directory.CreateDirectory(mainListEXPath); }
-                catch { }
-            }
-            if (!Directory.Exists(fixtureFolder))
-            {
-                try { Directory.CreateDirectory(fixtureFolder); }
-                catch { }
-            }
-            if (!Directory.Exists(backUpFolder))
-            {
-                try { Directory.CreateDirectory(backUpFolder); }
-                catch { }
-            }
-            if (!File.Exists(getFixturePath()))
-            {
-                try { File.CreateText(getFixturePath()); }
-                catch { }
-            }
+            build(dataFolder);
+            build(planilhaPath);
+            build(Logs);
+            build(skuPath);
+            build(ManutenfixtureOutLOGS);
+            build(logFolder);
+            build(Labels);
+            build(logLibrary);
+            build(versoesFX);
+            build(Forecast);
+            build(Scraps); 
+            build(printPath);
+            build(fixtureOutLOGS);
+            build(ListaGeralFolderPath);
+            build(GrupoFolderPath);
+            build(settingsPath);
+            build(TasksFolderPath);
+            build(genericPath);
+            build(imagePath);
+            build(TPFolder);
+            build(mainListEXPath);
+            build(fixtureFolder);
+            build(backUpFolder);
+            build(getFixturePath());
+            build(skuPath);
+
         }
         public void newItemList(String CN)
         {
@@ -245,6 +157,15 @@ namespace MagnusSpace
             }
 
             Directory.Delete(target_dir, false);
+        }
+        public bool build(string Direc)
+        {
+            if (!Directory.Exists(Direc))
+            {
+                try { Directory.CreateDirectory(Direc); }
+                catch { }
+            }
+            return Directory.Exists(Direc);
         }
        
         public List<string> allItensInModelList(string model)

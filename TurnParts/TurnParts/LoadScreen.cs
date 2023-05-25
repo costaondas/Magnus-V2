@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,9 +27,32 @@ namespace MagnusSpace
             {
                 timer1.Stop();
                 //Form1 form = new Form1();
-               // form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+                // form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
                 //if(form!=null)
-                 //   form.Close();
+                //   form.Close();
+                // Form1 form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+                //if (form != null)
+                // {
+                //form.Close();
+                // }
+                int counter = 0;
+                int idP = Process.GetCurrentProcess().Id;
+                Process[] runningProcesses = Process.GetProcesses();
+                foreach (Process process in runningProcesses)
+                {
+                    if (process.ProcessName == "Magnus")
+                    {
+                        
+                        counter++;
+                        if (process.Id != idP)
+                        {
+                            process.Kill();
+                        }
+                       
+                    }
+                        //process.CloseMainWindow();
+                }
+                //MessageBox.Show(counter.ToString());
                 TurnParts.Form1 newForm1 = new TurnParts.Form1();
                 this.Hide();
                 newForm1.ShowDialog();

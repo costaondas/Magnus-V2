@@ -204,7 +204,17 @@ namespace MagnusSpace
                     list.Add("CN" + vd() + "Item");
                     list.Add("Status" + vd() + "STATUS");
                     break;
-                    //qtdBin
+                //qtdBin
+                case 16:
+
+                    list.Add("CN" + vd() + "CN");
+                    list.Add("Name" + vd() + "Nome");
+                    list.Add("P/N" + vd() + "P/N");
+                    list.Add("QTD" + vd() + "Quantidade");
+                    list.Add("location3" + vd() + "Rua");
+                    list.Add("location2" + vd() + "Coluna");
+                    list.Add("location" + vd() + "Linha");
+                    break;
             }
 
 

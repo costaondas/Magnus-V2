@@ -56,6 +56,8 @@ namespace MagnusSpace
           
            
             textBox5.ScrollBars = ScrollBars.Both;
+            timer1.Interval = 100;
+
         }
        
        
@@ -376,12 +378,13 @@ namespace MagnusSpace
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox1.Text == "")
+                textBox1.BackColor = Color.White;
+            ticks = 0;
             try { if (numbOfTasksOnDisplay != 0) { groupBox1.Controls[getTextNames().Split(dashC)[0]].Text = textBox1.Text; } }
 
             catch { }
-
-
+            timer1.Start();
 
             //
 
@@ -579,6 +582,32 @@ namespace MagnusSpace
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+        int ticks = 0;
+        int maxtick = 30;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ticks += 10;
+            if(ticks > maxtick)
+            {
+                ticks = 0;
+                timer1.Stop();
+                string text = textBox1.Text;
+                if(text != "" && text != " ")
+                {
+                    Item item = new Item();
+                    item.Open(text);
+                    if (item.itemExists)
+                    {
+                        textBox1.BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        textBox1.BackColor = Color.White;
+                    }
+                }
+                // calcular item aqui
+            }
         }
     }
 }

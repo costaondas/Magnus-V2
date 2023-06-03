@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurnParts;
 
 namespace MagnusSpace
 {
@@ -90,12 +92,21 @@ namespace MagnusSpace
         {
             return "CN:" + cn + " QTD:" + qtd.ToString();
         }
+        public string lcPattern(item i)
+        {
+            ListClass lc = new ListClass();
+            string vd = lc.VarDash.ToString();
+            string vdP = lc.VarDashPlus.ToString();
+            string retur = "CN" + vd + i.cn + vdP;
+            retur += "QTD" + vd + i.qtd.ToString();
+            return retur;
+        }
         public void build()
         {
             textBox1.Clear();
             foreach (item j in TPlist2)
             {
-                textBox1.Text = pattern(j.cn, j.qtd) + "\r\n";
+                textBox1.Text += pattern(j.cn, j.qtd) + "\r\n";
             }
         }
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -103,8 +114,12 @@ namespace MagnusSpace
             if ((Keys)e.KeyChar == Keys.Enter)
             {
                 List<string> list = new List<string>();
-                list = txb_to_list();
+               // list = txb_to_list();
                 string text = textBox2.Text;
+                if(text.StartsWith("@"))
+                {
+                    text = text.Split('@')[1];
+                }
                 textBox2.Text = "";
                 if (text == "REMOVE")
                 {
@@ -172,10 +187,46 @@ namespace MagnusSpace
         private void Form19_Load(object sender, EventArgs e)
         {
             label1.Text = listName;
-            foreach(string l in TPlist.ToList())
+            ListClass lc = new ListClass();
+            ListClass st = new ListClass();
+            lc.ListPath = listAdress;
+            lc.mainList = lc.readList();
+            TPlist2.Clear();
+            foreach(string l in lc.mainList.ToList())
             {
-                textBox1.Text+=l + "\r\n";
+                item i = new item ();
+                st.mainList = l.Split(lc.VarDashPlus).ToList();
+                i.cn = st.stream("CN");
+                try
+                {
+                    i.qtd = Convert.ToInt32(st.stream("QTD"));
+                }
+                catch
+                {
+                    i.qtd = 1;
+                }
+                
+                TPlist2.Add(i);
             }
+            build();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListClass lc = new ListClass();
+            lc.ListPath = listAdress;
+            //lc.mainList = lc.readList();
+            lc.mainList.Clear();
+            foreach (item i in TPlist2)
+            {
+                lc.mainList.Add(lcPattern(i));
+            }
+            lc.Close();
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            form.loadSKUtoolstrip();
+            //form.refresh();
+            this.Close();
         }
     }
 }

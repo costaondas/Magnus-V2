@@ -103,3 +103,5 @@ C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpac
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form17.resources
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form18.resources
 C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form19.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form20.resources
+C:\Users\eduardo_costa\Documents\Magnus\TurnParts\TurnParts\obj\Debug\MagnusSpace.Form21.resources

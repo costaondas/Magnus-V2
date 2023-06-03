@@ -92,7 +92,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(479, 44);
-            this.textBox1.TabIndex = 30;
+            this.textBox1.TabIndex = 2;
             this.textBox1.BackColorChanged += new System.EventHandler(this.textBox1_BackColorChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -105,7 +105,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(479, 44);
-            this.textBox3.TabIndex = 31;
+            this.textBox3.TabIndex = 3;
             this.textBox3.BackColorChanged += new System.EventHandler(this.textBox3_BackColorChanged);
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);

@@ -177,7 +177,11 @@ namespace MagnusSpace
                     list.Add("Name" + vd() + "Nome");
                     list.Add("P/N" + vd() + "P/N");
                     list.Add("qtdBin" + vd() + "Bin");
+                    list.Add("trocas3Meses" + vd() + "Scrap 3 Meses");
                     list.Add("QTD" + vd() + "Total");
+                    list.Add("location3" + vd() + "Rua");
+                    list.Add("location2" + vd() + "Coluna");
+                    list.Add("location" + vd() + "Linha");
                     break;
                 case 12:
 
@@ -215,10 +219,48 @@ namespace MagnusSpace
                     list.Add("location2" + vd() + "Coluna");
                     list.Add("location" + vd() + "Linha");
                     break;
+                case 17:
+
+                    list.Add("CN" + vd() + "CN");
+                    list.Add("Modelo" + vd() + "Modelo");
+                    list.Add("Name" + vd() + "Nome");
+                    list.Add("P/N" + vd() + "P/N");
+                    list.Add("qtdBin" + vd() + "Bin");
+                    list.Add("QTD" + vd() + "Total");
+                    list.Add("location3" + vd() + "Rua");
+                    list.Add("location2" + vd() + "Coluna");
+                    list.Add("location" + vd() + "Linha");
+                    break;
             }
 
 
 
+            return list;
+        }
+
+
+        public List<string> getItensdeManutenção(bool CNsOnly = false)
+        {
+            List<string> list = new List<string>();
+            //list = item.maintanenceList(); // lista global
+            ListClass lc = new ListClass();
+            // ListClass lc = new ListClass();
+            lc.Open("Itens de Manutenção");
+            foreach (string l in lc.mainList)
+            {
+                if (l.StartsWith("CN"))
+                {
+                    if (CNsOnly)
+                    {
+                        list.Add(l.Split(VarDashPlus)[0].Split(VarDash)[1]);
+                    }
+                    else
+                    {
+                        list.Add(l);
+                    }
+
+                }
+            }
             return list;
         }
     }

@@ -14,6 +14,8 @@ using static System.Windows.Forms.AxHost;
 using Microsoft.Office.Interop.Excel;
 using System.Security.Cryptography;
 using static System.Net.Mime.MediaTypeNames;
+using System.Web;
+using System.Xml.Schema;
 
 namespace MagnusSpace
 {
@@ -280,7 +282,7 @@ namespace MagnusSpace
 
             foreach (string s in list)
             {
-                if (s.Contains(entradaNF))
+                if (shouldIskipScrap(s))
                 {
                     continue;
                 }
@@ -839,8 +841,14 @@ namespace MagnusSpace
                 
             }
         }
+        public string timeString()
+        {
+            return DateTime.Now.ToString();
+        }
         public string stream(string varName, string value = "null")
         {
+            if(varName == "NOW")
+                return timeString();
             int a = 0;
             if(value == "null")
             {
@@ -1605,6 +1613,7 @@ namespace MagnusSpace
                             newIDText = l1.Split(':')[1];
                             newID = l1.Split(':')[1].Contains(entradaNF);
                             ID = l1.Split(':')[1];
+                            stream("lastFX",text);
                         }
                         oldIDText = l1.Split(':')[1];
                         oldID = l1.Split(':')[1].Contains(entradaNF);
@@ -1982,7 +1991,7 @@ namespace MagnusSpace
             int scrap = 0; 
             foreach(string l in logList.ToList())
             {
-                if (l.Contains(entradaNF))
+                if (shouldIskipScrap(l))
                 {
                     continue;
                 }
@@ -1990,7 +1999,7 @@ namespace MagnusSpace
                 {
                     scrap += Convert.ToInt32(l.Split(' ')[3].Split(':')[1]);
                 }
-                catch { }
+                catch { }   
                 
             }
             return scrap;
@@ -2002,7 +2011,7 @@ namespace MagnusSpace
             int scrap = 0;
             foreach (string l in logList.ToList())
             {
-                if (l.Contains(entradaNF))
+                if (shouldIskipScrap(l))
                 {
                     continue;
                 }
@@ -2015,8 +2024,10 @@ namespace MagnusSpace
             }
             return scrap*(-1);
         }
+        public List<string> newLoglist = new List<string>();
         public List<string> scrapsPerTurno(string mode = "")
         {
+            newLoglist.Clear();
             List<string> fullList = new List<string>();
             List<string> logList = new List<string>();
             //List<string> TimeDivisionList = new List<string>();
@@ -2027,7 +2038,7 @@ namespace MagnusSpace
             a = new DateTime(a.Year, a.Month, a.Day, 6, 0, 0);
             b = new DateTime(b.Year, b.Month, b.Day, 15, 48, 0);
             c = new DateTime(b.Year, b.Month, b.Day, 1, 0, 0);
-
+            bool isIt3months = false;
 
             switch(mode)
             {
@@ -2039,6 +2050,7 @@ namespace MagnusSpace
                     break;
                 case "3 meses":
                     logList = FilterLogList(DateTime.Now, DateTime.Now, "3 meses");
+                    isIt3months= true;
                     break;
                 default:
                     logList = FilterLogList(DateTime.Now, DateTime.Now, "diario");
@@ -2053,12 +2065,14 @@ namespace MagnusSpace
             int trocas1 = 0;
             int trocas2 = 0;
             int trocas3 = 0;
+            
             foreach (string l in logList.ToList())
             {
-                if (l.Contains(entradaNF))
+                if (shouldIskipScrap(l))
                 {
                     continue;
                 }
+                newLoglist.Add(l);
                 hour = Convert.ToInt32(l.Split(' ')[2].Split(':')[0]);
                 min = Convert.ToInt32(l.Split(' ')[2].Split(':')[1]);
                 sec = Convert.ToInt32(l.Split(' ')[2].Split(':')[2]);
@@ -2092,11 +2106,108 @@ namespace MagnusSpace
             itemInfoList = lc.stream_SET(itemInfoList, "trocas1", trocas1.ToString());
             itemInfoList = lc.stream_SET(itemInfoList, "trocas2", trocas2.ToString());
             itemInfoList = lc.stream_SET(itemInfoList, "trocas3", trocas3.ToString());
-
+            if (isIt3months)
+            {
+                int totalScrap = trocas1 + trocas2 + trocas3;
+                totalScrap *= (-1);
+                stream("trocas3Meses", totalScrap.ToString());
+            }
             return fullList;
         }
+        public class maintananceItem
+        {
+            string CN = "";
+            public string TrulyhowmanydaysleftCN = "";
+            public int daysLeft = 0;
+            Folders folder = new Folders();
+            string cn = "";
+            public DateTime date = DateTime.MinValue;
+            int daysGonec = 0;
+            int maxDays = 0;
+            int porcentage = 0; //0 - 100
+            ListClass ListaLocalManutenção = new ListClass();
+            ListClass ListaGeralManutencao = new ListClass();
+            ListClass ListadeCNs = new ListClass();
+            public void Open(string cn)
+            {
+                CN = cn;
+                ListaLocalManutenção.Open("maintenance", folder.itemFolder(CN));
+                ListaGeralManutencao.mainList = ListaGeralManutencao.getItensdeManutenção();
+                ListadeCNs.mainList = ListadeCNs.getItensdeManutenção(true);
+            }
+            int diasCorridos(string l)
+            {
+                
+                DateTime i = Convert.ToDateTime(ListaLocalManutenção.streamPlus(l, "maintDate"));
+                return Convert.ToInt32((DateTime.Now.Date - i.Date).TotalDays);
+            }
+            int totalDays(string l)
+            {
+                
+                string diasTotais = ListaGeralManutencao.streamPlus(l, "dias_validade");
+                try
+                {
+                    return Convert.ToInt32(diasTotais);
+                }
+                catch { return 0; }
+                
+            }
+            int howmanydaysleft(string l)
+            {
+                return totalDays(l) - diasCorridos(l);
+            }
+            public int Trulyhowmanydaysleft()
+            {
+                if (ListadeCNs.mainList == null)
+                    return 0;
+                if (ListadeCNs.mainList.Count == 0)
+                    return 0;
+                int smallest = howmanydaysleft(ListadeCNs.mainList[0]);
+                TrulyhowmanydaysleftCN = ListadeCNs.mainList[0];
+                foreach (string l in ListadeCNs.mainList)
+                {
+                    if(smallest > howmanydaysleft(l))
+                    {
+                        smallest = howmanydaysleft(l);
+                        TrulyhowmanydaysleftCN = l;
+                    }
+                }
+                daysLeft = smallest;
+                return smallest;
+            }
+            public int scale0to100()
+            {
+                Trulyhowmanydaysleft();
+                float total = (float) totalDays(TrulyhowmanydaysleftCN);
+                float x = (float)diasCorridos(TrulyhowmanydaysleftCN);
+                float scale = x / total;
+                scale *= 100;
+                return Convert.ToInt32(scale);
 
-
+            }
+        }
+       
+        bool shouldIskipScrap(string log)
+        {
+            bool resolt = false;
+            if(log.Contains(entradaNF))
+            {
+                return true;
+            }
+            if (log.Contains("ENTRADA NPI"))
+            {
+                return true;
+            }
+            if (log.Contains("ENTRADA_NF"))
+            {
+                return true;
+            }
+            if (log.Contains("ENTRADA_NPI"))
+            {
+                return true;
+            }
+            return resolt;
+        }
 
 
         public List<string> FilterLogList(DateTime start1, DateTime end1, string frequencia = "")
@@ -2200,7 +2311,7 @@ namespace MagnusSpace
             
             foreach(string line in logsList.ToList())
             {
-                if (line.Contains(entradaNF))
+                if (shouldIskipScrap(line))
                 {
                     continue;
                 }
@@ -2726,7 +2837,7 @@ namespace MagnusSpace
             foreach (string l in logs)
             {
 
-                if (l.Contains(entradaNF))
+                if (shouldIskipScrap(l))
                 {
                     continue;
                 }
@@ -2961,6 +3072,52 @@ namespace MagnusSpace
             }
             
         }
+        public int getPositioninRank(string id)
+        {
+            return 0;
+            int position = 0;
+            int scraps = 0;
+            if(IDs_and_scraps == null || IDs_and_scraps.Count == 0)
+            {
+                _idScrapsList();
+            }
+            foreach(string l in IDs_and_scraps.ToList())
+            {
+                if (l.Split(VarDash)[0] != id)
+                    continue;
+                int qtd = 0;
+                try
+                {
+                    qtd = Convert.ToInt32(l.Split(VarDash)[1]);
+                }
+                catch
+                {
+                    qtd = 0;
+                }
+                scraps = qtd;
+                break;
+                
+            }
+            position = 1;
+            foreach (string l in IDs_and_scraps.ToList())
+            {
+                
+                int qtd = 0;
+                try
+                {
+                    qtd = Convert.ToInt32(l.Split(VarDash)[1]);
+                }
+                catch
+                {
+                    qtd = 0;
+                }
+                if (qtd < scraps)
+                    position++;
+            }
+            return position;
+
+        }
+        List<string> IDs_and_scraps= new List<string>();
         public List<string> _idScrapsList()
         {
             List<string> list = new List<string>();
@@ -3015,6 +3172,7 @@ namespace MagnusSpace
                 }
 
             }
+            IDs_and_scraps = list;
             return list;
         }
         private int cv(string number)
@@ -3036,14 +3194,57 @@ namespace MagnusSpace
         }
         public bool maintanenceExpired()
         {
-            Console.WriteLine("Maintanence expere Enter");
+            //Console.WriteLine("Maintanence expere Enter");
             ListClass lc2 = new ListClass();
             lc2.Open("Itens de Manutenção");
             List<string> globalList = lc2.mainList.ToList();
-            Console.WriteLine($"There are {globalList.Count()} itens in global List");
+            //Console.WriteLine($"There are {globalList.Count()} itens in global List");
             ListClass lc = new ListClass();
             List<string> localList = maintanenceList(); //lista local
             lc.mainList = localList;
+            //
+            // comparar localList com globalList
+            //se tiver em globalList mas não tiver em localList
+            // return true;
+            List<string> localList2 = new List<string>();
+            localList2.AddRange(localList);
+            List<string> globalList2 = new List<string>();
+            //globalList2.AddRange(globalList);
+            foreach (string globalItem in globalList)
+            {
+                if (!globalItem.StartsWith("//") && globalItem != "")
+                {
+                    globalList2.Add(globalItem);
+                    Console.WriteLine($"GLOBAL {globalItem}");
+                }
+               
+            }
+            string lcCN = "";
+            foreach (string globalItem in globalList2)
+            {
+                bool isitemMissinFromGlobal = true;
+                string globalCN = globalItem.Split(VarDashPlus)[0].Split(VarDash)[1];
+                Console.WriteLine($"global CN <{globalCN}>");
+                foreach (string localItem in localList2)
+                {
+                    string localCN = localItem.Split(VarDashPlus)[0].Split(VarDash)[1];
+                    Console.WriteLine($"local CN <{localCN}>");
+                    if (globalCN == localCN)
+                    {
+                        isitemMissinFromGlobal = false;
+                        Console.WriteLine($"NOT MISSING {localCN}");
+                        break;
+                    }
+                }
+                if (isitemMissinFromGlobal)
+                {
+                    Console.WriteLine($"MISSING {globalCN} on local");
+                    return true;
+                }
+                
+            }
+
+
             foreach (string localItem in localList.ToList())
             {
                 Console.WriteLine($"local Item {localItem}");

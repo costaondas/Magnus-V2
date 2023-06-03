@@ -344,6 +344,10 @@ namespace MagnusSpace
                     break;
                 case "Bin":
 
+                    title = lc.RowTitle(17);
+                    
+                    break;
+                case "BinScrap":
                     title = lc.RowTitle(11);
                     break;
             }

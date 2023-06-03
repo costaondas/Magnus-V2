@@ -176,6 +176,24 @@ namespace MagnusSpace
         {
             return string.Join(VarDashPlus.ToString(), list.ToArray());
         }
+        public string valuesOnly(string line)
+        {
+            string newLine = "";
+            List<string> i = new List<string>();
+            foreach(string l in line.Split(VarDashPlus).ToList())
+            {
+                try
+                {
+                    i.Add(l.Split(VarDash)[1]);
+                }
+                catch { }
+                
+            }
+            return string.Join(VarDash.ToString(), i);
+
+
+            return newLine;
+        }
 
         #region stabel
         public List<string> search(List<string> searxhList, string searchPhrase)
@@ -199,7 +217,8 @@ namespace MagnusSpace
                         containsAllStrings = true; ;
                         foreach (string l2 in searchPhrase.Split(' ').ToList())
                         {
-                            if (!l.Contains(l2, comp))
+                            string lValue = valuesOnly(l);
+                            if (!lValue.Contains(l2, comp))
                             {
                                 containsAllStrings = false;
                             }
@@ -211,7 +230,8 @@ namespace MagnusSpace
                     }
                     else
                     {
-                        if (l.Contains(searchPhrase, comp))
+                        string lValue = valuesOnly(l);
+                        if (lValue.Contains(searchPhrase, comp))
                         {
                             resolts.Add(l);
 

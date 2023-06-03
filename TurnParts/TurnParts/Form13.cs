@@ -124,6 +124,8 @@ namespace MagnusSpace
             {
                 Console.WriteLine("CELL CLICK");
                 Form14 f = new Form14();
+                Console.WriteLine($"Open 14 with cn {itemCN}");
+                
                 f.CN = itemCN;
                 ListClass lc = new ListClass();
                 // f.itemCN = currentCN;

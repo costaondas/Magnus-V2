@@ -23,6 +23,7 @@ namespace MagnusSpace
         public bool FixSize = false;
         public bool changeWithEnter = false;
         public bool dontFocus = false;
+        public bool call20 = false;
 
         public Form12()
         {
@@ -218,13 +219,23 @@ namespace MagnusSpace
                 search();
             }
         }
-
+        public string clickCN = "";
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dontFocus)
-                return;
-            //int row = dataGridView1.CurrentCell.RowIndex;
             string text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            if (call20)
+            {
+                Form20 form20 = System.Windows.Forms.Application.OpenForms["Form20"] as Form20;
+                form20.callDisplay(text); // procurar em EOL tambem
+                return;
+            }
+            if (dontFocus)
+            {
+                clickCN= text;
+                return;
+            }
+            
+            //int row = dataGridView1.CurrentCell.RowIndex;
             Form1 form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
             form.callDisplay(text); // procurar em EOL tambem
             //MessageBox.Show(text);

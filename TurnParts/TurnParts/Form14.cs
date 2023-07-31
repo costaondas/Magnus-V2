@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurnParts;
 using Label = System.Windows.Forms.Label;
 
 namespace MagnusSpace
@@ -224,6 +225,9 @@ namespace MagnusSpace
 
         private void button12_Click(object sender, EventArgs e)
         {
+            Form1 form = new Form1();
+            form = System.Windows.Forms.Application.OpenForms["Form1"] as Form1;
+            form.focus();
             this.Close();
         }
 

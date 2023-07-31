@@ -37,6 +37,7 @@ namespace MagnusSpace
         public List<string> modelList;
         public List<string> CNList;
         public List<string> LastLogs;
+        public List<string> skipLogChoiceList = new List<string>();
         public string justificativa = "";
         bool logsListUpdated = false;
         bool setlogsListUpdated = false;
@@ -105,6 +106,31 @@ namespace MagnusSpace
         public char vd()
         {
             return VarDash;
+        }
+        public bool shouldSkipLog(string log)
+        {
+            List<string> list = new List<string>();
+            list = log.Split(' ').ToList();
+            string obs = "";
+            foreach(string l in list)
+            {
+                if (l.Split(':')[0] == "OBS")
+                {
+                    obs = l.Split(':')[1];
+                    break;
+                }
+            }
+            if(obs != "")
+            {
+                foreach(string l2 in skipLogChoiceList)
+                {
+                    if(obs == l2)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
         public string linhaMestra()
         {
@@ -220,7 +246,18 @@ namespace MagnusSpace
             catch { }
             try { readList(adressesListPath); } // both lists
             catch { }
-            
+            ListClass lc7 = new ListClass ();
+            lc7.Open("Choices");
+            foreach(string j in lc7.mainList.ToList())
+            {
+                string cn = j.Split(VarDashPlus)[0].Split(VarDash)[1];
+                string skip = j.Split(VarDashPlus)[1].Split(VarDash)[1];
+                if(skip == "TRUE")
+                {
+                    skipLogChoiceList.Add(cn);
+                }
+            }
+            //skipLogChoiceList = lc7.mainList.ToList();
             try
             {
                 //ItemCN = itemInfoList[0].Split(VarDash)[1];
@@ -2194,18 +2231,9 @@ namespace MagnusSpace
             {
                 return true;
             }
-            if (log.Contains("ENTRADA NPI"))
-            {
+            if (shouldSkipLog(log))
                 return true;
-            }
-            if (log.Contains("ENTRADA_NF"))
-            {
-                return true;
-            }
-            if (log.Contains("ENTRADA_NPI"))
-            {
-                return true;
-            }
+           
             return resolt;
         }
 
